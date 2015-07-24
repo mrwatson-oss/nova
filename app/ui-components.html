@@ -19,10 +19,17 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
     <script src="bower_components/handlebars/handlebars.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
     <script src="scripts/ui-templates.js"></script>
     <script src="scripts/ui-components.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 </head>
 
 <body>
@@ -34,15 +41,22 @@
 
             $('#header').replaceWith(
                 $(header.render({
-                  'nav': [
-                    {"url": "/index.html", "item": 'UI base'},
-                    {"url": "#", "item": 'UI components','class': 'nav--active'},
-                    {"url": "#", "item": 'About'}
-                  ],
-                  'input': [
-                    {'id':'input__header', 'class': 'col-md-8'}
-                  ]
-              }))
+                    'nav': [{
+                        "url": "/index.html",
+                        "item": 'UI base'
+                    }, {
+                        "url": "#",
+                        "item": 'UI components',
+                        'class': 'nav--active'
+                    }, {
+                        "url": "#",
+                        "item": 'About'
+                    }],
+                    'input': [{
+                        'id': 'input__header',
+                        'class': 'col-md-8'
+                    }]
+                }))
             );
             </script>
         </div>
@@ -56,21 +70,42 @@
                 <div id="side-nav"></div>
                 <script>
                 $('#side-nav').replaceWith(
-                  $(ui.component.nav.render({
-                              properties: [
-                              {"url": "#anchor-button", "item": 'Action Bar'},
-                              {"url": "#anchor-button", "item": 'Alert'},
-                              {"url": "#anchor-button", "item": 'App Bar'},
-                              {"url": "#anchor-button", "item": 'App Block'},
-                              {"url": "#anchor-button", "item": 'App Daddy'},
-                              {"url": "#anchor-button", "item": 'Button'},
-                              {"url": "#anchor-card", "item": 'Card'},
-                              {"url": "#anchor-header", "item": 'Header'},
-                              {"url": "#anchor-input", "item": 'Input'},
-                              {"url": "#anchor-nav", "item": 'Nav'},
-                              {"url": "#anchor-sharepost", "item": 'Share-Post'}
-                              ]
-                            }))
+                    $(ui.component.nav.render({
+                        properties: [{
+                            "url": "#anchor-button",
+                            "item": 'Action Bar'
+                        }, {
+                            "url": "#anchor-button",
+                            "item": 'Alert'
+                        }, {
+                            "url": "#anchor-button",
+                            "item": 'App Bar'
+                        }, {
+                            "url": "#anchor-button",
+                            "item": 'App Block'
+                        }, {
+                            "url": "#anchor-button",
+                            "item": 'App Daddy'
+                        }, {
+                            "url": "#anchor-button",
+                            "item": 'Button'
+                        }, {
+                            "url": "#anchor-card",
+                            "item": 'Card'
+                        }, {
+                            "url": "#anchor-header",
+                            "item": 'Header'
+                        }, {
+                            "url": "#anchor-input",
+                            "item": 'Input'
+                        }, {
+                            "url": "#anchor-nav",
+                            "item": 'Nav'
+                        }, {
+                            "url": "#anchor-sharepost",
+                            "item": 'Share-Post'
+                        }]
+                    }))
 
                 );
                 </script>
@@ -83,10 +118,22 @@
                         <div id="button"></div>
                         <script>
                         $('#button').replaceWith(
-                            $(ui.component.button.render({'content':'Basic'})),
-                            $(ui.component.button.render({'content':'Happy','class':'btn btn--positive'})),
-                            $(ui.component.button.render({'content':'Strict','class':'btn btn--negative'})),
-                            $(ui.component.button.render({'content':'a','icon':'true','class':'btn btn--icon'}))
+                            $(ui.component.button.render({
+                                'content': 'Basic'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Happy',
+                                'class': 'btn btn--positive'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Strict',
+                                'class': 'btn btn--negative'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'a',
+                                'icon': 'true',
+                                'class': 'btn btn--icon'
+                            }))
 
                         );
                         </script>
@@ -100,29 +147,33 @@
                     </div>
                 </div>
                 <div class="row" id="anchor-card">
-                  <h2>Card</h2>
-                  <div class="col-md-6">
-                    <div id="card"></div>
-                      <script>
+                    <h2>Card</h2>
+                    <div class="col-md-6">
+                        <div id="card"></div>
+                        <script>
                         $('#card').replaceWith(
                             $(ui.component.card.render({
-                              properties: [
-                              { "thumbnail": "https://www.filepicker.io/api/file/ka18lT41SyJpHhjqFt5A"},
-                              { "title": "Marius", "class": "card__person"},
-                              { "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum natus sunt nisi ducimus similique rem dicta, numquam dolore ab earum. Perferendis eveniet repellendus tempore sunt ab consectetur facilis nesciunt animi."}
+                                properties: [{
+                                        "thumbnail": "https://www.filepicker.io/api/file/ka18lT41SyJpHhjqFt5A"
+                                    }, {
+                                        "title": "Marius",
+                                        "class": "card__person"
+                                    }, {
+                                        "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum natus sunt nisi ducimus similique rem dicta, numquam dolore ab earum. Perferendis eveniet repellendus tempore sunt ab consectetur facilis nesciunt animi."
+                                    }
 
-                              ]
+                                ]
                             }))
                         );
                         </script>
-                  </div>
-                  <div class="col-md-6">
-                    <pre><code class="language-javascript">
+                    </div>
+                    <div class="col-md-6">
+                        <pre><code class="language-javascript">
   $(ui.component.card.render({
     // properties
   }))
 </code></pre>
-                  </div>
+                    </div>
                 </div>
                 <div class="row" id="anchor-header">
                     <h2>Header</h2>
@@ -131,13 +182,18 @@
                         <script>
                         $('#header').replaceWith(
                             $(ui.component.header.render({
-                              'nav': [
-                    {"url": "#", "item": 'item 1'},
-                    {"url": "#", "item": 'item 2','class': 'nav--active'}
-                  ],
-                  'input': [
-                    {'id':'input__header', 'class': 'col-md-8'}
-                  ]
+                                'nav': [{
+                                    "url": "#",
+                                    "item": 'item 1'
+                                }, {
+                                    "url": "#",
+                                    "item": 'item 2',
+                                    'class': 'nav--active'
+                                }],
+                                'input': [{
+                                    'id': 'input__header',
+                                    'class': 'col-md-8'
+                                }]
                             }))
                         );
                         </script>
@@ -157,7 +213,7 @@
                         <script>
                         $('#input').replaceWith(
                             $(ui.component.input.render({
-                              'placeholder': 'Gimme boodskap'
+                                'placeholder': 'Gimme boodskap'
                             }))
                         );
                         </script>
@@ -171,55 +227,67 @@
                     </div>
                 </div>
                 <div class="row" id="anchor-nav">
-                  <h2>Nav</h2>
-                  <div class="col-md-6">
-                    <div id="nav"></div>
-                      <script>
+                    <h2>Nav</h2>
+                    <div class="col-md-6">
+                        <div id="nav"></div>
+                        <script>
                         $('#nav').replaceWith(
                             $(ui.component.nav.render({
-                              properties: [
-                              {"url": "#", "item": 'Item 1'},
-                              {"url": "#2", "item": 'Item 2'}
-                              ]
+                                properties: [{
+                                    "url": "#",
+                                    "item": 'Item 1'
+                                }, {
+                                    "url": "#2",
+                                    "item": 'Item 2'
+                                }]
                             }))
                         );
                         </script>
-                  </div>
-                  <div class="col-md-6">
-                    <pre><code class="language-javascript">
+                    </div>
+                    <div class="col-md-6">
+                        <pre><code class="language-javascript">
   $(ui.component.nav.render({
     // properties
   }))
 </code></pre>
-                  </div>
+                    </div>
                 </div>
                 <div class="row" id="anchor-navBar">
-                  <h2>NavBar</h2>
-                  <div class="col-xs-12">
-                    <div id="navBar"></div>
-                      <script>
+                    <h2>NavBar</h2>
+                    <div class="col-xs-12">
+                        <div id="navBar"></div>
+                        <script>
                         $('#navBar').replaceWith(
                             $(ui.component.navBar.render({
-                              properties: [
-                    {'url': "#", 'item': "item 1",'class': "nav--active"},
-                    {'url': "#", 'item': "item 2"},
-                    {'url': "#", 'item': "item 3"}
-                  ],
-                  'button': [
-                                {"class": "btn btn--positive pull-right", "content": 'Action'},
-                                {"class": "btn btn--positive pull-right", "content": 'Action'}
-                              ],
+                                properties: [{
+                                    'url': "#",
+                                    'item': "item 1",
+                                    'class': "nav--active"
+                                }, {
+                                    'url': "#",
+                                    'item': "item 2"
+                                }, {
+                                    'url': "#",
+                                    'item': "item 3"
+                                }],
+                                'button': [{
+                                    "class": "btn btn--positive pull-right",
+                                    "content": 'Action'
+                                }, {
+                                    "class": "btn btn--positive pull-right",
+                                    "content": 'Action'
+                                }],
                             }))
                         );
                         </script>
-                  </div>
-                  <div class="col-xs-6">
-                    <pre><code class="language-javascript">
+                    </div>
+                    <div class="col-xs-6">
+                        <pre><code class="language-javascript">
   $(ui.component.navBar.render({
     // properties
   }))
 </code></pre>
-                  </div>
+                    </div>
                 </div>
                 <div class="row" id="anchor-sharepost">
                     <h2>Share-Post</h2>
@@ -229,13 +297,15 @@
                         <script>
                         $('#share-post').replaceWith(
                             $(ui.component.sharePost.render({
-                              'button': [
-                                {"class": "btn btn--icon pull-left", "content": 'a', 'action':'alert("ok, pick something classy please")'},
-                                {"class": "btn btn--positive pull-right", "content": 'Share'}
-                              ],
-                              'input': [
-                                {}
-                              ]
+                                'button': [{
+                                    "class": "btn btn--icon pull-left",
+                                    "content": 'a',
+                                    'action': 'alert("ok, pick something classy please")'
+                                }, {
+                                    "class": "btn btn--positive pull-right",
+                                    "content": 'Share'
+                                }],
+                                'input': [{}]
 
                             }))
                         );
@@ -252,15 +322,7 @@
             </div>
         </div>
     </div>
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
     <!-- build:js(.) scripts/plugins.js -->
-    <!-- endbuild -->
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
     <script src="scripts/prism.js"></script>
     <!-- endbuild -->
 </body>
