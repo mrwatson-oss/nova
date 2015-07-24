@@ -1,0 +1,13 @@
+<div class="{{class}}">
+    {{#if logo}}
+    <img src="{{logo}}" class="pull-left" alt="blabla"> {{/if}} 
+    {{#if input}} {{#each input}} {{> partialInput }} {{/each}} {{/if}} {{#if nav}}
+    <div class="col-xs-4">
+        <ul class="nav nav--horizontal">
+            {{#each nav}}
+            <li>{{> partialNav}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/if}}
+</div>

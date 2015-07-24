@@ -1,0 +1,25 @@
+.nav {
+    // @extend .card;
+    // margin: 1em 0 0 0;
+    padding: 0;
+    background-color: white;
+
+}
+
+.nav--horizontal {
+    
+        margin: 0;
+        li {
+        float: left;
+    }
+}
+
+.nav--active {
+    border-bottom: 3px solid $primary-color--light;
+}
+
+    // background-color: white;
+    // text-decoration: none;
+    // list-style-type: none;
+    // padding: 0;
+    // margin: 0;

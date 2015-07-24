@@ -1,0 +1,94 @@
+// -----------------------------------------------------------------------------
+// Base button
+// -----------------------------------------------------------------------------
+.btn {
+    // line-height: 1.4em;
+    padding: 1em 2em;
+    font-size: .9em;
+    // vertical-align: middle;
+    border: none;
+    text-decoration: none;
+    transition: all 0.5s;
+    background-color: $base-color;
+    color: $font--primary-color;
+    &:link {}
+    &:visited {
+        // bla
+    }
+    &:hover {
+        background-color: $base-color--dark;
+    }
+    &:active {}
+    &:focus {
+        outline: none;
+    }
+}
+/**
+ * Positive buttons’ skin. Extends `.btn`.
+ */
+
+.btn--positive {
+    background-color: $primary-color;
+    color: white;
+    &:hover {
+        background-color: $primary-color--dark;
+    }
+}
+/**
+ * Negative buttons’ skin. Extends `.btn`.
+ */
+
+.btn--negative {
+    background-color: $accent-color;
+    color: white;
+    &:hover {
+        background-color: $accent-color--dark;
+    }
+}
+
+.btn--icon {
+	background: no-repeat center/60% url("/images/camera.png");
+    background-color: $base-color;
+	color: black;
+	padding: 1em 2em;
+}
+
+// -----------------------------------------------------------------------------
+// Button Size Modifiers
+// -----------------------------------------------------------------------------
+// .btn--full-width {
+//   display: block;
+//   width: 100%; // Ensure inputs also stretch full width
+// }
+// .btn--small {
+//   +btn-font-size(13);
+//   padding: 2px 14px;
+// }
+// // -----------------------------------------------------------------------------
+// // Buttons font modifiers
+// // -----------------------------------------------------------------------------
+// .btn--caps {
+//   text-transform: UPPERCASE;
+// }
+// // -----------------------------------------------------------------------------
+// // Buttons with icons
+// // -----------------------------------------------------------------------------
+// .btn--icon-only {
+//   @extend %image-replacement;
+//   padding-left: 14px;
+// }
+// // -----------------------------------------------------------------------------
+// // Button Colors
+// // -----------------------------------------------------------------------------
+// .btn {
+//   &.is-disabled, &[disabled]
+//     +btn-color($input-border, $lightgray, $subduedgray);
+//     cursor: default;
+//     opacity: .75;
+// }
+// .btn--linkblue {
+//   +btn-color($linkblue);
+// }
+// .btn--yella {
+//   +btn-color($yella, $body-copy);
+// }

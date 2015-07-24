@@ -1,0 +1,115 @@
+.block {
+    display: inline-block;
+    margin: 0 1em 0 0;
+    text-align: center;
+    .shape {
+        @include border-radius(.4em);
+        position: relative;
+        padding: 8em;
+        margin: 0;
+        .shade-light {
+            -webkit-border-radius: 0 0 0 .4em;
+            -moz-border-radius: 0 0 0 .4em;
+            -ms-border-radius: 0 0 0 .4em;
+            border-radius: 0 0 0 .4em;
+            position: absolute;
+            text-align: center;
+            padding: 2em;
+            margin: 0;
+            bottom: 0;
+            width: 50%;
+            left: 0;
+        }
+        .shade-dark {
+            -webkit-border-radius: 0 0 .4em 0;
+            -moz-border-radius: 0 0 .4em 0;
+            -ms-border-radius: 0 0 .4em 0;
+            border-radius: 0 0 .4em 0;
+            position: absolute;
+            text-align: center;
+            padding: 2em;
+            margin: 0;
+            bottom: 0;
+            width: 50%;
+            right: 0;
+        }
+    }
+    .mrwatson-green {
+        background-color: $green;
+        .shade-light {
+            background: $green--light;
+        }
+        .shade-dark {
+            background: $green--dark;
+        }
+    }
+    .mrwatson-green--light {
+        background-color: $green--light;
+    }
+    .mrwatson-green--dark {
+        background-color: $green--dark;
+    }
+    .mrwatson-white {
+        background-color: $white;
+    }
+    .mrwatson-grey {
+        background: $grey;
+        .shade-light {
+            background: $grey--light;
+        }
+        .shade-dark {
+            background: $grey--dark;
+        }
+    }
+    .mrwatson-grey--dark {
+        background: $grey--dark;
+    }
+    .danube {
+        background: $danube;
+        .shade-light {
+            background: $danube--light;
+        }
+        .shade-dark {
+            background: $danube--dark;
+        }
+    }
+    .azure {
+        background-color: $azure;
+        .shade-light {
+            background: $azure--light;
+        }
+        .shade-dark {
+            background: $azure--dark;
+        }
+    }
+    .valencia {
+        background: $valencia;
+        .shade-light {
+            background: $valencia--light;
+        }
+        .shade-dark {
+            background: $valencia--dark;
+        }
+    }
+    .flush-mahogany {
+        background: $flush-mahogany;
+    }
+    .tundora {
+        background-color: $tundora;
+    }
+    .nobel {
+        background-color: $nobel;
+        .shade-light {
+            background: $nobel--light;
+        }
+        .shade-dark {
+            background: $nobel--dark;
+        }
+    }
+    .alto {
+        background: $alto;
+    }
+    .concrete {
+        background: $concrete;
+    }
+}
