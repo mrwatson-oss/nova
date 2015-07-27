@@ -4,8 +4,8 @@
     {{#if input}} {{#each input}} {{> partialInput }} {{/each}} {{/if}} {{#if nav}}
     <div class="col-xs-4">
         <ul class="nav nav--horizontal">
-            {{#each nav}}
-            <li>{{> partialNav}}</li>
+            {{#each properties}}
+            <li>{{> link}}</li>
             {{/each}}
         </ul>
     </div>

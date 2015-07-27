@@ -32,8 +32,8 @@ $.get('http://api.testing.mrwatson.com/users', function(data) {
     var randomUser = (Math.floor(Math.random() * json.length - 1));
 
 
-    console.log(json[randomUser].user.first_name);
-    console.log(json[randomUser].user.profile_picture);
+    // console.log(json[randomUser].user.first_name);
+    // console.log(json[randomUser].user.profile_picture);
 
 
     $('#naam').html(json[randomUser].user.first_name);

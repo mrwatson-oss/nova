@@ -113,13 +113,16 @@ ui.component.header = (function($, T) {
      */
     function render(context) {
 
-Handlebars.registerPartial('partialNav', '<a href="{{url}}" class="{{class}}">{{item}}</a>');
-
+        
+        ui.component.nav.render();
         Handlebars.registerPartial({
-'partialInput': ui.component.input.render({
+            'partialInput': ui.component.input.render({
                 'id': '{{id}}',
                 'class': '{{class}}'
             }),
+            
+            
+
             // myNav: ui.component.nav.render({
             //     properties: [
             //                   {"url": "#anchor-button", "item": 'Button'},
@@ -298,7 +301,7 @@ ui.component.nav = (function($, T) {
      */
     function render(context) {
 
-Handlebars.registerPartial('link', '<a href="{{url}}">{{item}}</a>');
+Handlebars.registerPartial('link', '<a href="{{baseurl}}{{url}}">{{item}}</a>');
  
         data = $.extend({}, nav, context);
 

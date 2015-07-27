@@ -89,13 +89,13 @@ this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":functio
     var stack1;
 
   return "\n    <div class=\"col-xs-4\">\n        <ul class=\"nav nav--horizontal\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.nav : depth0),{"name":"each","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.properties : depth0),{"name":"each","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "        </ul>\n    </div>\n";
 },"7":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "            <li>"
-    + ((stack1 = this.invokePartial(partials.partialNav,depth0,{"name":"partialNav","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + ((stack1 = this.invokePartial(partials.link,depth0,{"name":"link","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper;

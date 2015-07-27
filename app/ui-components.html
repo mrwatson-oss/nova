@@ -38,10 +38,18 @@
         <div id="header">
             <script>
             var header = ui.component.header;
-
+              //todo
+          //     $(header.render({
+            //     {logo:{url:images/logo.png,href:index.html},
+            //     {input:{blabla}},
+            //     {nav:[
+            //       {url: index.html, item: home},
+            //       {url: bla.html, item: bla},
+            //       ]}
+          //      }))
             $('#header').replaceWith(
                 $(header.render({
-                    'nav': [{
+                    'properties': [{
                         "url": "/index.html",
                         "item": 'UI base'
                     }, {
