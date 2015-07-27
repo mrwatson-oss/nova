@@ -41,7 +41,7 @@
 
 // Components
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
-// @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navs";
@@ -77,7 +77,8 @@
 @import '../components/button/button';
 @import '../components/card/card';
 @import '../components/header/header';
-@import '../components/input/input';
+@import '../components/text-area/textArea';
+@import '../components/text-input/textInput';
 @import '../components/nav/nav';
 @import '../components/nav-bar/navBar';
 @import '../components/share-post/sharePost';
@@ -85,19 +86,19 @@
 
 
 body {
-  background: $primary-color--light;
+  background: $body-background-color;
   margin: 0;
   padding: 0;
   .space {
     padding: 18px 0;
   }
-  font-family: $mrwatson-font;
-  a {
+  font-family: $text-color;  
     text-decoration: none;
-    color: $font--primary-color;
+    color: $text-color;
     line-height: 2.4em;
     font-size: .9em;
   }
 
   
 }
+

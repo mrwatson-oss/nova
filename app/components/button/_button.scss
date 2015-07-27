@@ -9,14 +9,14 @@
     border: none;
     text-decoration: none;
     transition: all 0.5s;
-    background-color: $base-color;
-    color: $font--primary-color;
+    background-color: $button-color--neutral;
+    color: $button-color--neutral__text;
     &:link {}
     &:visited {
         // bla
     }
     &:hover {
-        background-color: $base-color--dark;
+        background-color: $button-color--neutral--accent;
     }
     &:active {}
     &:focus {
@@ -28,10 +28,10 @@
  */
 
 .btn--positive {
-    background-color: $primary-color;
+    background-color: $button-color--happy;
     color: white;
     &:hover {
-        background-color: $primary-color--dark;
+        background-color: $button-color--happy--accent;
     }
 }
 /**
@@ -39,10 +39,10 @@
  */
 
 .btn--negative {
-    background-color: $accent-color;
+    background-color: $button-color--angry;
     color: white;
     &:hover {
-        background-color: $accent-color--dark;
+        background-color: $button-color--angry--accent;
     }
 }
 

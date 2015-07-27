@@ -15,7 +15,7 @@ ui.component.header = (function($, T) {
         'properties': null,
         'class': 'row header',
         // logo: 'images/logo.png',
-        'input': true,
+        'input': false,
         'nav': true
 
     };
@@ -30,41 +30,15 @@ ui.component.header = (function($, T) {
      */
     function render(context) {
 
-        
+        //rendering the nav component
         ui.component.nav.render();
+        ui.component.textInput.render();
+        // ui.component.textInput.render();
+        //registering the input component as a partial
         Handlebars.registerPartial({
-            'partialInput': ui.component.input.render({
-                'id': '{{id}}',
-                'class': '{{class}}'
+            'partialTextInput': ui.component.textInput.render({
+                // 'background':'true'
             }),
-            
-            
-
-            // myNav: ui.component.nav.render({
-            //     properties: [
-            //                   {"url": "#anchor-button", "item": 'Button'},
-            //                   {"url": "#anchor-header", "item": 'Header'},
-            //                   {"url": "#anchor-sharepost", "item": 'Share-Post'}
-            //                   ]
-            // }),
-            // myNav: ui.component.verticalNav.render({
-            //     'bs-class': 'col-md-4',
-            //     'ul-class': 'nav',
-            //     'horizontal': true,
-            //     'nav-item': [
-            //     {label: 'UI Base', url: 'bleh'},
-            //     {label: 'UI Components', url: 'moethj'},
-            //     {label: 'About', url: 'moethj'}
-            //     ]
-            // }),
-            // myInput: ui.component.input.render({
-            //     // 'id': 'input__header',
-            //     // 'class': 'col-md-8',
-            //     // placeholder: 'Search for components or watever'
-            // })
-
-
-
         });
 
         data = $.extend({}, params, context);

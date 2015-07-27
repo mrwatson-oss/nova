@@ -13,9 +13,8 @@ ui.component.sharePost = (function($, T) {
      */
     var params = {
         'button': null,
-        'input': null,
-        'bs-class': '',
-        'class': 'share-post col-xs-12'
+        'input': true,
+        'class': 'share-post'
     };
 
     clickSharePost = function() {
@@ -33,7 +32,7 @@ ui.component.sharePost = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-
+ // ui.component.textInput.render({'background':'false'});
         Handlebars.registerPartial({
             'partialButton': ui.component.button.render({
                 'class': '{{class}}',
@@ -42,9 +41,7 @@ ui.component.sharePost = (function($, T) {
                 'action': '{{action}}',
                 'name': '{{name}}'
             }),
-            'partialInput': ui.component.input.render({
-                'things': '{{things}}'
-            })
+           
 
 
     });

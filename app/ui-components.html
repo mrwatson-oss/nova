@@ -38,15 +38,15 @@
         <div id="header">
             <script>
             var header = ui.component.header;
-              //todo
-          //     $(header.render({
+            //todo
+            //     $(header.render({
             //     {logo:{url:images/logo.png,href:index.html},
             //     {input:{blabla}},
             //     {nav:[
             //       {url: index.html, item: home},
             //       {url: bla.html, item: bla},
             //       ]}
-          //      }))
+            //      }))
             $('#header').replaceWith(
                 $(header.render({
                     'properties': [{
@@ -60,9 +60,8 @@
                         "url": "#",
                         "item": 'About'
                     }],
-                    'input': [{
-                        'id': 'input__header',
-                        'class': 'col-md-8'
+                    'text-input': [{
+                        'background': 'true'
                     }]
                 }))
             );
@@ -71,7 +70,7 @@
     </div>
     <div class="container">
         <div class="row ">
-            <p></p>
+       <p> </p>
         </div>
         <div class="row">
             <div class="col-xs-3">
@@ -118,10 +117,11 @@
                 );
                 </script>
             </div>
-            </script>
             <div class="col-xs-9">
                 <div class="row" id="anchor-button">
-                    <h2>Button</h2>
+                    <div class="col-xs-12">
+                        <h2>Button</h2>
+                    </div>
                     <div class="col-md-6">
                         <div id="button"></div>
                         <script>
@@ -155,7 +155,9 @@
                     </div>
                 </div>
                 <div class="row" id="anchor-card">
-                    <h2>Card</h2>
+                    <div class="col-xs-12">
+                        <h2>Card</h2>
+                    </div>
                     <div class="col-md-6">
                         <div id="card"></div>
                         <script>
@@ -184,7 +186,9 @@
                     </div>
                 </div>
                 <div class="row" id="anchor-header">
-                    <h2>Header</h2>
+                    <div class="col-xs-12">
+                        <h2>Header</h2>
+                    </div>
                     <div class="col-xs-12">
                         <div id="header"></div>
                         <script>
@@ -198,9 +202,8 @@
                                     "item": 'item 2',
                                     'class': 'nav--active'
                                 }],
-                                'input': [{
-                                    'id': 'input__header',
-                                    'class': 'col-md-8'
+                                'text-input': [{
+                                    'background': 'true'
                                 }]
                             }))
                         );
@@ -215,27 +218,53 @@
                     </div>
                 </div>
                 <div class="row" id="anchor-input">
-                    <h2>Input</h2>
-                    <div class="col-xs-6">
-                        <div id="input"></div>
+                    <div class="col-xs-12">
+                        <h2>Text Area</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="text-area"></div>
                         <script>
-                        $('#input').replaceWith(
-                            $(ui.component.input.render({
-                                'placeholder': 'Gimme boodskap'
+                        $('#text-area').replaceWith(
+                            $(ui.component.textArea.render({
+                                'placeholder': 'Gimme boodskap',
+                                'background': false
                             }))
                         );
                         </script>
                     </div>
                     <div class="col-xs-6">
                         <pre><code class="language-javascript">
-  $(ui.component.input.render({
+  $(ui.component.textArea.render({
+    // properties
+  }))
+</code></pre>
+                    </div>
+                    <div class="col-xs-12">
+                        <h2>Text Input</h2>
+                    </div>
+                    <div class="col-xs-6">
+                        <div id="text-input"></div>
+                        <script>
+                        $('#text-input').replaceWith(
+                            $(ui.component.textInput.render({
+                                'placeholder': 'Gimme boodskap',
+                                'background': false
+                            }))
+                        );
+                        </script>
+                    </div>
+                    <div class="col-xs-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.textInput.render({
     // properties
   }))
 </code></pre>
                     </div>
                 </div>
                 <div class="row" id="anchor-nav">
-                    <h2>Nav</h2>
+                    <div class="col-xs-12">
+                        <h2>Nav</h2>
+                    </div>
                     <div class="col-md-6">
                         <div id="nav"></div>
                         <script>
@@ -261,7 +290,9 @@
                     </div>
                 </div>
                 <div class="row" id="anchor-navBar">
-                    <h2>NavBar</h2>
+                    <div class="col-xs-12">
+                        <h2>NavBar</h2>
+                    </div>
                     <div class="col-xs-12">
                         <div id="navBar"></div>
                         <script>
@@ -298,7 +329,9 @@
                     </div>
                 </div>
                 <div class="row" id="anchor-sharepost">
-                    <h2>Share-Post</h2>
+                    <div class="col-xs-12">
+                        <h2>Share-Post</h2>
+                    </div>
                     <div class="col-md-6">
                         <!-- share-post -->
                         <div id="share-post"></div>
@@ -313,7 +346,9 @@
                                     "class": "btn btn--positive pull-right",
                                     "content": 'Share'
                                 }],
-                                'input': [{}]
+                                'text-input': [{
+                                    'background': 'false'
+                                }]
 
                             }))
                         );

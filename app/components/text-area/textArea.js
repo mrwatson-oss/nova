@@ -1,37 +1,38 @@
 /**
- * ui.component.input
+ * ui.component.textArea
  *
- * @return returns the input handlebars compiled with data
+ * @return returns the textArea handlebars compiled with data
  */
 var ui = ui || {};
 
-ui.component.input = (function($, T) {
+ui.component.textArea = (function($, T) {
 
     /**
-     * input
+     * textArea
      * @type {Object}
      */
-    var input = {
+    var textArea = {
         'class': null,
         id: null,
         name: null,
         type: 'text',
         value: null,
-        placeholder: 'placeholder'
+        placeholder: 'placeholder',
+        background: 'false'
     };
 
     /**
      * render
      *
      * @todo make this method extended or mixin
-     * @param {} input object with all properties
+     * @param {} textArea object with all properties
      * @return compiled handlebars template
      */
     function render(context) {
 
-        data = $.extend({}, input, context);
+        data = $.extend({}, textArea, context);
 
-        return T.input(data);
+        return T.textArea(data);
     }
 
     return {

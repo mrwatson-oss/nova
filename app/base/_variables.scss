@@ -5,62 +5,85 @@
 
 
 // -----------------------------------------------------------------------------
-// Gray Palette 
+// Primary Palette // DO NOT CALL THESE DIRECTLY, USE UI COLORS INSTEAD
 // -----------------------------------------------------------------------------
 
-$tundora 		: 	#4E4E4E;
-$nobel			: 	#B3B3B3;
-$nobel--light 	:	lighten($nobel, 20%);
-$nobel--dark 	: 	darken($nobel, 20%);
-$alto			: 	#DEDEDE;
-$concrete		:	#F2F2F2;
+$green			: #4AB75F;
+$green--light	: lighten($green, 44%);
+$green--dark	: darken($green, 14%);
+$white			: #FFFFFF;
+$grey			: #DEDEDE;
+$grey--light 	: lighten($grey, 20%);
+$grey--dark 	: darken($grey, 56%);
 
 // -----------------------------------------------------------------------------
-// Primary Palette // DO NOT CALL THESE DIRECTLY, USE UI COLORS INSTEAD.
+// Secundairy Palette // DO NOT CALL THESE DIRECTLY, USE UI COLORS INSTEAD
 // -----------------------------------------------------------------------------
 
-$green			: 	#4AB75F;
-$green--light	: 	lighten($green, 40%);
-$green--dark	: 	darken($green, 14%);
-$white			: 	#FFFFFF;
-$grey			: 	$alto;
-$grey--light 	: 	lighten($grey, 20%);
-$grey--dark 	: 	darken($grey, 56%);
+$sec-blue			: #6699CC;
+$sec-blue--light	: lighten($sec-blue, 30%);
+$sec-blue--dark		: darken($sec-blue, 20%);
+$sec-red			: #DA4747;
+$sec-red--light		: lighten($sec-red, 10%);
+$sec-red--dark		: darken($sec-red, 10%);
+$sec-grey			: #B3B3B3;
+$sec-grey--light	: lighten($sec-grey, 20%);
+$sec-grey--dark		: darken($sec-grey, 20%);
 
 // -----------------------------------------------------------------------------
-// Secundairy Palette 
+// UI colors - TYPE
 // -----------------------------------------------------------------------------
 
-$danube			:	#6699CC;
-$danube--light	: 	lighten($danube, 30%);
-$danube--dark	: 	darken($danube, 20%);
-$azure			:	#336699;
-$azure--light	: 	lighten($azure, 20%);
-$azure--dark	: 	darken($azure, 10%);
-$valencia		:	#DA4747;
-$valencia--light: 	lighten($valencia, 10%);
-$valencia--dark	: 	darken($valencia, 10%);
-$flush-mahogany	:	#C23434;
+$text-color				: $grey--dark;
+$text-color--accent		: $green;
 
+$header-color			: $grey--dark;
+$header-color--accent	: $green;
 
-// -----------------------------------------------------------------------------
-// Accent Palette
-// -----------------------------------------------------------------------------
+$link-color				: $sec-blue--dark;
 
 
 // -----------------------------------------------------------------------------
-// UI colors 
+// UI colors - BACKGROUNDS
 // -----------------------------------------------------------------------------
 
-$primary-color: $green;
-$primary-color--light: lighten($primary-color, 40%);
-$primary-color--dark: darken($primary-color, 7%);
+$body-background-color	: $green--light;
+$block-background-color	: $white;
+$border-color			: $grey--dark;
+$border-color--accent	: $green;  
+
+// -----------------------------------------------------------------------------
+// UI colors - BUTTONS
+// -----------------------------------------------------------------------------
+
+$button-color__text					: $white;
+
+$button-color--neutral				: $white;
+$button-color--neutral--accent		: $grey;
+$button-color--neutral__text		: $grey--dark;
+
+$button-color--happy				: $green;
+$button-color--happy--accent		: $green--dark;
+
+$button-color--strict				: $sec-blue;
+$button-color--strict--accent		: $sec-blue--dark;
+
+// $button-color--scary__background	: $sec-yellow?;
+
+$button-color--angry				: $sec-red;
+$button-color--angry--accent		: $sec-red--dark;
+
+
+
+// $primary-color: $green;
+// $primary-color--light: lighten($primary-color, 40%);
+// $primary-color--dark: darken($primary-color, 7%);
 
 $base-color: $grey;
 $base-color--light: lighten($base-color, 30%);
 $base-color--dark: darken($base-color, 7%);
 
-$accent-color: $danube;
+$accent-color: $sec-blue;
 $accent-color--light: lighten($accent-color, 30%);
 $accent-color--dark: darken($accent-color, 7%);
 
@@ -68,8 +91,6 @@ $accent-color--dark: darken($accent-color, 7%);
 // -----------------------------------------------------------------------------
 // Fonts
 // -----------------------------------------------------------------------------
-
-$font--primary-color: #222;
 
 @font-face {
     font-family: Azo-Sans-Regular;

@@ -1,8 +1,8 @@
 <div class="{{class}}">
     {{#if logo}}
     <img src="{{logo}}" class="pull-left" alt="blabla"> {{/if}} 
-    {{#if input}} {{#each input}} {{> partialInput }} {{/each}} {{/if}} {{#if nav}}
-    <div class="col-xs-4">
+    {{#if text-input}} <div class="col-xs-6 col-md-8"> {{#each text-input}} {{> partialTextInput }} {{/each}} </div> {{/if}} {{#if nav}}
+    <div class="col-xs-6 col-md-4">
         <ul class="nav nav--horizontal">
             {{#each properties}}
             <li>{{> link}}</li>

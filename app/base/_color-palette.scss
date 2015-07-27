@@ -1,12 +1,15 @@
-.block {
+.color-block {
     display: inline-block;
     margin: 0 1em 0 0;
     text-align: center;
     .shape {
         @include border-radius(.4em);
         position: relative;
-        padding: 8em;
+        padding: 7em;
         margin: 0;
+        &.shape-small {
+            padding: 3em 7em;
+        }
         .shade-light {
             -webkit-border-radius: 0 0 0 .4em;
             -moz-border-radius: 0 0 0 .4em;
@@ -34,25 +37,78 @@
             right: 0;
         }
     }
-    .mrwatson-green {
+    .body-background-color {
+        background: $body-background-color;
+        box-shadow: inset 0px 0px 0px 3px $border-color;
+    }
+    .block-background-color {
+        background: $block-background-color;
+    }
+    .border-color {
+        background: $border-color;
+    }
+    .border-color--accent {
+        background: $border-color--accent;
+    }
+    .button-color__text {
+        background: $button-color__text;
+    }
+    .button-color--neutral {
+        background: $button-color--neutral;
+    }
+    .button-color--neutral--accent {
+        background: $button-color--neutral--accent;
+    }
+    .button-color--neutral__text {
+        background: $button-color--neutral__text;
+    }
+    .button-color--happy {
+        background: $button-color--happy;
+    }
+    .button-color--happy--accent {
+        background: $button-color--happy--accent;
+    }
+    .button-color--strict {
+        background: $button-color--strict;
+    }
+    .button-color--strict--accent {
+        background: $button-color--strict--accent;
+    }
+    .button-color--angry {
+        background: $button-color--angry;
+    }
+    .button-color--angry--accent {
+        background: $button-color--angry--accent;
+    }
+    .text-color {
+        background: $text-color;
+    }
+    .text-color--accent {
+        background: $text-color--accent;
+    }
+    .header-color {
+        background: $header-color;
+    }
+    .header-color--accent {
+        background: $header-color--accent;
+    }
+    .link-color {
+        background: $link-color;
+    }
+    .green {
         background-color: $green;
         .shade-light {
             background: $green--light;
+            box-shadow: inset 0px 0px 0px 3px $border-color;
         }
         .shade-dark {
             background: $green--dark;
         }
     }
-    .mrwatson-green--light {
-        background-color: $green--light;
-    }
-    .mrwatson-green--dark {
-        background-color: $green--dark;
-    }
-    .mrwatson-white {
+    .white {
         background-color: $white;
     }
-    .mrwatson-grey {
+    .grey {
         background: $grey;
         .shade-light {
             background: $grey--light;
@@ -61,55 +117,31 @@
             background: $grey--dark;
         }
     }
-    .mrwatson-grey--dark {
-        background: $grey--dark;
-    }
-    .danube {
-        background: $danube;
+    .sec-red {
+        background: $sec-red;
         .shade-light {
-            background: $danube--light;
+            background: $sec-red--light;
         }
         .shade-dark {
-            background: $danube--dark;
+            background: $sec-red--dark;
         }
     }
-    .azure {
-        background-color: $azure;
+    .sec-blue {
+        background: $sec-blue;
         .shade-light {
-            background: $azure--light;
+            background: $sec-blue--light;
         }
         .shade-dark {
-            background: $azure--dark;
+            background: $sec-blue--dark;
         }
     }
-    .valencia {
-        background: $valencia;
+    .sec-grey {
+        background: $sec-grey;
         .shade-light {
-            background: $valencia--light;
+            background: $sec-grey--light;
         }
         .shade-dark {
-            background: $valencia--dark;
+            background: $sec-grey--dark;
         }
-    }
-    .flush-mahogany {
-        background: $flush-mahogany;
-    }
-    .tundora {
-        background-color: $tundora;
-    }
-    .nobel {
-        background-color: $nobel;
-        .shade-light {
-            background: $nobel--light;
-        }
-        .shade-dark {
-            background: $nobel--dark;
-        }
-    }
-    .alto {
-        background: $alto;
-    }
-    .concrete {
-        background: $concrete;
     }
 }

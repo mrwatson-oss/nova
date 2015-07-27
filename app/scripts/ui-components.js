@@ -98,7 +98,7 @@ ui.component.header = (function($, T) {
         'properties': null,
         'class': 'row header',
         // logo: 'images/logo.png',
-        'input': true,
+        'input': false,
         'nav': true
 
     };
@@ -113,41 +113,15 @@ ui.component.header = (function($, T) {
      */
     function render(context) {
 
-        
+        //rendering the nav component
         ui.component.nav.render();
+        ui.component.textInput.render();
+        // ui.component.textInput.render();
+        //registering the input component as a partial
         Handlebars.registerPartial({
-            'partialInput': ui.component.input.render({
-                'id': '{{id}}',
-                'class': '{{class}}'
+            'partialTextInput': ui.component.textInput.render({
+                // 'background':'true'
             }),
-            
-            
-
-            // myNav: ui.component.nav.render({
-            //     properties: [
-            //                   {"url": "#anchor-button", "item": 'Button'},
-            //                   {"url": "#anchor-header", "item": 'Header'},
-            //                   {"url": "#anchor-sharepost", "item": 'Share-Post'}
-            //                   ]
-            // }),
-            // myNav: ui.component.verticalNav.render({
-            //     'bs-class': 'col-md-4',
-            //     'ul-class': 'nav',
-            //     'horizontal': true,
-            //     'nav-item': [
-            //     {label: 'UI Base', url: 'bleh'},
-            //     {label: 'UI Components', url: 'moethj'},
-            //     {label: 'About', url: 'moethj'}
-            //     ]
-            // }),
-            // myInput: ui.component.input.render({
-            //     // 'id': 'input__header',
-            //     // 'class': 'col-md-8',
-            //     // placeholder: 'Search for components or watever'
-            // })
-
-
-
         });
 
         data = $.extend({}, params, context);
@@ -161,45 +135,6 @@ ui.component.header = (function($, T) {
     };
 
 }(jQuery, ui.component.template));
-;var ui = ui || {};
-
-ui.component.input = (function($, T) {
-
-    /**
-     * input
-     * @type {Object}
-     */
-    var input = {
-        'class': null,
-        id: null,
-        name: null,
-        type: 'text',
-        value: null,
-        placeholder: 'placeholder'
-    };
-
-    /**
-     * render
-     *
-     * @todo make this method extended or mixin
-     * @param {} input object with all properties
-     * @return compiled handlebars template
-     */
-    function render(context) {
-
-        data = $.extend({}, input, context);
-
-        return T.input(data);
-    }
-
-    return {
-        render: render
-    };
-
-}(jQuery, ui.component.template));
-
-
-
 ;var ui = ui || {};
 
 ui.component.navBar = (function($, T) {
@@ -324,9 +259,8 @@ ui.component.sharePost = (function($, T) {
      */
     var params = {
         'button': null,
-        'input': null,
-        'bs-class': '',
-        'class': 'share-post col-xs-12'
+        'input': true,
+        'class': 'share-post'
     };
 
     clickSharePost = function() {
@@ -344,7 +278,7 @@ ui.component.sharePost = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-
+ // ui.component.textInput.render({'background':'false'});
         Handlebars.registerPartial({
             'partialButton': ui.component.button.render({
                 'class': '{{class}}',
@@ -353,9 +287,7 @@ ui.component.sharePost = (function($, T) {
                 'action': '{{action}}',
                 'name': '{{name}}'
             }),
-            'partialInput': ui.component.input.render({
-                'things': '{{things}}'
-            })
+           
 
 
     });
@@ -371,3 +303,83 @@ ui.component.sharePost = (function($, T) {
     };
 
 }(jQuery, ui.component.template));
+;var ui = ui || {};
+
+ui.component.textArea = (function($, T) {
+
+    /**
+     * textArea
+     * @type {Object}
+     */
+    var textArea = {
+        'class': null,
+        id: null,
+        name: null,
+        type: 'text',
+        value: null,
+        placeholder: 'placeholder',
+        background: 'false'
+    };
+
+    /**
+     * render
+     *
+     * @todo make this method extended or mixin
+     * @param {} textArea object with all properties
+     * @return compiled handlebars template
+     */
+    function render(context) {
+
+        data = $.extend({}, textArea, context);
+
+        return T.textArea(data);
+    }
+
+    return {
+        render: render
+    };
+
+}(jQuery, ui.component.template));
+
+
+
+;var ui = ui || {};
+
+ui.component.textInput = (function($, T) {
+
+    /**
+     * textInput
+     * @type {Object}
+     */
+    var textInput = {
+        'class': 'text-input',
+        id: null,
+        name: null,
+        type: 'text',
+        value: null,
+        placeholder: 'placeholder',
+        background: null
+    };
+
+    /**
+     * render
+     *
+     * @todo make this method extended or mixin
+     * @param {} textInput object with all properties
+     * @return compiled handlebars template
+     */
+    function render(context) {
+
+        data = $.extend({}, textInput, context);
+
+        return T.textInput(data);
+    }
+
+    return {
+        render: render
+    };
+
+}(jQuery, ui.component.template));
+
+
+

@@ -52,9 +52,8 @@
                         "url": "#",
                         "item": 'About'
                     }],
-                    'input': [{
-                        'id': 'input__header',
-                        'class': 'col-md-8'
+                    'text-input': [{
+                        'background': 'true'
                     }]
                 }))
             );
@@ -116,95 +115,205 @@
             </script>
             <div class="col-xs-9">
                 <div class="row" id="anchor-color">
-                    <h2>Colors</h2>
-                    <h3>Primary Palette</h3>
                     <div class="col-xs-12">
-                        <div class="block">
-                            <div class="shape mrwatson-green">
-                                <div class="shade-light"></div>
-                                <div class="shade-dark"></div>
+                        <h2>Color Palette</h2>
+                        <h3>Primary Palette</h3>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="color-block">
+                            <div class="shape green">
+                                <div class="shade-light">light</div>
+                                <div class="shade-dark">dark</div>
                             </div>
                             <p>Green</p>
                         </div>
-                        <div class="block">
-                            <div class="shape mrwatson-grey">
-                                <div class="shade-light"></div>
-                                <div class="shade-dark"></div>
+                        <div class="color-block">
+                            <div class="shape grey">
+                                <div class="shade-light">light</div>
+                                <div class="shade-dark">dark</div>
                             </div>
                             <p>Grey</p>
                         </div>
                     </div>
-                    <h3>Secundary Palette</h3>
                     <div class="col-xs-12">
-                        <div class="block">
-                            <div class="shape danube">
-                                <div class="shade-light"></div>
-                                <div class="shade-dark"></div>
-                            </div>
-                            <p>Blue</p>
-                        </div>
-                        <div class="block">
-                            <div class="shape valencia">
-                                <div class="shade-light"></div>
-                                <div class="shade-dark"></div>
-                            </div>
-                            <p>Red</p>
-                        </div>
+                        <h3>Secundary Palette</h3>
                     </div>
-                    <h3>Gray Palette</h3>
                     <div class="col-xs-12">
-                        <div class="block">
-                            <div class="shape nobel">
-                                <div class="shade-light"></div>
-                                <div class="shade-dark"></div>
+                        <div class="color-block">
+                            <div class="shape sec-blue">
+                                <div class="shade-light">light</div>
+                                <div class="shade-dark">dark</div>
                             </div>
-                            <p>Dark Blue</p>
+                            <p>Sec Blue</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape sec-red">
+                                <div class="shade-light">light</div>
+                                <div class="shade-dark">dark</div>
+                            </div>
+                            <p>Sec Red</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape sec-grey">
+                                <div class="shade-light">light</div>
+                                <div class="shade-dark">dark</div>
+                            </div>
+                            <p>Sec Grey</p>
                         </div>
                     </div>
                     <div class="col-xs-6">
                         We use the colors like this..
                         <pre class="language-markup"><code class="language-markup">&lt;div class="blabla" &gt;</code></pre>
                     </div>
-                </div>
-            </div>
-            <div class="col-xs-9">
-                <div class="row" id="anchor-button">
-                    <h2>Grid</h2>
-                    <div class="col-md-6">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio officiis, dolorem, possimus provident dicta, fugit inventore ea molestias error rem culpa eligendi aliquid eos magnam. Saepe quasi aperiam libero!</p>
+                    <div class="col-xs-12">
+                        <h2>UI Colors</h2>
+                        <h3>Backgrounds &amp; Borders</h3>
                     </div>
-                    <div class="col-md-6">
-                        We use the Bootstrap grid like this
-                        <pre class="language-markup"><code class="language-markup">&lt;div class="row" &gt;</code></pre>
+                    <div class="col-xs-12">
+                        <div class="color-block">
+                            <div class="shape shape-small body-background-color">
+                            </div>
+                            <p>$body-background-color</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape shape-small block-background-color">
+                            </div>
+                            <p>$block-background-color</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape shape-small border-color">
+                            </div>
+                            <p>$border-color</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape shape-small border-color--accent">
+                            </div>
+                            <p>$border-color--accent</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <h3>Buttons</h3>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="color-block">
+                            <div class="shape shape-small button-color--neutral">
+                            </div>
+                            <p>$button-color--neutral</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape shape-small button-color--neutral--accent">
+                            </div>
+                            <p>$button-color--neutral--accent</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape shape-small button-color--happy">
+                            </div>
+                            <p>$button-color--happy</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape shape-small button-color--happy--accent">
+                            </div>
+                            <p>$button-color--happy--accent</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape shape-small button-color--strict">
+                            </div>
+                            <p>$button-color--strict</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape shape-small button-color--strict--accent">
+                            </div>
+                            <p>$button-color--strict--accent</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape shape-small button-color--angry">
+                            </div>
+                            <p>$button-color--angry</p>
+                        </div>
+                        <div class="color-block">
+                            <div class="shape shape-small button-color--angry--accent">
+                            </div>
+                            <p>$button-color--angry--accent</p>
+                        </div>
+                        <div class="col-xs-12">
+                            <h3>Text</h3>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="color-block">
+                                <div class="shape shape-small button-color__text">
+                                </div>
+                                <p>$button-color__text</p>
+                            </div>
+                            <div class="color-block">
+                                <div class="shape shape-small button-color--neutral__text">
+                                </div>
+                                <p>$button-color--neutral__text</p>
+                            </div>
+                            <div class="color-block">
+                                <div class="shape shape-small text-color">
+                                </div>
+                                <p>$text-color</p>
+                            </div>
+                            <div class="color-block">
+                                <div class="shape shape-small text-color--accent">
+                                </div>
+                                <p>$text-color--accent</p>
+                            </div>
+                            <div class="color-block">
+                                <div class="shape shape-small header-color">
+                                </div>
+                                <p>$header-color</p>
+                            </div>
+                            <div class="color-block">
+                                <div class="shape shape-small header-color--accent">
+                                </div>
+                                <p>$header-color--accent</p>
+                            </div>
+                            <div class="color-block">
+                                <div class="shape shape-small link-color">
+                                </div>
+                                <p>$link-color</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-9">
+                    <div class="row" id="anchor-button">
+                        <h2>Grid</h2>
+                        <div class="col-md-6">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio officiis, dolorem, possimus provident dicta, fugit inventore ea molestias error rem culpa eligendi aliquid eos magnam. Saepe quasi aperiam libero!</p>
+                        </div>
+                        <div class="col-md-6">
+                            We use the Bootstrap grid like this
+                            <pre class="language-markup"><code class="language-markup">&lt;div class="row" &gt;</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- build:js(.) scripts/plugins.js -->
-    <script src="scripts/prism.js"></script>
-    <!-- endbuild -->
+        <!-- build:js(.) scripts/plugins.js -->
+        <script src="scripts/prism.js"></script>
+        <!-- endbuild -->
 </body>
 
 </html>
 rkup"><code class="language-markup">&lt;div class="row" &gt;</code></pre>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:js(.) scripts/plugins.js -->
-    <!-- endbuild -->
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <script src="scripts/prism.js"></script>
-    <!-- endbuild -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:js(.) scripts/plugins.js -->
+<!-- endbuild -->
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<script src="scripts/prism.js"></script>
+<!-- endbuild -->
 </body>
 
 </html>

@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// Base input
+// -----------------------------------------------------------------------------
+.text-input {
+    input[type=text] {
+        border: none;
+        outline: none;
+        line-height: 1.6em;
+        padding: 1em;
+        // margin: 1em;
+        width: 100%;
+        // background: white;
+        &:active {
+            outline: none;
+            border: none;
+        }
+        &:focus {
+            outline: none;
+            border: none;
+        }
+    }
+    .text-input__grey {
+        background: $sec-grey--light;
+ 
+    }
+
+}
