@@ -261,7 +261,8 @@
                         $('#text-input').replaceWith(
                             $(ui.component.textInput.render({
                                 'placeholder': 'Gimme boodskap',
-                                'background': false
+                                'background': false,
+                                'label': 'name'
                             }))
                         );
                         </script>
@@ -299,10 +300,7 @@
                             }))
                         );
 
-                        //dropdown
-                        // $("li.dropdown").click(function() {
-                        //         $(this).toggleClass("drop-nav-active");
-                        //     });
+                        //Dit moet naar het component verhuizen
 
                         $('li.dropdown').click(function(event) {
                             event.stopPropagation();
@@ -409,7 +407,8 @@
                                 }],
                                 'text-input': [{
                                     'background': 'false'
-                                }]
+                                }],
+                                    'label': 'whats up'
 
                             }))
                         );

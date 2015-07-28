@@ -400,12 +400,13 @@ ui.component.textInput = (function($, T) {
      */
     var textInput = {
         'class': 'text-input',
-        id: null,
-        name: null,
-        type: 'text',
-        value: null,
-        placeholder: 'placeholder',
-        background: null
+        'id': null,
+        'name': null,
+        'type': 'text',
+        'value': null,
+        'placeholder': 'placeholder',
+        'label': false,
+        'background': null
     };
 
     /**
