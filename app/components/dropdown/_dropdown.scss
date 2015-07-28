@@ -6,6 +6,7 @@
     list-style-type: none;
     background: white;
     cursor: default;
+    color: $text-color;
     // padding: 1em;
     .drop-nav {
         list-style-type: none;
@@ -29,9 +30,10 @@
         font-size: .5em;
         display: inline-block;
         padding: .5em;
-        position: absolute;
+        position: relative;
     }
     #divider {
-        border-bottom: 1px solid $border-color;
+        border-bottom: 2px solid $divider-color; 
+
     }
 }

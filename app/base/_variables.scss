@@ -73,20 +73,11 @@ $button-color--strict--accent		: $sec-blue--dark;
 $button-color--angry				: $sec-red;
 $button-color--angry--accent		: $sec-red--dark;
 
+// -----------------------------------------------------------------------------
+// UI colors - NAVIGATION
+// -----------------------------------------------------------------------------
 
-
-// $primary-color: $green;
-// $primary-color--light: lighten($primary-color, 40%);
-// $primary-color--dark: darken($primary-color, 7%);
-
-$base-color: $grey;
-$base-color--light: lighten($base-color, 30%);
-$base-color--dark: darken($base-color, 7%);
-
-$accent-color: $sec-blue;
-$accent-color--light: lighten($accent-color, 30%);
-$accent-color--dark: darken($accent-color, 7%);
-
+$divider-color		: $sec-grey--light;
 
 // -----------------------------------------------------------------------------
 // Fonts

@@ -72,11 +72,13 @@ this["ui"]["component"]["template"]["dropdown"] = Handlebars.template({"1":funct
 
   return ((stack1 = this.invokePartial(partials.pDropdownOptions,depth0,{"name":"pDropdownOptions","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "");
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, helper;
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "<div class=\"nav\">\n<ul>\n<li class=\"dropdown "
-    + this.escapeExpression(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
-    + "\">\nDrop \n	<ul class=\"nav drop-nav\">\n		"
+    + alias3(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
+    + "\">\n"
+    + alias3(((helper = (helper = helpers.item || (depth0 != null ? depth0.item : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"item","hash":{},"data":data}) : helper)))
+    + "\n	<ul class=\"nav drop-nav\">\n		"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.options : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n	</ul>\n</li>\n</ul>\n</div>";
 },"usePartial":true,"useData":true});
