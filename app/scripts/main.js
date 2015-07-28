@@ -43,3 +43,8 @@ $.get('http://api.testing.mrwatson.com/users', function(data) {
 
 
 }, "text");
+
+//dropdown
+$("li.dropdown").click(function() {
+        $(this).toggleClass("drop-nav-active");
+    });

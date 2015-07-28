@@ -13,7 +13,7 @@ ui.component.header = (function($, T) {
      */
     var params = {
         'properties': null,
-        'class': 'row header',
+        'class': 'header',
         // logo: 'images/logo.png',
         'input': false,
         'nav': true
@@ -32,13 +32,19 @@ ui.component.header = (function($, T) {
 
         //rendering the nav component
         ui.component.nav.render();
-        ui.component.textInput.render();
+        ui.component.dropdown.render();
+
+        
+        // ui.component.textInput.render();
         // ui.component.textInput.render();
         //registering the input component as a partial
         Handlebars.registerPartial({
             'partialTextInput': ui.component.textInput.render({
                 // 'background':'true'
             }),
+            // 'pDropdownHeader': ui.component.dropdown.render({
+            //     // 'options':'{{aptions}}'
+            // })
         });
 
         data = $.extend({}, params, context);

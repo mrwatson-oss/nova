@@ -62,7 +62,20 @@
                     }],
                     'text-input': [{
                         'background': 'true'
-                    }]
+                    }],
+                    'options': [{
+                                    'option': 'dezem',
+                                    'href': '#'
+                                }, {
+                                    'option': 'dezin',
+                                    'href': '#'
+                                }, {
+                                    'option': 'depin',
+                                    'href': '#'
+                                }, {
+                                    'option': 'in',
+                                    'href': '#'
+                                }]
                 }))
             );
             </script>
@@ -70,7 +83,7 @@
     </div>
     <div class="container">
         <div class="row ">
-       <p> </p>
+            <p> </p>
         </div>
         <div class="row">
             <div class="col-xs-3">
@@ -194,12 +207,12 @@
                         <script>
                         $('#header').replaceWith(
                             $(ui.component.header.render({
-                                'nav': [{
+                                'properties': [{
                                     "url": "#",
-                                    "item": 'item 1'
+                                    "item": 'Item 1'
                                 }, {
                                     "url": "#",
-                                    "item": 'item 2',
+                                    "item": 'Active item',
                                     'class': 'nav--active'
                                 }],
                                 'text-input': [{
@@ -260,6 +273,53 @@
   }))
 </code></pre>
                     </div>
+                    <div class="col-xs-12">
+                        <h2>Dropdown</h2>
+                    </div>
+                    <div class="col-xs-6">
+                        <div id="dropdown"></div>
+                        <script>
+                        $('#dropdown').replaceWith(
+                            $(ui.component.dropdown.render({
+                                'options': [{
+                                    'option': 'dezem',
+                                    'href': '#'
+                                }, {
+                                    'option': 'dezin deze is echt heel erg lang, nog langer dan de volgende',
+                                    'href': '#',
+                                    'class':'divider'
+                                }, {
+                                    'option': 'depin erg lang deze',
+                                    'href': '#'
+                                }, {
+                                    'option': 'in',
+                                    'href': '#'
+                                }]
+                            }))
+                        );
+
+                        //dropdown
+                        // $("li.dropdown").click(function() {
+                        //         $(this).toggleClass("drop-nav-active");
+                        //     });
+
+                        $('li.dropdown').click(function(event) {
+                            event.stopPropagation();
+                            $(this).toggleClass("drop-nav-active");
+                        });
+
+                        $(document).click(function() {
+                            $('li.dropdown').removeClass("drop-nav-active");
+                        });
+                        </script>
+                    </div>
+                    <div class="col-xs-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.dropdown.render({
+    // properties
+  }))
+</code></pre>
+                    </div>
                 </div>
                 <div class="row" id="anchor-nav">
                     <div class="col-xs-12">
@@ -310,10 +370,10 @@
                                     'item': "item 3"
                                 }],
                                 'button': [{
-                                    "class": "btn btn--positive pull-right",
-                                    "content": 'Action'
+                                    "class": "btn btn--positive",
+                                    "content": 'Baction'
                                 }, {
-                                    "class": "btn btn--positive pull-right",
+                                    "class": "btn btn--positive",
                                     "content": 'Action'
                                 }],
                             }))

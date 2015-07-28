@@ -76,6 +76,7 @@
 /* Components */
 @import '../components/button/button';
 @import '../components/card/card';
+@import '../components/dropdown/dropdown';
 @import '../components/header/header';
 @import '../components/text-area/textArea';
 @import '../components/text-input/textInput';
@@ -92,7 +93,8 @@ body {
   .space {
     padding: 18px 0;
   }
-  font-family: $text-color;  
+  font-family: $mrwatson-font;
+  a {
     text-decoration: none;
     color: $text-color;
     line-height: 2.4em;

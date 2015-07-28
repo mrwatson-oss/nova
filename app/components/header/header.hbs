@@ -1,4 +1,4 @@
-<div class="{{class}}">
+<div class="row {{class}}">
     {{#if logo}}
     <img src="{{logo}}" class="pull-left" alt="blabla"> {{/if}} 
     {{#if text-input}} <div class="col-xs-6 col-md-8"> {{#each text-input}} {{> partialTextInput }} {{/each}} </div> {{/if}} {{#if nav}}
@@ -8,6 +8,15 @@
             <li>{{> link}}</li>
             {{/each}}
         </ul>
+{{!-- <li class="dropdown">
+Drop 
+    <ul class="nav drop-nav">
+        {{#each options}}{{> pDropdownOptions }}{{/each}}
+    </ul>
+</li> --}}
     </div>
     {{/if}}
+        
+  
+      
 </div>

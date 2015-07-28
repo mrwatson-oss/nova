@@ -32,7 +32,7 @@ ui.component.sharePost = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
- // ui.component.textInput.render({'background':'false'});
+ // ui.component.textInput.render({'background':'true'});
         Handlebars.registerPartial({
             'partialButton': ui.component.button.render({
                 'class': '{{class}}',

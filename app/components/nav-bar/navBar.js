@@ -28,11 +28,11 @@ ui.component.navBar = (function($, T) {
      */
     function render(context) {
 
-Handlebars.registerPartial('link2', '<a href="{{url}}" class="{{class}}">{{item}}</a>');
+// Handlebars.registerPartial('link2', '<a href="{{url}}" class="{{class}}">{{item}}</a>');
 
         Handlebars.registerPartial({
             'barButton': ui.component.button.render({
-                'class': '{{class}}',
+                'class': '{{class}} pull-right',
                 'id': '{{id}}',
                 'content': '{{content}}',
                 'action': '{{action}}',

@@ -35,7 +35,10 @@ clickButton = function() {
      */
     function render(context) {
 
-
+ // Handlebars.registerPartial({
+ //            'partButton': ui.component.button.render({})
+            
+ //            });
  
         data = $.extend({}, button, context);
 

@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// Base dropdown
+// -----------------------------------------------------------------------------
+.dropdown {
+    position: relative;
+    list-style-type: none;
+    background: white;
+    cursor: default;
+    // padding: 1em;
+    .drop-nav {
+        list-style-type: none;
+        position: absolute;
+        display: none;
+        background: white;
+        li {
+            // text-align: left;
+            // padding-right: 2em;
+        }
+    }
+    &.drop-nav-active {
+        .drop-nav {
+            display: block;
+            z-index: 1;
+            box-shadow: 0px 1px 5px $border-color;
+        }
+    }
+    &:after {
+        content: "\25BC";
+        font-size: .5em;
+        display: inline-block;
+        padding: .5em;
+        position: absolute;
+    }
+    #divider {
+        border-bottom: 1px solid $border-color;
+    }
+}

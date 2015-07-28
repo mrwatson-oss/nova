@@ -39,7 +39,7 @@
     }
     .body-background-color {
         background: $body-background-color;
-        box-shadow: inset 0px 0px 0px 3px $border-color;
+        box-shadow: inset 0px 0px 0px 3px $white;
     }
     .block-background-color {
         background: $block-background-color;
@@ -99,7 +99,7 @@
         background-color: $green;
         .shade-light {
             background: $green--light;
-            box-shadow: inset 0px 0px 0px 3px $border-color;
+            box-shadow: inset 0px 0px 0px 3px $white;
         }
         .shade-dark {
             background: $green--dark;
