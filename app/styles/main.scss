@@ -84,7 +84,7 @@
 @import '../components/nav-bar/navBar';
 @import '../components/share-post/sharePost';
 
-
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,200italic,300italic);
 
 body {
   background: $body-background-color;
@@ -94,13 +94,23 @@ body {
     padding: 18px 0;
   }
   font-family: $mrwatson-font;
+  font-weight: 400;
+  font-size: 1em;
   a {
     text-decoration: none;
+    font-family: $mrwatson-headers;
     color: $text-color;
     line-height: 2.4em;
     font-size: .9em;
   }
+h1,h2,h3,h4,h5,h6 {
+  font-family: $mrwatson-headers;
+  
 
+}
+button {
+  font-family: $mrwatson-headers;
+}
   
 }
 

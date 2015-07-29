@@ -1,56 +1,77 @@
 // -----------------------------------------------------------------------------
-// Base button
+// Base Button
 // -----------------------------------------------------------------------------
 .btn {
-    // line-height: 1.4em;
-    padding: 1em 2em;
-    font-size: .9em;
-    // vertical-align: middle;
-    border: none;
+    display: inline-block;
+    margin: .2em;
+    line-height: 1em;
+    font-size: 1em;
     text-decoration: none;
-    transition: all 0.5s;
-    background-color: $button-color--neutral;
-    color: $button-color--neutral__text;
-    &:link {}
-    &:visited {
-        // bla
-    }
-    &:hover {
-        background-color: $button-color--neutral--accent;
-    }
-    &:active {}
-    &:focus {
-        outline: none;
-    }
+    cursor: pointer;
+    
 }
-/**
- * Positive buttons’ skin. Extends `.btn`.
- */
 
-.btn--positive {
-    background-color: $button-color--happy;
-    color: white;
-    &:hover {
-        background-color: $button-color--happy--accent;
-    }
-}
-/**
- * Negative buttons’ skin. Extends `.btn`.
- */
+// -----------------------------------------------------------------------------
+// Naked Buttons
+// -----------------------------------------------------------------------------
 
-.btn--negative {
-    background-color: $button-color--angry;
-    color: white;
-    &:hover {
-        background-color: $button-color--angry--accent;
-    }
+.naked-button--neutral {
+    @extend .btn;
+    @include naked-button($button-color--neutral__text,$button-color--neutral--accent);
 }
+.naked-button--happy {
+    @extend .btn;
+    @include naked-button($button-color--happy,$button-color--happy--accent);
+}
+.naked-button--strict {
+    @extend .btn;
+    @include naked-button($button-color--strict,$button-color--strict--accent);
+}
+.naked-button--angry {
+    @extend .btn;
+    @include naked-button($button-color--angry,$button-color--angry--accent);
+}
+
+.naked-button--icon {
+    @extend .btn;
+    // @include naked-button($button-color--angry);
+}
+
+// -----------------------------------------------------------------------------
+// Solid Buttons
+// -----------------------------------------------------------------------------
+
+.solid-button--neutral {
+    @extend .btn;
+    @include solid-button($button-color--neutral,$button-color--neutral--accent,$button-color--neutral__text);
+}
+
+.solid-button--happy {
+    @extend .btn;
+    @include solid-button($button-color--happy,$button-color--happy--accent);
+}
+
+.solid-button--strict {
+    @extend .btn;
+    @include solid-button($button-color--strict,$button-color--strict--accent);
+}
+
+.solid-button--angry {
+    @extend .btn;
+    @include solid-button($button-color--angry,$button-color--angry--accent);
+}
+
+// .solid-button--icon {
+//     @extend .btn;
+//     @include solid-button($button-color--neutral,$button-color--neutral--accent);
+// }
 
 .btn--icon {
-	background: no-repeat center/60% url("/images/camera.png");
+    @extend .btn;
+    background: no-repeat center/60% url("/images/camera.png");
     background-color: $button-color--neutral;
-	color: black;
-	padding: 1em 2em;
+    color: black;
+    padding: 1em 2em;
 }
 
 // -----------------------------------------------------------------------------

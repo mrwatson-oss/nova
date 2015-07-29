@@ -136,27 +136,151 @@
             <div class="col-xs-9">
                 <div class="row" id="anchor-button">
                     <div class="col-xs-12">
-                        <h2>Button</h2>
+                        <h2>Buttons</h2>
+                        <h3>Naked Button</h3>
+                    <p>//als er een block component is kan elke button met uitleg los in een 'block'
+                            <br>The naked button is used blabla
+                            <br> The 'content' property describes the action..
+                            <br> The 'class' property defines the button style. Possible options are:
+                            <ul>
+                                <li>naked-button--neutral</li>
+                                <li>naked-button--happy</li>
+                                <li>naked-button--strict</li>
+                                <li>naked-button--angry</li>
+                            </ul>
+                        </p>
                     </div>
                     <div class="col-md-6">
-                        <div id="button"></div>
+                        <div id="naked-button"></div>
                         <script>
-                        $('#button').replaceWith(
+                        $('#naked-button').replaceWith(
                             $(ui.component.button.render({
-                                'content': 'Basic'
+                                'content': 'naked-button--neutral',
+                                'class': 'naked-button--neutral'
                             })),
                             $(ui.component.button.render({
                                 'content': 'Happy',
-                                'class': 'btn btn--positive'
+                                'class': 'naked-button--happy'
                             })),
                             $(ui.component.button.render({
                                 'content': 'Strict',
-                                'class': 'btn btn--negative'
+                                'class': 'naked-button--strict'
                             })),
                             $(ui.component.button.render({
-                                'content': 'a',
-                                'icon': 'true',
-                                'class': 'btn btn--icon'
+                                'content': 'Angry',
+                                'class': 'naked-button--angry'
+                            })),
+                            $(ui.component.button.render({
+                                'content': '&#167; icon with text',
+                                'class': 'naked-button--neutral'
+                            })),
+                            $(ui.component.button.render({
+                                'content': '&#60;',
+                                'class': 'naked-button--neutral'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Neutral',
+                                'class': 'naked-button--neutral',
+                                'disabled': 'disabled'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Happy',
+                                'class': 'naked-button--happy',
+                                'disabled': 'disabled'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Strict',
+                                'class': 'naked-button--strict',
+                                'disabled': 'disabled'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Angry',
+                                'class': 'naked-button--angry',
+                                'disabled': 'disabled'
+                            })),
+                            $(ui.component.button.render({
+                                'content': '&#167; icon with text',
+                                'class': 'naked-button--neutral',
+                                'disabled': 'disabled'
+                            })),
+                            $(ui.component.button.render({
+                                'content': '&#60;',
+                                'class': 'naked-button--neutral',
+                                'disabled': 'disabled'
+                            }))
+
+                        );
+                        </script>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.button.render({
+    'content' : 'Neutral',
+    'class'   : 'naked-button--neutral'
+  }))
+</code></pre>
+                    </div>
+                    <div class="col-xs-12">
+                        <h3>Solid Button</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="solid-button"></div>
+                        <script>
+                        $('#solid-button').replaceWith(
+                            $(ui.component.button.render({
+                                'content': 'Cancel',
+                                'class': 'solid-button--neutral'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Share post',
+                                'class': 'solid-button--happy'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Check availability',
+                                'class': 'solid-button--strict'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Delete user',
+                                'class': 'solid-button--angry'
+                            })),
+                            $(ui.component.button.render({
+                                'content': '&#167; Settings',
+                                'class': 'solid-button--neutral'
+                            })),
+                            $(ui.component.button.render({
+                                'content': '?',
+                                'class': 'solid-button--strict'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Reset form',
+                                'class': 'solid-button--neutral',
+                                'disabled': 'disabled'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Happy',
+                                'class': 'solid-button--happy',
+                                'disabled': 'disabled'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Check availability',
+                                'class': 'solid-button--strict',
+                                'disabled': 'disabled'
+                            })),
+                            $(ui.component.button.render({
+                                'content': 'Angry',
+                                'class': 'solid-button--angry',
+                                'disabled': 'disabled'
+                            })),
+                            $(ui.component.button.render({
+                                'content': '&#167; icon with text',
+                                'class': 'solid-button--neutral',
+                                'disabled': 'disabled'
+                            })),
+                            $(ui.component.button.render({
+                                'content': '?',
+                                'class': 'solid-button--strict',
+                                'disabled': 'disabled'
                             }))
 
                         );
@@ -353,7 +477,7 @@
                 </div>
                 <div class="row" id="anchor-navBar">
                     <div class="col-xs-12">
-                        <h2>NavBar</h2>
+                        <h2>App Bar</h2>
                     </div>
                     <div class="col-xs-12">
                         <div id="navBar"></div>
@@ -362,21 +486,15 @@
                             $(ui.component.navBar.render({
                                 properties: [{
                                     'url': '#',
-                                    'item': 'item 1',
+                                    'item': 'Upcoming events',
                                     'class': 'nav--active'
                                 }, {
                                     'url': '#',
-                                    'item': 'item 2'
-                                }, {
-                                    'url': '#',
-                                    'item': 'item 3'
+                                    'item': 'Past events'
                                 }],
                                 'button': [{
-                                    'class': 'btn btn--positive',
-                                    'content': 'Baction'
-                                }, {
-                                    'class': 'btn btn--positive',
-                                    'content': 'Action'
+                                    'class': 'solid-button--strict',
+                                    'content': 'Add user'
                                 }],
                             }))
                         );
@@ -401,12 +519,12 @@
                         $('#share-post').replaceWith(
                             $(ui.component.sharePost.render({
                                 'button': [{
-                                    'class': 'btn btn--icon pull-left',
-                                    'content': 'a',
+                                    'class': 'solid-button--neutral',
+                                    'content': 'i',
                                     'action': 'alert("ok, pick something classy please")'
                                 }, {
-                                    'class': 'btn btn--positive pull-right',
-                                    'content': 'Share'
+                                    'class': 'solid-button--happy pull-right',
+                                    'content': 'Share post'
                                 }],
                                 'text-input': [{
                                     'background': 'false'
