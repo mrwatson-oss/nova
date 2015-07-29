@@ -6,15 +6,18 @@
     <title>mr.Watson - Style Guide</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="/icon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="icon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="styles/prism.css">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/prism.css">
+    <!-- endbuild -->
+    <!-- build:js(.) scripts/plugins.js -->
+    <script src="scripts/prism.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -22,8 +25,8 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
     <script src="bower_components/handlebars/handlebars.js"></script>
+    <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/ui-templates.js"></script>
@@ -42,15 +45,15 @@
             $('#header').replaceWith(
                 $(header.render({
                     'properties': [{
-                        "url": "#",
-                        "item": 'UI base',
+                        'url': '#',
+                        'item': 'UI base',
                         'class': 'nav--active'
                     }, {
-                        "url": "/ui-components.html",
-                        "item": 'UI components'
+                        'url': '/ui-components.html',
+                        'item': 'UI components'
                     }, {
-                        "url": "#",
-                        "item": 'About'
+                        'url': '#',
+                        'item': 'About'
                     }],
                     'text-input': [{
                         'background': 'true'
@@ -73,26 +76,26 @@
                         properties: [
 
                             // {
-                            //     "url": "#",
-                            //     "item": 'Layout'
+                            //     'url': '#',
+                            //     'item': 'Layout'
                             // }, 
                             // {
-                            //     "url": "#",
-                            //     "item": 'Typography'
+                            //     'url': '#',
+                            //     'item': 'Typography'
                             // }, 
                             {
-                                "url": "#",
-                                "item": 'Colors'
+                                'url': '#',
+                                'item': 'Colors'
                             }, {
-                                "url": "#",
-                                "item": 'Grid'
+                                'url': '#',
+                                'item': 'Grid'
                             },
                             // {
-                            //     "url": "#",
-                            //     "item": 'Icons'
+                            //     'url': '#',
+                            //     'item': 'Icons'
                             // }, {
-                            //     "url": "#",
-                            //     "item": 'Branding'
+                            //     'url': '#',
+                            //     'item': 'Branding'
                             // }
                         ]
                     }))
@@ -104,14 +107,14 @@
                 $('#side-nav2').replaceWith(
                     $(ui.component.nav.render({
                         properties: [{
-                            "url": "#",
-                            "item": 'Scaffolding'
+                            'url': '#',
+                            'item': 'Scaffolding'
                         }, {
-                            "url": "#",
-                            "item": 'Code Standards'
+                            'url': '#',
+                            'item': 'Code Standards'
                         }, {
-                            "url": "#",
-                            "item": 'CSS Helpers'
+                            'url': '#',
+                            'item': 'CSS Helpers'
                         }]
                     }))
 
@@ -297,29 +300,7 @@
                 </div>
             </div>
         </div>
-        <!-- build:js(.) scripts/plugins.js -->
-        <script src="scripts/prism.js"></script>
-        <!-- endbuild -->
-</body>
 
-</html>
-rkup"><code class="language-markup">&lt;div class="row" &gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
-<!-- build:js(.) scripts/plugins.js -->
-<!-- endbuild -->
-<!-- build:js scripts/main.js -->
-<script src="scripts/main.js"></script>
-<script src="scripts/prism.js"></script>
-<!-- endbuild -->
 </body>
 
 </html>
