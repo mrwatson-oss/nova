@@ -1,0 +1,25 @@
+
+
+
+
+
+
+.avatar {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    img {
+        max-width: 100%;
+    }
+    &.round {
+        border-radius: 50%;
+    }
+}
+
+.avatar--small {
+    // @extend .avatar;
+    width: 60px;
+    height: 60px;
+}
+

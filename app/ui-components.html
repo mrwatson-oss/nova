@@ -134,11 +134,47 @@
                 </script>
             </div>
             <div class="col-xs-9">
+                <div class="row" id="anchor-avatar">
+                    <div class="col-xs-12">
+                        <h2>Avatars</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="avatar"></div>
+                        <script>
+                        $('#avatar').replaceWith(
+                            $(ui.component.avatar.render({
+                                'avatar': [{
+                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg'
+                                }, {
+                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
+                                    'round': true
+                                },{
+                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
+                                    'small': true
+                                }, {
+                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
+                                    'round': true,
+                                    'small': true
+                                }
+
+                                ]
+                            }))
+                        );
+                        </script>
+                    </div>
+                    <div class="col-md-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.avatar.render({
+    // properties
+  }))
+</code></pre>
+                    </div>
+                </div>
                 <div class="row" id="anchor-button">
                     <div class="col-xs-12">
                         <h2>Buttons</h2>
                         <h3>Naked Button</h3>
-                    <p>//als er een block component is kan elke button met uitleg los in een 'block'
+                        <p>//als er een block component is kan elke button met uitleg los in een 'block'
                             <br>The naked button is used blabla
                             <br> The 'content' property describes the action..
                             <br> The 'class' property defines the button style. Possible options are:
@@ -147,6 +183,8 @@
                                 <li>naked-button--happy</li>
                                 <li>naked-button--strict</li>
                                 <li>naked-button--angry</li>
+                                <li>pull-left/right</li>
+                                <li>'disabled':'true'</li>
                             </ul>
                         </p>
                     </div>
@@ -211,7 +249,6 @@
 
                         );
                         </script>
-                        
                     </div>
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
