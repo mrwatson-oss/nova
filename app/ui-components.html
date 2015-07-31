@@ -8,16 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="icon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="styles/prism.css">
-    <!-- endbower -->
-    <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    <!-- build:js(.) scripts/plugins.js -->
-    <script src="scripts/prism.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -33,6 +25,9 @@
     <script src="scripts/ui-components.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <link rel="stylesheet" href="vendor/prism.css">
+    <script src="vendor/prism.js"></script>
+
 </head>
 
 <body>
@@ -134,9 +129,10 @@
                 </script>
             </div>
             <div class="col-xs-9">
-                <div class="row" id="anchor-avatar">
+                <div class="row" id="anchor-images">
                     <div class="col-xs-12">
-                        <h2>Avatars</h2>
+                        <h2>Images</h2>
+                        <h3>Avatar</h3>
                     </div>
                     <div class="col-md-6">
                         <div id="avatar"></div>
@@ -148,16 +144,14 @@
                                 }, {
                                     'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
                                     'round': true
-                                },{
+                                }, {
                                     'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
                                     'small': true
                                 }, {
                                     'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
                                     'round': true,
                                     'small': true
-                                }
-
-                                ]
+                                }]
                             }))
                         );
                         </script>
@@ -165,6 +159,53 @@
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
   $(ui.component.avatar.render({
+    // properties
+  }))
+</code></pre>
+                    </div>
+                    <div class="col-xs-12">
+                        <h3>Body Image</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="bodyimage"></div>
+                        <script>
+                        $('#bodyimage').replaceWith(
+                            $(ui.component.image.render({
+                                'image': [{
+                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
+                                    'body':true
+                                }]
+                            }))
+                        );
+                        </script>
+                    </div>
+                    <div class="col-md-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.image.render({
+    // properties
+  }))
+</code></pre>
+                    </div>
+                
+                <div class="col-xs-12">
+                        <h3>Cover Image</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="coverimage"></div>
+                        <script>
+                        $('#coverimage').replaceWith(
+                            $(ui.component.image.render({
+                                'image': [{
+                                    'src': 'http://www.apnatimepass.com/dumb-and-dumber-to-movie/dumb-and-dumber-to-movie-still-10.jpg',
+                                    'cover':true
+                                }]
+                            }))
+                        );
+                        </script>
+                    </div>
+                    <div class="col-md-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.image.render({
     // properties
   }))
 </code></pre>
@@ -193,51 +234,51 @@
                         <script>
                         $('#naked-button').replaceWith(
                             $(ui.component.button.render({
-                                'content': 'naked-button--neutral',
+                                'content': 'Meetings',
                                 'class': 'naked-button--neutral'
                             })),
                             $(ui.component.button.render({
-                                'content': 'Happy',
+                                'content': 'Like',
                                 'class': 'naked-button--happy'
                             })),
                             $(ui.component.button.render({
-                                'content': 'Strict',
+                                'content': 'Back',
                                 'class': 'naked-button--strict'
                             })),
                             $(ui.component.button.render({
-                                'content': 'Angry',
+                                'content': 'Destroy',
                                 'class': 'naked-button--angry'
                             })),
                             $(ui.component.button.render({
-                                'content': '&#167; icon with text',
+                                'content': '&#167; Menu',
                                 'class': 'naked-button--neutral'
                             })),
                             $(ui.component.button.render({
-                                'content': '&#60;',
+                                'content': '&#9758;',
                                 'class': 'naked-button--neutral'
                             })),
                             $(ui.component.button.render({
-                                'content': 'Neutral',
+                                'content': 'Members',
                                 'class': 'naked-button--neutral',
                                 'disabled': 'disabled'
                             })),
                             $(ui.component.button.render({
-                                'content': 'Happy',
+                                'content': 'Save changes',
                                 'class': 'naked-button--happy',
                                 'disabled': 'disabled'
                             })),
                             $(ui.component.button.render({
-                                'content': 'Strict',
+                                'content': 'Receive &#36;100',
                                 'class': 'naked-button--strict',
                                 'disabled': 'disabled'
                             })),
                             $(ui.component.button.render({
-                                'content': 'Angry',
+                                'content': 'Kill app',
                                 'class': 'naked-button--angry',
                                 'disabled': 'disabled'
                             })),
                             $(ui.component.button.render({
-                                'content': '&#167; icon with text',
+                                'content': '&#167; All groups',
                                 'class': 'naked-button--neutral',
                                 'disabled': 'disabled'
                             })),
@@ -282,7 +323,7 @@
                                 'class': 'solid-button--angry'
                             })),
                             $(ui.component.button.render({
-                                'content': '&#167; Settings',
+                                'content': '&#9758; Settings',
                                 'class': 'solid-button--neutral'
                             })),
                             $(ui.component.button.render({
@@ -295,7 +336,7 @@
                                 'disabled': 'disabled'
                             })),
                             $(ui.component.button.render({
-                                'content': 'Happy',
+                                'content': 'Save changes',
                                 'class': 'solid-button--happy',
                                 'disabled': 'disabled'
                             })),
@@ -305,12 +346,12 @@
                                 'disabled': 'disabled'
                             })),
                             $(ui.component.button.render({
-                                'content': 'Angry',
+                                'content': 'Discard changes',
                                 'class': 'solid-button--angry',
                                 'disabled': 'disabled'
                             })),
                             $(ui.component.button.render({
-                                'content': '&#167; icon with text',
+                                'content': '&#167; Settings',
                                 'class': 'solid-button--neutral',
                                 'disabled': 'disabled'
                             })),
@@ -346,7 +387,7 @@
                                         'title': 'Marius',
                                         'class': 'card__person'
                                     }, {
-                                        'copy': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum natus sunt nisi ducimus similique rem dicta, numquam dolore ab earum. Perferendis eveniet repellendus tempore sunt ab consectetur facilis nesciunt animi.'
+                                        'copy': 'Ik zoek een accountant! Geen groot kantoor, maar een partij met een persoonlijke benadering en vriendelijke tariefjes. Kan iemand mij verder helpen? - gracias de antemano'
                                     }
 
                                 ]

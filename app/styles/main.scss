@@ -79,6 +79,7 @@
 @import '../components/card/card';
 @import '../components/dropdown/dropdown';
 @import '../components/header/header';
+@import '../components/image/image';
 @import '../components/text-area/textArea';
 @import '../components/text-input/textInput';
 @import '../components/nav/nav';
@@ -95,8 +96,8 @@ body {
     padding: 18px 0;
   }
   font-family: $mrwatson-font;
-  font-weight: 400;
-  font-size: 1em;
+  // font-weight: 400;
+  font-size: .9em;
   a {
     text-decoration: none;
     font-family: $mrwatson-headers;
@@ -112,6 +113,66 @@ h1,h2,h3,h4,h5,h6 {
 button {
   font-family: $mrwatson-headers;
 }
+p {
+  line-height: 1.4em;
+}
   
 }
 
+
+#theApp {
+  height: 300px;
+background: white;
+padding: 1em;
+  #start,#game,#finish {background: white; }
+
+
+.highscores {
+  border-left: solid 1px black;
+}
+
+.scoreListHighscore{
+  font-weight: bold;
+}
+
+.teader {
+  padding-bottom: 3em;
+  margin-bottom: 1em;
+  border-bottom: 1px;
+  // height: 20px;
+}
+
+.headercontent {
+  float: left;
+}
+
+.score {
+  float: right;
+
+}
+
+.ranking {
+  float: right;
+}
+
+
+
+.photo {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+.names {
+  // padding: 0 10px 5px 10px;
+}
+
+.userPhoto {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}}

@@ -15,7 +15,7 @@ ui.component.button = (function($, T) {
         'class': 'btn',
         id: null,
         name: 'hap',
-        type: null,
+        type: 'button',
         value: null,
         content: null,
         action: 'clickButton()',

@@ -343,7 +343,8 @@ module.exports = function(grunt) {
                         '*.{ico,png,txt}',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
-                        'fonts/{,*/}*.*'
+                        'fonts/{,*/}*.*',
+                        'vendor/*'
                     ]
                 }, {
                     expand: true,
@@ -365,7 +366,7 @@ module.exports = function(grunt) {
                     src: [
                         '<%= config.dist %>/scripts/{,*/}*.js',
                         '<%= config.dist %>/styles/{,*/}*.css',
-                        '!<%= config.dist %>/scripts/vendor/*'
+                        '<%= config.dist %>/scripts/vendor/*'
                     ]
                 },
                 uglify: true
