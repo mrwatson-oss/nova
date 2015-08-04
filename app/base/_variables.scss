@@ -2,9 +2,10 @@
 //http://davidwalsh.name/sass-color-variables-dont-suck
 //http://chir.ag/projects/name-that-color/#6195ED
 
-// 00000000000000000000000000000000000000000000000000000000000000000000000000000
+
+// ================================
 // Color
-// 00000000000000000000000000000000000000000000000000000000000000000000000000000
+// ================================
 
 // -----------------------------------------------------------------------------
 // Primary Palette // DO NOT CALL THESE DIRECTLY, USE UI COLORS INSTEAD
@@ -31,19 +32,6 @@ $sec-red--dark		: darken($sec-red, 10%);
 $sec-grey			: #B3B3B3;
 $sec-grey--light	: lighten($sec-grey, 20%);
 $sec-grey--dark		: darken($sec-grey, 20%);
-
-// -----------------------------------------------------------------------------
-// UI colors - TYPE
-// -----------------------------------------------------------------------------
-
-$text-color				: $grey--dark;
-$text-color--accent		: $green;
-
-$header-color			: $grey--dark;
-$header-color--accent	: $green;
-
-$link-color				: $sec-blue--dark;
-
 
 // -----------------------------------------------------------------------------
 // UI colors - BACKGROUNDS
@@ -81,12 +69,27 @@ $button-color--angry--accent		: $sec-red--dark;
 
 $divider-color		: $sec-grey--light;
 
-// 00000000000000000000000000000000000000000000000000000000000000000000000000000
+
+// ================================
 // Type
-// 00000000000000000000000000000000000000000000000000000000000000000000000000000
+// ================================
 
 // -----------------------------------------------------------------------------
-// Fonts
+// Type - COLOR
+// -----------------------------------------------------------------------------
+
+$text-color				: $grey--dark;
+$text-color--accent		: $green;
+
+$header-color			: $grey--dark;
+$header-color--accent	: $green;
+
+$link-color				: $sec-blue--dark;
+$link-color--accent		: $sec-blue;
+
+
+// -----------------------------------------------------------------------------
+// Type - FAMILY
 // -----------------------------------------------------------------------------
 
 @font-face {
@@ -94,16 +97,31 @@ $divider-color		: $sec-grey--light;
     src: url('../fonts/Azo-Sans-Regular.otf');
 }
 
-$mrwatson-headers: 'Azo-Sans-Regular';
-$mrwatson-font: 'Source Sans Pro';
+$button-font: 'Azo-Sans-Regular';
+// $mrwatson-font: 'Source Sans Pro';
+
+$font-family			: 'Source Sans Pro', sans-serif;
+$font-family--special	: 'Roboto', sans-serif;
+
+//todo: mixin for browser compatibility
+$font-size: .9em; 
 
 // -----------------------------------------------------------------------------
-// Typography
+// Type - WEIGHT
 // -----------------------------------------------------------------------------
 
-h1 {
-	
-}
+$font-weight--light: 300;
+$font-weight--regular: 400;
+$font-weight--bold: 500;
 
+// -----------------------------------------------------------------------------
+// Type - SIZE
+// -----------------------------------------------------------------------------
 
-
+//todo: mixin for browser compatibility
+$font-size--small: 0.7em;
+$font-size--regular: 0.9em;
+$font-size--large: 1.2em;
+$font-size--x-large: 1.6em;
+$font-size--xx-large: 2.2em;
+$font-size--xxx-large: 3.2em;

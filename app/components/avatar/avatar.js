@@ -27,10 +27,6 @@ ui.component.avatar = (function($, T) {
      */
     function render(context) {
 
- // Handlebars.registerPartial({
- //            'partButton': ui.component.avatar.render({})
-            
- //            });
  
         data = $.extend({}, avatar, context);
 

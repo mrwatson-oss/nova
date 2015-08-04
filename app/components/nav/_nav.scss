@@ -2,14 +2,24 @@
     // @extend .card;
     // margin: 1em 0 0 0;
     padding: 0;
-    background-color: white;
-
+    li {
+        background: white;
+        :focus {
+            outline: none;
+        }
+        a {
+            text-decoration: none;
+            // font-family: $mrwatson-headers;
+            color: $text-color;
+            line-height: 2.4em;
+            font-size: .9em;
+        }
+    }
 }
 
 .nav--horizontal {
-    
-        margin: 0;
-        li {
+    margin: 0;
+    li {
         float: left;
     }
 }
@@ -18,8 +28,3 @@
     border-bottom: 3px solid $grey--light;
 }
 
-    // background-color: white;
-    // text-decoration: none;
-    // list-style-type: none;
-    // padding: 0;
-    // margin: 0;

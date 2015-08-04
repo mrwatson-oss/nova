@@ -1,5 +1,45 @@
 var ui = ui || {};
 
+ui.component.appblock = (function($, T) {
+
+    /**
+     * appblock
+     * @type {Object}
+     */
+    var appblock = {
+        'class': null,
+        'avatar':null
+
+};
+
+     
+    /**
+     * render
+     *
+     * @todo make this method extended or mixin
+     * @param {} appblock object with all properties
+     * @return compiled handlebars template
+     */
+    function render(context) {
+// ui.component.avatar.render({})
+
+// Handlebars.registerPartial('theTitle', '{{title}}');
+// Handlebars.registerPartial('theCopy', '{{copy}}');
+// Handlebars.registerPartial('theThumbnail', '{{thumbnail}}');
+ 
+        data = $.extend({}, appblock, context);
+
+        return T.appblock(data);
+    }
+
+    return {
+        render: render
+    };
+
+
+}
+(jQuery, ui.component.template));;var ui = ui || {};
+
 ui.component.avatar = (function($, T) {
 
     /**
@@ -22,10 +62,6 @@ ui.component.avatar = (function($, T) {
      */
     function render(context) {
 
- // Handlebars.registerPartial({
- //            'partButton': ui.component.avatar.render({})
-            
- //            });
  
         data = $.extend({}, avatar, context);
 
@@ -71,10 +107,7 @@ clickButton = function() {
      */
     function render(context) {
 
- // Handlebars.registerPartial({
- //            'partButton': ui.component.button.render({})
-            
- //            });
+
  
         data = $.extend({}, button, context);
 
@@ -378,6 +411,38 @@ Handlebars.registerPartial('link', '<a href="{{baseurl}}{{url}}">{{item}}</a>');
 
 }
 (jQuery, ui.component.template));;var ui = ui || {};
+ui.component.partials = (function($, T) {
+        var partials = {};
+
+        function render(context) {
+
+            Handlebars.registerPartial({
+                'PartialButton': ui.component.button.render({
+                    'class': '{{class}}',
+                    'id': '{{id}}',
+                    'content': '{{content}}',
+                    'action': '{{action}}',
+                    'name': '{{name}}'
+                }),
+                'PartialAvatar': ui.component.avatar.render({
+                    'class':'{{class}}',
+                    'src':'{{src}}'
+                })
+            });
+
+            data = $.extend({}, partials, context);
+
+            return T.partials(data);
+        }
+
+        return {
+            render: render
+        };
+
+
+    }
+    (jQuery, ui.component.template));
+;var ui = ui || {};
 
 ui.component.sharePost = (function($, T) {
 

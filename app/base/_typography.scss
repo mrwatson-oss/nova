@@ -1,0 +1,68 @@
+// 00000000000000000000000000000000000000000000000000000000000000000000000000000
+// Type
+// 00000000000000000000000000000000000000000000000000000000000000000000000000000
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+// @font-face {
+//     font-family: Azo-Sans-Regular;
+//     src: url('../fonts/Azo-Sans-Regular.otf');
+// }
+// $mrwatson-headers: 'Azo-Sans-Regular';
+// $mrwatson-font: 'Source Sans Pro';
+// $font-family: 'Roboto', sans-serif;
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+body {
+    font-family: $font-family;
+    color: $text-color;
+    p {
+        font-weight: $font-weight--regular;
+        line-height: 1.4em;
+        a {
+            color: $link-color;
+            text-decoration: none;
+            // transition: all .1s;
+            &:hover {
+                color: $link-color--accent;
+                border-bottom: 1px solid $link-color--accent;
+            }
+        }
+    }
+    ul {
+        li {
+            list-style-type: circle;
+        }
+    }
+    h1 {
+        font-family: $font-family--special;
+        font-weight: $font-weight--light;
+        font-size: $font-size--xxx-large;
+    }
+    h2 {
+        font-family: $font-family--special;
+        font-weight: $font-weight--light;
+        font-size: $font-size--xx-large;
+    }
+    h3 {
+        font-family: $font-family--special;
+        font-weight: $font-weight--light;
+        font-size: $font-size--x-large;
+    }
+    h4 {
+        font-family: $font-family--special;
+        font-weight: $font-weight--light;
+        font-size: $font-size--large;
+    }
+    h5 {
+        font-family: $font-family--special;
+        font-weight: $font-weight--light;
+        font-size: $font-size--regular;
+    }
+    h6 {
+        font-family: $font-family--special;
+        font-weight: $font-weight--light;
+        font-size: $font-size--small;
+    }
+}

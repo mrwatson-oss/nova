@@ -1,0 +1,9 @@
+<div class="row app-block {{class}}" id="{{id}}">
+    <div class="col-xs-12">
+    	{{#each appBlockButter}} {{>PartialButton}} {{/each}}
+    	{{#each appBlockAvatar}} {{>PartialAvatar}} {{/each}}
+    	{{#each appBlockContent}} <p>{{{content}}} </p>{{/each}}
+    	{{#each appBlockButton}} {{>PartialButton}} {{/each}}
+    </div>
+    {{!-- {{#each appblockAvatar}} {{>PartialAvatar}} {{/each}} --}}
+</div>

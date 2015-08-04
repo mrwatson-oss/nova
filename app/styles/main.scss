@@ -10,6 +10,7 @@
 @import "../base/variables";
 @import "../base/mixins";
 @import "../base/color-palette";
+@import "../base/typography";
 
 /* Bootstrap grid */
 
@@ -75,6 +76,7 @@
 
 /* Components */
 @import '../components/avatar/avatar';
+@import '../components/appblock/appblock';
 @import '../components/button/button';
 @import '../components/card/card';
 @import '../components/dropdown/dropdown';
@@ -86,7 +88,8 @@
 @import '../components/nav-bar/navBar';
 @import '../components/share-post/sharePost';
 
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,200italic,300italic);
+// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,200italic,300italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500|Source+Sans+Pro:400,300);
 
 body {
   background: $body-background-color;
@@ -95,33 +98,35 @@ body {
   .space {
     padding: 18px 0;
   }
-  font-family: $mrwatson-font;
-  // font-weight: 400;
-  font-size: .9em;
-  a {
-    text-decoration: none;
-    font-family: $mrwatson-headers;
-    color: $text-color;
-    line-height: 2.4em;
-    font-size: .9em;
-  }
-h1,h2,h3,h4,h5,h6 {
-  font-family: $mrwatson-headers;
+  // font-family: $mrwatson-font;
+  // // font-weight: 400;
+  // font-size: .9em;
+  // a {
+  //   text-decoration: none;
+  //   font-family: $mrwatson-headers;
+  //   color: $text-color;
+  //   line-height: 2.4em;
+  //   font-size: .9em;
+  // }
+// h1,h2,h3,h4,h5,h6 {
+//   font-family: $mrwatson-headers;
   
 
-}
-button {
-  font-family: $mrwatson-headers;
-}
-p {
-  line-height: 1.4em;
-}
+// }
+// button {
+//   font-family: $mrwatson-headers;
+// // }
+// p {
+//   line-height: 1.4em;
+// }
   
 }
 
 
 #theApp {
-  height: 300px;
+  min-height: 300px;
+  max-height: 100%;
+  // max-height: 100%;
 background: white;
 padding: 1em;
   #start,#game,#finish {background: white; }

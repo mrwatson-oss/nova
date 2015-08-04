@@ -1,5 +1,7 @@
 // jshint devel:true
 // Scroll to anchor
+$(document).ready(function() {
+'use strict';
 $('a[href*=#]:not([href=#])').click(function() {
     'use strict';
     if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') || location.hostname === this.hostname) {
@@ -13,45 +15,49 @@ $('a[href*=#]:not([href=#])').click(function() {
         }
     }
 });
+})
 
 // naam en foto van de watson api binnenhalen en aan html attributen binden.
-$.get('http://api.testing.mrwatson.com/users', function(data) {
-    'use strict';
-    if (!data || data === "") {
-        console.log('geen data sorry joh');
-        return;
-    }
-    var json;
-    try {
-        json = jQuery.parseJSON(data);
-    } catch (e) {
-        console.log('die andere error');
-        return;
-    }
+// $.get('http://api.testing.mrwatson.com/users', function(data) {
+//     'use strict';
+//     if (!data || data === "") {
+//         console.log('geen data sorry joh');
+//         return;
+//     }
+//     var json;
+//     try {
+//         json = jQuery.parseJSON(data);
+//     } catch (e) {
+//         console.log('die andere error');
+//         return;
+//     }
 
-    var randomUser = (Math.floor(Math.random() * json.length - 1));
-
-
-    // console.log(json[randomUser].user.first_name);
-    // console.log(json[randomUser].user.profile_picture);
+//     var randomUser = (Math.floor(Math.random() * json.length - 1));
 
 
-    $('#naam').html(json[randomUser].user.first_name);
-    $('#foto').attr("src", json[randomUser].user.profile_picture);
-    // .html(json[randomUser].user.profile_picture);
+//     // console.log(json[randomUser].user.first_name);
+//     // console.log(json[randomUser].user.profile_picture);
+
+
+//     $('#naam').html(json[randomUser].user.first_name);
+//     $('#foto').attr("src", json[randomUser].user.profile_picture);
+//     // .html(json[randomUser].user.profile_picture);
 
 
 
-}, "text");
+// }, "text");
 
 //dropdown
 $("li.dropdown").click(function() {
+    'use strict';
     $(this).toggleClass("drop-nav-active");
 });
 
+
+//app
 //start app on doc load
 $(document).ready(function() {
-
+// 'use strict';
     //prepare html to show first screen only
     $('#game, #finish').hide();
 
@@ -186,10 +192,10 @@ $(document).ready(function() {
                     $('.progress').html(pastUsers.length + " / " + (availableUsers.length -1));
                     score += 1;
                     $('.score').html(score);
-                    console.log("corrreeectt : " + score);
+                    // console.log("corrreeectt : " + score);
                     //when all valid users have been shown.
                     if (pastUsers.length >= availableUsers.length - 1) {
-                        console.log("you the man");
+                        alert("you the man");
                         $(theWinner).html('<img class="image" src="http://i416.photobucket.com/albums/pp250/mychitphoto/comments%20diver/youre-da-man.jpg">');
                     }
                     $('#names').empty();
@@ -220,7 +226,7 @@ $(document).ready(function() {
                         $('#scoreListHighscore9').html(scorelist[8]);
                         $('#scoreListHighscore10').html(scorelist[9]);
                     }
-                    console.log(scorelist);
+                    // console.log(scorelist);
 
                     $('#game').hide();
                     $('#finish').show("slow");
@@ -230,7 +236,7 @@ $(document).ready(function() {
 
                     $('#thisPersonsName').html(currentUser.firstName);
 
-                    console.log("game over: " + score);
+                    // console.log("game over: " + score);
                     score = 0;
                     pastUsers = [];
                     $('.progress').html("0" + " / " + (availableUsers.length -1));
