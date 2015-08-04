@@ -18,7 +18,14 @@ ui.component.dropdown = (function($, T) {
         value: null,
         placeholder: 'placeholder'
     };
+ $('li.dropdown').click(function(event) {
+                            event.stopPropagation();
+                            $(this).toggleClass('drop-nav-active');
+                        });
 
+                        $(document).click(function() {
+                            $('li.dropdown').removeClass('drop-nav-active');
+                        });
     /**
      * render
      *

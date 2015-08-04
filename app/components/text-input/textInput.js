@@ -18,7 +18,8 @@ ui.component.textInput = (function($, T) {
         'type': 'text',
         'value': null,
         'placeholder': 'placeholder',
-        'label': false,
+        'hasLabel': false,
+        'label': null,
         'background': null
     };
 

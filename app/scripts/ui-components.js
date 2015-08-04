@@ -178,7 +178,14 @@ ui.component.dropdown = (function($, T) {
         value: null,
         placeholder: 'placeholder'
     };
+ $('li.dropdown').click(function(event) {
+                            event.stopPropagation();
+                            $(this).toggleClass('drop-nav-active');
+                        });
 
+                        $(document).click(function() {
+                            $('li.dropdown').removeClass('drop-nav-active');
+                        });
     /**
      * render
      *
@@ -425,8 +432,16 @@ ui.component.partials = (function($, T) {
                     'name': '{{name}}'
                 }),
                 'PartialAvatar': ui.component.avatar.render({
-                    'class':'{{class}}',
-                    'src':'{{src}}'
+                    'class': '{{class}}',
+                    'src': '{{src}}'
+                }),
+                'PartialTextInput': ui.component.textInput.render({
+                    'id': '{{id}}',
+                    'name': '{{name}}',
+                    'value': '{{value}}',
+                    'placeholder': '{{placeholder}}',
+                    // 'hasLabel': '{{hasLabel}}',
+                    'label': '{{label}}'
                 })
             });
 
@@ -442,6 +457,16 @@ ui.component.partials = (function($, T) {
 
     }
     (jQuery, ui.component.template));
+
+
+// ,
+// 'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
+// 'round': true,
+// 'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
+// 'small': true,
+// 'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
+// 'round': true,
+// 'small': true
 ;var ui = ui || {};
 
 ui.component.sharePost = (function($, T) {
@@ -472,18 +497,18 @@ ui.component.sharePost = (function($, T) {
      */
     function render(context) {
  // ui.component.textInput.render({'background':'true'});
-        Handlebars.registerPartial({
-            'partialButton': ui.component.button.render({
-                'class': '{{class}}',
-                'id': '{{id}}',
-                'content': '{{content}}',
-                'action': '{{action}}',
-                'name': '{{name}}'
-            }),
+    //     Handlebars.registerPartial({
+    //         'partialButton': ui.component.button.render({
+    //             'class': '{{class}}',
+    //             'id': '{{id}}',
+    //             'content': '{{content}}',
+    //             'action': '{{action}}',
+    //             'name': '{{name}}'
+    //         }),
            
 
 
-    });
+    // });
 
         data = $.extend({}, params, context);
 
@@ -551,7 +576,8 @@ ui.component.textInput = (function($, T) {
         'type': 'text',
         'value': null,
         'placeholder': 'placeholder',
-        'label': false,
+        'hasLabel': false,
+        'label': null,
         'background': null
     };
 

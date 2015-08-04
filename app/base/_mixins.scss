@@ -25,6 +25,7 @@
         // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4); 
     }
     &:focus {
+        background-color: $button-color-accent;
         outline: none;
     }
     &:disabled {
@@ -49,6 +50,7 @@
         // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4); 
     }
     &:focus {
+        color: $button-color-accent;
         outline: none;
     }
     &:disabled {

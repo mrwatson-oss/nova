@@ -1,7 +1,7 @@
 <div class="row {{class}}">
     {{#if logo}}
     <img src="{{logo}}" class="pull-left" alt="blabla"> {{/if}} 
-    {{#if text-input}} <div class="col-xs-6 col-md-8"> {{#each text-input}} {{> partialTextInput }} {{/each}} </div> {{/if}} {{#if nav}}
+    <div class="col-xs-6 col-md-8"> {{#each headerTextInput}} {{> PartialTextInput }} {{/each}} </div> {{#if nav}}
     <div class="col-xs-6 col-md-4">
         <ul class="nav nav--horizontal">
             {{#each properties}}

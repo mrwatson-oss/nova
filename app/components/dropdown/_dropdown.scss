@@ -3,11 +3,12 @@
 // -----------------------------------------------------------------------------
 .dropdown {
     position: relative;
+    display: inline-block;
     list-style-type: none;
     background: white;
     cursor: default;
     color: $text-color;
-    // padding: 1em;
+    padding: 1em;
     .drop-nav {
         list-style-type: none;
         position: absolute;

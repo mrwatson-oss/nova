@@ -65,4 +65,8 @@ body {
         font-weight: $font-weight--light;
         font-size: $font-size--small;
     }
+    input, textarea {
+    	font-size: .9em;
+    	color: $text-color;
+    }
 }

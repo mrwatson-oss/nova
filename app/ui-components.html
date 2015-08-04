@@ -52,6 +52,10 @@
             //      }))
             $('#header').replaceWith(
                 $(header.render({
+                    'headerTextInput': [{
+                        'placeholder': 'Seach for components or whatever'
+
+                    }],
                     'properties': [{
                         'url': '/index.html',
                         'item': 'UI base'
@@ -62,9 +66,6 @@
                     }, {
                         'url': '#',
                         'item': 'About'
-                    }],
-                    'text-input': [{
-                        'background': 'true'
                     }],
                     'options': [{
                         'option': 'dezem',
@@ -323,6 +324,31 @@ $(ui.component.avatar.render({
                         );
                         </script>
                     </div>
+                    <div class="col-xs-12">
+                        <div id="bappblock"></div>
+                        <script>
+                        $('#bappblock').replaceWith(
+                            $(ui.component.appblock.render({
+                                'appBlockButton': [{
+                                    'class': 'solid-button--angry',
+                                    'content': 'hoi'
+                                }, {
+                                    'class': 'solid-button--strict',
+                                    'content': 'rush'
+                                }],
+                                'appBlockAvatar': [{
+                                    'src': 'http://img1.wikia.nocookie.net/__cb20120402040942/creepypasta/images/7/7d/Black-kitten-2.jpg'
+
+                                }],
+                                'appBlockContent': [{
+                                    'content': 'heya be <div id="bla">had</div>'
+                                }]
+
+
+                            }))
+                        );
+                        </script>
+                    </div>
                 </div>
                 <div class="row" id="anchor-button">
                     <div class="col-xs-12">
@@ -525,6 +551,9 @@ $(ui.component.avatar.render({
                         <script>
                         $('#header').replaceWith(
                             $(ui.component.header.render({
+                                'headerTextInput': [{
+                                    'placeholder': 'This is the placeholder...'
+                                }],
                                 'properties': [{
                                     'url': '#',
                                     'item': 'Item 1'
@@ -580,6 +609,7 @@ $(ui.component.avatar.render({
                             $(ui.component.textInput.render({
                                 'placeholder': 'Gimme boodskap',
                                 'background': false,
+                                'hasLabel': true,
                                 'label': 'name'
                             }))
                         );
@@ -597,6 +627,7 @@ $(ui.component.avatar.render({
                     </div>
                     <div class="col-xs-6">
                         <div id="dropdown"></div>
+                        </div>
                         <script>
                         $('#dropdown').replaceWith(
                             $(ui.component.dropdown.render({
@@ -620,16 +651,16 @@ $(ui.component.avatar.render({
 
                         //Dit moet naar het component verhuizen
 
-                        $('li.dropdown').click(function(event) {
-                            event.stopPropagation();
-                            $(this).toggleClass('drop-nav-active');
-                        });
+                        // $('li.dropdown').click(function(event) {
+                        //     event.stopPropagation();
+                        //     $(this).toggleClass('drop-nav-active');
+                        // });
 
-                        $(document).click(function() {
-                            $('li.dropdown').removeClass('drop-nav-active');
-                        });
+                        // $(document).click(function() {
+                        //     $('li.dropdown').removeClass('drop-nav-active');
+                        // });
                         </script>
-                    </div>
+                    
                     <div class="col-xs-6">
                         <pre><code class="language-javascript">
   $(ui.component.dropdown.render({
@@ -709,6 +740,9 @@ $(ui.component.avatar.render({
                         <script>
                         $('#share-post').replaceWith(
                             $(ui.component.sharePost.render({
+                                'sharePostTextInput': [{
+                                    'placeholder': 'hoi',
+                                }],
                                 'button': [{
                                     'class': 'solid-button--neutral',
                                     'content': 'i',
@@ -719,8 +753,7 @@ $(ui.component.avatar.render({
                                 }],
                                 'text-input': [{
                                     'background': 'false'
-                                }],
-                                'label': 'whats up'
+                                }]
 
                             }))
                         );

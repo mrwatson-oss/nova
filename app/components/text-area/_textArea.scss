@@ -6,11 +6,14 @@
         resize: vertical;
         border: none;
         outline: none;
+        max-height: 400px;
         line-height: 1.6em;
         padding: 1em;
         // margin: 1em;
         width: 100%;
         // background: white;
+        }
+        
         &:active {
             outline: none;
             border: none;
@@ -19,8 +22,17 @@
             outline: none;
             border: none;
         }
+        textarea::-webkit-input-placeholder{
+          color: $sec-grey;
+          font-size: 16px;
+          font-family: $font-family;
+        }
+    :focus::-webkit-input-placeholder{
+      transition: all .2s;
+      opacity: 0;
     }
-}
+    }
+
 
 .mytest {
 
