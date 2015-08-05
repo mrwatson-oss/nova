@@ -1,5 +1,8 @@
-<div class="{{class}}" id="{{id}}">
-	{{#each properties}}
-		<li>{{> link}}</li>
+<div class="nav app-block {{class}}" id="{{id}}">
+{{#if title}}
+	<span class="nav-title">{{navTitle}}</span>
+{{/if}}
+	{{#each navItems}}
+		<li>{{> PartialNavItem}}</li>
 	{{/each}}
 </div>

@@ -1,20 +1,9 @@
-<div class="nav">
-
-<li class="dropdown {{class}}">
-{{item}}
+<ul class="nav">
+<li class="dropdown {{class}}" id="dropdown">
+{{dropdownItem}}
 	<ul class="nav drop-nav">
-		{{#each options}}{{> pDropdownOptions }}{{/each}}
+		{{#each dropdownOptions}}{{> pDropdownOptions }}{{/each}}
 	</ul>
 </li>
-
-</div>
-
-<script> 
-	$('li.dropdown').click(function(event) {
-		event.stopPropagation();
-		$(this).toggleClass('drop-nav-active');
-        });
-    $(document).click(function() {
-        $('li.dropdown').removeClass('drop-nav-active');
-    	});
-</script>
+</ul>
+<script>{{script}}</script>

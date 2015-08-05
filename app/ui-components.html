@@ -38,51 +38,43 @@
     </script>
     <div class="container-fluid">
         <!-- header -->
-        <div id="header">
-            <script>
-            var header = ui.component.header;
-            //todo
-            //     $(header.render({
-            //     {logo:{url:images/logo.png,href:index.html},
-            //     {input:{blabla}},
-            //     {nav:[
-            //       {url: index.html, item: home},
-            //       {url: bla.html, item: bla},
-            //       ]}
-            //      }))
-            $('#header').replaceWith(
-                $(header.render({
-                    'headerTextInput': [{
-                        'placeholder': 'Seach for components or whatever'
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="header"></div>
+                <script>
+                var header = ui.component.header;
+                $('#header').replaceWith(
+                    $(header.render({
+                        'headerTextInput': [{
+                            'placeholder': 'Seach for components or whatever',
+                            'class': 'text-input__grey'
 
-                    }],
-                    'properties': [{
-                        'url': '/index.html',
-                        'item': 'UI base'
-                    }, {
-                        'url': '#',
-                        'item': 'UI components',
-                        'class': 'nav--active'
-                    }, {
-                        'url': '#',
-                        'item': 'About'
-                    }],
-                    'options': [{
-                        'option': 'dezem',
-                        'href': '#'
-                    }, {
-                        'option': 'dezin',
-                        'href': '#'
-                    }, {
-                        'option': 'depin',
-                        'href': '#'
-                    }, {
-                        'option': 'in',
-                        'href': '#'
-                    }]
-                }))
-            );
-            </script>
+                        }],
+                        'navItems': [{
+                            'url': '#',
+                            'item': 'UI components',
+                            'class': 'nav--active'
+                        }, {
+                            'url': '/index.html',
+                            'item': 'UI base'
+                        }],
+                        'options': [{
+                            'option': 'dezem',
+                            'href': '#'
+                        }, {
+                            'option': 'dezin',
+                            'href': '#'
+                        }, {
+                            'option': 'depin',
+                            'href': '#'
+                        }, {
+                            'option': 'in',
+                            'href': '#'
+                        }]
+                    }))
+                );
+                </script>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -95,7 +87,7 @@
                 <script>
                 $('#side-nav').replaceWith(
                     $(ui.component.nav.render({
-                        properties: [{
+                        navItems: [{
                             'url': '#anchor-button',
                             'item': 'Action Bar'
                         }, {
@@ -140,25 +132,24 @@
                         <div class="app-block">
                             <h2>Images</h2>
                             <h3>Avatars</h3>
-                            </div>
-                            <div class="col-md-6">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
                         <div class="app-block">
-                                <!-- <div class="app-block"> -->
-                                <h4>Square Avatar</h4>
-                                <div id="square-avatar"></div>
-                                <script>
-                                $('#square-avatar').replaceWith(
-                                    $(ui.component.avatar.render({
-                                        'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg'
-                                    }))
-                                );
-                                </script>
+                            <h4>Square Avatar</h4>
+                            <div id="square-avatar"></div>
+                            <script>
+                            $('#square-avatar').replaceWith(
+                                $(ui.component.avatar.render({
+                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg'
+                                }))
+                            );
+                            </script>
                             <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     'src':'/*image source*/'
 }))
 </code></pre>
-                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -173,7 +164,6 @@ $(ui.component.avatar.render({
                                 }))
                             );
                             </script>
-                        
                             <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     'src':'/*image source*/',
@@ -293,7 +283,7 @@ $(ui.component.avatar.render({
                 <div class="row" id="anchor-block">
                     <div class="col-xs-12">
                         <h2>Blocks</h2>
-                        <h3>App block</h3>
+                        <h3>App Block</h3>
                     </div>
                     <div class="col-xs-12">
                         <div id="appblock"></div>
@@ -304,7 +294,7 @@ $(ui.component.avatar.render({
                                     'class': 'solid-button--neutral',
                                     'content': 'hoi'
                                 }, {
-                                    'class': 'solid-button--happy',
+                                    'class': 'solid-button--happy pull-right',
                                     'content': 'rush'
                                 }],
                                 'appBlockButter': [{
@@ -325,15 +315,15 @@ $(ui.component.avatar.render({
                         </script>
                     </div>
                     <div class="col-xs-12">
-                        <div id="bappblock"></div>
+                        <div id="appblock2"></div>
                         <script>
-                        $('#bappblock').replaceWith(
+                        $('#appblock2').replaceWith(
                             $(ui.component.appblock.render({
                                 'appBlockButton': [{
                                     'class': 'solid-button--angry',
                                     'content': 'hoi'
                                 }, {
-                                    'class': 'solid-button--strict',
+                                    'class': 'solid-button--strict pull-right',
                                     'content': 'rush'
                                 }],
                                 'appBlockAvatar': [{
@@ -552,7 +542,8 @@ $(ui.component.avatar.render({
                         $('#header').replaceWith(
                             $(ui.component.header.render({
                                 'headerTextInput': [{
-                                    'placeholder': 'This is the placeholder...'
+                                    'placeholder': 'Search bar..',
+                                    'class': 'text-input__grey'
                                 }],
                                 'properties': [{
                                     'url': '#',
@@ -627,40 +618,62 @@ $(ui.component.avatar.render({
                     </div>
                     <div class="col-xs-6">
                         <div id="dropdown"></div>
-                        </div>
-                        <script>
-                        $('#dropdown').replaceWith(
-                            $(ui.component.dropdown.render({
-                                'item': 'klap mij',
-                                'options': [{
-                                    'option': 'dezem',
-                                    'href': '#'
-                                }, {
-                                    'option': 'dezindez',
-                                    'href': '#',
-                                    'class': 'divider'
-                                }, {
-                                    'option': 'hier boven staat een divider',
-                                    'href': '#'
-                                }, {
-                                    'option': 'in',
-                                    'href': '#'
-                                }]
-                            }))
-                        );
-
-                        //Dit moet naar het component verhuizen
-
-                        // $('li.dropdown').click(function(event) {
-                        //     event.stopPropagation();
-                        //     $(this).toggleClass('drop-nav-active');
-                        // });
-
-                        // $(document).click(function() {
-                        //     $('li.dropdown').removeClass('drop-nav-active');
-                        // });
-                        </script>
-                    
+                    </div>
+                    <script>
+                    $('#dropdown').replaceWith(
+                        $(ui.component.dropdown.render({
+                            'dropdownItem': 'klap mij',
+                            'dropdownOptions': [{
+                                'option': 'dezem',
+                                'href': '#'
+                            }, {
+                                'option': 'dezindez',
+                                'href': '#',
+                                'class': 'divider'
+                            }, {
+                                'option': 'hier boven staat een divider',
+                                'href': '#'
+                            }, {
+                                'option': 'in',
+                                'href': '#'
+                            }]
+                        }))
+                    );
+                    </script>
+                    <div class="col-xs-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.dropdown.render({
+    // properties
+  }))
+</code></pre>
+                    </div>
+                    <div class="col-xs-12">
+                        <h2>Dropdown2</h2>
+                    </div>
+                    <div class="col-xs-6">
+                        <div id="dropdown2"></div>
+                    </div>
+                    <script>
+                    $('#dropdown2').replaceWith(
+                        $(ui.component.dropdown.render({
+                            'dropdownItem': 'klip mij',
+                            'dropdownOptions': [{
+                                'option': 'dezem',
+                                'href': '#'
+                            }, {
+                                'option': 'dezindez',
+                                'href': '#',
+                                'class': 'divider'
+                            }, {
+                                'option': 'hier boven staat een divider',
+                                'href': '#'
+                            }, {
+                                'option': 'in',
+                                'href': '#'
+                            }]
+                        }))
+                    );
+                    </script>
                     <div class="col-xs-6">
                         <pre><code class="language-javascript">
   $(ui.component.dropdown.render({
@@ -706,6 +719,16 @@ $(ui.component.avatar.render({
                         <script>
                         $('#navBar').replaceWith(
                             $(ui.component.navBar.render({
+                                'appbarDropdown': [{
+                                    'dropdownItem': 'hooi',
+                                    'dropdownOptions': [{
+                                        'option': 'dezem',
+                                        'href': '#'
+                                    }, {
+                                        'option': 'in',
+                                        'href': '#'
+                                    }]
+                                }],
                                 properties: [{
                                     'url': '#',
                                     'item': 'Upcoming events',
@@ -715,7 +738,7 @@ $(ui.component.avatar.render({
                                     'item': 'Past events'
                                 }],
                                 'button': [{
-                                    'class': 'solid-button--strict',
+                                    'class': 'solid-button--strict pull-right',
                                     'content': 'Add user'
                                 }],
                             }))
@@ -742,6 +765,7 @@ $(ui.component.avatar.render({
                             $(ui.component.sharePost.render({
                                 'sharePostTextInput': [{
                                     'placeholder': 'hoi',
+                                    'hasLabel': false
                                 }],
                                 'button': [{
                                     'class': 'solid-button--neutral',

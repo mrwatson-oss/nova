@@ -1,10 +1,14 @@
 <div class="{{class}}">
    <ul class="nav nav--horizontal">
    {{#each properties}}
-        <li>{{> link}}</li>
+        <li class="pull-left">{{> link}}</li>
     {{/each}}
+    {{!-- {{#appbarDropdown}}
+    	{{> PartialDropdown }}
+    {{/appbarDropdown}} --}}
     {{#each button}} 
-        {{> barButton }} 
+        {{> PartialButton }} 
     {{/each}}
+
     </ul>
 </div>

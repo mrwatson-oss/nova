@@ -1,10 +1,10 @@
 
 {{#if hasLabel}}
-	<div class="mytest">
+	<div class="mytest {{class}}">
       <input class="inputMaterial" type="text" required>
       <span class="bar"></span>
       <label>{{label}}</label>
    </div>
 {{else}}
-   <div class="{{class}}"><input {{#if background}}class="text-input__grey"{{/if}} {{#if required}}required{{/if}} name="{{name}}" id="{{id}}" type="text" placeholder="{{placeholder}}" value="{{value}}"></div>
+   <div class="text-input {{class}}"><input {{#if background}}class="text-input__grey"{{/if}} {{#if required}}required{{/if}} name="{{name}}" id="{{id}}" type="text" placeholder="{{placeholder}}" value="{{value}}"></div>
 {{/if}}

@@ -17,13 +17,18 @@ ui.component.partials = (function($, T) {
                     'src': '{{src}}'
                 }),
                 'PartialTextInput': ui.component.textInput.render({
+                    'class': '{{class}}',
                     'id': '{{id}}',
                     'name': '{{name}}',
                     'value': '{{value}}',
                     'placeholder': '{{placeholder}}',
-                    // 'hasLabel': '{{hasLabel}}',
+                    'hasLabel': false,
                     'label': '{{label}}'
-                })
+                }),
+                'PartialDropdown': ui.component.dropdown.render({
+                    'class': '{{class}}'
+                }),
+                'PartialNavItem': '<a href="{{baseurl}}{{url}}">{{item}}</a>'
             });
 
             data = $.extend({}, partials, context);

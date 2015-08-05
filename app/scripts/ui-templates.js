@@ -23,11 +23,11 @@ this["ui"]["component"]["template"]["appblock"] = Handlebars.template({"1":funct
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"row app-block "
+  return "<div class=\"row "
     + alias3(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
     + "\" id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\n    <div class=\"col-xs-12\">\n    	"
+    + "\">\n    <div class=\"col-xs-12\">\n    <div class=\"app-block\">\n    	"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.appBlockButter : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n    	"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.appBlockAvatar : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
@@ -35,7 +35,7 @@ this["ui"]["component"]["template"]["appblock"] = Handlebars.template({"1":funct
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.appBlockContent : depth0),{"name":"each","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n    	"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.appBlockButton : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\n    </div>\n</div>";
+    + "\n    </div>\n    </div>\n</div>";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["avatar"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -130,13 +130,15 @@ this["ui"]["component"]["template"]["dropdown"] = Handlebars.template({"1":funct
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"nav\">\n\n<li class=\"dropdown "
+  return "<ul class=\"nav\">\n<li class=\"dropdown "
     + alias3(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
-    + "\">\n"
-    + alias3(((helper = (helper = helpers.item || (depth0 != null ? depth0.item : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"item","hash":{},"data":data}) : helper)))
+    + "\" id=\"dropdown\">\n"
+    + alias3(((helper = (helper = helpers.dropdownItem || (depth0 != null ? depth0.dropdownItem : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"dropdownItem","hash":{},"data":data}) : helper)))
     + "\n	<ul class=\"nav drop-nav\">\n		"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.options : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\n	</ul>\n</li>\n\n</div>\n\n<script> \n	$('li.dropdown').click(function(event) {\n		event.stopPropagation();\n		$(this).toggleClass('drop-nav-active');\n        });\n    $(document).click(function() {\n        $('li.dropdown').removeClass('drop-nav-active');\n    	});\n</script>";
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.dropdownOptions : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n	</ul>\n</li>\n</ul>\n<script>"
+    + alias3(((helper = (helper = helpers.script || (depth0 != null ? depth0.script : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"script","hash":{},"data":data}) : helper)))
+    + "</script>\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -154,27 +156,27 @@ this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":functio
 },"5":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "\n    <div class=\"col-xs-6 col-md-4\">\n        <ul class=\"nav nav--horizontal\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.properties : depth0),{"name":"each","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+  return "\n    <div class=\"col-md-3\">\n        <ul class=\"nav nav--horizontal\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navItems : depth0),{"name":"each","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "        </ul>\n    </div>\n";
 },"6":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "            <li>"
-    + ((stack1 = this.invokePartial(partials.link,depth0,{"name":"link","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + ((stack1 = this.invokePartial(partials.PartialNavItem,depth0,{"name":"PartialNavItem","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper;
 
-  return "<div class=\"row "
+  return "\n<div class=\"row header "
     + this.escapeExpression(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
-    + "\">\n"
+    + "\">\n<div class=\"header-container\">\n    <div class=\"col-md-3\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.logo : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + " \n    <div class=\"col-xs-6 col-md-8\"> "
+    + " \n    </div>\n    <div class=\"col-md-6\"> "
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.headerTextInput : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + " </div> "
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.nav : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        \n  \n      \n</div>\n";
+    + "        </div>\n     </div> \n\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["image"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -202,13 +204,13 @@ this["ui"]["component"]["template"]["image"] = Handlebars.template({"1":function
 this["ui"]["component"]["template"]["navBar"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "        <li>"
+  return "        <li class=\"pull-left\">"
     + ((stack1 = this.invokePartial(partials.link,depth0,{"name":"link","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</li>\n";
 },"3":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = this.invokePartial(partials.barButton,depth0,{"name":"barButton","data":data,"indent":"        ","helpers":helpers,"partials":partials})) != null ? stack1 : "");
+  return ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","data":data,"indent":"        ","helpers":helpers,"partials":partials})) != null ? stack1 : "");
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper;
 
@@ -217,24 +219,31 @@ this["ui"]["component"]["template"]["navBar"] = Handlebars.template({"1":functio
     + "\">\n   <ul class=\"nav nav--horizontal\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.properties : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.button : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    </ul>\n</div>\n";
+    + "\n    </ul>\n</div>\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["nav"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "	<span class=\"nav-title\">"
+    + this.escapeExpression(((helper = (helper = helpers.navTitle || (depth0 != null ? depth0.navTitle : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"navTitle","hash":{},"data":data}) : helper)))
+    + "</span>\n";
+},"3":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "		<li>"
-    + ((stack1 = this.invokePartial(partials.link,depth0,{"name":"link","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + ((stack1 = this.invokePartial(partials.PartialNavItem,depth0,{"name":"PartialNavItem","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\""
+  return "<div class=\"nav app-block "
     + alias3(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
     + "\" id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.properties : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navItems : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</div>";
 },"usePartial":true,"useData":true});
 
@@ -297,15 +306,17 @@ this["ui"]["component"]["template"]["textArea"] = Handlebars.template({"1":funct
 },"useData":true});
 
 this["ui"]["component"]["template"]["textInput"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    var helper;
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "	<div class=\"mytest\">\n      <input class=\"inputMaterial\" type=\"text\" required>\n      <span class=\"bar\"></span>\n      <label>"
-    + this.escapeExpression(((helper = (helper = helpers.label || (depth0 != null ? depth0.label : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"label","hash":{},"data":data}) : helper)))
+  return "	<div class=\"mytest "
+    + alias3(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
+    + "\">\n      <input class=\"inputMaterial\" type=\"text\" required>\n      <span class=\"bar\"></span>\n      <label>"
+    + alias3(((helper = (helper = helpers.label || (depth0 != null ? depth0.label : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"label","hash":{},"data":data}) : helper)))
     + "</label>\n   </div>\n";
 },"3":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "   <div class=\""
+  return "   <div class=\"text-input "
     + alias3(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
     + "\"><input "
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.background : depth0),{"name":"if","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")

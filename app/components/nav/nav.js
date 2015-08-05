@@ -13,7 +13,9 @@ ui.component.nav = (function($, T) {
      */
     var nav = {
         'properties': null,
-        'class': 'nav'
+        'class': null,
+        'title': false,
+        'navTitle': null
 
 };
 
@@ -27,7 +29,7 @@ ui.component.nav = (function($, T) {
      */
     function render(context) {
 
-Handlebars.registerPartial('link', '<a href="{{baseurl}}{{url}}">{{item}}</a>');
+// Handlebars.registerPartial('link', '<a href="{{baseurl}}{{url}}">{{item}}</a>');
  
         data = $.extend({}, nav, context);
 

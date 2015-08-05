@@ -29,8 +29,10 @@
         transition: all .2s;
         opacity: 0;
     }
-    .text-input__grey {
-        background: $sec-grey--light;
+    &.text-input__grey {
+        input[type=text] {
+          background: $sec-grey--light;
+        }
     }
 }
 

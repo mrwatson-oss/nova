@@ -12,13 +12,13 @@ ui.component.textInput = (function($, T) {
      * @type {Object}
      */
     var textInput = {
-        'class': 'text-input',
+        'class': null,
         'id': null,
         'name': null,
         'type': 'text',
         'value': null,
         'placeholder': 'placeholder',
-        'hasLabel': false,
+        'hasLabel': null,
         'label': null,
         'background': null
     };

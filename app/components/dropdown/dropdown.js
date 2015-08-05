@@ -12,20 +12,20 @@ ui.component.dropdown = (function($, T) {
      * @type {Object}
      */
     var dropdown = {
-        'class': null,
-        id: null,
-        name: null,
-        value: null,
-        placeholder: 'placeholder'
+        'class': null, 
+        'script': 'comeDown()'
     };
- $('li.dropdown').click(function(event) {
-                            event.stopPropagation();
-                            $(this).toggleClass('drop-nav-active');
-                        });
 
-                        $(document).click(function() {
-                            $('li.dropdown').removeClass('drop-nav-active');
-                        });
+    comeDown = function() {
+        $('li.dropdown').click(function(event) {
+            event.stopPropagation();
+            $(this).addClass('drop-nav-active');
+        });
+        $(document).click(function() {
+            $('li.dropdown').removeClass('drop-nav-active');
+        });
+    };
+
     /**
      * render
      *
@@ -34,14 +34,20 @@ ui.component.dropdown = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-    
+
         Handlebars.registerPartial({
             'pDropdownOptions': '<li><a id="{{class}}" href="{{href}}">{{option}}</a></li>'
         });
+
         data = $.extend({}, dropdown, context);
 
+
         return T.dropdown(data);
+
     }
+
+
+
 
     return {
         render: render

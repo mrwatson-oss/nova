@@ -172,20 +172,20 @@ ui.component.dropdown = (function($, T) {
      * @type {Object}
      */
     var dropdown = {
-        'class': null,
-        id: null,
-        name: null,
-        value: null,
-        placeholder: 'placeholder'
+        'class': null, 
+        'script': 'comeDown()'
     };
- $('li.dropdown').click(function(event) {
-                            event.stopPropagation();
-                            $(this).toggleClass('drop-nav-active');
-                        });
 
-                        $(document).click(function() {
-                            $('li.dropdown').removeClass('drop-nav-active');
-                        });
+    comeDown = function() {
+        $('li.dropdown').click(function(event) {
+            event.stopPropagation();
+            $(this).addClass('drop-nav-active');
+        });
+        $(document).click(function() {
+            $('li.dropdown').removeClass('drop-nav-active');
+        });
+    };
+
     /**
      * render
      *
@@ -194,14 +194,20 @@ ui.component.dropdown = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-    
+
         Handlebars.registerPartial({
             'pDropdownOptions': '<li><a id="{{class}}" href="{{href}}">{{option}}</a></li>'
         });
+
         data = $.extend({}, dropdown, context);
 
+
         return T.dropdown(data);
+
     }
+
+
+
 
     return {
         render: render
@@ -218,7 +224,7 @@ ui.component.header = (function($, T) {
      */
     var params = {
         'properties': null,
-        'class': 'header',
+        'class': null,
         // logo: 'images/logo.png',
         'input': false,
         'nav': true
@@ -328,46 +334,7 @@ ui.component.navBar = (function($, T) {
      */
     function render(context) {
 
-// Handlebars.registerPartial('link2', '<a href="{{url}}" class="{{class}}">{{item}}</a>');
 
-        Handlebars.registerPartial({
-            'barButton': ui.component.button.render({
-                'class': '{{class}} pull-right',
-                'id': '{{id}}',
-                'content': '{{content}}',
-                'action': '{{action}}',
-                'name': '{{name}}'
-            })
-// 'partialInput': ui.component.input.render({
-//                 'id': '{{id}}',
-//                 'class': '{{class}}'
-            // }),
-            // myNav: ui.component.nav.render({
-            //     properties: [
-            //                   {"url": "#anchor-button", "item": 'Button'},
-            //                   {"url": "#anchor-navBar", "item": 'navBar'},
-            //                   {"url": "#anchor-sharepost", "item": 'Share-Post'}
-            //                   ]
-            // }),
-            // myNav: ui.component.verticalNav.render({
-            //     'bs-class': 'col-md-4',
-            //     'ul-class': 'nav',
-            //     'horizontal': true,
-            //     'nav-item': [
-            //     {label: 'UI Base', url: 'bleh'},
-            //     {label: 'UI Components', url: 'moethj'},
-            //     {label: 'About', url: 'moethj'}
-            //     ]
-            // }),
-            // myInput: ui.component.input.render({
-            //     // 'id': 'input__navBar',
-            //     // 'class': 'col-md-8',
-            //     // placeholder: 'Search for components or watever'
-            // })
-
-
-
-        });
 
         data = $.extend({}, params, context);
 
@@ -390,7 +357,9 @@ ui.component.nav = (function($, T) {
      */
     var nav = {
         'properties': null,
-        'class': 'nav'
+        'class': null,
+        'title': false,
+        'navTitle': null
 
 };
 
@@ -404,7 +373,7 @@ ui.component.nav = (function($, T) {
      */
     function render(context) {
 
-Handlebars.registerPartial('link', '<a href="{{baseurl}}{{url}}">{{item}}</a>');
+// Handlebars.registerPartial('link', '<a href="{{baseurl}}{{url}}">{{item}}</a>');
  
         data = $.extend({}, nav, context);
 
@@ -436,13 +405,18 @@ ui.component.partials = (function($, T) {
                     'src': '{{src}}'
                 }),
                 'PartialTextInput': ui.component.textInput.render({
+                    'class': '{{class}}',
                     'id': '{{id}}',
                     'name': '{{name}}',
                     'value': '{{value}}',
                     'placeholder': '{{placeholder}}',
-                    // 'hasLabel': '{{hasLabel}}',
+                    'hasLabel': false,
                     'label': '{{label}}'
-                })
+                }),
+                'PartialDropdown': ui.component.dropdown.render({
+                    'class': '{{class}}'
+                }),
+                'PartialNavItem': '<a href="{{baseurl}}{{url}}">{{item}}</a>'
             });
 
             data = $.extend({}, partials, context);
@@ -570,13 +544,13 @@ ui.component.textInput = (function($, T) {
      * @type {Object}
      */
     var textInput = {
-        'class': 'text-input',
+        'class': null,
         'id': null,
         'name': null,
         'type': 'text',
         'value': null,
         'placeholder': 'placeholder',
-        'hasLabel': false,
+        'hasLabel': null,
         'label': null,
         'background': null
     };

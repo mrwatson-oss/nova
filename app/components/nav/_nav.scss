@@ -15,12 +15,18 @@
             font-size: .9em;
         }
     }
+    .nav-title {
+        line-height: 3.8em;
+        padding: 1em;
+        color: $sec-grey;
+        font-family: $button-font;
+    }
 }
 
 .nav--horizontal {
     margin: 0;
     li {
-        float: left;
+        float: right;
     }
 }
 
@@ -28,4 +34,3 @@
     border-bottom: 3px solid $grey--light;
     color: red;
 }
-

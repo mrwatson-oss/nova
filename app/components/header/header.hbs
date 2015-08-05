@@ -1,22 +1,19 @@
-<div class="row {{class}}">
+
+<div class="row header {{class}}">
+<div class="header-container">
+    <div class="col-md-3">
     {{#if logo}}
     <img src="{{logo}}" class="pull-left" alt="blabla"> {{/if}} 
-    <div class="col-xs-6 col-md-8"> {{#each headerTextInput}} {{> PartialTextInput }} {{/each}} </div> {{#if nav}}
-    <div class="col-xs-6 col-md-4">
+    </div>
+    <div class="col-md-6"> {{#each headerTextInput}} {{> PartialTextInput }} {{/each}} </div> {{#if nav}}
+    <div class="col-md-3">
         <ul class="nav nav--horizontal">
-            {{#each properties}}
-            <li>{{> link}}</li>
+            {{#each navItems}}
+            <li>{{> PartialNavItem}}</li>
             {{/each}}
         </ul>
-{{!-- <li class="dropdown">
-Drop 
-    <ul class="nav drop-nav">
-        {{#each options}}{{> pDropdownOptions }}{{/each}}
-    </ul>
-</li> --}}
     </div>
     {{/if}}
-        
-  
-      
-</div>
+        </div>
+     </div> 
+

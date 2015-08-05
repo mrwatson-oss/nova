@@ -2,9 +2,13 @@
 // Base share-post
 // -----------------------------------------------------------------------------
 .header {
-    // width komt later dmv row als grid er is
+    // display: block;
     background: white;
     padding: 1em;
     border-bottom: 3px solid $border-color--accent;
-
+	.header-container {
+		position: relative;
+		max-width: 1170px;
+		margin: 0 auto;
+	}
 }
