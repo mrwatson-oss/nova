@@ -28,8 +28,6 @@ ui.component.nav = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-
-// Handlebars.registerPartial('link', '<a href="{{baseurl}}{{url}}">{{item}}</a>');
  
         data = $.extend({}, nav, context);
 

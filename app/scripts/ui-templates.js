@@ -201,11 +201,11 @@ this["ui"]["component"]["template"]["image"] = Handlebars.template({"1":function
   return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.image : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"useData":true});
 
-this["ui"]["component"]["template"]["navBar"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+this["ui"]["component"]["template"]["appbar"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "        <li class=\"pull-left\">"
-    + ((stack1 = this.invokePartial(partials.link,depth0,{"name":"link","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + ((stack1 = this.invokePartial(partials.PartialNavItem,depth0,{"name":"PartialNavItem","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</li>\n";
 },"3":function(depth0,helpers,partials,data) {
     var stack1;
@@ -214,10 +214,10 @@ this["ui"]["component"]["template"]["navBar"] = Handlebars.template({"1":functio
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper;
 
-  return "<div class=\""
+  return "<div class=\"app-bar "
     + this.escapeExpression(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
     + "\">\n   <ul class=\"nav nav--horizontal\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.properties : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navItems : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.button : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n    </ul>\n</div>\n";
 },"usePartial":true,"useData":true});

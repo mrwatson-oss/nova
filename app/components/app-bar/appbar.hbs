@@ -1,7 +1,7 @@
-<div class="{{class}}">
+<div class="app-bar {{class}}">
    <ul class="nav nav--horizontal">
-   {{#each properties}}
-        <li class="pull-left">{{> link}}</li>
+   {{#each navItems}}
+        <li class="pull-left">{{> PartialNavItem}}</li>
     {{/each}}
     {{!-- {{#appbarDropdown}}
     	{{> PartialDropdown }}

@@ -88,29 +88,26 @@
                 $('#side-nav').replaceWith(
                     $(ui.component.nav.render({
                         navItems: [{
-                            'url': '#anchor-button',
-                            'item': 'Action Bar'
-                        }, {
-                            'url': '#anchor-button',
-                            'item': 'Alert'
-                        }, {
-                            'url': '#anchor-button',
+                            'url': '#anchor-appbar',
                             'item': 'App Bar'
                         }, {
-                            'url': '#anchor-button',
+                            'url': '#anchor-appblock',
                             'item': 'App Block'
+                                // }, {
+                                //     'url': '#anchor-button',
+                                //     'item': 'App Daddy'
                         }, {
                             'url': '#anchor-button',
-                            'item': 'App Daddy'
+                            'item': 'Buttons'
                         }, {
-                            'url': '#anchor-button',
-                            'item': 'Button'
-                        }, {
-                            'url': '#anchor-card',
-                            'item': 'Card'
-                        }, {
+                            //     'url': '#anchor-card',
+                            //     'item': 'Card'
+                            // }, {
                             'url': '#anchor-header',
                             'item': 'Header'
+                        }, {
+                            'url': '#anchor-image',
+                            'item': 'Images'
                         }, {
                             'url': '#anchor-input',
                             'item': 'Input'
@@ -127,165 +124,54 @@
                 </script>
             </div>
             <div class="col-xs-9">
-                <div class="row" id="anchor-images">
-                    <div class="col-xs-12 ">
-                        <div class="app-block">
-                            <h2>Images</h2>
-                            <h3>Avatars</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <h4>Square Avatar</h4>
-                            <div id="square-avatar"></div>
-                            <script>
-                            $('#square-avatar').replaceWith(
-                                $(ui.component.avatar.render({
-                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg'
-                                }))
-                            );
-                            </script>
-                            <pre><code class="language-javascript">
-$(ui.component.avatar.render({
-    'src':'/*image source*/'
-}))
-</code></pre>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <h4>Round Avatar</h4>
-                            <div id="square-avatar-round"></div>
-                            <script>
-                            $('#square-avatar-round').replaceWith(
-                                $(ui.component.avatar.render({
-                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
-                                    'round': true
-                                }))
-                            );
-                            </script>
-                            <pre><code class="language-javascript">
-$(ui.component.avatar.render({
-    'src':'/*image source*/',
-    'round': true
-}))
-</code></pre>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <h4>Small Square Avatar</h4>
-                            <div id="square-avatar"></div>
-                            <script>
-                            $('#square-avatar').replaceWith(
-                                $(ui.component.avatar.render({
-                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
-                                    'small': true
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <div class="app-block">
-                            <pre><code class="language-javascript">
-$(ui.component.avatar.render({
-    'src':'/*image source*/',
-    'small': true
-}))
-</code></pre>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <h4>Small Round Avatar</h4>
-                            <div id="square-avatar-round"></div>
-                            <script>
-                            $('#square-avatar-round').replaceWith(
-                                $(ui.component.avatar.render({
-                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
-                                    'round': true,
-                                    'small': true
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <div class="app-block">
-                            <pre><code class="language-javascript">
-$(ui.component.avatar.render({
-    'src':'/*image source*/',
-    'round': true,
-    'small': true
-}))
-</code></pre>
-                        </div>
+                <div class="row" id="anchor-appbar">
+                    <div class="col-xs-12">
+                        <h2>App Bar</h2>
                     </div>
                     <div class="col-xs-12">
-                        <div class="app-block">
-                            <h3>Body Image</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <div id="bodyimage"></div>
-                            <script>
-                            $('#bodyimage').replaceWith(
-                                $(ui.component.image.render({
-                                    'image': [{
-                                        'src': 'http://cdn.animals-pics.com/pictures/www.ozanimals.com/image/albums/australia/Bird/normal_Cape-Barren-Goose-2.jpg',
-                                        'body': true
-                                    }]
-                                }))
-                            );
-                            </script>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <pre><code class="language-javascript">
-  $(ui.component.image.render({
-    // properties
-  }))
-</code></pre>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="app-block">
-                            <h3>Cover Image</h3>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <!-- <div class="app-block"> -->
-                        <div id="coverimage"></div>
+                        <div id="appbar"></div>
                         <script>
-                        $('#coverimage').replaceWith(
-                            $(ui.component.image.render({
-                                'image': [{
-                                    'src': 'http://www.apnatimepass.com/dumb-and-dumber-to-movie/dumb-and-dumber-to-movie-still-10.jpg',
-                                    'cover': true
-                                }]
+                        $('#appbar').replaceWith(
+                            $(ui.component.appbar.render({
+                                'appbarDropdown': [{
+                                    'dropdownItem': 'hooi',
+                                    'dropdownOptions': [{
+                                        'option': 'dezem',
+                                        'href': '#'
+                                    }, {
+                                        'option': 'in',
+                                        'href': '#'
+                                    }]
+                                }],
+                                navItems: [{
+                                    'url': '#',
+                                    'item': 'Upcoming events',
+                                    'class': 'nav--active'
+                                }, {
+                                    'url': '#',
+                                    'item': 'Past events'
+                                }],
+                                'button': [{
+                                    'class': 'solid-button--strict pull-right',
+                                    'content': 'Add user'
+                                }],
                             }))
                         );
                         </script>
-                        <!-- </div> -->
                     </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <pre><code class="language-javascript">
-  $(ui.component.image.render({
-    'image': [{
-        'src': '/*image source*/',
-        'cover': true
-       }]
-    }))
+                    <div class="col-xs-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.appbar.render({
+    // properties
+  }))
 </code></pre>
-                        </div>
                     </div>
                 </div>
-                <div class="row" id="anchor-block">
+                <div class="row" id="anchor-appblock">
                     <div class="col-xs-12">
-                        <h2>Blocks</h2>
                         <h3>App Block</h3>
                     </div>
-                    <div class="col-xs-12">
+                    <div class="col-md-6">
                         <div id="appblock"></div>
                         <script>
                         $('#appblock').replaceWith(
@@ -314,7 +200,16 @@ $(ui.component.avatar.render({
                         );
                         </script>
                     </div>
-                    <div class="col-xs-12">
+                    <div class="col-md-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.appblock.render({
+    // properties
+  }))
+</code></pre>
+                    </div>
+                    <div class="clearfix visible-lg-block"></div>
+                    <div class="clearfix visible-md-block"></div>
+                    <div class="col-md-6">
                         <div id="appblock2"></div>
                         <script>
                         $('#appblock2').replaceWith(
@@ -338,6 +233,13 @@ $(ui.component.avatar.render({
                             }))
                         );
                         </script>
+                    </div>
+                    <div class="col-md-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.appblock.render({
+    // properties
+  }))
+</code></pre>
                     </div>
                 </div>
                 <div class="row" id="anchor-button">
@@ -501,7 +403,7 @@ $(ui.component.avatar.render({
 </code></pre>
                     </div>
                 </div>
-                <div class="row" id="anchor-card">
+                <!--  <div class="row" id="anchor-card">
                     <div class="col-xs-12">
                         <h2>Card</h2>
                     </div>
@@ -531,7 +433,7 @@ $(ui.component.avatar.render({
   }))
 </code></pre>
                     </div>
-                </div>
+                </div> -->
                 <div class="row" id="anchor-header">
                     <div class="col-xs-12">
                         <h2>Header</h2>
@@ -545,7 +447,7 @@ $(ui.component.avatar.render({
                                     'placeholder': 'Search bar..',
                                     'class': 'text-input__grey'
                                 }],
-                                'properties': [{
+                                'navItems': [{
                                     'url': '#',
                                     'item': 'Item 1'
                                 }, {
@@ -566,6 +468,159 @@ $(ui.component.avatar.render({
     // properties
   }))
 </code></pre>
+                    </div>
+                </div>
+                <div class="row" id="anchor-image">
+                    <div class="col-xs-12 ">
+                        <div class="app-block">
+                            <h2>Images</h2>
+                            <h3>Avatars</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="app-block">
+                            <h4>Square Avatar</h4>
+                            <div id="square-avatar"></div>
+                            <script>
+                            $('#square-avatar').replaceWith(
+                                $(ui.component.avatar.render({
+                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg'
+                                }))
+                            );
+                            </script>
+                            <pre><code class="language-javascript">
+$(ui.component.avatar.render({
+    'src':'/*image source*/'
+}))
+</code></pre>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="app-block">
+                            <h4>Round Avatar</h4>
+                            <div id="square-avatar-round"></div>
+                            <script>
+                            $('#square-avatar-round').replaceWith(
+                                $(ui.component.avatar.render({
+                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
+                                    'round': true
+                                }))
+                            );
+                            </script>
+                            <pre><code class="language-javascript">
+$(ui.component.avatar.render({
+    'src':'/*image source*/',
+    'round': true
+}))
+</code></pre>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="app-block">
+                            <h4>Small Square Avatar</h4>
+                            <div id="square-avatar"></div>
+                            <script>
+                            $('#square-avatar').replaceWith(
+                                $(ui.component.avatar.render({
+                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
+                                    'small': true
+                                }))
+                            );
+                            </script>
+                        </div>
+                        <div class="app-block">
+                            <pre><code class="language-javascript">
+$(ui.component.avatar.render({
+    'src':'/*image source*/',
+    'small': true
+}))
+</code></pre>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="app-block">
+                            <h4>Small Round Avatar</h4>
+                            <div id="square-avatar-round"></div>
+                            <script>
+                            $('#square-avatar-round').replaceWith(
+                                $(ui.component.avatar.render({
+                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
+                                    'round': true,
+                                    'small': true
+                                }))
+                            );
+                            </script>
+                        </div>
+                        <div class="app-block">
+                            <pre><code class="language-javascript">
+$(ui.component.avatar.render({
+    'src':'/*image source*/',
+    'round': true,
+    'small': true
+}))
+</code></pre>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="app-block">
+                            <h3>Body Image</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="app-block">
+                            <div id="bodyimage"></div>
+                            <script>
+                            $('#bodyimage').replaceWith(
+                                $(ui.component.image.render({
+                                    'image': [{
+                                        'src': 'http://cdn.animals-pics.com/pictures/www.ozanimals.com/image/albums/australia/Bird/normal_Cape-Barren-Goose-2.jpg',
+                                        'body': true
+                                    }]
+                                }))
+                            );
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="app-block">
+                            <pre><code class="language-javascript">
+  $(ui.component.image.render({
+    // properties
+  }))
+</code></pre>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="app-block">
+                            <h3>Cover Image</h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <!-- <div class="app-block"> -->
+                        <div id="coverimage"></div>
+                        <script>
+                        $('#coverimage').replaceWith(
+                            $(ui.component.image.render({
+                                'image': [{
+                                    'src': 'http://www.apnatimepass.com/dumb-and-dumber-to-movie/dumb-and-dumber-to-movie-still-10.jpg',
+                                    'cover': true
+                                }]
+                            }))
+                        );
+                        </script>
+                        <!-- </div> -->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="app-block">
+                            <pre><code class="language-javascript">
+  $(ui.component.image.render({
+    'image': [{
+        'src': '/*image source*/',
+        'cover': true
+       }]
+    }))
+</code></pre>
+                        </div>
                     </div>
                 </div>
                 <div class="row" id="anchor-input">
@@ -691,7 +746,9 @@ $(ui.component.avatar.render({
                         <script>
                         $('#nav').replaceWith(
                             $(ui.component.nav.render({
-                                properties: [{
+                                'title': true,
+                                'navTitle': 'Optional title',
+                                'navItems': [{
                                     'url': '#',
                                     'item': 'Item 1'
                                 }, {
@@ -705,49 +762,6 @@ $(ui.component.avatar.render({
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
   $(ui.component.nav.render({
-    // properties
-  }))
-</code></pre>
-                    </div>
-                </div>
-                <div class="row" id="anchor-navBar">
-                    <div class="col-xs-12">
-                        <h2>App Bar</h2>
-                    </div>
-                    <div class="col-xs-12">
-                        <div id="navBar"></div>
-                        <script>
-                        $('#navBar').replaceWith(
-                            $(ui.component.navBar.render({
-                                'appbarDropdown': [{
-                                    'dropdownItem': 'hooi',
-                                    'dropdownOptions': [{
-                                        'option': 'dezem',
-                                        'href': '#'
-                                    }, {
-                                        'option': 'in',
-                                        'href': '#'
-                                    }]
-                                }],
-                                properties: [{
-                                    'url': '#',
-                                    'item': 'Upcoming events',
-                                    'class': 'nav--active'
-                                }, {
-                                    'url': '#',
-                                    'item': 'Past events'
-                                }],
-                                'button': [{
-                                    'class': 'solid-button--strict pull-right',
-                                    'content': 'Add user'
-                                }],
-                            }))
-                        );
-                        </script>
-                    </div>
-                    <div class="col-xs-6">
-                        <pre><code class="language-javascript">
-  $(ui.component.navBar.render({
     // properties
   }))
 </code></pre>

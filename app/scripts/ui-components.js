@@ -311,15 +311,14 @@ ui.component.image = (function($, T) {
 }
 (jQuery, ui.component.template));;var ui = ui || {};
 
-ui.component.navBar = (function($, T) {
+ui.component.appbar = (function($, T) {
 
     /**
-     * navBar
+     * appbar
      * @type {Object}
      */
     var params = {
-        'properties': null,
-        'class': 'nav-bar'
+        'class': null
  
 
     };
@@ -329,7 +328,7 @@ ui.component.navBar = (function($, T) {
      * render
      *
      * @todo make this method extended or mixin
-     * @param {} navBar object with all properties
+     * @param {} appbar object with all properties
      * @return compiled handlebars template
      */
     function render(context) {
@@ -339,7 +338,7 @@ ui.component.navBar = (function($, T) {
         data = $.extend({}, params, context);
 
 
-        return T.navBar(data);
+        return T.appbar(data);
     }
 
     return {
@@ -372,8 +371,6 @@ ui.component.nav = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-
-// Handlebars.registerPartial('link', '<a href="{{baseurl}}{{url}}">{{item}}</a>');
  
         data = $.extend({}, nav, context);
 
