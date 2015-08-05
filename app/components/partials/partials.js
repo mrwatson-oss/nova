@@ -28,7 +28,7 @@ ui.component.partials = (function($, T) {
                 'PartialDropdown': ui.component.dropdown.render({
                     'class': '{{class}}'
                 }),
-                'PartialNavItem': '<a href="{{baseurl}}{{url}}">{{item}}</a>'
+                'PartialNavItem': '<a href="{{baseurl}}{{url}}">{{{item}}}</a>'
             });
 
             data = $.extend({}, partials, context);

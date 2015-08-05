@@ -110,13 +110,13 @@
                             'item': 'Images'
                         }, {
                             'url': '#anchor-input',
-                            'item': 'Input'
+                            'item': 'Input Fields'
                         }, {
                             'url': '#anchor-nav',
                             'item': 'Nav'
                         }, {
                             'url': '#anchor-sharepost',
-                            'item': 'Share-Post'
+                            'item': 'Share Post'
                         }]
                     }))
 
@@ -169,7 +169,7 @@
                 </div>
                 <div class="row" id="anchor-appblock">
                     <div class="col-xs-12">
-                        <h3>App Block</h3>
+                        <h2>App Block</h2>
                     </div>
                     <div class="col-md-6">
                         <div id="appblock"></div>
@@ -207,7 +207,7 @@
   }))
 </code></pre>
                     </div>
-                    <div class="clearfix visible-lg-block"></div>
+                    <!-- <div class="clearfix visible-lg-block"></div>
                     <div class="clearfix visible-md-block"></div>
                     <div class="col-md-6">
                         <div id="appblock2"></div>
@@ -240,16 +240,18 @@
     // properties
   }))
 </code></pre>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="row" id="anchor-button">
                     <div class="col-xs-12">
                         <h2>Buttons</h2>
-                        <h3>Naked Button</h3>
-                        <p>//als er een block component is kan elke button met uitleg los in een 'block'
-                            <br>The naked button is used blabla
-                            <br> The 'content' property describes the action..
-                            <br> The 'class' property defines the button style. Possible options are:
+                        <div class="app-block">
+                            <h3>Naked Button</h3>
+                            <p>//als er een block component is kan elke button met uitleg los in een 'block'
+                                <br>The naked button is used blabla
+                                <br> The 'content' property describes the action..
+                                <br> The 'class' property defines the button style. Possible options are:
+                            </p>
                             <ul>
                                 <li>naked-button--neutral</li>
                                 <li>naked-button--happy</li>
@@ -258,69 +260,71 @@
                                 <li>pull-left/right</li>
                                 <li>'disabled':'true'</li>
                             </ul>
-                        </p>
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <div id="naked-button"></div>
-                        <script>
-                        $('#naked-button').replaceWith(
-                            $(ui.component.button.render({
-                                'content': 'Meetings',
-                                'class': 'naked-button--neutral'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Like',
-                                'class': 'naked-button--happy'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Back',
-                                'class': 'naked-button--strict'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Destroy',
-                                'class': 'naked-button--angry'
-                            })),
-                            $(ui.component.button.render({
-                                'content': '&#167; Menu',
-                                'class': 'naked-button--neutral'
-                            })),
-                            $(ui.component.button.render({
-                                'content': '&#9758;',
-                                'class': 'naked-button--neutral'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Members',
-                                'class': 'naked-button--neutral',
-                                'disabled': 'disabled'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Save changes',
-                                'class': 'naked-button--happy',
-                                'disabled': 'disabled'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Receive &#36;100',
-                                'class': 'naked-button--strict',
-                                'disabled': 'disabled'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Kill app',
-                                'class': 'naked-button--angry',
-                                'disabled': 'disabled'
-                            })),
-                            $(ui.component.button.render({
-                                'content': '&#167; All groups',
-                                'class': 'naked-button--neutral',
-                                'disabled': 'disabled'
-                            })),
-                            $(ui.component.button.render({
-                                'content': '&#60;',
-                                'class': 'naked-button--neutral',
-                                'disabled': 'disabled'
-                            }))
+                        <div class="app-block">
+                            <div id="naked-button"></div>
+                            <script>
+                            $('#naked-button').replaceWith(
+                                $(ui.component.button.render({
+                                    'content': 'Meetings',
+                                    'class': 'naked-button--neutral'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Like',
+                                    'class': 'naked-button--happy'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Back',
+                                    'class': 'naked-button--strict'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Destroy',
+                                    'class': 'naked-button--angry'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': '&#167; Menu',
+                                    'class': 'naked-button--neutral'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': '&#9758;',
+                                    'class': 'naked-button--neutral'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Members',
+                                    'class': 'naked-button--neutral',
+                                    'disabled': 'disabled'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Save changes',
+                                    'class': 'naked-button--happy',
+                                    'disabled': 'disabled'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Receive &#36;100',
+                                    'class': 'naked-button--strict',
+                                    'disabled': 'disabled'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Kill app',
+                                    'class': 'naked-button--angry',
+                                    'disabled': 'disabled'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': '&#167; All groups',
+                                    'class': 'naked-button--neutral',
+                                    'disabled': 'disabled'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': '&#60;',
+                                    'class': 'naked-button--neutral',
+                                    'disabled': 'disabled'
+                                }))
 
-                        );
-                        </script>
+                            );
+                            </script>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
@@ -331,69 +335,73 @@
 </code></pre>
                     </div>
                     <div class="col-xs-12">
-                        <h3>Solid Button</h3>
+                        <div class="app-block">
+                            <h3>Solid Button</h3>
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <div id="solid-button"></div>
-                        <script>
-                        $('#solid-button').replaceWith(
-                            $(ui.component.button.render({
-                                'content': 'Cancel',
-                                'class': 'solid-button--neutral'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Share post',
-                                'class': 'solid-button--happy'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Check availability',
-                                'class': 'solid-button--strict'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Delete user',
-                                'class': 'solid-button--angry'
-                            })),
-                            $(ui.component.button.render({
-                                'content': '&#9758; Settings',
-                                'class': 'solid-button--neutral'
-                            })),
-                            $(ui.component.button.render({
-                                'content': '?',
-                                'class': 'solid-button--strict'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Reset form',
-                                'class': 'solid-button--neutral',
-                                'disabled': 'disabled'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Save changes',
-                                'class': 'solid-button--happy',
-                                'disabled': 'disabled'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Check availability',
-                                'class': 'solid-button--strict',
-                                'disabled': 'disabled'
-                            })),
-                            $(ui.component.button.render({
-                                'content': 'Discard changes',
-                                'class': 'solid-button--angry',
-                                'disabled': 'disabled'
-                            })),
-                            $(ui.component.button.render({
-                                'content': '&#167; Settings',
-                                'class': 'solid-button--neutral',
-                                'disabled': 'disabled'
-                            })),
-                            $(ui.component.button.render({
-                                'content': '?',
-                                'class': 'solid-button--strict',
-                                'disabled': 'disabled'
-                            }))
+                        <div class="app-block">
+                            <div id="solid-button"></div>
+                            <script>
+                            $('#solid-button').replaceWith(
+                                $(ui.component.button.render({
+                                    'content': 'Cancel',
+                                    'class': 'solid-button--neutral'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Share post',
+                                    'class': 'solid-button--happy'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Check availability',
+                                    'class': 'solid-button--strict'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Delete user',
+                                    'class': 'solid-button--angry'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': '&#9758; Settings',
+                                    'class': 'solid-button--neutral'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': '?',
+                                    'class': 'solid-button--strict'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Reset form',
+                                    'class': 'solid-button--neutral',
+                                    'disabled': 'disabled'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Save changes',
+                                    'class': 'solid-button--happy',
+                                    'disabled': 'disabled'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Check availability',
+                                    'class': 'solid-button--strict',
+                                    'disabled': 'disabled'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': 'Discard changes',
+                                    'class': 'solid-button--angry',
+                                    'disabled': 'disabled'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': '&#167; Settings',
+                                    'class': 'solid-button--neutral',
+                                    'disabled': 'disabled'
+                                })),
+                                $(ui.component.button.render({
+                                    'content': '?',
+                                    'class': 'solid-button--strict',
+                                    'disabled': 'disabled'
+                                }))
 
-                        );
-                        </script>
+                            );
+                            </script>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
@@ -472,8 +480,8 @@
                 </div>
                 <div class="row" id="anchor-image">
                     <div class="col-xs-12 ">
-                        <div class="app-block">
                             <h2>Images</h2>
+                        <div class="app-block">
                             <h3>Avatars</h3>
                         </div>
                     </div>
@@ -488,39 +496,43 @@
                                 }))
                             );
                             </script>
+                        </div>
+                        
                             <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     'src':'/*image source*/'
 }))
 </code></pre>
-                        </div>
+                       
                     </div>
                     <div class="col-md-6">
                         <div class="app-block">
                             <h4>Round Avatar</h4>
-                            <div id="square-avatar-round"></div>
+                            <div id="avatar-round"></div>
                             <script>
-                            $('#square-avatar-round').replaceWith(
+                            $('#avatar-round').replaceWith(
                                 $(ui.component.avatar.render({
                                     'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
                                     'round': true
                                 }))
                             );
                             </script>
+                        </div>
+                        
                             <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     'src':'/*image source*/',
     'round': true
 }))
 </code></pre>
-                        </div>
+                       
                     </div>
                     <div class="col-md-6">
                         <div class="app-block">
                             <h4>Small Square Avatar</h4>
-                            <div id="square-avatar"></div>
+                            <div id="small-square-avatar"></div>
                             <script>
-                            $('#square-avatar').replaceWith(
+                            $('#small-square-avatar').replaceWith(
                                 $(ui.component.avatar.render({
                                     'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
                                     'small': true
@@ -528,21 +540,21 @@ $(ui.component.avatar.render({
                             );
                             </script>
                         </div>
-                        <div class="app-block">
+                        
                             <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     'src':'/*image source*/',
     'small': true
 }))
 </code></pre>
-                        </div>
+                       
                     </div>
                     <div class="col-md-6">
                         <div class="app-block">
                             <h4>Small Round Avatar</h4>
-                            <div id="square-avatar-round"></div>
+                            <div id="small-square-avatar-round"></div>
                             <script>
-                            $('#square-avatar-round').replaceWith(
+                            $('#small-square-avatar-round').replaceWith(
                                 $(ui.component.avatar.render({
                                     'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
                                     'round': true,
@@ -551,7 +563,7 @@ $(ui.component.avatar.render({
                             );
                             </script>
                         </div>
-                        <div class="app-block">
+                        
                             <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     'src':'/*image source*/',
@@ -559,7 +571,7 @@ $(ui.component.avatar.render({
     'small': true
 }))
 </code></pre>
-                        </div>
+                       
                     </div>
                     <div class="col-xs-12">
                         <div class="app-block">
@@ -582,13 +594,11 @@ $(ui.component.avatar.render({
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="app-block">
-                            <pre><code class="language-javascript">
+                        <pre><code class="language-javascript">
   $(ui.component.image.render({
     // properties
   }))
 </code></pre>
-                        </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="app-block">
@@ -611,8 +621,7 @@ $(ui.component.avatar.render({
                         <!-- </div> -->
                     </div>
                     <div class="col-md-6">
-                        <div class="app-block">
-                            <pre><code class="language-javascript">
+                        <pre><code class="language-javascript">
   $(ui.component.image.render({
     'image': [{
         'src': '/*image source*/',
@@ -620,12 +629,14 @@ $(ui.component.avatar.render({
        }]
     }))
 </code></pre>
-                        </div>
                     </div>
                 </div>
                 <div class="row" id="anchor-input">
                     <div class="col-xs-12">
-                        <h2>Text Area</h2>
+                        <h2>Input Fields</h2>
+                        <div class="app-block">
+                            <h3>Text Area</h3>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div id="text-area"></div>
@@ -646,7 +657,9 @@ $(ui.component.avatar.render({
 </code></pre>
                     </div>
                     <div class="col-xs-12">
-                        <h2>Text Input</h2>
+                        <div class="app-block">
+                            <h3>Text Input</h3>
+                        </div>
                     </div>
                     <div class="col-xs-6">
                         <div id="text-input"></div>
@@ -669,7 +682,9 @@ $(ui.component.avatar.render({
 </code></pre>
                     </div>
                     <div class="col-xs-12">
-                        <h2>Dropdown</h2>
+                        <div class="app-block">
+                            <h3>Dropdown</h3>
+                        </div>
                     </div>
                     <div class="col-xs-6">
                         <div id="dropdown"></div>
@@ -703,7 +718,9 @@ $(ui.component.avatar.render({
 </code></pre>
                     </div>
                     <div class="col-xs-12">
-                        <h2>Dropdown2</h2>
+                        <div class="app-block">
+                            <h3>Dropdown2</h3>
+                        </div>
                     </div>
                     <div class="col-xs-6">
                         <div id="dropdown2"></div>
@@ -769,7 +786,7 @@ $(ui.component.avatar.render({
                 </div>
                 <div class="row" id="anchor-sharepost">
                     <div class="col-xs-12">
-                        <h2>Share-Post</h2>
+                        <h2>Share Post</h2>
                     </div>
                     <div class="col-md-6">
                         <!-- share-post -->

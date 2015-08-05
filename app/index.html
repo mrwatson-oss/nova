@@ -106,8 +106,8 @@
                             //     'url': '#',
                             //     'item': 'CSS Helpers'
                             // }, {
-                            'url': '#anchor-sampleapp',
-                            'item': 'Sample App'
+                            'url': '#anchor-sampleapps',
+                            'item': 'Sample App&#39;s'
                         }]
                     }))
 
@@ -119,8 +119,9 @@
                 <div class="row" id="anchor-color">
                     <div class="col-xs-12">
                         <h2>Color Palette</h2>
+                        <div class="app-block">
                         <h3>Primary Palette</h3>
-                    </div>
+                    </div></div>
                     <div class="col-xs-12">
                         <div class="color-block">
                             <div class="shape green">
@@ -138,7 +139,9 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <h3>Secundary Palette</h3>
+                        <div class="app-block">
+                            <h3>Secundary Palette</h3>
+                        </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="color-block">
@@ -169,7 +172,9 @@
                     </div>
                     <div class="col-xs-12">
                         <h2>UI Colors</h2>
-                        <h3>Backgrounds &amp; Borders</h3>
+                        <div class="app-block">
+                            <h3>Backgrounds &amp; Borders</h3>
+                        </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="color-block">
@@ -194,8 +199,9 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
+                    <div class="app-block">
                         <h3>Buttons</h3>
-                    </div>
+                    </div></div>
                     <div class="col-xs-12">
                         <div class="color-block">
                             <div class="shape shape-small button-color--neutral">
@@ -239,8 +245,9 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
+                    <div class="app-block">
                         <h3>Text</h3>
-                    </div>
+                    </div></div>
                     <div class="col-xs-12">
                         <div class="color-block">
                             <div class="shape shape-small button-color__text">
@@ -308,7 +315,6 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        
                         <pre class="language-markup"><code class="language-markup">
 &lt;div class="container"&gt; 
     &lt;div class="row"&gt; 
@@ -330,8 +336,6 @@
 
 &#8595; Creates a grid like this &#8595; 
 </code></pre>
-                        
-                        
                     </div>
                     <div class="col-xs-12">
                         <div class="app-block">
@@ -367,21 +371,21 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="app-block">
+                        <div class="app-block--accent">
                             <p>
                                 The left column (col-md-3) is for navigation and disappears on small devices or screen-widths.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="app-block">
+                        <div class="app-block--accent">
                             <p>
                                 The middle column (col-md-6) is for main content.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="app-block">
+                        <div class="app-block--accent">
                             <p>
                                 The (optional) right column (col-md-3) is for widgets and disappears on small devices or screen-widths.
                             </p>
@@ -397,21 +401,21 @@
                         </div>
                     </div>
                     <div class="col-md-9 col-md-offset-3">
-                        <div class="app-block">
+                        <div class="app-block--accent">
                             <p>
                                 App Bar or full-width app content
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6 col-md-offset-3">
-                        <div class="app-block">
+                        <div class="app-block--accent">
                             <p>
                                 App content
                             </p>
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="app-block">
+                        <div class="app-block--accent">
                             <p>
                                 The (optional) right column (col-md-3) for in-app nav
                             </p>
@@ -423,19 +427,13 @@
                         <h2>Typography</h2>
                         <div class="app-block">
                             <h3>Fonts</h3>
-                    
-                    
-                            <p>we use this font blabla</p>
+                            <p>We use these fonts</p>
+                            <p>For regular type in <code class="language-markup">&lt;p&gt;</code> we use the <code class="language-css"> $font-family </code> Sass variable. (Currently Source Sans Pro)</p>
                         </div>
-                        
                     </div>
-                    <div class="col-xs-12">
+                    <div class="col-xs-8">
                         <div class="app-block">
                             <h3>Headers</h3>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="app-block">
                             <h1>This is H1</h1>
                             <h2>This is H2</h2>
                             <h3>This is H3</h3>
@@ -444,24 +442,16 @@
                             <h6>This is H6</h6>
                         </div>
                     </div>
-                    <div class="col-xs-12">
+                    <div class="col-xs-8">
                         <div class="app-block">
                             <h3>Paragraph</h3>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="app-block">
                             <p>This is a paragraph - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, cumque quis possimus dicta illo qui, quaerat deleniti distinctio. Mollitia deleniti praesentium molestias provident facilis facere minus aut quam, ex repellendus.
                                 <a href="#">This is what a link looks like in a paragraph</a> </p>
                         </div>
                     </div>
-                    <div class="col-xs-12">
+                    <div class="col-xs-4">
                         <div class="app-block">
                             <h3>Unordered list</h3>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="app-block">
                             <ul>
                                 <li>item</li>
                                 <li>item</li>
@@ -471,8 +461,11 @@
                         </div>
                     </div>
                 </div>
-                <div id="anchor-sampleapp">
-                    <h2>Sample App - Face Game</h2>
+                <div id="anchor-sampleapps">
+                    <h2>Sample App&#39;s</h2>
+                    <div class="app-block">
+                        <h3>Face Game</h3>
+                    </div>
                 </div>
                 <div id="theApp">
                     <div id="start">

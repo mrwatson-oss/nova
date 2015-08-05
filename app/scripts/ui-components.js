@@ -1,5 +1,42 @@
 var ui = ui || {};
 
+ui.component.appbar = (function($, T) {
+
+    /**
+     * appbar
+     * @type {Object}
+     */
+    var params = {
+        'class': null
+ 
+
+    };
+
+
+    /**
+     * render
+     *
+     * @todo make this method extended or mixin
+     * @param {} appbar object with all properties
+     * @return compiled handlebars template
+     */
+    function render(context) {
+
+
+
+        data = $.extend({}, params, context);
+
+
+        return T.appbar(data);
+    }
+
+    return {
+        render: render
+    };
+
+}(jQuery, ui.component.template));
+;var ui = ui || {};
+
 ui.component.appblock = (function($, T) {
 
     /**
@@ -311,43 +348,6 @@ ui.component.image = (function($, T) {
 }
 (jQuery, ui.component.template));;var ui = ui || {};
 
-ui.component.appbar = (function($, T) {
-
-    /**
-     * appbar
-     * @type {Object}
-     */
-    var params = {
-        'class': null
- 
-
-    };
-
-
-    /**
-     * render
-     *
-     * @todo make this method extended or mixin
-     * @param {} appbar object with all properties
-     * @return compiled handlebars template
-     */
-    function render(context) {
-
-
-
-        data = $.extend({}, params, context);
-
-
-        return T.appbar(data);
-    }
-
-    return {
-        render: render
-    };
-
-}(jQuery, ui.component.template));
-;var ui = ui || {};
-
 ui.component.nav = (function($, T) {
 
     /**
@@ -413,7 +413,7 @@ ui.component.partials = (function($, T) {
                 'PartialDropdown': ui.component.dropdown.render({
                     'class': '{{class}}'
                 }),
-                'PartialNavItem': '<a href="{{baseurl}}{{url}}">{{item}}</a>'
+                'PartialNavItem': '<a href="{{baseurl}}{{url}}">{{{item}}}</a>'
             });
 
             data = $.extend({}, partials, context);
