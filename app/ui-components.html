@@ -133,28 +133,42 @@
                         <script>
                         $('#appbar').replaceWith(
                             $(ui.component.appbar.render({
-                                'appbarDropdown': [{
-                                    'dropdownItem': 'hooi',
-                                    'dropdownOptions': [{
-                                        'option': 'dezem',
-                                        'href': '#'
-                                    }, {
-                                        'option': 'in',
-                                        'href': '#'
-                                    }]
-                                }],
-                                navItems: [{
-                                    'url': '#',
-                                    'item': 'Upcoming events',
-                                    'class': 'nav--active'
-                                }, {
-                                    'url': '#',
-                                    'item': 'Past events'
-                                }],
+                                // 'appbarDropdown': [{
+                                //     'dropdownItem': 'hooi',
+                                //     'dropdownOptions': [{
+                                //         'option': 'dezem',
+                                //         'href': '#'
+                                //     }, {
+                                //         'option': 'in',
+                                //         'href': '#'
+                                //     }]
+                                // }],
+                                // navItems: [{
+                                //     'url': '#',
+                                //     'item': 'Upcoming events',
+                                //     'class': 'nav--active'
+                                // }, {
+                                //     'url': '#',
+                                //     'item': 'Past events'
+                                // }],
                                 'button': [{
                                     'class': 'solid-button--strict pull-right',
                                     'content': 'Add user'
-                                }],
+                                }, {
+                                    'class': 'solid-button--neutral border-right',
+                                    'content': 'About'
+                                },
+                                {
+                                    'class': 'solid-button--neutral border-right',
+                                    'content': 'Posts',
+                                    'borderLeft': true
+                                },
+                                {
+                                    'class': 'solid-button--neutral border-right',
+                                    'content': 'Collagues',
+                                    'borderLeft': true
+                                }
+                                ],
                             }))
                         );
                         </script>
@@ -268,19 +282,19 @@
                             <script>
                             $('#naked-button').replaceWith(
                                 $(ui.component.button.render({
-                                    'content': 'Meetings',
+                                    'content': 'MEETINGS',
                                     'class': 'naked-button--neutral'
                                 })),
                                 $(ui.component.button.render({
-                                    'content': 'Like',
+                                    'content': 'LIKE',
                                     'class': 'naked-button--happy'
                                 })),
                                 $(ui.component.button.render({
-                                    'content': 'Back',
+                                    'content': 'BACK',
                                     'class': 'naked-button--strict'
                                 })),
                                 $(ui.component.button.render({
-                                    'content': 'Destroy',
+                                    'content': 'DESTROY',
                                     'class': 'naked-button--angry'
                                 })),
                                 $(ui.component.button.render({

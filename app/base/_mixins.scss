@@ -13,9 +13,9 @@
 
 @mixin solid-button($button-color, $button-color-accent, $button-text-color: $button-color__text) {
     background: $button-color;
-    border: 1px solid $button-color-accent;
+    border: 0px solid $button-color-accent;
     color: $button-text-color;
-    padding: 1em 1.4em;
+    padding: 1em 1.4em 1em 1.4em;
     &:link {}
     &:visited {}
     &:hover {
@@ -30,7 +30,7 @@
     }
     &:disabled {
         background: lighten($button-color, 30%);
-        border: 1px solid lighten($button-color-accent, 40%);
+        border: 0px solid lighten($button-color-accent, 40%);
         color: lighten($button-text-color, 40%);
         cursor: default;
     }

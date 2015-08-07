@@ -128,7 +128,8 @@ ui.component.button = (function($, T) {
         content: null,
         action: 'clickButton()',
         icon: null,
-        disabled: false
+        disabled: false,
+        borderLeft: false
     };
 
 clickButton = function() {

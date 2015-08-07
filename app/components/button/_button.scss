@@ -3,14 +3,21 @@
 // -----------------------------------------------------------------------------
 .btn {
     display: inline-block;
-    margin: .2em;
+    margin: .2em .2em .2em 0;
     line-height: 1em;
-    font-size: 1em;
+    font-size: .8em;
     text-decoration: none;
     cursor: pointer;
     font-family: $button-font;
+    border-radius: 2px;
+    letter-spacing: 1px;
 }
-
+.border-left {
+    border-left: 1px solid $sec-grey--light !important;
+}
+.border-right {
+    border-right: 1px solid $sec-grey--light !important;
+}
 // -----------------------------------------------------------------------------
 // Naked Buttons
 // -----------------------------------------------------------------------------
