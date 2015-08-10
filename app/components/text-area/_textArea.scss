@@ -23,7 +23,7 @@
             border: none;
         }
         textarea::-webkit-input-placeholder{
-          color: $sec-grey;
+          color: $grey;
           font-size: 16px;
           font-family: $font-family;
         }
@@ -46,7 +46,7 @@
 .inputMaterial:focus {outline:none;}
 
 label {
-  color: $sec-grey;
+  color: $grey;
   font-weight: normal;
   position: absolute;
   pointer-events: none;

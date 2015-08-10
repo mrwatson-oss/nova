@@ -7,11 +7,11 @@
     </div>
     <div class="col-md-6"> {{#each headerTextInput}} {{> PartialTextInput }} {{/each}} </div> {{#if nav}}
     <div class="col-md-3">
-        <ul class="nav nav--horizontal">
+        <div class="nav nav--horizontal">
             {{#each navItems}}
             <li>{{> PartialNavItem}}</li>
             {{/each}}
-        </ul>
+        </div>
     </div>
     {{/if}}
         </div>

@@ -1,38 +1,67 @@
 .nav {
-    // @extend .card;
-    // margin: 1em 0 0 0;
     padding: 0;
     li {
         background: white;
         :focus {
             outline: none;
+            // background: green;
         }
         a {
             text-decoration: none;
-            // font-family: $mrwatson-headers;
             color: $text-color;
             line-height: 2.4em;
             font-size: .9em;
             // border-left: 1px solid $sec-grey--light;
+            &:hover {
+                background: $grey;
+                // background: green;
+            }
+            &:active {
+                background: $grey--light;
+                // background: green;
+            }
         }
     }
     .nav-title {
         line-height: 3.8em;
         padding: 1em;
-        color: $sec-grey;
+        color: $grey;
         font-family: $button-font;
         cursor: default;
     }
 }
 
 .nav--horizontal {
-    margin: 0;
+    // margin: 0;
     li {
-        float: right;
+        display: inline-block;
+        // margin: 0 auto;
+        a {
+            line-height: 2em;
+            padding: .4em .5em;
+            margin: 0 .5em;
+            &:hover {
+                background: none;
+                border-bottom: .1em solid $border-color--accent;
+            }
+            &:active {
+                background: $grey--light;
+            }
+        }
+        .divider {
+            &:after {
+                content: "";
+                // font-size: 2em;
+                padding-left: 1em;
+                // margin-top: .4em;
+                // padding-bottom: 0;
+                margin-right: -1em;
+                border-right: .1em solid $grey;
+            }
+        }
     }
 }
 
 .nav--active {
-    border-bottom: 3px solid $grey--light;
-    color: red;
+    border-bottom: .1em solid $border-color--accent;
 }

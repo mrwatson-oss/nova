@@ -1,9 +1,9 @@
 // jshint devel:true
 // Scroll to anchor
 $(document).ready(function() {
-'use strict';
+'use strict'; 
 $('a[href*=#]:not([href=#])').click(function() {
-    'use strict';
+    // 'use strict';
     if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') || location.hostname === this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');

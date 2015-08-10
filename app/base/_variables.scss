@@ -16,7 +16,7 @@ $green--light	: lighten($green, 44%);
 $green--dark	: darken($green, 10%);
 $white			: #FFFFFF;
 $grey			: #DEDEDE;
-$grey--light 	: lighten($grey, 20%);
+$grey--light 	: lighten($grey, 9%);
 $grey--dark 	: darken($grey, 56%);
 
 // -----------------------------------------------------------------------------
@@ -29,9 +29,9 @@ $sec-blue--dark		: darken($sec-blue, 10%);
 $sec-red			: #DA4747;
 $sec-red--light		: lighten($sec-red, 10%);
 $sec-red--dark		: darken($sec-red, 10%);
-$sec-grey			: #B3B3B3;
-$sec-grey--light	: lighten($sec-grey, 20%);
-$sec-grey--dark		: darken($sec-grey, 20%);
+// $sec-grey			: #DEDEDE;
+// $sec-grey--light	: lighten($sec-grey, 9%);
+// $sec-grey--dark		: darken($sec-grey, 10%);
 
 // -----------------------------------------------------------------------------
 // UI colors - BACKGROUNDS
@@ -67,7 +67,7 @@ $button-color--angry--accent		: $sec-red--dark;
 // UI colors - NAVIGATION
 // -----------------------------------------------------------------------------
 
-$divider-color		: $sec-grey--light;
+$divider-color		: $grey--light;
 
 
 // ================================
@@ -111,21 +111,23 @@ $font-size: .9em;
 // Type - WEIGHT
 // -----------------------------------------------------------------------------
 
-$font-weight--light: 300;
-$font-weight--regular: 400;
-$font-weight--bold: 500;
+$font-weight--light		: 300;
+$font-weight--regular	: 400;
+$font-weight--bold		: 500;
 
 // -----------------------------------------------------------------------------
 // Type - SIZE
 // -----------------------------------------------------------------------------
 
 //todo: mixin for browser compatibility
-$font-size--small: 0.7em;
-$font-size--regular: 0.9em;
-$font-size--large: 1.2em;
-$font-size--x-large: 1.6em;
-$font-size--xx-large: 2.2em;
-$font-size--xxx-large: 3.2em;
+$font-size--small		: 0.7em;
+$font-size--regular		: 0.9em;
+$font-size--large		: 1.2em;
+$font-size--x-large		: 1.6em;
+$font-size--xx-large	: 2.2em;
+$font-size--xxx-large	: 3.2em;
+
+$line-height			: $font-size--large;
 
 // ================================
 // UI-elements
@@ -135,4 +137,5 @@ $font-size--xxx-large: 3.2em;
 // UI-elements - BLOCKS
 // -----------------------------------------------------------------------------
 
+$block-padding		: .4em;
 

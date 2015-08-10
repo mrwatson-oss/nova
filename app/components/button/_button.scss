@@ -13,10 +13,10 @@
     letter-spacing: 1px;
 }
 .border-left {
-    border-left: 1px solid $sec-grey--light !important;
+    border-left: 1px solid $grey--light !important;
 }
 .border-right {
-    border-right: 1px solid $sec-grey--light !important;
+    border-right: 1px solid $grey--light !important;
 }
 // -----------------------------------------------------------------------------
 // Naked Buttons
@@ -51,6 +51,7 @@
 .solid-button--neutral {
     @extend .btn;
     @include solid-button($button-color--neutral,$button-color--neutral--accent,$button-color--neutral__text);
+    border: 1px solid $button-color--neutral--accent;    
 }
 
 .solid-button--happy {

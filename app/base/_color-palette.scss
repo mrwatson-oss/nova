@@ -115,6 +115,7 @@
         }
         .shade-dark {
             background: $grey--dark;
+            color: $grey;
         }
     }
     .sec-red {
@@ -135,13 +136,13 @@
             background: $sec-blue--dark;
         }
     }
-    .sec-grey {
-        background: $sec-grey;
-        .shade-light {
-            background: $sec-grey--light;
-        }
-        .shade-dark {
-            background: $sec-grey--dark;
-        }
-    }
+    // .sec-grey {
+    //     background: $sec-grey;
+    //     .shade-light {
+    //         background: $sec-grey--light;
+    //     }
+    //     .shade-dark {
+    //         background: $sec-grey--dark;
+    //     }
+    // }
 }

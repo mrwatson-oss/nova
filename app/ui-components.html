@@ -48,15 +48,15 @@
                         'headerTextInput': [{
                             'placeholder': 'Seach for components or whatever',
                             'class': 'text-input__grey'
-
                         }],
                         'navItems': [{
-                            'url': '#',
-                            'item': 'UI components',
-                            'class': 'nav--active'
-                        }, {
                             'url': '/index.html',
                             'item': 'UI base'
+                        }, {
+
+                            'url': '#',
+                            'item': 'UI components',
+                            'class': 'nav--active divider'
                         }],
                         'options': [{
                             'option': 'dezem',
@@ -93,16 +93,13 @@
                         }, {
                             'url': '#anchor-appblock',
                             'item': 'App Block'
-                                // }, {
-                                //     'url': '#anchor-button',
-                                //     'item': 'App Daddy'
                         }, {
                             'url': '#anchor-button',
                             'item': 'Buttons'
                         }, {
-                            //     'url': '#anchor-card',
-                            //     'item': 'Card'
-                            // }, {
+                            'url': '#anchor-composer',
+                            'item': 'Composer'
+                        }, {
                             'url': '#anchor-header',
                             'item': 'Header'
                         }, {
@@ -112,11 +109,8 @@
                             'url': '#anchor-input',
                             'item': 'Input Fields'
                         }, {
-                            'url': '#anchor-nav',
-                            'item': 'Nav'
-                        }, {
-                            'url': '#anchor-sharepost',
-                            'item': 'Share Post'
+                            'url': '#anchor-navigation',
+                            'item': 'Navigation'
                         }]
                     }))
 
@@ -143,31 +137,33 @@
                                 //         'href': '#'
                                 //     }]
                                 // }],
-                                // navItems: [{
-                                //     'url': '#',
-                                //     'item': 'Upcoming events',
-                                //     'class': 'nav--active'
-                                // }, {
-                                //     'url': '#',
-                                //     'item': 'Past events'
-                                // }],
-                                'button': [{
-                                    'class': 'solid-button--strict pull-right',
-                                    'content': 'Add user'
+                                navItems: [{
+                                    'url': '#',
+                                    'item': 'Past events',
+                                    'class': 'nav--active divider'
                                 }, {
-                                    'class': 'solid-button--neutral border-right',
-                                    'content': 'About'
-                                },
-                                {
-                                    'class': 'solid-button--neutral border-right',
-                                    'content': 'Posts',
-                                    'borderLeft': true
-                                },
-                                {
-                                    'class': 'solid-button--neutral border-right',
-                                    'content': 'Collagues',
-                                    'borderLeft': true
-                                }
+                                    'url': '#',
+                                    'item': 'Upcoming events'
+
+                                }],
+                                'button': [{
+                                        'class': 'solid-button--strict pull-right',
+                                        'content': 'Add user'
+                                    }
+                                    // , {
+                                    //     'class': 'solid-button--neutral border-right',
+                                    //     'content': 'About'
+                                    // },
+                                    // {
+                                    //     'class': 'solid-button--neutral border-right',
+                                    //     'content': 'Posts',
+                                    //     'borderLeft': true
+                                    // },
+                                    // {
+                                    //     'class': 'solid-button--neutral border-right',
+                                    //     'content': 'Collagues',
+                                    //     'borderLeft': true
+                                    // }
                                 ],
                             }))
                         );
@@ -282,19 +278,19 @@
                             <script>
                             $('#naked-button').replaceWith(
                                 $(ui.component.button.render({
-                                    'content': 'MEETINGS',
+                                    'content': 'Meetings',
                                     'class': 'naked-button--neutral'
                                 })),
                                 $(ui.component.button.render({
-                                    'content': 'LIKE',
+                                    'content': 'Like',
                                     'class': 'naked-button--happy'
                                 })),
                                 $(ui.component.button.render({
-                                    'content': 'BACK',
+                                    'content': 'Back',
                                     'class': 'naked-button--strict'
                                 })),
                                 $(ui.component.button.render({
-                                    'content': 'DESTROY',
+                                    'content': 'Destroy',
                                     'class': 'naked-button--angry'
                                 })),
                                 $(ui.component.button.render({
@@ -456,6 +452,44 @@
 </code></pre>
                     </div>
                 </div> -->
+                <div class="row" id="anchor-composer">
+                    <div class="col-xs-12">
+                        <h2>Composer</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- share-post -->
+                        <div id="share-post"></div>
+                        <script>
+                        $('#share-post').replaceWith(
+                            $(ui.component.sharePost.render({
+                                'sharePostTextInput': [{
+                                    'placeholder': 'hoi',
+                                    'hasLabel': false
+                                }],
+                                'button': [{
+                                    'class': 'solid-button--neutral',
+                                    'content': 'i',
+                                    'action': 'alert("ok, pick something classy please")'
+                                }, {
+                                    'class': 'solid-button--happy pull-right',
+                                    'content': 'Share post'
+                                }],
+                                'text-input': [{
+                                    'background': 'false'
+                                }]
+
+                            }))
+                        );
+                        </script>
+                    </div>
+                    <div class="col-md-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.sharePost.render({
+    // properties
+  }))
+</code></pre>
+                    </div>
+                </div>
                 <div class="row" id="anchor-header">
                     <div class="col-xs-12">
                         <h2>Header</h2>
@@ -494,7 +528,7 @@
                 </div>
                 <div class="row" id="anchor-image">
                     <div class="col-xs-12 ">
-                            <h2>Images</h2>
+                        <h2>Images</h2>
                         <div class="app-block">
                             <h3>Avatars</h3>
                         </div>
@@ -511,13 +545,11 @@
                             );
                             </script>
                         </div>
-                        
-                            <pre><code class="language-javascript">
+                        <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     'src':'/*image source*/'
 }))
 </code></pre>
-                       
                     </div>
                     <div class="col-md-6">
                         <div class="app-block">
@@ -532,14 +564,12 @@ $(ui.component.avatar.render({
                             );
                             </script>
                         </div>
-                        
-                            <pre><code class="language-javascript">
+                        <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     'src':'/*image source*/',
     'round': true
 }))
 </code></pre>
-                       
                     </div>
                     <div class="col-md-6">
                         <div class="app-block">
@@ -554,14 +584,12 @@ $(ui.component.avatar.render({
                             );
                             </script>
                         </div>
-                        
-                            <pre><code class="language-javascript">
+                        <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     'src':'/*image source*/',
     'small': true
 }))
 </code></pre>
-                       
                     </div>
                     <div class="col-md-6">
                         <div class="app-block">
@@ -577,15 +605,13 @@ $(ui.component.avatar.render({
                             );
                             </script>
                         </div>
-                        
-                            <pre><code class="language-javascript">
+                        <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     'src':'/*image source*/',
     'round': true,
     'small': true
 }))
 </code></pre>
-                       
                     </div>
                     <div class="col-xs-12">
                         <div class="app-block">
@@ -768,7 +794,7 @@ $(ui.component.avatar.render({
 </code></pre>
                     </div>
                 </div>
-                <div class="row" id="anchor-nav">
+                <div class="row" id="anchor-navigation">
                     <div class="col-xs-12">
                         <h2>Nav</h2>
                     </div>
@@ -793,44 +819,6 @@ $(ui.component.avatar.render({
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
   $(ui.component.nav.render({
-    // properties
-  }))
-</code></pre>
-                    </div>
-                </div>
-                <div class="row" id="anchor-sharepost">
-                    <div class="col-xs-12">
-                        <h2>Share Post</h2>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- share-post -->
-                        <div id="share-post"></div>
-                        <script>
-                        $('#share-post').replaceWith(
-                            $(ui.component.sharePost.render({
-                                'sharePostTextInput': [{
-                                    'placeholder': 'hoi',
-                                    'hasLabel': false
-                                }],
-                                'button': [{
-                                    'class': 'solid-button--neutral',
-                                    'content': 'i',
-                                    'action': 'alert("ok, pick something classy please")'
-                                }, {
-                                    'class': 'solid-button--happy pull-right',
-                                    'content': 'Share post'
-                                }],
-                                'text-input': [{
-                                    'background': 'false'
-                                }]
-
-                            }))
-                        );
-                        </script>
-                    </div>
-                    <div class="col-md-6">
-                        <pre><code class="language-javascript">
-  $(ui.component.sharePost.render({
     // properties
   }))
 </code></pre>

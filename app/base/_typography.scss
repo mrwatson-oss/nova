@@ -24,7 +24,22 @@ body {
             color: $link-color;
             text-decoration: none;
             // transition: all .1s;
+            &:link {
+                color: $link-color;
+            }
+            &:visited {
+                color: $link-color--accent;
+            }
             &:hover {
+                color: $link-color--accent;
+                border-bottom: 1px solid $link-color--accent;
+            }
+            &:active {
+                color: $link-color;
+            }
+            &:focus {
+                outline: none;
+                background: $grey--light;
                 color: $link-color--accent;
                 border-bottom: 1px solid $link-color--accent;
             }
@@ -65,8 +80,9 @@ body {
         font-weight: $font-weight--light;
         font-size: $font-size--small;
     }
-    input, textarea {
-    	font-size: .9em;
-    	color: $text-color;
+    input,
+    textarea {
+        font-size: .9em;
+        color: $text-color;
     }
 }
