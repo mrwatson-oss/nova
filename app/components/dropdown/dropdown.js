@@ -13,7 +13,8 @@ ui.component.dropdown = (function($, T) {
      */
     var dropdown = {
         'class': null, 
-        'script': 'comeDown()'
+        'script': 'comeDown()',
+        'dropdownItem': null
     };
 
     comeDown = function() {
@@ -34,10 +35,6 @@ ui.component.dropdown = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-
-        Handlebars.registerPartial({
-            'pDropdownOptions': '<li><a id="{{class}}" href="{{href}}">{{option}}</a></li>'
-        });
 
         data = $.extend({}, dropdown, context);
 

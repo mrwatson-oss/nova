@@ -1,12 +1,9 @@
 // $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
-
 // bower:scss
 // endbower
 
-
-
-
 /* Base */
+
 @import "../base/variables";
 @import "../base/mixins";
 @import "../base/color-palette";
@@ -14,24 +11,23 @@
 
 /* Bootstrap grid */
 
-
 // Core variables and mixins
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-
 // Reset and dependencies
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/print";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
-
 // Core CSS
 * {
-  @include box-sizing(border-box);
+    @include box-sizing(border-box);
 }
+
 *:before,
 *:after {
-  @include box-sizing(border-box);
+    @include box-sizing(border-box);
 }
+
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/type";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/code";
@@ -39,7 +35,6 @@
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/forms";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
-
 // Components
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
@@ -62,19 +57,17 @@
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/wells";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/close";
-
 // Components w/ JavaScript
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/modals";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
-
 // Utility classes
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 
-
 /* Components */
+
 @import '../components/app-bar/appbar';
 @import '../components/avatar/avatar';
 @import '../components/appblock/appblock';
@@ -82,102 +75,72 @@
 @import '../components/card/card';
 @import '../components/dropdown/dropdown';
 @import '../components/header/header';
+@import '../components/icon/icon';
 @import '../components/image/image';
 @import '../components/text-area/textArea';
 @import '../components/text-input/textInput';
 @import '../components/nav/nav';
+@import '../components/partials/partials';
 @import '../components/share-post/sharePost';
-
 // @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,200italic,300italic);
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500|Source+Sans+Pro:400,300);
-
 body {
-  background: $body-background-color;
-  margin: 0;
-  padding: 0;
-  .space {
-    padding: 18px 0;
-  }
-  // font-family: $mrwatson-font;
-  // // font-weight: 400;
-  // font-size: .9em;
-  // a {
-  //   text-decoration: none;
-  //   font-family: $mrwatson-headers;
-  //   color: $text-color;
-  //   line-height: 2.4em;
-  //   font-size: .9em;
-  // }
-// h1,h2,h3,h4,h5,h6 {
-//   font-family: $mrwatson-headers;
-  
-
-// }
-// button {
-//   font-family: $mrwatson-headers;
-// // }
-// p {
-//   line-height: 1.4em;
-// }
-  
+    background: $body-background-color;
+    margin: 0;
+    padding: 0;
+    .space {
+        padding: 18px 0;
+    }
+    
 }
-
 
 #theApp {
-  min-height: 300px;
-  max-height: 100%;
-  // max-height: 100%;
-background: white;
-padding: 1em;
-  #start,#game,#finish {background: white; }
-
-
-.highscores {
-  border-left: solid 1px black;
+    min-height: 300px;
+    max-height: 100%;
+    // max-height: 100%;
+    background: white;
+    padding: 1em;
+    #start,
+    #game,
+    #finish {
+        background: white;
+    }
+    .highscores {
+        border-left: solid 1px black;
+    }
+    .scoreListHighscore {
+        font-weight: bold;
+    }
+    .teader {
+        padding-bottom: 3em;
+        margin-bottom: 1em;
+        border-bottom: 1px;
+        // height: 20px;
+    }
+    .headercontent {
+        float: left;
+    }
+    .score {
+        float: right;
+    }
+    .ranking {
+        float: right;
+    }
+    .photo {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        overflow: hidden;
+        margin-top: 1em;
+    }
+    .names {
+        // padding: 0 10px 5px 10px;
+    }
+    .userPhoto {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
 }
-
-.scoreListHighscore{
-  font-weight: bold;
-}
-
-.teader {
-  padding-bottom: 3em;
-  margin-bottom: 1em;
-  border-bottom: 1px;
-  // height: 20px;
-}
-
-.headercontent {
-  float: left;
-}
-
-.score {
-  float: right;
-
-}
-
-.ranking {
-  float: right;
-}
-
-
-
-.photo {
-  position: relative;
-  height: 100px;
-  width: 100px;
-  overflow: hidden;
-  margin-top: 1em;
-}
-
-.names {
-  // padding: 0 10px 5px 10px;
-}
-
-.userPhoto {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto;
-}}

@@ -15,7 +15,8 @@ ui.component.nav = (function($, T) {
         'properties': null,
         'class': null,
         'title': false,
-        'navTitle': null
+        'navTitle': null,
+        'communitySwitch': null
 
 };
 

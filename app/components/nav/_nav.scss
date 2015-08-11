@@ -42,7 +42,7 @@
             margin: 0 .5em;
             &:hover {
                 background: none;
-                border-bottom: .1em solid $border-color--accent;
+                border-bottom: .2em solid $border-color--accent;
             }
             &:active {
                 background: $grey--light;
@@ -63,5 +63,5 @@
 }
 
 .nav--active {
-    border-bottom: .1em solid $border-color--accent;
+    border-bottom: .2em solid $border-color--accent;
 }

@@ -27,6 +27,7 @@
     <!-- endbuild -->
     <link rel="stylesheet" href="vendor/prism.css">
     <script src="vendor/prism.js"></script>
+    <script src="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js"></script>
 </head>
 
 <body>
@@ -51,12 +52,13 @@
                         }],
                         'navItems': [{
                             'url': '/index.html',
-                            'item': 'UI base'
+                            'item': 'UI base',
+                            'class': 'divider'
                         }, {
 
                             'url': '#',
                             'item': 'UI components',
-                            'class': 'nav--active divider'
+                            'class': 'nav--active'
                         }],
                         'options': [{
                             'option': 'dezem',
@@ -624,10 +626,10 @@ $(ui.component.avatar.render({
                             <script>
                             $('#bodyimage').replaceWith(
                                 $(ui.component.image.render({
-                                    'image': [{
-                                        'src': 'http://cdn.animals-pics.com/pictures/www.ozanimals.com/image/albums/australia/Bird/normal_Cape-Barren-Goose-2.jpg',
-                                        'body': true
-                                    }]
+
+                                    'src': 'https://pbs.twimg.com/profile_images/2112311889/ostrich_head.jpg',
+                                    'body': true
+
                                 }))
                             );
                             </script>
@@ -651,10 +653,10 @@ $(ui.component.avatar.render({
                         <script>
                         $('#coverimage').replaceWith(
                             $(ui.component.image.render({
-                                'image': [{
-                                    'src': 'http://www.apnatimepass.com/dumb-and-dumber-to-movie/dumb-and-dumber-to-movie-still-10.jpg',
-                                    'cover': true
-                                }]
+
+                                'src': 'http://www.apnatimepass.com/dumb-and-dumber-to-movie/dumb-and-dumber-to-movie-still-10.jpg',
+                                'cover': true
+
                             }))
                         );
                         </script>
@@ -732,7 +734,7 @@ $(ui.component.avatar.render({
                     <script>
                     $('#dropdown').replaceWith(
                         $(ui.component.dropdown.render({
-                            'dropdownItem': 'klap mij',
+                            'dropdownItem': 'Klap mij',
                             'dropdownOptions': [{
                                 'option': 'dezem',
                                 'href': '#'
@@ -777,7 +779,7 @@ $(ui.component.avatar.render({
                                 'href': '#',
                                 'class': 'divider'
                             }, {
-                                'option': 'hier boven staat een divider',
+                                'option': 'hier een divider',
                                 'href': '#'
                             }, {
                                 'option': 'in',
@@ -796,13 +798,20 @@ $(ui.component.avatar.render({
                 </div>
                 <div class="row" id="anchor-navigation">
                     <div class="col-xs-12">
-                        <h2>Nav</h2>
+                        <h2>Navigation</h2>
                     </div>
                     <div class="col-md-6">
-                        <div id="nav"></div>
+                        <div id="navigation"></div>
                         <script>
-                        $('#nav').replaceWith(
+                        $('#navigation').replaceWith(
                             $(ui.component.nav.render({
+                                'communitySwitch': true,
+                                // 'dropdownItem': 'KLAP',
+                                // 'icons': [{'icon': 'icon-solid-bell'}],
+                                'navCommunities': [{
+                                    'src': 'http://w3.siemens.nl/buildingtechnologies/nl/nl/PublishingImages/total-building-solutions-key-visual-large.jpg',
+                                    'name': 'Katshoek'
+                                }],
                                 'title': true,
                                 'navTitle': 'Optional title',
                                 'navItems': [{

@@ -1,0 +1,5 @@
+{{#if styleguide}} 
+	<div class="row">{{#each icons}}<div class="col-md-6 col-lg-4"><div class="app-block">{{>PartialIcon}}</div></div>{{/each}}</div>
+{{else}}
+	{{#each icons}} {{>PartialIcon}} {{/each}}
+{{/if}}

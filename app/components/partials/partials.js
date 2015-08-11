@@ -16,6 +16,11 @@ ui.component.partials = (function($, T) {
                     'class': '{{class}}',
                     'src': '{{src}}'
                 }),
+                'PartialDropdown': ui.component.dropdown.render({
+                    'class': '{{class}}',
+                    'dropdownItem': null
+                }),
+                'pDropdownOptions': '<li><a id="{{class}}" href="{{href}}">{{option}}</a></li>',
                 'PartialTextInput': ui.component.textInput.render({
                     'class': '{{class}}',
                     'id': '{{id}}',
@@ -25,9 +30,13 @@ ui.component.partials = (function($, T) {
                     'hasLabel': false,
                     'label': '{{label}}'
                 }),
-                'PartialDropdown': ui.component.dropdown.render({
-                    'class': '{{class}}'
+                'PartialIcon': '<i class="icon"><svg class="{{icon}} {{class}} {{color}}"><use xlink:href="#{{icon}}"></use></svg></i>{{#if label}}<pre class="language-markup"><code class="language-markup">{{icon}}</code></pre>{{/if}}',
+                'PartialCoverImage': ui.component.image.render({
+                    'cover': true,
+                    'src': '{{{src}}}',
+                    'alt': '{{alt}}'
                 }),
+                'PartialCommunitySwitch': '<div class="community-switch" style="background: no-repeat center url({{src}})"><span class="community-switch-name"><h1>{{name}} {{>PartialIcon icon="icon-system-down-open"}}</h1></span></div>',
                 'PartialNavItem': '<a class="{{class}} "href="{{baseurl}}{{url}}">{{{item}}}</a>'
             });
 

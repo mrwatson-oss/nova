@@ -1,9 +1,9 @@
-<ul class="nav">
+<div class="nav nav--drop">
 <li class="dropdown {{class}}" id="dropdown">
 {{dropdownItem}}
 	<ul class="nav drop-nav">
-		{{#each dropdownOptions}}{{> pDropdownOptions }}{{/each}}
+		{{#each dropdownOptions}} <li><a id="{{class}}" href="{{href}}">{{option}}</a></li> {{/each}}
 	</ul>
 </li>
-</ul>
+</div>
 <script>{{script}}</script>

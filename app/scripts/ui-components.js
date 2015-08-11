@@ -211,7 +211,8 @@ ui.component.dropdown = (function($, T) {
      */
     var dropdown = {
         'class': null, 
-        'script': 'comeDown()'
+        'script': 'comeDown()',
+        'dropdownItem': null
     };
 
     comeDown = function() {
@@ -232,10 +233,6 @@ ui.component.dropdown = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-
-        Handlebars.registerPartial({
-            'pDropdownOptions': '<li><a id="{{class}}" href="{{href}}">{{option}}</a></li>'
-        });
 
         data = $.extend({}, dropdown, context);
 
@@ -309,6 +306,47 @@ ui.component.header = (function($, T) {
 }(jQuery, ui.component.template));
 ;var ui = ui || {};
 
+ui.component.icon = (function($, T) {
+
+    /**
+     * icon
+     * @type {Object}
+     */
+    var icon = {
+        'icon': null,
+        'color': null,
+        'size': null,
+        'styleguide': null
+    };
+
+     
+    /**
+     * render
+     *
+     * @todo make this method extended or mixin
+     * @param {} icon object with all properties
+     * @return compiled handlebars template
+     */
+    function render(context) {
+
+ // Handlebars.registerPartial({
+ //            'partButton': ui.component.icon.render({})
+            
+ //            });
+ 
+        data = $.extend({}, icon, context);
+
+        return T.icon(data);
+    }
+
+    return {
+        render: render
+    };
+
+
+}
+(jQuery, ui.component.template));;var ui = ui || {};
+
 ui.component.image = (function($, T) {
 
     /**
@@ -359,7 +397,8 @@ ui.component.nav = (function($, T) {
         'properties': null,
         'class': null,
         'title': false,
-        'navTitle': null
+        'navTitle': null,
+        'communitySwitch': null
 
 };
 
@@ -402,6 +441,11 @@ ui.component.partials = (function($, T) {
                     'class': '{{class}}',
                     'src': '{{src}}'
                 }),
+                'PartialDropdown': ui.component.dropdown.render({
+                    'class': '{{class}}',
+                    'dropdownItem': null
+                }),
+                'pDropdownOptions': '<li><a id="{{class}}" href="{{href}}">{{option}}</a></li>',
                 'PartialTextInput': ui.component.textInput.render({
                     'class': '{{class}}',
                     'id': '{{id}}',
@@ -411,9 +455,13 @@ ui.component.partials = (function($, T) {
                     'hasLabel': false,
                     'label': '{{label}}'
                 }),
-                'PartialDropdown': ui.component.dropdown.render({
-                    'class': '{{class}}'
+                'PartialIcon': '<i class="icon"><svg class="{{icon}} {{class}} {{color}}"><use xlink:href="#{{icon}}"></use></svg></i>{{#if label}}<pre class="language-markup"><code class="language-markup">{{icon}}</code></pre>{{/if}}',
+                'PartialCoverImage': ui.component.image.render({
+                    'cover': true,
+                    'src': '{{{src}}}',
+                    'alt': '{{alt}}'
                 }),
+                'PartialCommunitySwitch': '<div class="community-switch" style="background: no-repeat center url({{src}})"><span class="community-switch-name"><h1>{{name}} {{>PartialIcon icon="icon-system-down-open"}}</h1></span></div>',
                 'PartialNavItem': '<a class="{{class}} "href="{{baseurl}}{{url}}">{{{item}}}</a>'
             });
 

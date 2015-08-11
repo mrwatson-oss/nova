@@ -7,9 +7,12 @@
     </div>
     <div class="col-md-6"> {{#each headerTextInput}} {{> PartialTextInput }} {{/each}} </div> {{#if nav}}
     <div class="col-md-3">
-        <div class="nav nav--horizontal">
+        <div class="nav nav--horizontal pull-right">
             {{#each navItems}}
-            <li>{{> PartialNavItem}}</li>
+             <li>{{> PartialNavItem}}</li>
+            {{/each}}
+            {{#each navIcons}}
+             {{> PartialIcon}}
             {{/each}}
         </div>
     </div>

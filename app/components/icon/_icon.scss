@@ -1,0 +1,19 @@
+.icon {
+    [class^="icon-"],
+    [class*=" icon-"] {
+        height: 32px;
+        width: 32px;
+        display: inline-block;
+        fill: currentColor;
+    }
+    // display: inline-block; 
+    .green {
+        fill: $green;
+    }
+}
+    .icon-label {
+        // color: currentColor;
+        // padding: 1em;
+        // vertical-align: middle;
+
+    }

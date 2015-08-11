@@ -1,8 +1,11 @@
 // -----------------------------------------------------------------------------
 // Base dropdown
 // -----------------------------------------------------------------------------
+.nav--drop {
+    display: inline-block;
+}
 .dropdown {
-    position: relative;
+    position: absolute;
     display: inline-block;
     list-style-type: none;
     background: white;
@@ -16,23 +19,26 @@
         background: white;
         li {
             // text-align: left;
-            // padding-right: 2em;
+            position: relative;
+            // width: 200%;
         }
     }
     &.drop-nav-active {
         .drop-nav {
             display: block;
+            // width: 200%;
+            position: relative;
             z-index: 1;
             box-shadow: 0px 1px 5px $border-color;
         }
     }
-    &:after {
-        content: "\25BC";
-        font-size: .5em;
-        display: inline-block;
-        padding: .5em;
-        position: relative;
-    }
+    // &:after {
+    //     content: "\25BC";
+    //     font-size: .5em;
+    //     display: inline-block;
+    //     padding: .5em;
+    //     position: relative;
+    // }
     #divider {
         border-bottom: 2px solid $divider-color; 
 

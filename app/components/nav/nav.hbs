@@ -1,4 +1,10 @@
 <div class="nav app-block {{class}}" id="{{id}}">
+{{#if communitySwitch}}
+	{{#each navCommunities}}
+		{{>PartialCommunitySwitch}}
+	{{/each}}
+	{{!-- {{>PartialIcon}} --}}
+{{/if}}
 {{#if title}}
 	<span class="nav-title">{{navTitle}}</span>
 {{/if}}
