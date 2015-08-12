@@ -62,6 +62,28 @@
         -moz-transition: 0.2s ease all;
         -webkit-transition: 0.2s ease all;
     }
+     .icon {
+        font-size: 1.6em;
+        // line-height: 1.6em;
+        vertical-align: bottom;
+        // margin: 0 .4em 0 0;
+        margin: 0 .2em -.4em 0;
+        &.green {
+            color: $green;
+        }
+        &.blue {
+            color: $sec-blue;
+        }
+        &.red {
+            color: $sec-red;
+        }
+        &.grey {
+            color: $grey;
+        }
+        &.white {
+            color: $white;
+        }
+    }
     /* active state */
     .inputMaterial:focus ~ label,
     .inputMaterial:valid ~ label {

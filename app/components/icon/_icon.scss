@@ -6,14 +6,20 @@
         display: inline-block;
         fill: currentColor;
     }
-    // display: inline-block; 
+    display: inline-block; 
     .green {
         fill: $green;
     }
-}
-    .icon-label {
-        // color: currentColor;
-        // padding: 1em;
-        // vertical-align: middle;
-
+    .blue {
+        fill: $sec-blue;
     }
+    .red {
+        fill: $sec-red;
+    }
+    .grey {
+        fill: $grey;
+    }
+    .white {
+        fill: $white;
+    }
+}

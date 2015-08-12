@@ -3,7 +3,7 @@
     padding: 1em;
     width : 100%;
     height: auto;
-    background-color: white;
+    background: white;
     margin-bottom: 1em;
 }
 
@@ -11,3 +11,8 @@
     @extend .app-block;
     background-color: $sec-blue--light;
 }
+
+// .app-block--no-background {
+// 	@extend .app-block;
+// 	background: none;
+// }

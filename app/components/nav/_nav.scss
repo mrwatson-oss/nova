@@ -1,51 +1,104 @@
 .nav {
     padding: 0;
+    background: none;
     li {
         background: white;
         :focus {
             outline: none;
             // background: green;
         }
-        a {
+        &.nav__action-bar__button{
+            padding-left: .3em;
+        }
+            &.first {
+                padding-top: .6em;
+            }
+            &.last {
+                padding-bottom: .6em;
+            }
+            a {
+            vertical-align: top;
             text-decoration: none;
             color: $text-color;
-            line-height: 2.4em;
+            line-height: 1.4em;
             font-size: .9em;
-            // border-left: 1px solid $sec-grey--light;
             &:hover {
-                background: $grey;
-                // background: green;
+                background: $grey--light;
             }
             &:active {
                 background: $grey--light;
-                // background: green;
             }
         }
     }
     .nav-title {
-        line-height: 3.8em;
-        padding: 1em;
-        color: $grey;
+        display: block;
+        font-weight: 100;
+        background: rgba($white, .6);
+        padding: .8em 1em;
+        font-size: $font-size--large;
+        line-height: $font-size--large;
+        color: $text-color;
         font-family: $button-font;
         cursor: default;
+        .nav-title__button {
+            margin: -.76em -1em 0 0;
+        }
+    }
+    .icon {
+        font-size: 1.6em;
+        // line-height: 1.4em;
+        vertical-align: bottom;
+        margin: 0 .4em -.2em 0;
+        &.green {
+            color: $green;
+        }
+        &.blue {
+            color: $sec-blue;
+        }
+        &.red {
+            color: $sec-red;
+        }
+        &.grey {
+            color: $grey;
+        }
+        &.white {
+            color: $white;
+        }
+    }
+    .community-switch {
+        height: 4.5em;
+        color: white;
+        padding: 1.1em;
+        // margin-bottom: .5em;
+        box-shadow: inset 0 0 0 3em rgba($grey--dark, .5);
+        .community-switch-name {
+            font-family: $font-family;
+            font-weight: 100;
+            color: white;
+            font-size: $font-size--x-large;
+        }
+        .icon {
+            float: right;
+        }
     }
 }
 
 .nav--horizontal {
-    // margin: 0;
     li {
         display: inline-block;
-        // margin: 0 auto;
         a {
             line-height: 2em;
-            padding: .4em .5em;
-            margin: 0 .5em;
+            padding: .4em 0;
+            margin: 0 1em;
             &:hover {
                 background: none;
                 border-bottom: .2em solid $border-color--accent;
             }
             &:active {
-                background: $grey--light;
+                background: none;
+            }
+            &:focus {
+                background: none;
             }
         }
         .divider {

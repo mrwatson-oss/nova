@@ -16,7 +16,10 @@ ui.component.nav = (function($, T) {
         'class': null,
         'title': false,
         'navTitle': null,
-        'communitySwitch': null
+        'communitySwitch': null,
+        'button': null,
+        'icon': null,
+        'navActionBar': null
 
 };
 

@@ -1,4 +1,4 @@
-<div class="nav app-block {{class}}" id="{{id}}">
+<div class="nav app-block" id="{{id}}">
 {{#if communitySwitch}}
 	{{#each navCommunities}}
 		{{>PartialCommunitySwitch}}
@@ -6,9 +6,21 @@
 	{{!-- {{>PartialIcon}} --}}
 {{/if}}
 {{#if title}}
-	<span class="nav-title">{{navTitle}}</span>
+<div class="nav-title">
+	{{navTitle}}
+{{#if button}}
+	<div class="nav-title__button pull-right">{{>PartialButton}}</div>
 {{/if}}
+</div>
+{{/if}}
+	<li class="first"></li>
 	{{#each navItems}}
-		<li>{{> PartialNavItem}}</li>
+		<li>{{>PartialNavItem}}</li>
 	{{/each}}
+{{#if navActionBar}}
+	{{#navActionBarButtons}}
+		<li class="nav__action-bar__button">{{>PartialButton}}</li>
+	{{/navActionBarButtons}}
+{{/if}}
+	<li class="last"></li>
 </div>
