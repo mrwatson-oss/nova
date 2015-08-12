@@ -16,6 +16,25 @@
     border: 1px solid $button-color;
     color: $button-text-color;
     padding: 1em 1.4em;
+    .icon {
+        font-size: 1.6em;
+        vertical-align: bottom;
+        &.green {
+            color: $green;
+        }
+        &.blue {
+            color: $sec-blue;
+        }
+        &.red {
+            color: $sec-red;
+        }
+        &.grey {
+            color: $grey;
+        }
+        &.white {
+            color: $white;
+        }
+    }
     &:link {}
     &:visited {}
     &:hover {
@@ -44,6 +63,26 @@
     border: none;
     color: $button-text-color;
     padding: 1em;
+     .icon {
+        font-size: 1.6em;
+        vertical-align: bottom;
+        margin: 0 .2em -.12em 0;
+        &.green {
+            color: $green;
+        }
+        &.blue {
+            color: $sec-blue;
+        }
+        &.red {
+            color: $sec-red;
+        }
+        &.grey {
+            color: $grey;
+        }
+        &.white {
+            color: $white;
+        }
+    }
     &:link {}
     &:visited {}
     &:hover {

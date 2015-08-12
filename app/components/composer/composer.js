@@ -1,23 +1,25 @@
 /**
- * ui.component.sharePost
+ * ui.component.composer
  *
- * @return returns the sharePost handlebars compiled with data
+ * @return returns the composer handlebars compiled with data
  */
 var ui = ui || {};
 
-ui.component.sharePost = (function($, T) {
+ui.component.composer = (function($, T) {
 
     /**
-     * sharePost
+     * composer
      * @type {Object}
      */
     var params = {
         'button': null,
         'input': true,
-        'class': 'share-post'
+        'class': 'composer',
+        'props': '{{props}}'
+
     };
 
-    clickSharePost = function() {
+    clickcomposer = function() {
         alert('ok verstuurd');
     };
     clickUploadPicture = function() {
@@ -28,7 +30,7 @@ ui.component.sharePost = (function($, T) {
      * render
      *
      * @todo make this method extended or mixin
-     * @param {} sharePost object with all properties
+     * @param {} composer object with all properties
      * @return compiled handlebars template
      */
     function render(context) {
@@ -49,7 +51,7 @@ ui.component.sharePost = (function($, T) {
         data = $.extend({}, params, context);
 
 
-        return T.sharePost(data);
+        return T.composer(data);
     }
 
     return {

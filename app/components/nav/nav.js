@@ -19,7 +19,8 @@ ui.component.nav = (function($, T) {
         'communitySwitch': null,
         'button': null,
         'icon': null,
-        'navActionBar': null
+        'navActionBar': null,
+        'dropdown': 'false'
 
 };
 

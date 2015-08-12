@@ -13,15 +13,15 @@ ui.component.button = (function($, T) {
      */
     var button = {
         'class': 'btn',
-        id: null,
-        name: 'hap',
-        type: 'button',
-        value: null,
-        content: null,
-        action: 'clickButton()',
-        icon: null,
-        disabled: false,
-        borderLeft: false
+        'id': null,
+        'name': 'hap',
+        'type': 'button',
+        'value': null,
+        'content': false,
+        'action': 'clickButton()',
+        'icon': null,
+        'disabled': false,
+        'borderLeft': false
     };
 
 clickButton = function() {

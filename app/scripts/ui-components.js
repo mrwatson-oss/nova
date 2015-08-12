@@ -121,15 +121,15 @@ ui.component.button = (function($, T) {
      */
     var button = {
         'class': 'btn',
-        id: null,
-        name: 'hap',
-        type: 'button',
-        value: null,
-        content: null,
-        action: 'clickButton()',
-        icon: null,
-        disabled: false,
-        borderLeft: false
+        'id': null,
+        'name': 'hap',
+        'type': 'button',
+        'value': null,
+        'content': false,
+        'action': 'clickButton()',
+        'icon': null,
+        'disabled': false,
+        'borderLeft': false
     };
 
 clickButton = function() {
@@ -202,6 +202,62 @@ Handlebars.registerPartial('theThumbnail', '{{thumbnail}}');
 
 }
 (jQuery, ui.component.template));;var ui = ui || {};
+
+ui.component.composer = (function($, T) {
+
+    /**
+     * composer
+     * @type {Object}
+     */
+    var params = {
+        'button': null,
+        'input': true,
+        'class': 'composer',
+        'props': '{{props}}'
+
+    };
+
+    clickcomposer = function() {
+        alert('ok verstuurd');
+    };
+    clickUploadPicture = function() {
+        alert('ok doe maar uitzoeken');
+    };
+
+    /**
+     * render
+     *
+     * @todo make this method extended or mixin
+     * @param {} composer object with all properties
+     * @return compiled handlebars template
+     */
+    function render(context) {
+ // ui.component.textInput.render({'background':'true'});
+    //     Handlebars.registerPartial({
+    //         'partialButton': ui.component.button.render({
+    //             'class': '{{class}}',
+    //             'id': '{{id}}',
+    //             'content': '{{content}}',
+    //             'action': '{{action}}',
+    //             'name': '{{name}}'
+    //         }),
+           
+
+
+    // });
+
+        data = $.extend({}, params, context);
+
+
+        return T.composer(data);
+    }
+
+    return {
+        render: render
+    };
+
+}(jQuery, ui.component.template));
+;var ui = ui || {};
 
 ui.component.dropdown = (function($, T) {
 
@@ -401,7 +457,8 @@ ui.component.nav = (function($, T) {
         'communitySwitch': null,
         'button': null,
         'icon': null,
-        'navActionBar': null
+        'navActionBar': null,
+        'dropdown': 'false'
 
 };
 
@@ -433,22 +490,12 @@ ui.component.partials = (function($, T) {
         function render(context) {
 
             Handlebars.registerPartial({
-                'PartialButton': ui.component.button.render({
-                    'class': '{{class}}',
-                    'id': '{{id}}',
-                    'content': '{{content}}',
-                    'action': '{{action}}',
-                    'name': '{{name}}'
-                }),
+                'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="{{class}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}">{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>',
                 'PartialAvatar': ui.component.avatar.render({
                     'class': '{{class}}',
                     'src': '{{src}}'
                 }),
-                'PartialDropdown': ui.component.dropdown.render({
-                    'class': '{{class}}',
-                    'dropdownItem': '{{{dropdownItem}}}'
-                }),
-                'pDropdownOptions': '<li><a id="{{class}}" href="{{href}}">{{option}}</a></li>',
+                'PartialDropdown': '<li class="dropdown {{class}}" id="dropdown">{{{dropdownItem}}}<ul class="nav drop-nav">{{#each dropdownOptions}}<li><a id="{{class}}" href="{{href}}">{{option}}</a></li>{{/each}}</ul></li>',
                 'PartialTextInput': ui.component.textInput.render({
                     'class': '{{class}}',
                     'id': '{{id}}',
@@ -464,10 +511,9 @@ ui.component.partials = (function($, T) {
                     'src': '{{{src}}}',
                     'alt': '{{alt}}'
                 }),
-                'PartialCommunitySwitch': '<div class="community-switch" style="background: no-repeat center url({{src}})"><span class="community-switch-name">{{name}} {{>PartialIcon icon="icon-system-down-open"}}</span></div>',
-                'PartialNavItem': '<a class="{{class}} "href="{{baseurl}}{{url}}">{{#if icon}}<i class="icon {{icon}}"></i>{{/if}} {{item}}</a>'
+                'PartialCommunitySwitch': '<div class="community-switch" style="background: no-repeat center url({{src}})"><span class="community-switch-name">{{name}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}</span></div>',
+                'PartialNavItem': '<li><a class="{{class}} "href="{{baseurl}}{{url}}">{{#if icon}}<i class="icon {{icon}}"></i>{{/if}} {{{item}}}</a></li>'
             });
-
             data = $.extend({}, partials, context);
 
             return T.partials(data);
@@ -490,60 +536,6 @@ ui.component.partials = (function($, T) {
 // 'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
 // 'round': true,
 // 'small': true
-;var ui = ui || {};
-
-ui.component.sharePost = (function($, T) {
-
-    /**
-     * sharePost
-     * @type {Object}
-     */
-    var params = {
-        'button': null,
-        'input': true,
-        'class': 'share-post'
-    };
-
-    clickSharePost = function() {
-        alert('ok verstuurd');
-    };
-    clickUploadPicture = function() {
-        alert('ok doe maar uitzoeken');
-    };
-
-    /**
-     * render
-     *
-     * @todo make this method extended or mixin
-     * @param {} sharePost object with all properties
-     * @return compiled handlebars template
-     */
-    function render(context) {
- // ui.component.textInput.render({'background':'true'});
-    //     Handlebars.registerPartial({
-    //         'partialButton': ui.component.button.render({
-    //             'class': '{{class}}',
-    //             'id': '{{id}}',
-    //             'content': '{{content}}',
-    //             'action': '{{action}}',
-    //             'name': '{{name}}'
-    //         }),
-           
-
-
-    // });
-
-        data = $.extend({}, params, context);
-
-
-        return T.sharePost(data);
-    }
-
-    return {
-        render: render
-    };
-
-}(jQuery, ui.component.template));
 ;var ui = ui || {};
 
 ui.component.textArea = (function($, T) {

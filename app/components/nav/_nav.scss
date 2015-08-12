@@ -22,11 +22,22 @@
             color: $text-color;
             line-height: 1.4em;
             font-size: .9em;
-            &:hover {
+            &:focus {
                 background: $grey--light;
+                background: -webkit-linear-gradient(left, $white, $grey--light);
+
+
+            }
+            &:hover {
+                // background: $grey--light;
+                background: -webkit-linear-gradient(left, $white, $grey--light);
+
             }
             &:active {
-                background: $grey--light;
+                // background: $grey--light;
+                background: $grey;
+                background: -webkit-linear-gradient(left, $white, $grey--light);
+
             }
         }
     }

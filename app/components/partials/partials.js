@@ -5,22 +5,12 @@ ui.component.partials = (function($, T) {
         function render(context) {
 
             Handlebars.registerPartial({
-                'PartialButton': ui.component.button.render({
-                    'class': '{{class}}',
-                    'id': '{{id}}',
-                    'content': '{{content}}',
-                    'action': '{{action}}',
-                    'name': '{{name}}'
-                }),
+                'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="{{class}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}">{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>',
                 'PartialAvatar': ui.component.avatar.render({
                     'class': '{{class}}',
                     'src': '{{src}}'
                 }),
-                'PartialDropdown': ui.component.dropdown.render({
-                    'class': '{{class}}',
-                    'dropdownItem': '{{{dropdownItem}}}'
-                }),
-                'pDropdownOptions': '<li><a id="{{class}}" href="{{href}}">{{option}}</a></li>',
+                'PartialDropdown': '<li class="dropdown {{class}}" id="dropdown">{{{dropdownItem}}}<ul class="nav drop-nav">{{#each dropdownOptions}}<li><a id="{{class}}" href="{{href}}">{{option}}</a></li>{{/each}}</ul></li>',
                 'PartialTextInput': ui.component.textInput.render({
                     'class': '{{class}}',
                     'id': '{{id}}',
@@ -36,10 +26,9 @@ ui.component.partials = (function($, T) {
                     'src': '{{{src}}}',
                     'alt': '{{alt}}'
                 }),
-                'PartialCommunitySwitch': '<div class="community-switch" style="background: no-repeat center url({{src}})"><span class="community-switch-name">{{name}} {{>PartialIcon icon="icon-system-down-open"}}</span></div>',
-                'PartialNavItem': '<a class="{{class}} "href="{{baseurl}}{{url}}">{{#if icon}}<i class="icon {{icon}}"></i>{{/if}} {{item}}</a>'
+                'PartialCommunitySwitch': '<div class="community-switch" style="background: no-repeat center url({{src}})"><span class="community-switch-name">{{name}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}</span></div>',
+                'PartialNavItem': '<li><a class="{{class}} "href="{{baseurl}}{{url}}">{{#if icon}}<i class="icon {{icon}}"></i>{{/if}} {{{item}}}</a></li>'
             });
-
             data = $.extend({}, partials, context);
 
             return T.partials(data);

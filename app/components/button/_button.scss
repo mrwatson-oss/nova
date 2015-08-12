@@ -11,32 +11,38 @@
     font-family: $button-font;
     border-radius: 2px;
     letter-spacing: 1px;
+   
 }
+
 .border-left {
     border-left: 1px solid $grey--light !important;
 }
+
 .border-right {
     border-right: 1px solid $grey--light !important;
 }
+
 // -----------------------------------------------------------------------------
 // Naked Buttons
 // -----------------------------------------------------------------------------
-
 .naked-button--neutral {
     @extend .btn;
-    @include naked-button($button-color--neutral__text,$button-color--neutral--accent);
+    @include naked-button($button-color--neutral__text, $button-color--neutral--accent);
 }
+
 .naked-button--happy {
     @extend .btn;
-    @include naked-button($button-color--happy,$button-color--happy--accent);
+    @include naked-button($button-color--happy, $button-color--happy--accent);
 }
+
 .naked-button--strict {
     @extend .btn;
-    @include naked-button($button-color--strict,$button-color--strict--accent);
+    @include naked-button($button-color--strict, $button-color--strict--accent);
 }
+
 .naked-button--angry {
     @extend .btn;
-    @include naked-button($button-color--angry,$button-color--angry--accent);
+    @include naked-button($button-color--angry, $button-color--angry--accent);
 }
 
 .naked-button--icon {
@@ -47,39 +53,35 @@
 // -----------------------------------------------------------------------------
 // Solid Buttons
 // -----------------------------------------------------------------------------
-
 .solid-button--neutral {
     @extend .btn;
-    @include solid-button($button-color--neutral,$button-color--neutral--accent,$button-color--neutral__text);
-    border: 1px solid $button-color--neutral--accent;    
+    @include solid-button($button-color--neutral, $button-color--neutral--accent, $button-color--neutral__text);
+    border: 1px solid $button-color--neutral--accent;
 }
 
 .solid-button--happy {
     @extend .btn;
-    @include solid-button($button-color--happy,$button-color--happy--accent);
+    @include solid-button($button-color--happy, $button-color--happy--accent);
 }
 
 .solid-button--strict {
     @extend .btn;
-    @include solid-button($button-color--strict,$button-color--strict--accent);
+    @include solid-button($button-color--strict, $button-color--strict--accent);
 }
 
 .solid-button--angry {
     @extend .btn;
-    @include solid-button($button-color--angry,$button-color--angry--accent);
+    @include solid-button($button-color--angry, $button-color--angry--accent);
 }
 
 // .solid-button--icon {
 //     @extend .btn;
 //     @include solid-button($button-color--neutral,$button-color--neutral--accent);
 // }
+.icon-only {
+    padding: .73em;
+    // margin: 0;
 
-.btn--icon {
-    @extend .btn;
-    background: no-repeat center/60% url("/images/camera.png");
-    background-color: $button-color--neutral;
-    color: black;
-    padding: 1em 2em;
 }
 
 // -----------------------------------------------------------------------------

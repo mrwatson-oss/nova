@@ -1,2 +1,1 @@
-<button {{#if disabled}}disabled{{/if}} class="{{class}} {{#if borderLeft}} border-left
-{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}">{{#if content}}{{{content}}}{{/if}}</button>
+<button {{#if disabled}}disabled{{/if}} class="{{class}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}">{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>
