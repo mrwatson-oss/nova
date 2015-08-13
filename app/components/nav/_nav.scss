@@ -96,7 +96,7 @@
 
 .nav--horizontal {
     li {
-        display: inline-block;
+        float: left;
         a {
             line-height: 2em;
             padding: .4em 0;

@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// Base alert
+// -----------------------------------------------------------------------------
+.alert {
+    display: block;
+    height: 4em;
+    padding: .5em;
+    margin-bottom: 1em;
+    .alert-icon {
+        float: left;
+        line-height: 3em;
+        .icon {
+            font-size: $font-size--x-large;
+            line-height: $font-size--x-large;
+            margin: .2em .4em 0 .5em;
+        }
+    }
+    .title {
+        padding: 0 .4em;
+        float: left;
+        line-height: 3em;
+    }
+    .message {
+        float: left;
+        line-height: 3em;
+    }
+    .alert-button {
+        line-height: 3em;
+        float: right;
+        button {}
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Naked alerts
+// -----------------------------------------------------------------------------
+
+.naked-alert--happy {
+    @extend .alert;
+    @include naked-alert($alert-color--happy, $text-color);
+}
+
+.naked-alert--strict {
+    @extend .alert;
+    @include naked-alert($alert-color--strict, $text-color);
+}
+
+.naked-alert--angry {
+    @extend .alert;
+    @include naked-alert($alert-color--angry, $text-color);
+}
+
+// -----------------------------------------------------------------------------
+// Solid alerts
+// -----------------------------------------------------------------------------
+
+.solid-alert--happy {
+    @extend .alert;
+    @include solid-alert($alert-color--happy, $alert-color__text);
+}
+
+.solid-alert--strict {
+    @extend .alert;
+    @include solid-alert($alert-color--strict, $alert-color__text);
+}
+
+.solid-alert--angry {
+    @extend .alert;
+    @include solid-alert($alert-color--angry, $alert-color__text);
+}

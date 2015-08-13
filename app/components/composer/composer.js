@@ -34,19 +34,7 @@ ui.component.composer = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
- // ui.component.textInput.render({'background':'true'});
-    //     Handlebars.registerPartial({
-    //         'partialButton': ui.component.button.render({
-    //             'class': '{{class}}',
-    //             'id': '{{id}}',
-    //             'content': '{{content}}',
-    //             'action': '{{action}}',
-    //             'name': '{{name}}'
-    //         }),
-           
 
-
-    // });
 
         data = $.extend({}, params, context);
 

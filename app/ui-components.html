@@ -126,40 +126,40 @@
                         'button': true,
                         'class': 'naked-button--strict',
                         'content': 'Add user',
-                        
-                        
+
+
                         navItems: [{
                             'url': '#anchor-appbar',
                             'item': 'App Bar',
-                            'icon': 'icon-app-naked-smartphone blue'                            
+                            'icon': 'icon-app-naked-smartphone blue'
                         }, {
                             'url': '#anchor-appblock',
                             'item': 'App Block',
-                            'icon': 'icon-app-naked-house blue'                            
+                            'icon': 'icon-app-naked-house blue'
                         }, {
                             'url': '#anchor-button',
                             'item': 'Buttons',
-                            'icon': 'icon-app-naked-bookables blue'   
+                            'icon': 'icon-app-naked-bookables blue'
                         }, {
                             'url': '#anchor-composer',
                             'item': 'Composer',
-                            'icon': 'icon-app-naked-serving blue'   
+                            'icon': 'icon-app-naked-serving blue'
                         }, {
                             'url': '#anchor-header',
                             'item': 'Header',
-                            'icon': 'icon-app-naked-key blue'   
+                            'icon': 'icon-app-naked-key blue'
                         }, {
                             'url': '#anchor-image',
                             'item': 'Images',
-                            'icon': 'icon-app-naked-pin blue'   
+                            'icon': 'icon-app-naked-pin blue'
                         }, {
                             'url': '#anchor-input',
                             'item': 'Input Fields',
-                            'icon': 'icon-app-naked-traffic-light blue'   
+                            'icon': 'icon-app-naked-traffic-light blue'
                         }, {
                             'url': '#anchor-navigation',
                             'item': 'Navigation',
-                            'icon': 'icon-app-naked-direction-sign blue'   
+                            'icon': 'icon-app-naked-direction-sign blue'
                         }],
                         'navActionBar': true,
                         'navActionBarButtons': [{
@@ -173,6 +173,148 @@
                 </script>
             </div>
             <div class="col-xs-12 col-lg-9">
+                <div class="row" id="anchor-alert">
+                    <div class="col-xs-12">
+                        <h2>Messages</h2>
+                        <div class="app-block">
+                            <h3>Alerts</h3>
+                            <p>
+                                You can either use the solid or the naked alert.
+                                
+                                <br> The 'class' property defines the alert style. Possible options are:
+                            </p>
+                            <ul>
+                                <li>naked-alert--happy</li>
+                                <li>naked-alert--strict</li>
+                                <li>naked-alert--angry</li>
+                            </ul>
+                            <pre><code class="language-javascript">
+$(ui.component.alert.render({
+  'icon': 'icon-user-award',
+    'title': 'YES!',
+    'class': 'solid-alert--happy',
+    'message': 'You did something right',
+    'button': [{
+        'iconOnly': true,
+        'icon': 'icon-system-close',
+        'class': 'naked-button--icon-only--happy'
+    }]
+}))
+</code></pre>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="app-block">
+                            
+                            <div id="solid-alert"></div>
+                            <script>
+                            $('#solid-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-user-award',
+                                    'title': 'YES!',
+                                    'class': 'solid-alert--happy',
+                                    'message': 'You did something right',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--happy'
+                                    }]
+                                }))
+                                );
+                            </script>
+                            <div id="naked-alert"></div>
+                            <script>
+                            $('#naked-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-user-award',
+                                    'title': 'YES!',
+                                    'class': 'naked-alert--happy',
+                                    'message': 'You did something right',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--happy'
+                                    }]
+                                }))
+                                );
+                            </script>
+
+                            <div id="solid-alert"></div>
+                            <script>
+                            $('#solid-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-solid-flag',
+                                    'title': 'Heads up!',
+                                    'class': 'solid-alert--strict',
+                                    'message': 'No employees yet.',
+                                    'link': 'Add one now?',
+                                    'href': '#',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--strict'
+                                    }]
+                                }))
+                                );
+                            </script>
+                            <div id="naked-alert"></div>
+                            <script>
+                            $('#naked-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-solid-flag',
+                                    'title': 'Heads up!',
+                                    'class': 'naked-alert--strict',
+                                    'message': 'No employees yet.',
+                                    'link': 'Add one now?',
+                                    'href': '#',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--strict'
+                                    }]
+                                }))
+                                );
+                            </script>
+                            <div id="solid-alert"></div>
+                            <script>
+                            $('#solid-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-solid-fire',
+                                    'title': 'Oops!',
+                                    'class': 'solid-alert--angry',
+                                    'message': 'That e-mail address already exists.',
+                                    'link': 'Forgot your password?',
+                                    'href': '#',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--angry'
+                                    }]
+                                }))
+                                );
+                            </script>
+                            <div id="naked-alert"></div>
+                            <script>
+                            $('#naked-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-solid-fire',
+                                    'title': 'Oops!',
+                                    'class': 'naked-alert--angry',
+                                    'message': 'That e-mail address already exists.',
+                                    'link': 'Forgot your password?',
+                                    'href': '#',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--angry'
+                                    }]
+                                }))
+                                );
+                            </script>
+                        </div>
+                    </div>
+ 
+                </div>
                 <div class="row" id="anchor-appbar">
                     <div class="col-xs-12">
                         <h2>App Bar</h2>
@@ -240,7 +382,6 @@
                         <div class="app-block">
                             <p>The app block is a CSS class</p>
                         </div>
-
                     </div>
                     <div class="col-md-6">
                         <pre><code class="language-javascript">

@@ -64,6 +64,27 @@ $button-color--angry				: $sec-red;
 $button-color--angry--accent		: $sec-red--dark;
 
 // -----------------------------------------------------------------------------
+// UI colors - BUTTONS
+// -----------------------------------------------------------------------------
+
+$alert-color__text					: $white;
+
+$alert-color--neutral				: $white;
+$alert-color--neutral--accent		: $grey;
+$alert-color--neutral__text			: $grey--dark;
+
+$alert-color--happy					: $green;
+$alert-color--happy--accent			: $green--dark;
+
+$alert-color--strict				: $sec-blue;
+$alert-color--strict--accent		: $sec-blue--dark;
+
+// $alert-color--scary__background	: $sec-yellow?;
+
+$alert-color--angry					: $sec-red;
+$alert-color--angry--accent			: $sec-red--dark;
+
+// -----------------------------------------------------------------------------
 // UI colors - NAVIGATION
 // -----------------------------------------------------------------------------
 
@@ -104,6 +125,7 @@ $font-family			: 'Source Sans Pro', sans-serif;
 $font-family--special	: 'Roboto', sans-serif;
 
 $button-font: 'Source Sans Pro';
+$alert-font: 'Source Sans Pro';
 //todo: mixin for browser compatibility
 $font-size: .9em; 
 

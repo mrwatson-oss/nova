@@ -27,11 +27,6 @@ ui.component.image = (function($, T) {
      */
     function render(context) {
 
- // Handlebars.registerPartial({
- //            'partButton': ui.component.image.render({})
-            
- //            });
- 
         data = $.extend({}, image, context);
 
         return T.image(data);

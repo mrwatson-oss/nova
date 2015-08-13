@@ -2,9 +2,12 @@
 // Base app-bar
 // -----------------------------------------------------------------------------
 .app-bar {
-    // width komt later dmv row als grid er is
-    background: white;
-    padding: $block-padding;
- // display: block;
-
+    display: block;
+    height: 4em;
+    padding: .5em;
+    margin-bottom: 1em;
+    background: $white;
+    .innerContainer {
+    	height: 3em;
+    }
 }

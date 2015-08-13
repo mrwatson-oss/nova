@@ -27,11 +27,6 @@ ui.component.icon = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-
- // Handlebars.registerPartial({
- //            'partButton': ui.component.icon.render({})
-            
- //            });
  
         data = $.extend({}, icon, context);
 

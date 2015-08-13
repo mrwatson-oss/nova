@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 .btn {
     display: inline-block;
-    margin: .2em .2em .2em 0;
+    // margin: .2em .2em .2em 0;
     line-height: 1em;
     font-size: .8em;
     text-decoration: none;
@@ -50,6 +50,20 @@
     // @include naked-button($button-color--angry);
 }
 
+.naked-button--icon-only--happy {
+    @extend .btn;
+    @include naked-button--icon-only($button-color--happy);
+}
+
+.naked-button--icon-only--strict {
+    @extend .btn;
+    @include naked-button--icon-only($button-color--strict);
+}
+
+.naked-button--icon-only--angry {
+    @extend .btn;
+    @include naked-button--icon-only($button-color--angry);
+}
 // -----------------------------------------------------------------------------
 // Solid Buttons
 // -----------------------------------------------------------------------------
@@ -80,7 +94,9 @@
 // }
 .icon-only {
     padding: .73em;
-    // margin: 0;
+
+
+    // margin: 0 !important;
 
 }
 

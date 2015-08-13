@@ -26,11 +26,6 @@ ui.component.appblock = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-// ui.component.avatar.render({})
-
-// Handlebars.registerPartial('theTitle', '{{title}}');
-// Handlebars.registerPartial('theCopy', '{{copy}}');
-// Handlebars.registerPartial('theThumbnail', '{{thumbnail}}');
  
         data = $.extend({}, appblock, context);
 

@@ -1,5 +1,42 @@
 var ui = ui || {};
 
+ui.component.alert = (function($, T) {
+
+    /**
+     * alert
+     * @type {Object}
+     */
+    var alert = {
+        'class': null,
+        'id': null,
+        'icon': null,
+        'title': null,
+        'alert': null,
+        'button': false
+    };
+     
+    /**
+     * render
+     *
+     * @todo make this method extended or mixin
+     * @param {} alert object with all properties
+     * @return compiled handlebars template
+     */
+    function render(context) {
+
+        data = $.extend({}, alert, context);
+
+        return T.alert(data);
+    }
+
+    return {
+        render: render
+    };
+
+
+}
+(jQuery, ui.component.template));var ui = ui || {};
+
 ui.component.appbar = (function($, T) {
 
     /**
@@ -58,11 +95,6 @@ ui.component.appblock = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-// ui.component.avatar.render({})
-
-// Handlebars.registerPartial('theTitle', '{{title}}');
-// Handlebars.registerPartial('theCopy', '{{copy}}');
-// Handlebars.registerPartial('theThumbnail', '{{thumbnail}}');
  
         data = $.extend({}, appblock, context);
 
@@ -158,50 +190,55 @@ clickButton = function() {
 
 
 }
-(jQuery, ui.component.template));;var ui = ui || {};
+(jQuery, ui.component.template));;// /**
+//  * ui.component.card
+//  *
+//  * @return returns the card handlebars compiled with data
+//  */
+// var ui = ui || {};
 
-ui.component.card = (function($, T) {
+// ui.component.card = (function($, T) {
 
-    /**
-     * card
-     * @type {Object}
-     */
-    var card = {
-        'properties': null,
-        'class': 'card',
-        'id': null,
-        'title': false,
-        'copy': false,
-        'thumbnail': false
+//     /**
+//      * card
+//      * @type {Object}
+//      */
+//     var card = {
+//         'properties': null,
+//         'class': 'card',
+//         'id': null,
+//         'title': false,
+//         'copy': false,
+//         'thumbnail': false
 
-};
+// };
 
      
-    /**
-     * render
-     *
-     * @todo make this method extended or mixin
-     * @param {} card object with all properties
-     * @return compiled handlebars template
-     */
-    function render(context) {
+//     *
+//      * render
+//      *
+//      * @todo make this method extended or mixin
+//      * @param {} card object with all properties
+//      * @return compiled handlebars template
+     
+//     function render(context) {
 
-Handlebars.registerPartial('theTitle', '{{title}}');
-Handlebars.registerPartial('theCopy', '{{copy}}');
-Handlebars.registerPartial('theThumbnail', '{{thumbnail}}');
+// // Handlebars.registerPartial('theTitle', '{{title}}');
+// // Handlebars.registerPartial('theCopy', '{{copy}}');
+// // Handlebars.registerPartial('theThumbnail', '{{thumbnail}}');
  
-        data = $.extend({}, card, context);
+//         data = $.extend({}, card, context);
 
-        return T.card(data);
-    }
+//         return T.card(data);
+//     }
 
-    return {
-        render: render
-    };
+//     return {
+//         render: render
+//     };
 
 
-}
-(jQuery, ui.component.template));;var ui = ui || {};
+// }
+// (jQuery, ui.component.template));;var ui = ui || {};
 
 ui.component.composer = (function($, T) {
 
@@ -232,19 +269,7 @@ ui.component.composer = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
- // ui.component.textInput.render({'background':'true'});
-    //     Handlebars.registerPartial({
-    //         'partialButton': ui.component.button.render({
-    //             'class': '{{class}}',
-    //             'id': '{{id}}',
-    //             'content': '{{content}}',
-    //             'action': '{{action}}',
-    //             'name': '{{name}}'
-    //         }),
-           
 
-
-    // });
 
         data = $.extend({}, params, context);
 
@@ -332,22 +357,7 @@ ui.component.header = (function($, T) {
      */
     function render(context) {
 
-        //rendering the nav component
-        ui.component.nav.render();
-        ui.component.dropdown.render();
 
-        
-        // ui.component.textInput.render();
-        // ui.component.textInput.render();
-        //registering the input component as a partial
-        Handlebars.registerPartial({
-            'partialTextInput': ui.component.textInput.render({
-                // 'background':'true'
-            }),
-            // 'pDropdownHeader': ui.component.dropdown.render({
-            //     // 'options':'{{aptions}}'
-            // })
-        });
 
         data = $.extend({}, params, context);
 
@@ -384,11 +394,6 @@ ui.component.icon = (function($, T) {
      * @return compiled handlebars template
      */
     function render(context) {
-
- // Handlebars.registerPartial({
- //            'partButton': ui.component.icon.render({})
-            
- //            });
  
         data = $.extend({}, icon, context);
 
@@ -425,11 +430,6 @@ ui.component.image = (function($, T) {
      */
     function render(context) {
 
- // Handlebars.registerPartial({
- //            'partButton': ui.component.image.render({})
-            
- //            });
- 
         data = $.extend({}, image, context);
 
         return T.image(data);
