@@ -29,18 +29,17 @@ $sec-blue--dark		: darken($sec-blue, 10%);
 $sec-red			: #DA4747;
 $sec-red--light		: lighten($sec-red, 10%);
 $sec-red--dark		: darken($sec-red, 10%);
-// $sec-grey			: #DEDEDE;
-// $sec-grey--light	: lighten($sec-grey, 9%);
-// $sec-grey--dark		: darken($sec-grey, 10%);
+
 
 // -----------------------------------------------------------------------------
 // UI colors - BACKGROUNDS
 // -----------------------------------------------------------------------------
 
-$body-background-color	: $green--light;
-$block-background-color	: $white;
-$border-color			: $grey--dark;
-$border-color--accent	: $green;  
+$body-background-color			: $green--light;
+$block-background-color			: $white;
+$block-background-color--accent	: $grey--light;
+$border-color					: $grey--dark;
+$border-color--accent			: $green;  
 
 // -----------------------------------------------------------------------------
 // UI colors - BUTTONS

@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// Base dialog
+// -----------------------------------------------------------------------------
+.dialog {
+    display: inline-block;
+    padding: 1em 1em .4em 1em;
+    width: 24em;
+    height: auto;
+    background: white;
+    box-shadow: 0 0 3em $grey--dark;
+    .dialog-top {
+        padding: .4em 0;
+        .title {
+            font-size: $font-size--large;
+        }
+    }
+    .dialog-body {
+        padding: .4em 0;
+    }
+    .dialog-actions {
+        button {
+            font-size: $font-size--regular;
+        }
+    }
+}

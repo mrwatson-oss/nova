@@ -157,6 +157,10 @@
                             'item': 'Input Fields',
                             'icon': 'icon-app-naked-traffic-light blue'
                         }, {
+                            'url': '#anchor-messages',
+                            'item': 'Messages',
+                            'icon': 'icon-app-naked-burger blue'
+                        },{
                             'url': '#anchor-navigation',
                             'item': 'Navigation',
                             'icon': 'icon-app-naked-direction-sign blue'
@@ -173,148 +177,7 @@
                 </script>
             </div>
             <div class="col-xs-12 col-lg-9">
-                <div class="row" id="anchor-alert">
-                    <div class="col-xs-12">
-                        <h2>Messages</h2>
-                        <div class="app-block">
-                            <h3>Alerts</h3>
-                            <p>
-                                You can either use the solid or the naked alert.
-                                
-                                <br> The 'class' property defines the alert style. Possible options are:
-                            </p>
-                            <ul>
-                                <li>naked-alert--happy</li>
-                                <li>naked-alert--strict</li>
-                                <li>naked-alert--angry</li>
-                            </ul>
-                            <pre><code class="language-javascript">
-$(ui.component.alert.render({
-  'icon': 'icon-user-award',
-    'title': 'YES!',
-    'class': 'solid-alert--happy',
-    'message': 'You did something right',
-    'button': [{
-        'iconOnly': true,
-        'icon': 'icon-system-close',
-        'class': 'naked-button--icon-only--happy'
-    }]
-}))
-</code></pre>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="app-block">
-                            
-                            <div id="solid-alert"></div>
-                            <script>
-                            $('#solid-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-user-award',
-                                    'title': 'YES!',
-                                    'class': 'solid-alert--happy',
-                                    'message': 'You did something right',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--happy'
-                                    }]
-                                }))
-                                );
-                            </script>
-                            <div id="naked-alert"></div>
-                            <script>
-                            $('#naked-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-user-award',
-                                    'title': 'YES!',
-                                    'class': 'naked-alert--happy',
-                                    'message': 'You did something right',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--happy'
-                                    }]
-                                }))
-                                );
-                            </script>
-
-                            <div id="solid-alert"></div>
-                            <script>
-                            $('#solid-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-flag',
-                                    'title': 'Heads up!',
-                                    'class': 'solid-alert--strict',
-                                    'message': 'No employees yet.',
-                                    'link': 'Add one now?',
-                                    'href': '#',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--strict'
-                                    }]
-                                }))
-                                );
-                            </script>
-                            <div id="naked-alert"></div>
-                            <script>
-                            $('#naked-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-flag',
-                                    'title': 'Heads up!',
-                                    'class': 'naked-alert--strict',
-                                    'message': 'No employees yet.',
-                                    'link': 'Add one now?',
-                                    'href': '#',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--strict'
-                                    }]
-                                }))
-                                );
-                            </script>
-                            <div id="solid-alert"></div>
-                            <script>
-                            $('#solid-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-fire',
-                                    'title': 'Oops!',
-                                    'class': 'solid-alert--angry',
-                                    'message': 'That e-mail address already exists.',
-                                    'link': 'Forgot your password?',
-                                    'href': '#',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--angry'
-                                    }]
-                                }))
-                                );
-                            </script>
-                            <div id="naked-alert"></div>
-                            <script>
-                            $('#naked-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-fire',
-                                    'title': 'Oops!',
-                                    'class': 'naked-alert--angry',
-                                    'message': 'That e-mail address already exists.',
-                                    'link': 'Forgot your password?',
-                                    'href': '#',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--angry'
-                                    }]
-                                }))
-                                );
-                            </script>
-                        </div>
-                    </div>
- 
-                </div>
+                
                 <div class="row" id="anchor-appbar">
                     <div class="col-xs-12">
                         <h2>App Bar</h2>
@@ -968,6 +831,192 @@ $(ui.component.avatar.render({
     // properties
   }))
 </code></pre>
+                    </div>
+                </div>
+                <div class="row" id="anchor-messages">
+                    <div class="col-xs-12">
+                        <h2>Messages</h2>
+                        <div class="app-block">
+                            <h3>Alerts</h3>
+                            <p>
+                                You can either use the solid or the naked alert.
+                                <br> The 'class' property defines the alert style. Possible options are:
+                            </p>
+                            <ul>
+                                <li>naked-alert--happy</li>
+                                <li>naked-alert--strict</li>
+                                <li>naked-alert--angry</li>
+                            </ul>
+                            <pre><code class="language-javascript">
+$(ui.component.alert.render({
+  'icon': 'icon-user-award',
+    'title': 'YES!',
+    'class': 'solid-alert--happy',
+    'message': 'You did something right',
+    'button': [{
+        'iconOnly': true,
+        'icon': 'icon-system-close',
+        'class': 'naked-button--icon-only--happy'
+    }]
+}))
+</code></pre>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="app-block">
+                            <div id="solid-alert"></div>
+                            <script>
+                            $('#solid-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-user-award',
+                                    'title': 'YES!',
+                                    'class': 'solid-alert--happy',
+                                    'message': 'You did something right',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--happy'
+                                    }]
+                                }))
+                            );
+                            </script>
+                            <div id="naked-alert"></div>
+                            <script>
+                            $('#naked-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-user-award',
+                                    'title': 'YES!',
+                                    'class': 'naked-alert--happy',
+                                    'message': 'You did something right',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--happy'
+                                    }]
+                                }))
+                            );
+                            </script>
+                            <div id="solid-alert"></div>
+                            <script>
+                            $('#solid-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-solid-flag',
+                                    'title': 'Heads up!',
+                                    'class': 'solid-alert--strict',
+                                    'message': 'No employees yet.',
+                                    'link': 'Add one now?',
+                                    'href': '#',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--strict'
+                                    }]
+                                }))
+                            );
+                            </script>
+                            <div id="naked-alert"></div>
+                            <script>
+                            $('#naked-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-solid-flag',
+                                    'title': 'Heads up!',
+                                    'class': 'naked-alert--strict',
+                                    'message': 'No employees yet.',
+                                    'link': 'Add one now?',
+                                    'href': '#',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--strict'
+                                    }]
+                                }))
+                            );
+                            </script>
+                            <div id="solid-alert"></div>
+                            <script>
+                            $('#solid-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-solid-fire',
+                                    'title': 'Oops!',
+                                    'class': 'solid-alert--angry',
+                                    'message': 'That e-mail address already exists.',
+                                    'link': 'Forgot your password?',
+                                    'href': '#',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--angry'
+                                    }]
+                                }))
+                            );
+                            </script>
+                            <div id="naked-alert"></div>
+                            <script>
+                            $('#naked-alert').replaceWith(
+                                $(ui.component.alert.render({
+                                    'icon': 'icon-solid-fire',
+                                    'title': 'Oops!',
+                                    'class': 'naked-alert--angry',
+                                    'message': 'That e-mail address already exists.',
+                                    'link': 'Forgot your password?',
+                                    'href': '#',
+                                    'button': [{
+                                        'iconOnly': true,
+                                        'icon': 'icon-system-close',
+                                        'class': 'naked-button--icon-only--angry'
+                                    }]
+                                }))
+                            );
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="app-block">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3>Dialogs</h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <p>
+                                        An dialog is presented to a user when ...
+                                        <br> Possible options are:
+                                    </p>
+                                </div>
+                                <div class="col-xs-8">
+                                    <pre><code class="language-javascript">
+$(ui.component.dialog.render({
+    'title': 'Deleting this is permanent.',
+    'message': 'Are you sure you want to delete your account?',
+    'button': [{
+        'class': 'naked-button--strict',
+        'content': 'NO'
+    }, {
+        'class': 'naked-button--strict',
+        'content': 'YES'
+    }]
+}))
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div id="dialog"></div>
+                        <script>
+                        $('#dialog').replaceWith(
+                            $(ui.component.dialog.render({
+                                'title': 'Deleting this is permanent.',
+                                'message': 'Are you sure you want to delete your account?',
+                                'button': [{
+                                    'class': 'naked-button--strict',
+                                    'content': 'NO'
+                                }, {
+                                    'class': 'naked-button--strict',
+                                    'content': 'YES'
+                                }]
+                            }))
+                        );
+                        </script>
                     </div>
                 </div>
                 <div class="row" id="anchor-navigation">
