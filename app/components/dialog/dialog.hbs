@@ -1,1 +1,21 @@
-<div class="dialog {{class}}" id="{{id}}"><div class="dialog-top">{{#if title}}<span class="title"><b> {{title}} </b></span>{{/if}}</div><div class="dialog-body">{{#if message}}<span class="message"> {{message}} {{#if link}} <a href="{{{href}}}">{{link}}</a> {{/if}}</span>{{/if}}</div><div class="dialog-actions">{{#if button}}{{#each button}}<span class="dialog-button pull-right">{{>PartialButton}}</span>{{/each}}{{/if}}</div></div>
+<div class="dialog {{class}}" id="{{id}}">
+	<div class="row">
+		<div class="col-xs-3">
+			{{#if icon}} <span class="dialog-icon"> <i class="icon {{icon}}"></i></span>{{/if}}
+		</div>
+		<div class="col-xs-9">
+			<div class="dialog-title">
+				{{#if title}}<span class="title"><b> {{title}} </b></span>{{/if}}
+			</div>
+			<div class="dialog-message">
+				{{#if message}}<span class="message"> {{message}} {{#if link}} <a href="{{{href}}}">{{link}}</a> {{/if}}</span>{{/if}}
+			</div>
+		</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="dialog-actions">
+				{{#if button}}{{#each button}}<span class="dialog-button pull-right">{{>PartialButton}}</span>{{/each}}{{/if}}
+			</div>
+		</div>
+	</div>
+</div>

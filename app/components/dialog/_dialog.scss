@@ -3,19 +3,23 @@
 // -----------------------------------------------------------------------------
 .dialog {
     display: inline-block;
-    padding: 1em 1em .4em 1em;
-    width: 24em;
+    position: relative;
+    width: 32em;
     height: auto;
+    padding: 4em 4em 1em 4em;
     background: white;
-    box-shadow: 0 0 3em $grey--dark;
-    .dialog-top {
-        padding: .4em 0;
-        .title {
-            font-size: $font-size--large;
+    box-shadow: 0 0 1em $grey;
+    .dialog-icon {
+        margin-right: -30px;
+        .icon {
+            font-size: $font-size--xxx-large;        
         }
     }
-    .dialog-body {
-        padding: .4em 0;
+    .dialog-title {
+        font-size: $font-size--large;
+    }
+    .dialog-message {
+        padding: 1em 0 2em 0;
     }
     .dialog-actions {
         button {
@@ -23,3 +27,13 @@
         }
     }
 }
+
+.dialog--angry {
+    @extend .dialog;
+    @include dialog($button-color--angry);
+}
+.dialog--strict {
+    @extend .dialog;
+    @include dialog($button-color--strict);
+}
+

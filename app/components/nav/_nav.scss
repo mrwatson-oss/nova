@@ -45,15 +45,38 @@
         display: block;
         font-weight: 100;
         background: rgba($white, .6);
-        padding: .8em 1em;
+        padding:  1em;
         font-size: $font-size--large;
         line-height: $font-size--large;
         color: $text-color;
         font-family: $button-font;
         cursor: default;
-        .nav-title__button {
-            margin: -.76em -1em 0 0;
+        .nav-title__icon {
+            float: left;
+            padding-right: .4em;
+                    font-size: $font-size--large;
+        line-height: $font-size--large;
         }
+        .nav-title__button {
+            margin: -.76em -.5em 0 0;
+            font-size: .9em;
+            .naked-button--neutral,
+            .naked-button--strict,
+            .naked-button--happy,
+            .naked-button--angry {
+                margin-top: .4em;
+            }
+
+        }
+
+    }
+    .sub-title {
+        @extend .nav-title;
+        background: $white;
+        .category {
+            font-weight: bold;
+        }
+        margin-bottom: -.6em;
     }
     .icon {
         font-size: 1.6em;
