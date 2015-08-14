@@ -112,7 +112,9 @@
             font-size: $font-size--x-large;
         }
         .icon {
+            font-size: $font-size;
             float: right;
+            margin: .3em -.2em 0 0;
         }
     }
 }

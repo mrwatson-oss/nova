@@ -970,46 +970,7 @@ $(ui.component.dialog.render({
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12">
-                        <div id="dialog"></div>
-                        <script>
-                        $('#dialog').replaceWith(
-                            $(ui.component.dialog.render({
-                                'class': 'dialog--angry',
-                                'icon': 'icon-solid-fire',
-                                'title': 'Deleting this is permanent.',
-                                'message': 'Are you sure you want to delete your account?',
-                                'button': [{
-                                    'class': 'solid-button--strict',
-                                    'content': 'Delete'
-                                }, {
-                                    'class': 'solid-button--neutral',
-                                    'content': 'Cancel'
-                                }]
-                            }))
-                        );
-                        </script>
-                    </div>
-                    <div class="col-xs-12">
-                        <div id="dialog"></div>
-                        <script>
-                        $('#dialog').replaceWith(
-                            $(ui.component.dialog.render({
-                                'class': 'dialog--angry',
-                                'icon': 'icon-solid-fire',
-                                'title': 'Deleting this is permanent.',
-                                'message': 'Are you sure you want to delete your account?',
-                                'button': [{
-                                    'class': 'naked-button--strict',
-                                    'content': 'Delete'
-                                }, {
-                                    'class': 'naked-button--strict',
-                                    'content': 'Cancel'
-                                }]
-                            }))
-                        );
-                        </script>
-                    </div>
+                    
                     <div class="col-xs-12">
                         <div id="dialog"></div>
                         <script>
@@ -1137,7 +1098,7 @@ $(ui.component.dialog.render({
                             $(ui.component.nav.render({
                                 'title': true,
                                 'button': true,
-                                'class': 'naked-button--strict',
+                                'class': 'naked-button--strict hover',
                                 'content': 'Add Group',
                                 'navTitle': 'Groups',
                                 navItems: [{
