@@ -190,55 +190,7 @@ clickButton = function() {
 
 
 }
-(jQuery, ui.component.template));;// /**
-//  * ui.component.card
-//  *
-//  * @return returns the card handlebars compiled with data
-//  */
-// var ui = ui || {};
-
-// ui.component.card = (function($, T) {
-
-//     /**
-//      * card
-//      * @type {Object}
-//      */
-//     var card = {
-//         'properties': null,
-//         'class': 'card',
-//         'id': null,
-//         'title': false,
-//         'copy': false,
-//         'thumbnail': false
-
-// };
-
-     
-//     *
-//      * render
-//      *
-//      * @todo make this method extended or mixin
-//      * @param {} card object with all properties
-//      * @return compiled handlebars template
-     
-//     function render(context) {
-
-// // Handlebars.registerPartial('theTitle', '{{title}}');
-// // Handlebars.registerPartial('theCopy', '{{copy}}');
-// // Handlebars.registerPartial('theThumbnail', '{{thumbnail}}');
- 
-//         data = $.extend({}, card, context);
-
-//         return T.card(data);
-//     }
-
-//     return {
-//         render: render
-//     };
-
-
-// }
-// (jQuery, ui.component.template));;var ui = ui || {};
+(jQuery, ui.component.template));;var ui = ui || {};
 
 ui.component.composer = (function($, T) {
 
@@ -527,11 +479,8 @@ ui.component.partials = (function($, T) {
         function render(context) {
 
             Handlebars.registerPartial({
+                'PartialAvatar': '{{#if avatar}}{{#avatar}}<div class="avatar {{#if small}} avatar--small{{/if}} {{#if round}} round{{/if}}"><img {{#if src}}src="{{src}}" {{else}}src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu"{{/if}} alt="avatar"></div>{{/avatar}}{{else}}<div class="avatar {{#if small}}avatar--small{{/if}}"><img src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu" alt="avatar"/></div>{{/if}}',
                 'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="{{class}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}">{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>',
-                'PartialAvatar': ui.component.avatar.render({
-                    'class': '{{class}}',
-                    'src': '{{src}}'
-                }),
                 'PartialDropdown': '<li class="dropdown {{class}}" id="dropdown">{{{dropdownItem}}}<ul class="nav drop-nav">{{#each dropdownOptions}}<li><a id="{{class}}" href="{{href}}">{{option}}</a></li>{{/each}}</ul></li>',
                 'PartialTextInput': ui.component.textInput.render({
                     'class': '{{class}}',
@@ -656,3 +605,45 @@ ui.component.textInput = (function($, T) {
 
 
 
+;var ui = ui || {};
+
+ui.component.userpostit = (function($, T) {
+
+    /**
+     * userpostit
+     * @type {Object}
+     */
+    var userpostit = {
+        'class': null,
+        'id': null,
+        'content': null,
+        'userpostitContent': null
+
+};
+
+     
+    // *
+    //  * render
+    //  *
+    //  * @todo make this method extended or mixin
+    //  * @param {} userpostit object with all properties
+    //  * @return compiled handlebars template
+     
+    function render(context) {
+
+// Handlebars.registerPartial('theTitle', '{{title}}');
+// Handlebars.registerPartial('theCopy', '{{copy}}');
+// Handlebars.registerPartial('theThumbnail', '{{thumbnail}}');
+ 
+        data = $.extend({}, userpostit, context);
+
+        return T.userpostit(data);
+    }
+
+    return {
+        render: render
+    };
+
+
+}
+(jQuery, ui.component.template));

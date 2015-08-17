@@ -1,1 +1,1 @@
-<div class="avatar {{#if small}} avatar--small{{/if}} {{#if round}} round{{/if}}"><img src="{{src}}" alt="avatar"></div> 
+{{#if avatar}}{{#avatar}}<div class="avatar {{#if small}} avatar--small{{/if}} {{#if round}} round{{/if}}"><img {{#if src}}src="{{src}}" {{else}}src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu"{{/if}} alt="avatar"></div>{{/avatar}}{{else}}<div class="avatar {{#if small}} avatar--small{{/if}}"><img src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu" alt="avatar"/></div>{{/if}}

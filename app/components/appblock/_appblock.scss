@@ -9,6 +9,12 @@
 
 .app-block--accent {
     @extend .app-block;
-    background-color: $sec-blue--light;
+    background: $sec-blue--light;
 }
 
+.app-block--no-bg {
+    @extend .app-block;
+    background: rgba($white, .6);
+    margin-top: -1em;
+
+}

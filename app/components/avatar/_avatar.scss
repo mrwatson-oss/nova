@@ -1,16 +1,17 @@
-
-
-
-
-
-
 .avatar {
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 5em;
+    height: 5em;
     overflow: hidden;
     img {
-        max-width: 100%;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        height: 100%;
+        width: auto;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
     &.round {
         border-radius: 50%;
@@ -19,7 +20,6 @@
 
 .avatar--small {
     // @extend .avatar;
-    width: 60px;
-    height: 60px;
+    width: 3.4em;
+    height: 3.4em;
 }
-

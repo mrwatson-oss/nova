@@ -113,8 +113,8 @@ $link-color--accent		: $sec-blue;
 // -----------------------------------------------------------------------------
 
 @font-face {
-    font-family: Azo-Sans-Regular;
-    src: url('../fonts/Azo-Sans-Regular.otf');
+    font-family 		: Azo-Sans-Regular;
+    src 				: url('../fonts/Azo-Sans-Regular.otf');
 }
 
 // $button-font: 'Azo-Sans-Regular';
@@ -123,10 +123,10 @@ $link-color--accent		: $sec-blue;
 $font-family			: 'Source Sans Pro', sans-serif;
 $font-family--special	: 'Roboto', sans-serif;
 
-$button-font: 'Source Sans Pro';
-$alert-font: 'Source Sans Pro';
+$button-font			: 'Source Sans Pro';
+$alert-font				: 'Source Sans Pro';
 //todo: mixin for browser compatibility
-$font-size: .9em; 
+$font-size				: .9em; 
 
 // -----------------------------------------------------------------------------
 // Type - WEIGHT
@@ -134,7 +134,7 @@ $font-size: .9em;
 
 $font-weight--light		: 300;
 $font-weight--regular	: 400;
-$font-weight--bold		: 500;
+$font-weight--bold		: 900;
 
 // -----------------------------------------------------------------------------
 // Type - SIZE
@@ -142,7 +142,7 @@ $font-weight--bold		: 500;
 
 //todo: mixin for browser compatibility
 $font-size--small		: 0.7em;
-$font-size--regular		: 0.9em;
+$font-size--regular		: $font-size;
 $font-size--large		: 1.17em;
 $font-size--x-large		: 1.6em;
 $font-size--xx-large	: 2.2em;
@@ -158,5 +158,5 @@ $line-height			: $font-size--large;
 // UI-elements - BLOCKS
 // -----------------------------------------------------------------------------
 
-$block-padding		: .4em;
+$block-padding			: .4em;
 

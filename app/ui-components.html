@@ -131,6 +131,10 @@
                             'url': '#anchor-navigation',
                             'item': 'Navigation',
                             'icon': 'icon-app-naked-direction-sign blue'
+                        }, {
+                            'url': '#anchor-postits',
+                            'item': 'Post-it&#39;s',
+                            'icon': 'icon-app-naked-pen blue'
                         }]
                     }))
 
@@ -213,40 +217,6 @@
   }))
 </code></pre>
                     </div>
-                    <!-- <div class="clearfix visible-lg-block"></div>
-                    <div class="clearfix visible-md-block"></div>
-                    <div class="col-md-6">
-                        <div id="appblock2"></div>
-                        <script>
-                        $('#appblock2').replaceWith(
-                            $(ui.component.appblock.render({
-                                'appBlockButton': [{
-                                    'class': 'solid-button--angry',
-                                    'content': 'hoi'
-                                }, {
-                                    'class': 'solid-button--strict pull-right',
-                                    'content': 'rush'
-                                }],
-                                'appBlockAvatar': [{
-                                    'src': 'http://img1.wikia.nocookie.net/__cb20120402040942/creepypasta/images/7/7d/Black-kitten-2.jpg'
-
-                                }],
-                                'appBlockContent': [{
-                                    'content': 'heya be <div id="bla">had</div>'
-                                }]
-
-
-                            }))
-                        );
-                        </script>
-                    </div>
-                    <div class="col-md-6">
-                        <pre><code class="language-javascript">
-  $(ui.component.appblock.render({
-    // properties
-  }))
-</code></pre>
-                    </div> -->
                 </div>
                 <div class="row" id="anchor-button">
                     <div class="col-xs-12">
@@ -538,7 +508,10 @@
                             <script>
                             $('#square-avatar').replaceWith(
                                 $(ui.component.avatar.render({
-                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg'
+                                    'avatar': {
+                                        'src': 'http://latetothemovies.com/wp-content/uploads/2015/06/DrStrangelove.gif'
+                                    }
+
                                 }))
                             );
                             </script>
@@ -556,8 +529,10 @@ $(ui.component.avatar.render({
                             <script>
                             $('#avatar-round').replaceWith(
                                 $(ui.component.avatar.render({
-                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
-                                    'round': true
+                                    'avatar': {
+                                        'src': 'http://latetothemovies.com/wp-content/uploads/2015/06/DrStrangelove.gif',
+                                        'round': true
+                                    }
                                 }))
                             );
                             </script>
@@ -576,8 +551,10 @@ $(ui.component.avatar.render({
                             <script>
                             $('#small-square-avatar').replaceWith(
                                 $(ui.component.avatar.render({
-                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
-                                    'small': true
+                                    'avatar': {
+                                        'src': 'http://latetothemovies.com/wp-content/uploads/2015/06/DrStrangelove.gif',
+                                        'small': true
+                                    }
                                 }))
                             );
                             </script>
@@ -596,9 +573,11 @@ $(ui.component.avatar.render({
                             <script>
                             $('#small-square-avatar-round').replaceWith(
                                 $(ui.component.avatar.render({
-                                    'src': 'http://i160.photobucket.com/albums/t164/mtms4/hobo.jpg',
-                                    'round': true,
-                                    'small': true
+                                    'avatar': {
+                                        'src': 'http://latetothemovies.com/wp-content/uploads/2015/06/DrStrangelove.gif',
+                                        'round': true,
+                                        'small': true
+                                    }
                                 }))
                             );
                             </script>
@@ -970,7 +949,6 @@ $(ui.component.dialog.render({
                             </div>
                         </div>
                     </div>
-                    
                     <div class="col-xs-12">
                         <div id="dialog"></div>
                         <script>
@@ -982,7 +960,7 @@ $(ui.component.dialog.render({
                                 'message': 'Are you sure you want to delete your account?',
                                 'button': [{
                                     'class': 'naked-button--strict hover',
-                                    'content': 'Delete'
+                                    'content': 'Delete account'
                                 }, {
                                     'class': 'naked-button--strict hover',
                                     'content': 'Cancel'
@@ -1002,7 +980,7 @@ $(ui.component.dialog.render({
                                 'message': 'You should only create a new community if you are setting one up in a new coworking space.',
                                 'button': [{
                                     'class': 'naked-button--strict hover',
-                                    'content': 'Create new community'
+                                    'content': 'Create community'
                                 }, {
                                     'class': 'naked-button--strict hover',
                                     'content': 'Cancel'
@@ -1041,7 +1019,7 @@ $(ui.component.dialog.render({
                                 'communitySwitch': true,
                                 'navCommunities': [{
                                     'src': 'http://erfgoedstem.nl/wp-content/uploads/2012/07/Industriegebouw-Goudsesingel_1.jpg',
-                                    'name': 'Het Industrieg..',
+                                    'name': 'Het Industriegeb..',
                                     'icon': 'icon-system-down-open'
                                 }],
                                 'title': false,
@@ -1126,6 +1104,104 @@ $(ui.component.dialog.render({
                                 }]
                             }))
 
+                        );
+                        </script>
+                    </div>
+                </div>
+                <div class="row" id="anchor-postits">
+                    <div class="col-xs-12">
+                        <h2>Post-it's</h2>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="app-block">
+                            <h3>User Post-it</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="userpostit"></div>
+                        <script>
+                        $('#userpostit').replaceWith(
+                            $(ui.component.userpostit.render({
+                                'userpostitMeta': {
+                                    'avatar': {
+                                        'src': 'http://i.ytimg.com/vi/N1KvgtEnABY/hqdefault.jpg'
+                                    },
+                                    'author': 'Sgt. Sanders',
+                                    'timestamp': '10 aug 2015'
+                                },
+                                'userpostitContent': {
+                                    'content': 'Om deze grijze maandagmiddag wat zonneschijn te geven, staat er op de 2e verdieping op de picknicktafels allerlei lekkers van Marqt wat anders weggegooid zou worden. Ik zou zeggen; sla je slag en geniet :-)'
+                                },
+                                'userpostitActions': [{
+                                    'class': 'naked-button--happy hover',
+                                    'content': 'Like',
+                                    'icon': 'icon-solid-like'
+                                }, {
+                                    'class': 'naked-button--happy hover',
+                                    'content': 'Comment',
+                                    'icon': 'icon-naked-bubble'
+                                }],
+                                'userpostitLikes': {
+                                    'number': '17'
+                                }
+                                
+
+                            }))
+                        );
+                        </script>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="userpostit"></div>
+                        <script>
+                        $('#userpostit').replaceWith(
+                            $(ui.component.userpostit.render({
+                                'userpostitMeta': {
+                                    'avatar': {
+                                        'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg'
+                                    },
+                                    'author': 'Dr. Strangelove',
+                                    'timestamp': '10 aug 2015'
+                                },
+                                'userpostitContent': {
+                                    'content': 'Vanochtend kwam ik aan en was het luik niet naar beneden. Allemaal leuk en aardig, maar er staat te veel apparatuur op deze verdieping om hem open te laten. DUS LUIK DICHT!'
+                                },
+                                'userpostitActions': [{
+                                    'class': 'naked-button--happy hover',
+                                    'content': 'Like',
+                                    'icon': 'icon-naked-like'
+                                }, {
+                                    'class': 'naked-button--happy hover',
+                                    'content': '2 Comments',
+                                    'icon': 'icon-solid-bubble'
+                                }],
+                                'userpostitLikes': {
+                                    'number': '2'
+                                },
+                                'comments': [{
+                                    'author': 'General Dooks',
+                                    'timestamp': '12 aug 2015',
+                                    'avatar': 
+                                    {'src': 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png', 'small': true},
+                                    'content': 'Daarnaast mbt corvee, het is al eerder aangegeven. Het is wel zo netjes om een volgende groep niet met een achterstand te laten beginnen, voor iedereen zijn de maandagochtenden belangrijk, dus zorg ajb dat je op vrijdag je corveeweek netjes afsluit, dan kan iedereen zich op maandag focussen wat belangrijk is'
+                                
+                                },
+                                {
+                                    'author': 'General Dooks',
+                                    'timestamp': '13 aug 2015',
+                                    'avatar': 
+                                    {'src': 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png', 'small': true},
+                                    'content': 'Trouwens, bij onze zuivel-bestelling van deze week is er iets mis gegaan waardoor we met een ietsje-pietsje meer volle melk zitten dan de bedoeling was. Omdat we het natuurlijk zonde vinden als al deze flessen zouden bederven, kunnen jullie voor een mooi prijsje wat flessen mee naar huis nemen.'
+                                
+                                }],
+                                'commentInputField': {
+                                     'avatar': 
+                                    {'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg', 'small': true},
+                                    'placeholder': 'Add a comment',
+                                    'content': 'Comment'
+                                
+                                }
+
+                            }))
                         );
                         </script>
                     </div>
