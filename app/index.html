@@ -125,7 +125,6 @@
                 );
                 </script>
             </div>
-            
             <div class="col-xs-12 col-lg-9">
                 <div class="row" id="anchor-color">
                     <div class="col-xs-12">
@@ -189,6 +188,34 @@
                         We use the colors like this..
                         <pre class="language-markup"><code class="language-markup">&lt;div class="blabla" &gt;</code></pre>
                     </div>
+                    <!-- Color HEX value script -->
+                    <script>
+                    $(document).ready(function() {
+                        var bgColor = '';
+                        $('.shape-small').click(function() {
+                            var x = $(this).css('backgroundColor');
+                            hexc(x);
+                            var bgText = $(this).find('span.bg-color').text();
+                            // alert(bgText.length > 0);
+
+                            if (bgText.length > 0) {
+                                $(this).html('');
+                            } else {
+                                $(this).html('<span class="bg-color">' + bgColor.toUpperCase() + '</span>');
+                            }
+                        })
+
+                        function hexc(colorval) {
+                            var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+                            delete(parts[0]);
+                            for (var i = 1; i <= 3; ++i) {
+                                parts[i] = parseInt(parts[i]).toString(16);
+                                if (parts[i].length == 1) parts[i] = '0' + parts[i];
+                            }
+                            bgColor = '#' + parts.join('');
+                        }
+                    });
+                    </script>
                     <div class="col-xs-12">
                         <h2>UI Colors</h2>
                         <div class="app-block">
@@ -809,7 +836,7 @@ $(ui.component.icon.render({
                                         </div>
                                     </div>
                                     <div class="col-xs-12" id="theWinner">
-                                        <div class="avatar col-md-3 ">
+                                        <div class="col-md-3 ">
                                             <img class="userPhoto" id="userPhoto" src="http://sierrafire.cr.usgs.gov/images/loading.gif">
                                         </div>
                                         <div class="names col-md-9">

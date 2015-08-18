@@ -616,9 +616,9 @@ this["ui"]["component"]["template"]["userpostit"] = Handlebars.template({"1":fun
 },"16":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "		<div class=\"app-block--no-bg user-post-it\">\n"
+  return "			<div class=\"app-block--no-bg user-post-it\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"each","hash":{},"fn":this.program(17, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "				</div>\n";
+    + "			</div>\n";
 },"17":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
@@ -630,14 +630,14 @@ this["ui"]["component"]["template"]["userpostit"] = Handlebars.template({"1":fun
     + alias3(((helper = (helper = helpers.timestamp || (depth0 != null ? depth0.timestamp : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"timestamp","hash":{},"data":data}) : helper)))
     + "</span></div>\n							<div class=\"comment-content\"><p>"
     + ((stack1 = ((helper = (helper = helpers.content || (depth0 != null ? depth0.content : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"content","hash":{},"data":data}) : helper))) != null ? stack1 : "")
-    + "</p></div>\n	\n						</div>\n					</div>\n";
+    + "</p></div>\n						</div>\n					</div>\n";
 },"19":function(depth0,helpers,partials,data) {
     var stack1, helper, options, buffer = 
-  "		<div class=\"app-block--no-bg user-post-it-input\">\n\n";
+  "			<div class=\"app-block--no-bg user-post-it-input\">\n";
   stack1 = ((helper = (helper = helpers.commentInputField || (depth0 != null ? depth0.commentInputField : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"commentInputField","hash":{},"fn":this.program(20, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
   if (!helpers.commentInputField) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
-  return buffer + "		</div>\n";
+  return buffer + "			</div>\n";
 },"20":function(depth0,helpers,partials,data) {
     var stack1;
 
@@ -654,7 +654,7 @@ this["ui"]["component"]["template"]["userpostit"] = Handlebars.template({"1":fun
   stack1 = ((helper = (helper = helpers.userpostitMeta || (depth0 != null ? depth0.userpostitMeta : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"userpostitMeta","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
   if (!helpers.userpostitMeta) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
-  return buffer + "					</div>\n				</div>	\n			</div>\n		\n			<div class=\"row\">\n				<div class=\"col-xs-12\">\n					<div class=\"user-post-it__content\">\n"
+  return buffer + "					</div>\n				</div>	\n			</div>		\n			<div class=\"row\">\n				<div class=\"col-xs-12\">\n					<div class=\"user-post-it__content\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.userpostitContent : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.program(9, data, 0),"data":data})) != null ? stack1 : "")
     + "					</div>\n				</div>\n			</div>\n			<div class=\"row\">\n				<div class=\"col-xs-12\">\n					<div class=\"user-post-it__action-bar\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.userpostitActions : depth0),{"name":"each","hash":{},"fn":this.program(11, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")

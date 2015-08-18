@@ -9,6 +9,20 @@
         margin: 0;
         &.shape-small {
             padding: 3em 7em;
+            .bg-color {
+                @include border-radius(1em);
+                @include opacity(.4);
+                cursor: default;
+                // transition: all 1s;
+                position: absolute;
+                background: $white;
+                color: black;
+                top: 2em;
+                left: 4em;
+                padding: .4em .8em;
+                font-family: $font-family--special;
+                // border-radius: .3em 0 .3em 0; 
+            }
         }
         .shade-light {
             -webkit-border-radius: 0 0 0 .4em;

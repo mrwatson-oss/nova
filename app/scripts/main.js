@@ -71,13 +71,13 @@ $(document).ready(function() {
     $('#replaybutton').on("click", function() {
         $('#finish').hide("slow");
         $('#game').show("slow");
-        console.log("click");
+        // console.log("click");
     });
 
     $('#menubutton').on("click", function() {
         $('#finish').hide();
         $('#start').show();
-        console.log("click");
+        // console.log("click");
     });
 
 
