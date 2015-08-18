@@ -242,13 +242,13 @@ this["ui"]["component"]["template"]["composer"] = Handlebars.template({"1":funct
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper;
 
-  return "		<div class=\"row "
+  return "\n			<div class=\"app-block "
     + this.escapeExpression(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
-    + "\">	\n			<div class=\"col-xs-12\">\n				 "
+    + "\">\n			<div class=\"col-xs-12\">\n				 "
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.composerTextInput : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n			</div>\n			<div class=\"col-xs-12\">\n			<p></p>\n				"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.button : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\n			</div>\n		</div>\n	\n";
+    + "\n			</div>\n			</div>	\n\n	\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["dialog"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
