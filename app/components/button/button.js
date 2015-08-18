@@ -21,7 +21,8 @@ ui.component.button = (function($, T) {
         'action': 'clickButton()',
         'icon': null,
         'disabled': false,
-        'borderLeft': false
+        'borderLeft': false,
+        'label': false
     };
 
 clickButton = function() {

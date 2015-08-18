@@ -42,11 +42,11 @@
             background: $button-color;
             border: 1px solid $button-color;
             color: $button-text-color;
-            margin: .2em 0 .2em 1em;
             padding: 1em 1.4em;
             .icon {
                 font-size: 1.6em;
                 vertical-align: bottom;
+            // margin: .2em 0 -.2em 0;
                 &.green {
                     color: $green;
                 }

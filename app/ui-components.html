@@ -219,206 +219,183 @@
                     </div>
                 </div>
                 <div class="row" id="anchor-button">
-                    <div class="col-xs-12">
+                <div class="col-xs-12">
                         <h2>Buttons</h2>
                         <div class="app-block">
-                            <h3>Naked Button</h3>
-                            <p>//als er een block component is kan elke button met uitleg los in een 'block'
-                                <br>The naked button is used blabla
-                                <br> The 'content' property describes the action..
-                                <br> The 'class' property defines the button style. Possible options are:
-                            </p>
-                            <ul>
-                                <li>naked-button--neutral</li>
-                                <li>naked-button--happy</li>
-                                <li>naked-button--strict</li>
-                                <li>naked-button--angry</li>
-                                <li>pull-left/right</li>
-                                <li>'disabled':'true'</li>
-                            </ul>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3>Naked Button</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p>
+                                        You can either use the solid or the naked alert.
+                                        <br> The 'class' property defines the alert style. Possible options are:
+                                    </p>
+                                    <ul>
+                                        <li>naked-alert--happy</li>
+                                        <li>naked-alert--strict</li>
+                                        <li>naked-alert--angry</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-8">
+                                    <pre><code class="language-javascript">
+$(ui.component.button.render({
+    'content': 'Menu',
+    'class': 'naked-button--neutral',
+    'icon': 'icon-system-menu'
+    })) 
+</code></pre>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <div id="naked-button"></div>
-                            <script>
-                            $('#naked-button').replaceWith(
-                                $(ui.component.button.render({
-                                    'content': 'Meetings',
+                    <div class="col-xs-12">
+                        <div id="naked-buttons"></div>
+                        <script>
+                        $('#naked-buttons').replaceWith(
+                            $(ui.component.button.render({
+                                'styleguide': true,
+                                'buttons': [{
+                                    'content': 'Meetings',                                    
                                     'class': 'naked-button--neutral',
-                                    'icon': 'icon-solid-camera'
-                                })),
-                                $(ui.component.button.render({
+                                }, {
                                     'content': 'Like',
                                     'class': 'naked-button--happy'
-                                })),
-                                $(ui.component.button.render({
+                                }, {
                                     'content': 'Back',
                                     'class': 'naked-button--strict'
-                                })),
-                                $(ui.component.button.render({
+                                }, {
                                     'content': 'Destroy',
                                     'class': 'naked-button--angry'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': '&#167; Menu',
+                                }, {
+                                    'content': 'Menu',
+                                    'class': 'naked-button--neutral',
+                                    'icon': 'icon-system-menu'
+                                }, {                                    
+                                    'icon': 'icon-solid-camera',
                                     'class': 'naked-button--neutral'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': '&#9758;',
-                                    'class': 'naked-button--neutral'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': 'Members',
-                                    'class': 'naked-button--neutral',
-                                    'disabled': 'disabled'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': 'Save changes',
-                                    'class': 'naked-button--happy',
-                                    'disabled': 'disabled'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': 'Receive &#36;100',
-                                    'class': 'naked-button--strict',
-                                    'disabled': 'disabled'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': 'Kill app',
-                                    'class': 'naked-button--angry',
-                                    'disabled': 'disabled'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': '&#167; All groups',
-                                    'class': 'naked-button--neutral',
-                                    'disabled': 'disabled'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': '&#60;',
-                                    'class': 'naked-button--neutral',
-                                    'disabled': 'disabled'
-                                }))
-
-                            );
-                            </script>
+                                }]
+                            })));
+                        </script>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="app-block">
+                            <h3>Naked Button - disabled</h3>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <pre><code class="language-javascript">
-  $(ui.component.button.render({
-    'content' : 'Neutral',
-    'class'   : 'naked-button--neutral'
-  }))
-</code></pre>
+                    <div class="col-xs-12">
+                        <div id="naked-buttons-disabled"></div>
+                        <script>
+                        $('#naked-buttons-disabled').replaceWith(
+                            $(ui.component.button.render({
+                                'styleguide': true,
+                                'buttons': [{
+                                    'content': 'Meetings',                                    
+                                    'class': 'naked-button--neutral',
+                                    'disabled': 'disabled'
+                                }, {
+                                    'content': 'Like',
+                                    'class': 'naked-button--happy',
+                                    'disabled': 'disabled'
+                                }, {
+                                    'content': 'Back',
+                                    'class': 'naked-button--strict',
+                                    'disabled': 'disabled'
+                                }, {
+                                    'content': 'Destroy',
+                                    'class': 'naked-button--angry',
+                                    'disabled': 'disabled'
+                                }, {
+                                    'content': 'Menu',
+                                    'class': 'naked-button--neutral',
+                                    'icon': 'icon-system-menu',
+                                    'disabled': 'disabled'
+                                }, {                                    
+                                    'icon': 'icon-solid-camera',
+                                    'class': 'naked-button--neutral',
+                                    'disabled': 'disabled'
+                                }]
+                            })));
+                        </script>
                     </div>
                     <div class="col-xs-12">
                         <div class="app-block">
                             <h3>Solid Button</h3>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <div id="solid-button"></div>
-                            <script>
-                            $('#solid-button').replaceWith(
-                                $(ui.component.button.render({
+                    <div class="col-xs-12">
+                        <div id="solid-buttons"></div>
+                        <script>
+                        $('#solid-buttons').replaceWith(
+                            $(ui.component.button.render({
+                                'styleguide': true,
+                                'buttons': [{
                                     'content': 'Cancel',
                                     'class': 'solid-button--neutral'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': 'Share post',
+                                }, {
+                                    'content': 'Share Post',
                                     'class': 'solid-button--happy'
-                                })),
-                                $(ui.component.button.render({
+                                }, {
                                     'content': 'Check availability',
                                     'class': 'solid-button--strict'
-                                })),
-                                $(ui.component.button.render({
+                                }, {
                                     'content': 'Delete user',
                                     'class': 'solid-button--angry'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': '&#9758; Settings',
-                                    'class': 'solid-button--neutral'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': '?',
-                                    'class': 'solid-button--strict'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': 'Reset form',
+                                }, {
+                                    'content': 'Settings',
+                                    'icon': 'icon-solid-settings',
+                                    'class': 'solid-button--neutral icon-only'
+                                }, {
+                                    'icon': 'icon-user-arrow-right',
+                                    'class': 'solid-button--strict icon-only'
+                                }]
+                            })));
+                        </script>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="app-block">
+                            <h3>Solid Button - disabled</h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div id="solid-buttons-disabled"></div>
+                        <script>
+                        $('#solid-buttons-disabled').replaceWith(
+                            $(ui.component.button.render({
+                                'styleguide': true,
+                                'buttons': [{
+                                    'content': 'Cancel',
                                     'class': 'solid-button--neutral',
                                     'disabled': 'disabled'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': 'Save changes',
+                                }, {
+                                    'content': 'Share Post',
                                     'class': 'solid-button--happy',
                                     'disabled': 'disabled'
-                                })),
-                                $(ui.component.button.render({
+                                }, {
                                     'content': 'Check availability',
                                     'class': 'solid-button--strict',
                                     'disabled': 'disabled'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': 'Discard changes',
+                                }, {
+                                    'content': 'Delete user',
                                     'class': 'solid-button--angry',
                                     'disabled': 'disabled'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': '&#167; Settings',
-                                    'class': 'solid-button--neutral',
+                                }, {
+                                    'content': 'Settings',
+                                    'icon': 'icon-solid-settings',
+                                    'class': 'solid-button--neutral icon-only',
                                     'disabled': 'disabled'
-                                })),
-                                $(ui.component.button.render({
-                                    'content': '?',
-                                    'class': 'solid-button--strict',
+                                }, {
+                                    'icon': 'icon-user-arrow-right',
+                                    'class': 'solid-button--strict icon-only',
                                     'disabled': 'disabled'
-                                }))
-
-                            );
-                            </script>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <pre><code class="language-javascript">
-  $(ui.component.button.render({
-    // properties
-  }))
-</code></pre>
-                    </div>
-                </div>
-                <!--  <div class="row" id="anchor-card">
-                    <div class="col-xs-12">
-                        <h2>Card</h2>
-                    </div>
-                    <div class="col-md-6">
-                        <div id="card"></div>
-                        <script>
-                        $('#card').replaceWith(
-                            $(ui.component.card.render({
-                                properties: [{
-                                        'thumbnail': 'https://www.filepicker.io/api/file/ka18lT41SyJpHhjqFt5A'
-                                    }, {
-                                        'title': 'Marius',
-                                        'class': 'card__person'
-                                    }, {
-                                        'copy': 'Ik zoek een accountant! Geen groot kantoor, maar een partij met een persoonlijke benadering en vriendelijke tariefjes. Kan iemand mij verder helpen? - gracias de antemano'
-                                    }
-
-                                ]
-                            }))
-                        );
+                                }]
+                            })));
                         </script>
                     </div>
-                    <div class="col-md-6">
-                        <pre><code class="language-javascript">
-  $(ui.component.card.render({
-    // properties
-  }))
-</code></pre>
-                    </div>
-                </div> -->
+
+                </div>
                 <div class="row" id="anchor-composer">
                     <div class="col-xs-12">
                         <h2>Composer</h2>
@@ -1144,7 +1121,7 @@ $(ui.component.dialog.render({
                                 'userpostitLikes': {
                                     'number': '17'
                                 }
-                                
+
 
                             }))
                         );
@@ -1180,25 +1157,30 @@ $(ui.component.dialog.render({
                                 'comments': [{
                                     'author': 'General Dooks',
                                     'timestamp': '12 aug 2015',
-                                    'avatar': 
-                                    {'src': 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png', 'small': true},
+                                    'avatar': {
+                                        'src': 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png',
+                                        'small': true
+                                    },
                                     'content': 'Daarnaast mbt corvee, het is al eerder aangegeven. Het is wel zo netjes om een volgende groep niet met een achterstand te laten beginnen, voor iedereen zijn de maandagochtenden belangrijk, dus zorg ajb dat je op vrijdag je corveeweek netjes afsluit, dan kan iedereen zich op maandag focussen wat belangrijk is'
-                                
-                                },
-                                {
+
+                                }, {
                                     'author': 'General Dooks',
                                     'timestamp': '13 aug 2015',
-                                    'avatar': 
-                                    {'src': 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png', 'small': true},
+                                    'avatar': {
+                                        'src': 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png',
+                                        'small': true
+                                    },
                                     'content': 'Trouwens, bij onze zuivel-bestelling van deze week is er iets mis gegaan waardoor we met een ietsje-pietsje meer volle melk zitten dan de bedoeling was. Omdat we het natuurlijk zonde vinden als al deze flessen zouden bederven, kunnen jullie voor een mooi prijsje wat flessen mee naar huis nemen.'
-                                
+
                                 }],
                                 'commentInputField': {
-                                     'avatar': 
-                                    {'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg', 'small': true},
+                                    'avatar': {
+                                        'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                                        'small': true
+                                    },
                                     'placeholder': 'Add a comment',
                                     'content': 'Comment'
-                                
+
                                 }
 
                             }))
