@@ -4,7 +4,16 @@ Front-end framework & style guide for [www.mrwatson.com](www.mrwatson.com)
 ## Dependencies
 
 - [Node](https://nodejs.org/download/)
-- [Bower](http://bower.io/)
+- [Bower](http://bower.io/) or
+
+```
+$ npm install -g bower
+```
+- [Yeoman](http://yeoman.io/) or
+
+```
+$ npm install -g yo
+```
 - [Sass](http://sass-lang.com/install/)
 
 ## Installing
