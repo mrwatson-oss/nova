@@ -54,13 +54,13 @@
             line-height: $font-size--large;
         }
         .nav-title__button {
-            margin: -.76em -.5em 0 0;
-            font-size: .9em;
+            margin: -.5em -.5em 0 0;
+            font-size: .85em;
             .naked-button--neutral,
             .naked-button--strict,
             .naked-button--happy,
             .naked-button--angry {
-                margin-top: .4em;
+                // margin-top: .4em;
             }
         }
     }
