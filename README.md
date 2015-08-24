@@ -1,60 +1,35 @@
 #Mr.Watson | Nova (v0.0.1)
-Front-end framework & style guide for [www.mrwatson.com](#) 
-<!-- blabla `pad\pad\pad\uiblabla` and `pad\pad\blalba`. -->
-<!-- 
-[![Build Status](https://api.travis-ci.org/websoftwares/middleware.png)](https://travis-ci.org/websoftwares/middleware)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/websoftwares/middleware/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/websoftwares/middleware/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/websoftwares/middleware/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/websoftwares/middleware/?branch=master) -->
+Front-end framework & style guide for [www.mrwatson.com](www.mrwatson.com) 
 
-<!-- ## Installing via ... (recommended)
+## Dependencies
 
-Install ... project:
-```
-code commando bla
-```
+- [Node](https://nodejs.org/download/)
+- [Bower](http://bower.io/)
+- [Sass](http://sass-lang.com/install/)
 
-doe dan dit:
-```nodejs
-
-dit en zo
-```
-
-Install via ....
-```
-commando
-```
-
-## Usage
-Basic usage of the `....` dinges.
+## Installing
 
 ```
-zo doe je dat.nl
-
+$ git clone https://github.com/mrwatson-oss/nova.git
 ```
 
-## nog een hoofdstuk
-Dus en zo ~~streep mij door~~ tekst bla
-
-## nog iets trouwens
-The package [deze](url) is an blabla
+```
+$ npm install
+```
 
 ```
-code
+$ bower install
+```
 
-``` -->
-<!-- 
-## Changelog
-- v0.0.1: 
- -->
-<!-- ## Testing
-In the tests folder u can find several tests. -->
+## Commands
 
-<!-- ## Acknowledgement
-Inspired by all the great middleware packages
+```
+$ grunt serve
+```
 
-- Mijn ouders
-- [Bootstrap?](#) -->
+```
+$ grunt build
+```
 
-<!-- 
 ## License
-The [MIT](http://opensource.org/licenses/MIT "MIT") License (MIT). -->
+The [MIT](http://opensource.org/licenses/MIT "MIT") License (MIT). 
