@@ -1,0 +1,311 @@
+<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>mr.Watson - Style Guide</title> <meta name=description content=""> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel="shortcut icon" href=/icon.ba402555.ico> <link rel=apple-touch-icon href=/apple-touch-icon.335f333c.png> <link rel=stylesheet href=styles/main.7a4f6e62.css> <script src=scripts/vendor/modernizr.1cb556bb.js></script> <script src=scripts/vendor.a61cdef5.js></script> <script src=scripts/main.4e4ace62.js></script> <link rel=stylesheet href=vendor/prism.css> <script src=vendor/prism.js></script> <script src=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js></script>  <body> <div id=partials></div> <script>$('#partials').replaceWith(
+        $(ui.component.partials.render({}))
+    );</script> <div class=container-fluid> <!-- header --> <div class=row> <div class=col-xs-12> <div id=header></div> <script>var header = ui.component.header;
+                $('#header').replaceWith(
+                    $(header.render({
+                        'headerTextInput': [{
+                            'placeholder': 'Seach for colors or whatever',
+                            'class': 'text-input__grey'
+
+                        }],
+                        'navItems': [{
+                                'url': '#',
+                                'item': 'UI base',
+                                'class': 'nav--active divider'
+                            }, {
+                                'url': '/nova/dist/ui-components.html',
+                                'item': 'UI components'
+                            }]
+                            // ,
+                            // 'navIcons': [
+                            // {'icon': 'icon-solid-bubbles', 'color': 'green'},
+                            // {'icon': 'icon-solid-bell'}
+
+                        // ]
+                    }))
+                );</script> </div> </div> </div> <div class=container> <div class=row> <p> </p> </div> <div class=row> <div class="hidden-xs hidden-sm hidden-md col-lg-3"> <div id=side-nav></div> <script>$('#side-nav').replaceWith(
+                    $(ui.component.nav.render({
+                        'title': true,
+                        'navTitle': 'Design',
+                        navItems: [{
+                            'url': '#anchor-color',
+                            'item': 'Colors'
+                        }, {
+                            'url': '#anchor-icons',
+                            'item': 'Icons'
+                        }, {
+                            'url': '#anchor-layout',
+                            'item': 'Layout'
+                        }, {
+                            'url': '#anchor-typography',
+                            'item': 'Typography'
+                        }]
+                    }))
+
+                );</script> <div id=side-nav2></div> <script>$('#side-nav2').replaceWith(
+                    $(ui.component.nav.render({
+                        'title': true,
+                        'navTitle': 'Starting a project',
+                        'navItems': [{
+                            'url': '#',
+                            'item': 'Scaffolding'
+                        }, {
+                            //     'url': '#',
+                            //     'item': 'Code Standards'
+                            // }, {
+                            //     'url': '#',
+                            //     'item': 'CSS Helpers'
+                            // }, {
+                            'url': '#anchor-sampleapps',
+                            'item': 'Sample App&#39;s'
+                        }]
+                    }))
+
+                );</script> </div> <div class="col-xs-12 col-lg-9"> <div class=row id=anchor-color> <div class=col-xs-12> <h2>Color Palette</h2> <div class=app-block> <h3>Primary Palette</h3> </div> </div> <div class=col-xs-12> <div class=color-block> <div class="shape green"> <div class=shade-light>light</div> <div class=shade-dark>dark</div> </div> <p>Green</p> </div> <div class=color-block> <div class="shape grey"> <div class=shade-light>light</div> <div class=shade-dark>dark</div> </div> <p>Grey</p> </div> <div class=color-block> <div class="shape white"> <!-- <div class="shade-light">light</div>
+                                <div class="shade-dark">dark</div> --> </div> <p>White</p> </div> </div> <div class=col-xs-12> <div class=app-block> <h3>Secundary Palette</h3> </div> </div> <div class=col-xs-12> <div class=color-block> <div class="shape sec-blue"> <div class=shade-light>light</div> <div class=shade-dark>dark</div> </div> <p>Sec Blue</p> </div> <div class=color-block> <div class="shape sec-red"> <div class=shade-light>light</div> <div class=shade-dark>dark</div> </div> <p>Sec Red</p> </div> <!-- <div class="color-block">
+                            <div class="shape sec-grey">
+                                <div class="shade-light">light</div>
+                                <div class="shade-dark">dark</div>
+                            </div>
+                            <p>Sec Grey</p>
+                        </div> --> </div> <div class=col-xs-6> We use the colors like this.. <pre class=language-markup><code class=language-markup>&lt;div class="blabla" &gt;</code></pre> </div> <!-- Color HEX value script --> <script>$(document).ready(function() {
+                        var bgColor = '';
+                        $('.shape-small').click(function() {
+                            var x = $(this).css('backgroundColor');
+                            hexc(x);
+                            var bgText = $(this).find('span.bg-color').text();
+                            // alert(bgText.length > 0);
+
+                            if (bgText.length > 0) {
+                                $(this).html('');
+                            } else {
+                                $(this).html('<span class="bg-color">' + bgColor.toUpperCase() + '</span>');
+                            }
+                        })
+
+                        function hexc(colorval) {
+                            var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+                            delete(parts[0]);
+                            for (var i = 1; i <= 3; ++i) {
+                                parts[i] = parseInt(parts[i]).toString(16);
+                                if (parts[i].length == 1) parts[i] = '0' + parts[i];
+                            }
+                            bgColor = '#' + parts.join('');
+                        }
+                    });</script> <div class=col-xs-12> <h2>UI Colors</h2> <div class=app-block> <h3>Backgrounds &amp; Borders</h3> </div> </div> <div class=col-xs-12> <div class=color-block> <div class="shape shape-small body-background-color"> </div> <p>$body-background-color</p> </div> <div class=color-block> <div class="shape shape-small block-background-color"> </div> <p>$block-background-color</p> </div> <div class=color-block> <div class="shape shape-small border-color"> </div> <p>$border-color</p> </div> <div class=color-block> <div class="shape shape-small border-color--accent"> </div> <p>$border-color--accent</p> </div> </div> <div class=col-xs-12> <div class=app-block> <h3>Buttons</h3> </div> </div> <div class=col-xs-12> <div class=color-block> <div class="shape shape-small button-color--neutral"> </div> <p>$button-color--neutral</p> </div> <div class=color-block> <div class="shape shape-small button-color--neutral--accent"> </div> <p>$button-color--neutral--accent</p> </div> <div class=color-block> <div class="shape shape-small button-color--happy"> </div> <p>$button-color--happy</p> </div> <div class=color-block> <div class="shape shape-small button-color--happy--accent"> </div> <p>$button-color--happy--accent</p> </div> <div class=color-block> <div class="shape shape-small button-color--strict"> </div> <p>$button-color--strict</p> </div> <div class=color-block> <div class="shape shape-small button-color--strict--accent"> </div> <p>$button-color--strict--accent</p> </div> <div class=color-block> <div class="shape shape-small button-color--angry"> </div> <p>$button-color--angry</p> </div> <div class=color-block> <div class="shape shape-small button-color--angry--accent"> </div> <p>$button-color--angry--accent</p> </div> </div> <div class=col-xs-12> <div class=app-block> <h3>Text</h3> </div> </div> <div class=col-xs-12> <div class=color-block> <div class="shape shape-small button-color__text"> </div> <p>$button-color__text</p> </div> <div class=color-block> <div class="shape shape-small button-color--neutral__text"> </div> <p>$button-color--neutral__text</p> </div> <div class=color-block> <div class="shape shape-small text-color"> </div> <p>$text-color</p> </div> <div class=color-block> <div class="shape shape-small text-color--accent"> </div> <p>$text-color--accent</p> </div> <div class=color-block> <div class="shape shape-small header-color"> </div> <p>$header-color</p> </div> <div class=color-block> <div class="shape shape-small header-color--accent"> </div> <p>$header-color--accent</p> </div> <div class=color-block> <div class="shape shape-small link-color"> </div> <p>$link-color</p> </div> </div> </div> <div class=row id=anchor-icons> <div class=col-xs-12> <h2>Icons</h2> </div> <div class=col-xs-12> <div class=app-block> <h3>Header Icons</h3> <div class=row> <div class="col-md-4 col-lg-6"> <p>These are the icons used in Mr.Watson's header etc.</p> </div> <div class="col-md-8 col-lg-6"> <pre><code class=language-javascript>
+$(ui.component.icon.render({
+    'icons': [
+        {'icon': 'icon-solid-bell'},
+        {'icon': 'icon-naked-bell'}
+        ]
+    }))
+</code></pre> </div> </div> </div> </div> <div class=col-xs-12> <div id=header-icons></div> <script>$('#header-icons').replaceWith(
+                            $(ui.component.icon.render({
+                                'styleguide': true,
+                                'icons': [{
+                                    'icon': 'icon-solid-bell',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-naked-bell',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-solid-bubbles',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-naked-bubbles',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-solid-user',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-naked-user',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-solid-menu',
+                                    'label': true
+                                }]
+                            }))
+                        );</script> </div> <div class=col-xs-12> <div class=app-block> <h3>System Icons</h3> </div> </div> <div class=col-xs-12> <div id=system-icons></div> <script>$('#system-icons').replaceWith(
+                            $(ui.component.icon.render({
+                                'styleguide': true,
+                                'icons': [{
+                                    'icon': 'icon-system-menu',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-system-refresh',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-system-down-open',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-system-up-open',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-system-close',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-solid-magnifier',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-naked-magnifier',
+                                    'label': true
+                                }]
+                            }))
+                        );</script> </div> <div class=col-xs-12> <div class=app-block> <h3>User Icons</h3> </div> </div> <div class=col-xs-12> <div id=user-icons></div> <script>$('#user-icons').replaceWith(
+                            $(ui.component.icon.render({
+                                'styleguide': true,
+                                'icons': [{
+                                    'icon': 'icon-solid-bubble',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-naked-bubble',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-solid-like',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-naked-like',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-solid-add',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-naked-add',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-solid-settings',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-naked-settings',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-solid-flag',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-solid-fire',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-solid-cup',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-naked-cup',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-arrow-left',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-arrow-right',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-star-big',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-star-small',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-check',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-award',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-star-flag',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-megaphone',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-github',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-linkedin',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-googleplus',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-pinterest',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-twitter',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-facebook',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-instagram',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-skype',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-key',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-url',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-help',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-mail',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-phone',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-school',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-clock',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-location',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-compass',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-map',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-mobile',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-monitor',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-suitcase',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-calendar',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-location-2',
+                                    'label': true
+                                }, {
+                                    'icon': 'icon-user-user',
+                                    'label': true
+                                }]
+                            }))
+                        );</script> </div> </div> <div class=row id=anchor-layout> <div class=col-xs-12> <h2>Layout</h2> <div class=app-block> <h3>Grid</h3> </div> </div> <div class=col-md-6> <div class=app-block> <p> Right now we use the <a href=https://github.com/twbs/bootstrap-sass>Sass version of Bootstrap</a>'s grid. Note we only use Bootstrap's grid. Other bootstrap classes don't work.</p> <p> </p><p><strong>Most important rules:</strong></p> <ul> <li>Do not nest containers</li> <li>Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding</li> <li>Use rows to create horizontal groups of columns</li> <li>Content should be placed within columns, and only columns may be immediate children of rows</li> </ul> <p> More information on: </p> <p> <span><a href=http://getbootstrap.com/css/#grid target=_blank>getbootstrap.com/css/#grid</a></span> <span><a href=http://getbootstrap.com/examples/grid target=_blank>getbootstrap.com/examples/grid</a></span> </p> </div> </div> <div class=col-md-6> <pre class=language-markup><code class=language-markup>
+&lt;div class="container"&gt; 
+    &lt;div class="row"&gt; 
+        &lt;div class="col-md-4"&gt; 
+            &lt;&#33;--content--&gt;    
+        &lt;&#47;div&gt; &lt;&#33;--/col-md-4--&gt;
+        &lt;div class="col-md-8"&gt; 
+             &lt;div class="row"&gt; 
+                &lt;div class="col-xs-6"&gt; 
+                    &lt;&#33;--content--&gt;    
+                &lt;&#47;div&gt; &lt;&#33;--/col-xs-6--&gt;
+                &lt;div class="col-xs-6"&gt; 
+                    &lt;&#33;--content--&gt;    
+                &lt;&#47;div&gt; &lt;&#33;--/col-xs-6--&gt;           
+            &lt;&#47;div&gt; &lt;&#33;--/row--&gt;  
+        &lt;&#47;div&gt; &lt;&#33;--/col-md-8--&gt;          
+    &lt;&#47;div&gt; &lt;&#33;--/row--&gt;
+&lt;&#47;div&gt; &lt;&#33;--/container--&gt;
+
+&#8595; Creates a grid like this &#8595; 
+</code></pre> </div> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-md-4 style="padding: 2em; background:#4AB75F"> &lt;&#33;--content--&gt; (col-md-4) </div> <!--/col-xs-4--> <div class=col-md-8 style="padding: 1em; background:#B3B3B3"> <div class=row> <div class=col-xs-6 style="padding: 1em; background:#6699CC"> &lt;&#33;--content--&gt; (col-xs-6) </div> <!--/col-xs-6--> <div class=col-xs-6 style="padding: 1em; background:#DA4747"> &lt;&#33;--content--&gt; (col-xs-6) </div> <!--/col-xs-6--> </div> <!--/row--> </div> <!--/col-xs-8--> </div> <!--/row--> </div> </div> <div class=col-xs-12> <div class=app-block> <h3>Platform Layout</h3> <p>Mr.Watson uses a 3 column grid with a full-width header on top <br> The most right column is optional. If not used the middle column becomes (col-md-9) and takes up the extra space. </p> </div> </div> <div class=col-md-3> <div class=app-block--accent> <p> The left column (col-md-3) is for navigation and disappears on small devices or screen-widths. </p> </div> </div> <div class=col-md-6> <div class=app-block--accent> <p> The middle column (col-md-6) is for main content. </p> </div> </div> <div class=col-md-3> <div class=app-block--accent> <p> The (optional) right column (col-md-3) is for widgets and disappears on small devices or screen-widths. </p> </div> </div> <div class=col-xs-12> <div class=app-block> <h3>App Layout</h3> <p>Apps can use the 9 columns on the right in the same fashion the platform does. They can either take up the entire 9 columns. I.e. for placing the <a href=/ui-components.html target=_blank>App Bar Component</a> which houses the app's filter views and action buttons. <br> <br> The optional right column is used for in-app navigation. </p> </div> </div> <div class="col-md-9 col-md-offset-3"> <div class=row> <div class=col-xs-12> <div class=app-block--accent> <p> App Bar or full-width app content </p> </div> </div> <div class=col-xs-8> <div class=app-block--accent> <p> App content <br> <br> <br> </p> </div> </div> <div class=col-xs-4> <div class=app-block--accent> <p> The (optional) right column (col-md-3) for in-app nav </p> </div> </div> <div class=col-xs-3> <div class=app-block--accent> <p> 1/4 grid for small content blocks </p> </div> </div> <div class=col-xs-3> <div class=app-block--accent> <p> 1/4 grid for small content blocks </p> </div> </div> <div class=col-xs-3> <div class=app-block--accent> <p> 1/4 grid for small content blocks </p> </div> </div> <div class=col-xs-3> <div class=app-block--accent> <p> 1/4 grid for small content blocks </p> </div> </div> </div> </div> </div> <div class=row id=anchor-typography> <div class=col-xs-12> <h2>Typography</h2> <div class=app-block> <h3>Fonts</h3> <p>We use these fonts</p> <p>For regular type in <code class=language-markup>&lt;p&gt;</code> we use the <code class=language-css> $font-family </code> Sass variable. (Currently Source Sans Pro)</p> </div> </div> <div class=col-sm-8> <div class=app-block> <h3>Headers</h3> <h1>This is H1</h1> <h2>This is H2</h2> <h3>This is H3</h3> <h4>This is H4</h4> <h5>This is H5</h5> <h6>This is H6</h6> </div> </div> <div class="col-xs-6 col-sm-4"> <div class=app-block> <h3>Buttons</h3> <p>For buttons we use</p> </div> </div> <div class="col-xs-6 col-sm-4"> <div class=app-block> <h3>Navigation</h3> <p>For navigation we use</p> </div> </div> <div class=col-sm-8> <div class=app-block> <h3>Paragraph</h3> <p>This is a paragraph - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, cumque quis possimus dicta illo qui, quaerat deleniti distinctio. Mollitia deleniti praesentium molestias provident facilis facere minus aut quam, ex repellendus. <a href=#>This is what a link looks like in a paragraph</a> </p> </div> </div> <div class=col-sm-4> <div class=app-block> <h3>Unordered list</h3> <ul> <li>item</li> <li>item</li> <li>item</li> <li>item</li> </ul> </div> </div> </div> <div class=row id=anchor-sampleapps> <div class=col-xs-12> <h2>Sample App&#39;s</h2> <div class=app-block> <h3>Face Game</h3> </div> <div id=theApp> <div id=start> <div class=row> <div class="start col-xs-4" id=startbutton> <p class="solid-button--strict pull-right">start</p> </div> <div class="highscores col-xs-8"> <h1>Highscores:</h1> <ol id=scorelist> <li>Marius &nbsp;-<span id=scoreListHighscore1>10</span></li> <li>Marius &nbsp;-<span id=scoreListHighscore2>9</span></li> <li>Marius &nbsp;-<span id=scoreListHighscore3>8</span></li> <li>Marius &nbsp;-<span id=scoreListHighscore4>7</span></li> <li>Marius &nbsp;-<span id=scoreListHighscore5>6</span></li> <li>Marius &nbsp;-<span id=scoreListHighscore6>5</span></li> <li>Marius &nbsp;-<span id=scoreListHighscore7>4</span></li> <li>Marius &nbsp;-<span id=scoreListHighscore8>3</span></li> <li>Marius &nbsp;-<span id=scoreListHighscore9>2</span></li> <li>Marius &nbsp;-<span id=scoreListHighscore10>1</span></li> </ol> </div> </div> </div> <div id=game> <div class=row> <div class=col-xs-12> <div class="header teader"> <p class="headercontent progress"></p> <p class="headercontent pull-right">Personal best:&nbsp; <span class=score> 0 </span></p> </div> </div> <div class=col-xs-12 id=theWinner> <div class=col-md-3> <img class=userPhoto id=userPhoto src=http://sierrafire.cr.usgs.gov/images/loading.gif> </div> <div class="names col-md-9"> <ul id=names> </ul> </div> </div> </div> </div> <div id=finish> <div class=row> <div class="app col-xs-12"> <div class="header teader"> <p class="headercontent finalscore">Final Score: 20</p> <p class="headercontent ranking">Your ranking: 1</p> </div> </div> <div class="start col-xs-4"> <p class=solid-button--strict id=replaybutton>Play again</p> <br> <p class=naked-button--strict id=menubutton>See highscores</p> </div> <div class=col-xs-8> <div class="photo col-xs-6"> <img class=userPhoto id=wrongUser src=""> </div> <div class=col-xs-6> <p>Auch, wrong answer..</p> <p>This is <span id=thisPersonsName></span>!</p> </div> </div> </div> </div> </div> </div> </div> <!--app--> </div> </div> </div> 
