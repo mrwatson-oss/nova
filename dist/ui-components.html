@@ -80,60 +80,61 @@
 
                     );</script> </div> <!-- </div> --> </div> <div class="col-xs-12 col-lg-9"> <div class=row id=anchor-appbar> <div class=col-xs-12> <h2>App Bar</h2> </div> <div class=col-xs-12> <div id=appbar></div> <script>$('#appbar').replaceWith(
                             $(ui.component.appbar.render({
-                                // 'appbarDropdown': [{
-                                //     'dropdownItem': 'hooi',
-                                //     'dropdownOptions': [{
-                                //         'option': 'dezem',
-                                //         'href': '#'
-                                //     }, {
-                                //         'option': 'in',
-                                //         'href': '#'
-                                //     }]
-                                // }],
-                                navItems: [{
+                                'navItems': [{
                                     'url': '#',
                                     'item': 'Past events',
                                     'class': 'nav--active divider'
                                 }, {
                                     'url': '#',
                                     'item': 'Upcoming events'
-
                                 }],
                                 'button': [{
-                                        'class': 'solid-button--strict pull-right',
-                                        'content': 'Add user'
-                                    }
-                                    // , {
-                                    //     'class': 'solid-button--neutral border-right',
-                                    //     'content': 'About'
-                                    // },
-                                    // {
-                                    //     'class': 'solid-button--neutral border-right',
-                                    //     'content': 'Posts',
-                                    //     'borderLeft': true
-                                    // },
-                                    // {
-                                    //     'class': 'solid-button--neutral border-right',
-                                    //     'content': 'Collagues',
-                                    //     'borderLeft': true
-                                    // }
-                                ],
+                                    'class': 'solid-button--strict pull-right',
+                                    'content': 'Add new event'
+                                }]
                             }))
-                        );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
+                        );</script> </div> <div class=col-md-8> <pre><code class=language-javascript>
   $(ui.component.appbar.render({
-    // properties
+    'navItems': [{
+        'url': '#',
+        'item': 'Past events',
+        'class': 'nav--active divider'
+    }, {
+        'url': '#',
+        'item': 'Upcoming events'
+    }],
+    'button': [{
+            'class': 'solid-button--strict pull-right',
+            'content': 'Add new event'
+        }]
   }))
-</code></pre> </div> </div> <div class=row id=anchor-appblock> <div class=col-xs-12> <h2>App Block</h2> </div> <div class=col-md-6> <div class=app-block> <p>The app block is a CSS class</p> </div> </div> <div class=col-md-6> <pre><code class=language-javascript>
-  $(ui.component.appblock.render({
-    // properties
-  }))
-</code></pre> </div> </div> <div class=row id=anchor-button> <div class=col-xs-12> <h2>Buttons</h2> <div class=app-block> <div class=row> <div class=col-xs-12> <h3>Naked Button</h3> </div> </div> <div class=row> <div class=col-md-4> <p> You can either use the solid or the naked alert. <br> The 'class' property defines the alert style. Possible options are: </p> <ul> <li>naked-alert--happy</li> <li>naked-alert--strict</li> <li>naked-alert--angry</li> </ul> </div> <div class=col-xs-8> <pre><code class=language-javascript>
+</code></pre> </div> <div class=col-md-4> <div class=app-block> The app bar component is used as header for apps. <br> <br> Just like most other components it scales to the column it's in. <br> <br> Properties includes an array for nav items and an optional one for one or more action buttons. </div> </div> </div> <div class=row id=anchor-appblock> <div class=col-xs-12> <h2>App Block</h2> </div> <div class=col-md-6> <div class=app-block> <p>The app block is a CSS class. <br> <br> All it does at the moment is putting the content in it in a white block <pre><code class=language-css>    display: inline-block;
+    padding: 1em;
+    width : 100%;
+    height: auto;
+    background: white;
+    margin-bottom: 1em;</code></pre> Just like all other components the app block should be placed directly in a column. </p> </div> </div> <div class="col-sm-8 col-md-6"> <!-- <div class="app-block"> --> <pre><code class=language-markup>
+&lt;div class="col-md-6"&gt;
+    &lt;div class="app-block"&gt;
+        &lt;p&gt;The app block is a CSS 
+        class. All it does at the moment 
+        is putting the content in it in 
+        a white block 
+        &lt;!-- code example --&gt;
+        Just like all other components 
+        the app block should be 
+        placed directly in a column.
+        &lt;&#47;p&gt;
+    &lt;&#47;div&gt; 
+&lt;&#47;div&gt; 
+</code></pre> <!-- </div> --> </div> </div> <div class=row id=anchor-button> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-xs-12> <h2>Buttons</h2> </div> <div class=col-md-6> <p> Buttons come in two variations. There's the solid button and the naked button. <br> <br> The 'class' property defines the button style. Possible options are: </p> <ul> <li><code class=language-css>solid-button--neutral</code></li> <li><code class=language-css>solid-button--happy</code></li> <li><code class=language-css>solid-button--strict</code></li> <li><code class=language-css>solid-button--angry</code></li> </ul> <p>Pro tip: replace <code class=language-css>solid</code> with <code class=language-css>naked</code> for the naked button variation ;)</p> </div> <div class="col-xs-8 col-sm-6"> <div class=row> <div class=col-xs-12> <pre><code class=language-javascript>
 $(ui.component.button.render({
     'content': 'Menu',
     'class': 'naked-button--neutral',
+    'action': 'myAction',
     'icon': 'icon-system-menu'
     })) 
-</code></pre> </div> </div> </div> </div> <div class=col-xs-12> <div id=naked-buttons></div> <script>$('#naked-buttons').replaceWith(
+</code></pre> </div> <div class=col-xs-12> <h3>Properties</h3> </div> <div class=col-xs-6> Mandatory <ul> <li>content</li> <li>class</li> <li>action</li> </ul> </div> <div class=col-xs-6> Optional <ul> <li>icon</li> </ul> </div> </div> </div> </div> </div> <div class=row> <div class=col-xs-12> <h3>Naked Button</h3> </div> </div> </div> <div class=col-xs-12> <div id=naked-buttons></div> <script>$('#naked-buttons').replaceWith(
                             $(ui.component.button.render({
                                 'styleguide': true,
                                 'buttons': [{
