@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>mr.Watson - Style Guide</title> <meta name=description content=""> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel="shortcut icon" href=icon.ba402555.ico> <link rel=apple-touch-icon href=apple-touch-icon.335f333c.png> <link rel=stylesheet href=styles/main.7a4f6e62.css> <script src=scripts/vendor/modernizr.1cb556bb.js></script> <script src=scripts/vendor.a61cdef5.js></script> <script src=scripts/main.4e4ace62.js></script> <link rel=stylesheet href=vendor/prism.css> <script src=vendor/prism.js></script> <link href=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css rel=stylesheet> <script src=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js></script>  <body> <div id=partials></div> <script>$('#partials').replaceWith(
+<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>mr.Watson - Style Guide</title> <meta name=description content=""> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel="shortcut icon" href=icon.ba402555.ico> <link rel=apple-touch-icon href=apple-touch-icon.335f333c.png> <link rel=stylesheet href=styles/main.2de20899.css> <script src=scripts/vendor/modernizr.1cb556bb.js></script> <script src=scripts/vendor.a61cdef5.js></script> <script src=scripts/main.3a709901.js></script> <link rel=stylesheet href=vendor/prism.css> <script src=vendor/prism.js></script> <link href=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css rel=stylesheet> <script src=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js></script>  <body> <div id=partials></div> <script>$('#partials').replaceWith(
         $(ui.component.partials.render({}))
     );</script> <div class=container-fluid> <!-- header --> <div class=row> <div class=col-xs-12> <div id=header></div> <script>var header = ui.component.header;
                 $('#header').replaceWith(
@@ -31,57 +31,54 @@
                             'href': '#'
                         }]
                     }))
-                );</script> </div> </div> </div> <div class=container> <div class=row> <p> </p> </div> <div class=row> <div class="hidden-xs hidden-sm hidden-md col-lg-3"> <div id=side-nav></div> <script>$('#side-nav').replaceWith(
-                    $(ui.component.nav.render({
-                        'title': true,
-                        'navTitle': 'Components',
-                        // 'navTitleIcon': 'icon-app-solid-lego',
+                );</script> </div> </div> </div> <div class=container> <div class=row> <p> </p> </div> <div class=row> <div class="hidden-xs hidden-sm hidden-md col-lg-3"> <!-- <div class="fixed-nav"> --> <div id=side-nav> <script>$('#side-nav').replaceWith(
+                        $(ui.component.nav.render({
+                            'title': true,
+                            'navTitle': 'Components',
+                            navItems: [{
+                                'url': '#anchor-appbar',
+                                'item': 'App Bar',
+                                'icon': 'icon-app-naked-list blue'
+                            }, {
+                                'url': '#anchor-appblock',
+                                'item': 'App Block',
+                                'icon': 'icon-user-naked-thumbnails blue'
+                            }, {
+                                'url': '#anchor-button',
+                                'item': 'Buttons',
+                                'icon': 'icon-app-coins blue'
+                            }, {
+                                'url': '#anchor-composer',
+                                'item': 'Composer',
+                                'icon': 'icon-user-naked-pencil blue'
+                            }, {
+                                'url': '#anchor-header',
+                                'item': 'Header',
+                                'icon': 'icon-app-naked-school blue'
+                            }, {
+                                'url': '#anchor-image',
+                                'item': 'Images',
+                                'icon': 'icon-app-naked-flower blue'
+                            }, {
+                                'url': '#anchor-input',
+                                'item': 'Input Fields',
+                                'icon': 'icon-app-naked-notebook blue'
+                            }, {
+                                'url': '#anchor-messages',
+                                'item': 'Messages',
+                                'icon': 'icon-naked-bubbles blue'
+                            }, {
+                                'url': '#anchor-navigation',
+                                'item': 'Navigation',
+                                'icon': 'icon-app-naked-direction-sign blue'
+                            }, {
+                                'url': '#anchor-postits',
+                                'item': 'Post-it&#39;s',
+                                'icon': 'icon-app-naked-pen blue'
+                            }]
+                        }))
 
-
-                        navItems: [{
-                            'url': '#anchor-appbar',
-                            'item': 'App Bar',
-                            'icon': 'icon-app-naked-list blue'
-                        }, {
-                            'url': '#anchor-appblock',
-                            'item': 'App Block',
-                            'icon': 'icon-user-naked-thumbnails blue'
-                        }, {
-                            'url': '#anchor-button',
-                            'item': 'Buttons',
-                            'icon': 'icon-app-coins blue'
-                        }, {
-                            'url': '#anchor-composer',
-                            'item': 'Composer',
-                            'icon': 'icon-user-naked-pencil blue'
-                        }, {
-                            'url': '#anchor-header',
-                            'item': 'Header',
-                            'icon': 'icon-app-naked-school blue'
-                        }, {
-                            'url': '#anchor-image',
-                            'item': 'Images',
-                            'icon': 'icon-app-naked-flower blue'
-                        }, {
-                            'url': '#anchor-input',
-                            'item': 'Input Fields',
-                            'icon': 'icon-app-naked-notebook blue'
-                        }, {
-                            'url': '#anchor-messages',
-                            'item': 'Messages',
-                            'icon': 'icon-naked-bubbles blue'
-                        }, {
-                            'url': '#anchor-navigation',
-                            'item': 'Navigation',
-                            'icon': 'icon-app-naked-direction-sign blue'
-                        }, {
-                            'url': '#anchor-postits',
-                            'item': 'Post-it&#39;s',
-                            'icon': 'icon-app-naked-pen blue'
-                        }]
-                    }))
-
-                );</script> </div> <div class="col-xs-12 col-lg-9"> <div class=row id=anchor-appbar> <div class=col-xs-12> <h2>App Bar</h2> </div> <div class=col-xs-12> <div id=appbar></div> <script>$('#appbar').replaceWith(
+                    );</script> </div> <!-- </div> --> </div> <div class="col-xs-12 col-lg-9"> <div class=row id=anchor-appbar> <div class=col-xs-12> <h2>App Bar</h2> </div> <div class=col-xs-12> <div id=appbar></div> <script>$('#appbar').replaceWith(
                             $(ui.component.appbar.render({
                                 // 'appbarDropdown': [{
                                 //     'dropdownItem': 'hooi',
@@ -140,7 +137,7 @@ $(ui.component.button.render({
                             $(ui.component.button.render({
                                 'styleguide': true,
                                 'buttons': [{
-                                    'content': 'Meetings',                                    
+                                    'content': 'Meetings',
                                     'class': 'naked-button--neutral',
                                 }, {
                                     'content': 'Like',
@@ -155,7 +152,7 @@ $(ui.component.button.render({
                                     'content': 'Menu',
                                     'class': 'naked-button--neutral',
                                     'icon': 'icon-system-menu'
-                                }, {                                    
+                                }, {
                                     'icon': 'icon-solid-camera',
                                     'class': 'naked-button--neutral'
                                 }]
@@ -163,7 +160,7 @@ $(ui.component.button.render({
                             $(ui.component.button.render({
                                 'styleguide': true,
                                 'buttons': [{
-                                    'content': 'Meetings',                                    
+                                    'content': 'Meetings',
                                     'class': 'naked-button--neutral',
                                     'disabled': 'disabled'
                                 }, {
@@ -183,7 +180,7 @@ $(ui.component.button.render({
                                     'class': 'naked-button--neutral',
                                     'icon': 'icon-system-menu',
                                     'disabled': 'disabled'
-                                }, {                                    
+                                }, {
                                     'icon': 'icon-solid-camera',
                                     'class': 'naked-button--neutral',
                                     'disabled': 'disabled'
