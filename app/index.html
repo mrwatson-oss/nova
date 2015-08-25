@@ -121,13 +121,17 @@
             <div class="col-xs-12 col-lg-9">
                 <div class="row" id="anchor-color">
                     <div class="col-xs-12">
-                        <h2>Color Palette</h2>
                         <div class="app-block">
-                            <h3>Primary Palette</h3>
-                            <p>These are the colors used in the mr.Watson UI <br>
-                                <br> Do not use these colors directly. Instead use the UI colors. <br>New colors can be added as Sass variables in <code class="language-markdown">app/base/_variables.scss</code>
+                            <h2>Color Palette</h2>
+                            <p>These are the colors used in the mr.Watson UI
+                                <br>
+                                <br> Do not use these colors directly. Instead use the UI color variables.
+                                <br>New colors can be added as Sass variables in <code class="language-markdown">app/base/_variables.scss</code>
                             </p>
                         </div>
+                        <!-- <div class="app-block"> -->
+                        <h3>Primary Palette</h3>
+                        <!-- </div> -->
                     </div>
                     <div class="col-xs-12">
                         <div class="color-block">
@@ -153,9 +157,9 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <div class="app-block">
-                            <h3>Secundary Palette</h3>
-                        </div>
+                        <!-- <div class="app-block"> -->
+                        <h3>Secundary Palette</h3>
+                        <!-- </div> -->
                     </div>
                     <div class="col-xs-12">
                         <div class="color-block">
@@ -202,11 +206,14 @@
                     });
                     </script>
                     <div class="col-xs-12">
-                        <h2>UI Colors</h2>
                         <div class="app-block">
-                            <p>dit daarom</p>
-                            <h3>Backgrounds &amp; Borders</h3>
+                            <h2>UI Colors</h2>
+                            <p>These are the UI colors and their Sass variable names.
+                                <br>
+                                <br> If you would like to know a color's Hex value, click on the color.
+                                <br> Just don't use the Hex value in production because they change with the mr.Watson color palette</p>
                         </div>
+                        <h3>Backgrounds &amp; Borders</h3>
                     </div>
                     <div class="col-xs-12">
                         <div class="color-block">
@@ -231,9 +238,9 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <div class="app-block">
-                            <h3>Buttons</h3>
-                        </div>
+                        <!-- <div class="app-block"> -->
+                        <h3>Buttons</h3>
+                        <!-- </div> -->
                     </div>
                     <div class="col-xs-12">
                         <div class="color-block">
@@ -278,9 +285,9 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <div class="app-block">
-                            <h3>Text</h3>
-                        </div>
+                        <!-- <div class="app-block"> -->
+                        <h3>Text</h3>
+                        <!-- </div> -->
                     </div>
                     <div class="col-xs-12">
                         <div class="color-block">
@@ -322,27 +329,39 @@
                 </div>
                 <div class="row" id="anchor-icons">
                     <div class="col-xs-12">
-                        <h2>Icons</h2>
-                    </div>
-                    <div class="col-xs-12">
                         <div class="app-block">
-                            <h3>Header Icons</h3>
+                            <h2>Icons</h2>
                             <div class="row">
                                 <div class="col-md-4 col-lg-6">
-                                    <p>These are the icons used in Mr.Watson's header etc.</p>
+                                    <p>
+                                        Most of the icons come in two styles: solid and naked.
+                                        <br> The icon will automatically use the same color as the type in the element would. To customize the color you can use the <code class="language-javascript">'color':</code> property.
+                                        <br> Possible options are:
+                                        <ul>
+                                            <li>green</li>
+                                            <li>blue</li>
+                                            <li>red</li>
+                                            <li>grey</li>
+                                            <li>white</li>
+                                        </ul>
+                                    </p>
                                 </div>
                                 <div class="col-md-8 col-lg-6">
                                     <pre><code class="language-javascript">
 $(ui.component.icon.render({
     'icons': [
         {'icon': 'icon-solid-bell'},
-        {'icon': 'icon-naked-bell'}
+        {'icon': 'icon-naked-bell',
+        'color': 'green'}
         ]
     }))
 </code></pre>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <h3>Header Icons</h3>
                     </div>
                     <div class="col-xs-12">
                         <div id="header-icons"></div>
@@ -377,9 +396,9 @@ $(ui.component.icon.render({
                         </script>
                     </div>
                     <div class="col-xs-12">
-                        <div class="app-block">
+                        <!-- <div class="app-block"> -->
                             <h3>System Icons</h3>
-                        </div>
+                        <!-- </div> -->
                     </div>
                     <div class="col-xs-12">
                         <div id="system-icons"></div>
@@ -414,9 +433,9 @@ $(ui.component.icon.render({
                         </script>
                     </div>
                     <div class="col-xs-12">
-                        <div class="app-block">
+                        <!-- <div class="app-block"> -->
                             <h3>User Icons</h3>
-                        </div>
+                        <!-- </div> -->
                     </div>
                     <div class="col-xs-12">
                         <div id="user-icons"></div>

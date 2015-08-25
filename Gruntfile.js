@@ -467,7 +467,7 @@ grunt.registerTask('build', [
     'uglify',
     'copy:dist',
     'modernizr',
-    'filerev',
+    // 'filerev',
     'usemin',
     'htmlmin'
 ]);
