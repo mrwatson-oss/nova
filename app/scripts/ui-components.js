@@ -448,7 +448,8 @@ ui.component.nav = (function($, T) {
         'button': null,
         'icon': null,
         'navActionBar': null,
-        'dropdown': 'false'
+        'dropdown': 'false',
+        'fixed': false
 
 };
 

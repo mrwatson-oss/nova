@@ -78,52 +78,49 @@
         </div>
         <div class="row">
             <div class="hidden-xs hidden-sm hidden-md col-lg-3">
-                <div id="side-nav"></div>
-                <script>
-                $('#side-nav').replaceWith(
-                    $(ui.component.nav.render({
-                        'title': true,
-                        'navTitle': 'Design',
-                        navItems: [{
-                            'url': '#anchor-color',
-                            'item': 'Colors'
-                        }, {
-                            'url': '#anchor-icons',
-                            'item': 'Icons'
-                        }, {
-                            'url': '#anchor-layout',
-                            'item': 'Layout'
-                        }, {
-                            'url': '#anchor-typography',
-                            'item': 'Typography'
-                        }]
-                    }))
+                <!-- <div class="fixed-nav"> -->
+                <div id="side-nav">
+                    <script>
+                    $('#side-nav').replaceWith(
+                        $(ui.component.nav.render({
+                            'title': true,
+                            'navTitle': 'Design',
+                            navItems: [{
+                                'url': '#anchor-color',
+                                'item': 'Colors'
+                            }, {
+                                'url': '#anchor-icons',
+                                'item': 'Icons'
+                            }, {
+                                'url': '#anchor-layout',
+                                'item': 'Layout'
+                            }, {
+                                'url': '#anchor-typography',
+                                'item': 'Typography'
+                            }]
+                        }))
 
-                );
-                </script>
-                <div id="side-nav2"></div>
-                <script>
-                $('#side-nav2').replaceWith(
-                    $(ui.component.nav.render({
-                        'title': true,
-                        'navTitle': 'Starting a project',
-                        'navItems': [{
-                            'url': '#',
-                            'item': 'Scaffolding'
-                        }, {
-                            //     'url': '#',
-                            //     'item': 'Code Standards'
-                            // }, {
-                            //     'url': '#',
-                            //     'item': 'CSS Helpers'
-                            // }, {
-                            'url': '#anchor-sampleapps',
-                            'item': 'Sample App&#39;s'
-                        }]
-                    }))
-
-                );
-                </script>
+                    );
+                    </script>
+                </div>
+                <div id="side-nav2">
+                    <script>
+                    $('#side-nav2').replaceWith(
+                        $(ui.component.nav.render({
+                            'title': true,
+                            'navTitle': 'Starting a project',
+                            'navItems': [{
+                                'url': '#',
+                                'item': 'Scaffolding'
+                            }, {
+                                'url': '#anchor-sampleapps',
+                                'item': 'Sample App&#39;s'
+                            }]
+                        }))
+                    );
+                    </script>
+                </div>
+                <!-- </div> -->
             </div>
             <div class="col-xs-12 col-lg-9">
                 <div class="row" id="anchor-color">

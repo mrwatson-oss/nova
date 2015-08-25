@@ -86,60 +86,60 @@
         </div>
         <div class="row">
             <div class="hidden-xs hidden-sm hidden-md col-lg-3">
-                <div id="side-nav"></div>
-                <script>
-                $('#side-nav').replaceWith(
-                    $(ui.component.nav.render({
-                        'title': true,
-                        'navTitle': 'Components',
-                        // 'navTitleIcon': 'icon-app-solid-lego',
+                <!-- <div class="fixed-nav"> -->
+                <div id="side-nav">
+                    <script>
+                    $('#side-nav').replaceWith(
+                        $(ui.component.nav.render({
+                            'title': true,
+                            'navTitle': 'Components',
+                            navItems: [{
+                                'url': '#anchor-appbar',
+                                'item': 'App Bar',
+                                'icon': 'icon-app-naked-list blue'
+                            }, {
+                                'url': '#anchor-appblock',
+                                'item': 'App Block',
+                                'icon': 'icon-user-naked-thumbnails blue'
+                            }, {
+                                'url': '#anchor-button',
+                                'item': 'Buttons',
+                                'icon': 'icon-app-coins blue'
+                            }, {
+                                'url': '#anchor-composer',
+                                'item': 'Composer',
+                                'icon': 'icon-user-naked-pencil blue'
+                            }, {
+                                'url': '#anchor-header',
+                                'item': 'Header',
+                                'icon': 'icon-app-naked-school blue'
+                            }, {
+                                'url': '#anchor-image',
+                                'item': 'Images',
+                                'icon': 'icon-app-naked-flower blue'
+                            }, {
+                                'url': '#anchor-input',
+                                'item': 'Input Fields',
+                                'icon': 'icon-app-naked-notebook blue'
+                            }, {
+                                'url': '#anchor-messages',
+                                'item': 'Messages',
+                                'icon': 'icon-naked-bubbles blue'
+                            }, {
+                                'url': '#anchor-navigation',
+                                'item': 'Navigation',
+                                'icon': 'icon-app-naked-direction-sign blue'
+                            }, {
+                                'url': '#anchor-postits',
+                                'item': 'Post-it&#39;s',
+                                'icon': 'icon-app-naked-pen blue'
+                            }]
+                        }))
 
-
-                        navItems: [{
-                            'url': '#anchor-appbar',
-                            'item': 'App Bar',
-                            'icon': 'icon-app-naked-list blue'
-                        }, {
-                            'url': '#anchor-appblock',
-                            'item': 'App Block',
-                            'icon': 'icon-user-naked-thumbnails blue'
-                        }, {
-                            'url': '#anchor-button',
-                            'item': 'Buttons',
-                            'icon': 'icon-app-coins blue'
-                        }, {
-                            'url': '#anchor-composer',
-                            'item': 'Composer',
-                            'icon': 'icon-user-naked-pencil blue'
-                        }, {
-                            'url': '#anchor-header',
-                            'item': 'Header',
-                            'icon': 'icon-app-naked-school blue'
-                        }, {
-                            'url': '#anchor-image',
-                            'item': 'Images',
-                            'icon': 'icon-app-naked-flower blue'
-                        }, {
-                            'url': '#anchor-input',
-                            'item': 'Input Fields',
-                            'icon': 'icon-app-naked-notebook blue'
-                        }, {
-                            'url': '#anchor-messages',
-                            'item': 'Messages',
-                            'icon': 'icon-naked-bubbles blue'
-                        }, {
-                            'url': '#anchor-navigation',
-                            'item': 'Navigation',
-                            'icon': 'icon-app-naked-direction-sign blue'
-                        }, {
-                            'url': '#anchor-postits',
-                            'item': 'Post-it&#39;s',
-                            'icon': 'icon-app-naked-pen blue'
-                        }]
-                    }))
-
-                );
-                </script>
+                    );
+                    </script>
+                </div>
+                <!-- </div> -->
             </div>
             <div class="col-xs-12 col-lg-9">
                 <div class="row" id="anchor-appbar">
@@ -219,7 +219,7 @@
                     </div>
                 </div>
                 <div class="row" id="anchor-button">
-                <div class="col-xs-12">
+                    <div class="col-xs-12">
                         <h2>Buttons</h2>
                         <div class="app-block">
                             <div class="row">
@@ -258,7 +258,7 @@ $(ui.component.button.render({
                             $(ui.component.button.render({
                                 'styleguide': true,
                                 'buttons': [{
-                                    'content': 'Meetings',                                    
+                                    'content': 'Meetings',
                                     'class': 'naked-button--neutral',
                                 }, {
                                     'content': 'Like',
@@ -273,7 +273,7 @@ $(ui.component.button.render({
                                     'content': 'Menu',
                                     'class': 'naked-button--neutral',
                                     'icon': 'icon-system-menu'
-                                }, {                                    
+                                }, {
                                     'icon': 'icon-solid-camera',
                                     'class': 'naked-button--neutral'
                                 }]
@@ -292,7 +292,7 @@ $(ui.component.button.render({
                             $(ui.component.button.render({
                                 'styleguide': true,
                                 'buttons': [{
-                                    'content': 'Meetings',                                    
+                                    'content': 'Meetings',
                                     'class': 'naked-button--neutral',
                                     'disabled': 'disabled'
                                 }, {
@@ -312,7 +312,7 @@ $(ui.component.button.render({
                                     'class': 'naked-button--neutral',
                                     'icon': 'icon-system-menu',
                                     'disabled': 'disabled'
-                                }, {                                    
+                                }, {
                                     'icon': 'icon-solid-camera',
                                     'class': 'naked-button--neutral',
                                     'disabled': 'disabled'
@@ -394,7 +394,6 @@ $(ui.component.button.render({
                             })));
                         </script>
                     </div>
-
                 </div>
                 <div class="row" id="anchor-composer">
                     <div class="col-xs-12">

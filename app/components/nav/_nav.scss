@@ -1,6 +1,11 @@
+.fixed-nav {
+    position: fixed;
+}
+
 .nav {
     padding: 0;
     background: none;
+    // width: 100%;
     li {
         background: white;
         :focus {
