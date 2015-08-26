@@ -60,7 +60,7 @@ label {
 
 /* active state */
 .inputMaterial:focus ~ label, .inputMaterial:valid ~ label      {
-  bottom:2em;
+  bottom: 1em;
   font-size:.9em;
   color: $text-color--accent;
 }

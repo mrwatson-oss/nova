@@ -469,7 +469,8 @@ $(ui.component.composer.render({
                             <p>
                                 The header component is used only by the mr.Watson platform, not by apps.
                                 <br> If you're looking for an app header check out the app bar component.
-                                <br><br> To do: Make search box work &amp; fix dropdown item
+                                <br>
+                                <br> To do: Make search box work &amp; fix dropdown item
                             </p>
                         </div>
                     </div>
@@ -519,10 +520,12 @@ $(ui.component.composer.render({
                 </div>
                 <div class="row" id="anchor-image">
                     <div class="col-xs-12 ">
-                        <h2>Images</h2>
                         <div class="app-block">
-                            <h3>Avatars</h3>
+                            <h2>Images</h2>
+                            <p>There is three types of images that are used throughout mr.Watson.
+                                <br> The three types are avatars, body images and cover images.</p>
                         </div>
+                        <h3>Avatars</h3>
                     </div>
                     <div class="col-md-6">
                         <div class="app-block">
@@ -614,9 +617,9 @@ $(ui.component.avatar.render({
 </code></pre>
                     </div>
                     <div class="col-xs-12">
-                        <div class="app-block">
-                            <h3>Body Image</h3>
-                        </div>
+                        <!-- <div class="app-block"> -->
+                        <h3>Body Image</h3>
+                        <!-- </div> -->
                     </div>
                     <div class="col-md-6">
                         <div class="app-block">
@@ -625,8 +628,7 @@ $(ui.component.avatar.render({
                             $('#bodyimage').replaceWith(
                                 $(ui.component.image.render({
 
-                                    'src': 'https://pbs.twimg.com/profile_images/2112311889/ostrich_head.jpg',
-                                    'body': true
+                                    'src': 'https://pbs.twimg.com/profile_images/2112311889/ostrich_head.jpg'
 
                                 }))
                             );
@@ -636,14 +638,20 @@ $(ui.component.avatar.render({
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
   $(ui.component.image.render({
-    // properties
+    'src':'/*image source*/'
   }))
 </code></pre>
+                        <div class="app-block">
+                            <p>Body images are used inside content area's.
+                                <br> They take up the entire width of the column they are in.
+                                <br>
+                                <br> To do: create lightbox for larger images.</p>
+                        </div>
                     </div>
                     <div class="col-xs-12">
-                        <div class="app-block">
-                            <h3>Cover Image</h3>
-                        </div>
+                        <!-- <div class="app-block"> -->
+                        <h3>Cover Image</h3>
+                        <!-- </div> -->
                     </div>
                     <div class="col-xs-12">
                         <!-- <div class="app-block"> -->
@@ -651,16 +659,14 @@ $(ui.component.avatar.render({
                         <script>
                         $('#coverimage').replaceWith(
                             $(ui.component.image.render({
-
                                 'src': 'http://www.apnatimepass.com/dumb-and-dumber-to-movie/dumb-and-dumber-to-movie-still-10.jpg',
                                 'cover': true
 
                             }))
                         );
                         </script>
-                        <!-- </div> -->
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-xs-6">
                         <pre><code class="language-javascript">
   $(ui.component.image.render({
     'image': [{
@@ -670,21 +676,59 @@ $(ui.component.avatar.render({
     }))
 </code></pre>
                     </div>
+                    <div class="col-xs-6">
+                        <div class="app-block">
+                            <p>Cover images are used for decorational purposes.
+                                <br> They are mainly used for headers in apps and events.
+                                <br>
+                                <br> The max height of an cover image is 200 pixels. If the image is larger only the top 200 pixels are displayed. (Is this what we want?)
+                                <br>
+                                <br> To do: create lightbox for larger images.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="row" id="anchor-input">
                     <div class="col-xs-12">
-                        <h2>Input Fields</h2>
                         <div class="app-block">
-                            <h3>Text Area</h3>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h2>Input Fields</h2>
+                                    <p>
+                                        Input fields are used in forms and anywhere user input is needed. As the fields are part of a form they should be included between <code class="language-markup"> &lt;form&gt; </code> tags.
+                                        <br>
+                                        <br> To do: should the form be a component as well?
+                                    </p>
+                                    <h3>Properties</h3>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    Mandatory:
+                                    <ul>
+                                        <li>id</li>
+                                        <li>name</li>
+                                        <li>value</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6 col-sm-9">
+                                    Optional:
+                                    <ul>
+                                        <li>placeholder</li>
+                                        <li>hasLabel (true/false)</li>
+                                        <li>label</li>
+                                        <li>icon</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <h3>Text Area</h3>
                     </div>
                     <div class="col-md-6">
                         <div id="text-area"></div>
                         <script>
                         $('#text-area').replaceWith(
                             $(ui.component.textArea.render({
-                                'placeholder': 'Gimme boodskap',
-                                'background': false
+                                'placeholder': 'Tell people what you\'re all about'
                             }))
                         );
                         </script>
@@ -692,23 +736,22 @@ $(ui.component.avatar.render({
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
   $(ui.component.textArea.render({
-    // properties
+    'placeholder': 'Tell people what you\'re all about'
   }))
 </code></pre>
                     </div>
                     <div class="col-xs-12">
-                        <div class="app-block">
-                            <h3>Text Input</h3>
-                        </div>
+                        <!-- <div class="app-block"> -->
+                        <h3>Text Input</h3>
+                        <!-- </div> -->
                     </div>
                     <div class="col-md-6">
                         <div id="text-input"></div>
                         <script>
                         $('#text-input').replaceWith(
                             $(ui.component.textInput.render({
-                                'placeholder': 'Gimme boodskap',
-                                'background': false,
                                 'hasLabel': true,
+                                'type': 'password',
                                 'label': 'Password',
                                 'icon': 'icon-user-key'
                             }))
@@ -718,14 +761,38 @@ $(ui.component.avatar.render({
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
   $(ui.component.textInput.render({
-    // properties
+    'hasLabel': true,
+    'type': 'password',
+    'label': 'Password',
+    'icon': 'icon-user-key'
+  }))
+</code></pre>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="text-input2"></div>
+                        <script>
+                        $('#text-input2').replaceWith(
+                            $(ui.component.textInput.render({
+                                'hasLabel': true,
+                                'label': 'First name',
+                            }))
+                        );
+                        </script>
+                    </div>
+                    <div class="col-md-6">
+                        <pre><code class="language-javascript">
+  $(ui.component.textInput.render({
+    'hasLabel': true,
+    'type': 'password',
+    'label': 'Password',
+    'icon': 'icon-user-key'
   }))
 </code></pre>
                     </div>
                     <div class="col-xs-12">
-                        <div class="app-block">
-                            <h3>Dropdown</h3>
-                        </div>
+                        <!-- <div class="app-block"> -->
+                        <h3>Dropdown</h3>
+                        <!-- </div> -->
                     </div>
                     <div class="col-md-6">
                         <div id="drokdown"></div>
@@ -752,42 +819,6 @@ $(ui.component.avatar.render({
                     );
                     </script>
                     <div class="col-md-6">
-                        <pre><code class="language-javascript">
-  $(ui.component.dropdown.render({
-    // properties
-  }))
-</code></pre>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="app-block">
-                            <h3>Dropdown2</h3>
-                        </div>
-                    </div>
-                    <div class="col-xs-6">
-                        <div id="dropdown2"></div>
-                    </div>
-                    <script>
-                    $('#dropdown2').replaceWith(
-                        $(ui.component.dropdown.render({
-                            'dropdownItem': 'klip mij',
-                            'dropdownOptions': [{
-                                'option': 'dezem',
-                                'href': '#'
-                            }, {
-                                'option': 'dezindez',
-                                'href': '#',
-                                'class': 'divider'
-                            }, {
-                                'option': 'hier een divider',
-                                'href': '#'
-                            }, {
-                                'option': 'in',
-                                'href': '#'
-                            }]
-                        }))
-                    );
-                    </script>
-                    <div class="col-xs-6">
                         <pre><code class="language-javascript">
   $(ui.component.dropdown.render({
     // properties

@@ -37,6 +37,7 @@
 }
 
 .mytest {
+    margin-top: 1em;
     .inputMaterial {
         border: none;
         outline: none;
@@ -88,8 +89,8 @@
     .inputMaterial:focus ~ label,
     .inputMaterial:valid ~ label {
         bottom: 4em;
-        font-size: .8em;
-        color: $text-color--accent;
+        // font-size: .8em;
+        color: $text-color;
     }
     .bar {
         position: relative;
