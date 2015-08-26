@@ -1,11 +1,11 @@
 
-			<div class="app-block {{class}}">
+			<div class="app-block composer">
 			<div class="col-xs-12">
-				 {{#each composerTextInput}} {{> PartialTextInput }} {{/each}}
+				 {{#input}} {{> PartialTextInput }} {{/input}}
 			</div>
 			<div class="col-xs-12">
 			<p></p>
-				{{#if button}} {{#each button}} {{> PartialButton }} {{/each}} {{/if}}
+				{{#if buttons}} {{#each buttons}} {{> PartialButton }} {{/each}} {{/if}}
 			</div>
 			</div>	
 

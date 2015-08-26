@@ -200,18 +200,8 @@ ui.component.composer = (function($, T) {
      * @type {Object}
      */
     var params = {
-        'button': null,
-        'input': true,
-        'class': 'composer',
-        'props': '{{props}}'
-
-    };
-
-    clickcomposer = function() {
-        alert('ok verstuurd');
-    };
-    clickUploadPicture = function() {
-        alert('ok doe maar uitzoeken');
+        'buttons': null,
+        'input': null
     };
 
     /**
@@ -329,11 +319,6 @@ ui.component.header = (function($, T) {
      * @type {Object}
      */
     var params = {
-        'properties': null,
-        'class': null,
-        // logo: 'images/logo.png',
-        'input': false,
-        'nav': true
 
     };
 

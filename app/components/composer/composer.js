@@ -12,18 +12,8 @@ ui.component.composer = (function($, T) {
      * @type {Object}
      */
     var params = {
-        'button': null,
-        'input': true,
-        'class': 'composer',
-        'props': '{{props}}'
-
-    };
-
-    clickcomposer = function() {
-        alert('ok verstuurd');
-    };
-    clickUploadPicture = function() {
-        alert('ok doe maar uitzoeken');
+        'buttons': null,
+        'input': null
     };
 
     /**

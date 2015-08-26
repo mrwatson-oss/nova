@@ -12,11 +12,6 @@ ui.component.header = (function($, T) {
      * @type {Object}
      */
     var params = {
-        'properties': null,
-        'class': null,
-        // logo: 'images/logo.png',
-        'input': false,
-        'nav': true
 
     };
 

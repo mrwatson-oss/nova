@@ -3,10 +3,12 @@
     );</script> <div class=container-fluid> <!-- header --> <div class=row> <div class=col-xs-12> <div id=header></div> <script>var header = ui.component.header;
                 $('#header').replaceWith(
                     $(header.render({
-                        'headerTextInput': [{
-                            'placeholder': 'Seach for components or whatever',
-                            'class': 'text-input__grey'
-                        }],
+                        'logo': {
+                            'src': '/images/logo.png'
+                        },
+                        'input': {
+                            'placeholder': 'Seach for components or whatever'
+                        },
                         'navItems': [{
                             'url': '/',
                             'item': 'UI base',
@@ -16,19 +18,6 @@
                             'url': '#',
                             'item': 'UI components',
                             'class': 'nav--active'
-                        }],
-                        'options': [{
-                            'option': 'dezem',
-                            'href': '#'
-                        }, {
-                            'option': 'dezin',
-                            'href': '#'
-                        }, {
-                            'option': 'depin',
-                            'href': '#'
-                        }, {
-                            'option': 'in',
-                            'href': '#'
                         }]
                     }))
                 );</script> </div> </div> </div> <div class=container> <div class=row> <div class="hidden-xs hidden-sm hidden-md col-lg-3"> <!-- <div class="fixed-nav"> --> <div id=side-nav> <script>$('#side-nav').replaceWith(
@@ -127,14 +116,14 @@
         &lt;&#47;p&gt;
     &lt;&#47;div&gt; 
 &lt;&#47;div&gt; 
-</code></pre> <!-- </div> --> </div> </div> <div class=row id=anchor-button> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-xs-12> <h2>Buttons</h2> </div> <div class=col-md-6> <p> Buttons come in two variations. There's the solid button and the naked button. <br> <br> The 'class' property defines the button style. Possible options are: </p> <ul> <li><code class=language-css>solid-button--neutral</code></li> <li><code class=language-css>solid-button--happy</code></li> <li><code class=language-css>solid-button--strict</code></li> <li><code class=language-css>solid-button--angry</code></li> </ul> <p>Pro tip: replace <code class=language-css>solid</code> with <code class=language-css>naked</code> for the naked button variation ;)</p> </div> <div class="col-xs-8 col-sm-6"> <div class=row> <div class=col-xs-12> <pre><code class=language-javascript>
+</code></pre> <!-- </div> --> </div> </div> <div class=row id=anchor-button> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-xs-12> <h2>Buttons</h2> </div> <div class=col-md-5> <div class=row> <div class=col-xs-12> <p> Buttons come in two variations. There's the solid button and the naked button. </p> <h3>Properties</h3> </div> <div class=col-xs-6> Mandatory: <ul> <li>content</li> <li>class</li> <li>action</li> </ul> </div> <div class=col-xs-6> Optional: <ul> <li>icon</li> </ul> </div> </div> </div> <div class="col-sm-8 col-md-7"> <pre><code class=language-javascript>
 $(ui.component.button.render({
     'content': 'Menu',
     'class': 'naked-button--neutral',
     'action': 'myAction',
     'icon': 'icon-system-menu'
     })) 
-</code></pre> </div> <div class=col-xs-12> <h3>Properties</h3> </div> <div class=col-xs-6> Mandatory <ul> <li>content</li> <li>class</li> <li>action</li> </ul> </div> <div class=col-xs-6> Optional <ul> <li>icon</li> </ul> </div> </div> </div> </div> </div> <div class=row> <div class=col-xs-12> <h3>Naked Button</h3> </div> </div> </div> <div class=col-xs-12> <div id=naked-buttons></div> <script>$('#naked-buttons').replaceWith(
+</code></pre> </div> </div> </div> <div class=row> <div class=col-xs-12> <h3>Naked Button</h3> </div> </div> </div> <div class=col-xs-12> <div id=naked-buttons></div> <script>$('#naked-buttons').replaceWith(
                             $(ui.component.button.render({
                                 'styleguide': true,
                                 'buttons': [{
@@ -157,7 +146,7 @@ $(ui.component.button.render({
                                     'icon': 'icon-solid-camera',
                                     'class': 'naked-button--neutral'
                                 }]
-                            })));</script> </div> <div class=col-xs-12> <div class=app-block> <h3>Naked Button - disabled</h3> </div> </div> <div class=col-xs-12> <div id=naked-buttons-disabled></div> <script>$('#naked-buttons-disabled').replaceWith(
+                            })));</script> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Naked Button - disabled</h3> <!-- </div> --> </div> <div class=col-xs-12> <div id=naked-buttons-disabled></div> <script>$('#naked-buttons-disabled').replaceWith(
                             $(ui.component.button.render({
                                 'styleguide': true,
                                 'buttons': [{
@@ -186,7 +175,7 @@ $(ui.component.button.render({
                                     'class': 'naked-button--neutral',
                                     'disabled': 'disabled'
                                 }]
-                            })));</script> </div> <div class=col-xs-12> <div class=app-block> <h3>Solid Button</h3> </div> </div> <div class=col-xs-12> <div id=solid-buttons></div> <script>$('#solid-buttons').replaceWith(
+                            })));</script> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Solid Button</h3> <!-- </div> --> </div> <div class=col-xs-12> <div id=solid-buttons></div> <script>$('#solid-buttons').replaceWith(
                             $(ui.component.button.render({
                                 'styleguide': true,
                                 'buttons': [{
@@ -209,7 +198,7 @@ $(ui.component.button.render({
                                     'icon': 'icon-user-arrow-right',
                                     'class': 'solid-button--strict'
                                 }]
-                            })));</script> </div> <div class=col-xs-12> <div class=app-block> <h3>Solid Button - disabled</h3> </div> </div> <div class=col-xs-12> <div id=solid-buttons-disabled></div> <script>$('#solid-buttons-disabled').replaceWith(
+                            })));</script> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Solid Button - disabled</h3> <!-- </div> --> </div> <div class=col-xs-12> <div id=solid-buttons-disabled></div> <script>$('#solid-buttons-disabled').replaceWith(
                             $(ui.component.button.render({
                                 'styleguide': true,
                                 'buttons': [{
@@ -238,36 +227,44 @@ $(ui.component.button.render({
                                     'class': 'solid-button--strict',
                                     'disabled': 'disabled'
                                 }]
-                            })));</script> </div> </div> <div class=row id=anchor-composer> <div class=col-xs-12> <h2>Composer</h2> </div> <div class=col-md-6> <!-- composer --> <div id=composer></div> <script>$('#composer').replaceWith(
+                            })));</script> </div> </div> <div class=row id=anchor-composer> <div class=col-xs-12> <div class=app-block> <h2>Composer</h2> <p>The composer component is used for creating post-its <br> Typically it contains an input field and two buttons. </p> </div> </div> <div class=col-md-6> <!-- composer --> <div id=composer></div> <script>$('#composer').replaceWith(
                             $(ui.component.composer.render({
-                                'composerTextInput': [{
-                                    'placeholder': 'hoi',
-                                    'hasLabel': false
-                                }],
-                                'button': [{
+                                'input': {
+                                    'placeholder': 'Share your thoughts'
+                                },
+                                'buttons': [{
                                     'class': 'solid-button--neutral',
-                                    'iconOnly': true,
                                     'icon': 'icon-solid-camera',
-                                    'action': 'alert("ok, pick something classy please")'
+                                    'action': 'alert("pick a classy one!")'
                                 }, {
                                     'class': 'solid-button--happy pull-right',
-                                    'content': 'Share post'
-                                }],
-                                'text-input': [{
-                                    'background': 'false'
+                                    'content': 'Share post',
+                                    'action': 'alert("it works")'
                                 }]
-
                             }))
                         );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
-  $(ui.component.composer.render({
-    // properties
-  }))
-</code></pre> </div> </div> <div class=row id=anchor-header> <div class=col-xs-12> <h2>Header</h2> </div> <div class=col-xs-12> <div id=header></div> <script>$('#header').replaceWith(
+$(ui.component.composer.render({
+    'input': {
+        'placeholder': 'Share your thoughts'
+    },
+    'buttons': [{
+        'class': 'solid-button--neutral',
+        'icon': 'icon-solid-camera',
+        'action': 'alert("pick a classy one!")'
+    }, {
+        'class': 'solid-button--happy pull-right',
+        'content': 'Share post',
+        'action': 'alert("it works")'
+    }]
+}))
+</code></pre> </div> </div> <div class=row id=anchor-header> <div class=col-xs-12> <div class=app-block> <h2>Header</h2> <p> The header component is used only by the mr.Watson platform, not by apps. <br> If you're looking for an app header check out the app bar component. <br><br> To do: Make search box work &amp; fix dropdown item </p> </div> </div> <div class=col-xs-12> <div id=header></div> <script>$('#header').replaceWith(
                             $(ui.component.header.render({
-                                'headerTextInput': [{
-                                    'placeholder': 'Search bar..',
-                                    'class': 'text-input__grey'
-                                }],
+                                'logo': {
+                                    'src': '/images/logo.png'
+                                },
+                                'input': {
+                                    'placeholder': 'Search bar..'
+                                },
                                 'navItems': [{
                                     'url': '#',
                                     'item': 'Item 1'
@@ -275,15 +272,25 @@ $(ui.component.button.render({
                                     'url': '#',
                                     'item': 'Active item',
                                     'class': 'nav--active'
-                                }],
-                                'text-input': [{
-                                    'background': 'true'
                                 }]
                             }))
                         );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
   $(ui.component.header.render({
-    // properties
-  }))
+    'logo': {
+        'src': '/images/logo.png'
+    },
+    'input': {
+        'placeholder': 'Search bar..'
+    },
+    'navItems': [{
+        'url': '#',
+        'item': 'Item 1'
+    }, {
+        'url': '#',
+        'item': 'Active item',
+        'class': 'nav--active'
+    }]
+}))
 </code></pre> </div> </div> <div class=row id=anchor-image> <div class=col-xs-12> <h2>Images</h2> <div class=app-block> <h3>Avatars</h3> </div> </div> <div class=col-md-6> <div class=app-block> <h4>Square Avatar</h4> <div id=square-avatar></div> <script>$('#square-avatar').replaceWith(
                                 $(ui.component.avatar.render({
                                     'avatar': {

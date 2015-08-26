@@ -1,8 +1,7 @@
 // -----------------------------------------------------------------------------
-// Base share-post
+// Base header
 // -----------------------------------------------------------------------------
 .header {
-    // display: block;
     background: white;
     padding: 1em;
     border-bottom: 3px solid $border-color--accent;
@@ -11,5 +10,8 @@
 		position: relative;
 		max-width: 1170px;
 		margin: 0 auto;
+	}
+	.header-logo {
+		padding: .5em;
 	}
 }
