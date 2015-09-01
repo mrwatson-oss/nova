@@ -5,7 +5,7 @@
 .nav {
     padding: 0;
     background: none;
-    // width: 100%;
+    max-width: 20em;
     li {
         background: white;
         :focus {
@@ -119,6 +119,7 @@
 }
 
 .nav--horizontal {
+    max-width: 100%;
     li {
         display: inline-block;
         a {

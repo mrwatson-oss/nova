@@ -156,17 +156,17 @@
                     <div class="col-md-8">
                         <pre><code class="language-javascript">
   $(ui.component.appbar.render({
-    'navItems': [{
-        'url': '#',
-        'item': 'Past events',
+    navItems: [{
+        url: '#',
+        item: 'Past events',
         'class': 'nav--active divider'
     }, {
-        'url': '#',
-        'item': 'Upcoming events'
+        url: '#',
+        item: 'Upcoming events'
     }],
-    'button': [{
+    button: [{
             'class': 'solid-button--strict pull-right',
-            'content': 'Add new event'
+            content: 'Add new event'
         }]
   }))
 </code></pre>
@@ -253,10 +253,10 @@
                                 <div class="col-sm-8 col-md-7">
                                     <pre><code class="language-javascript">
 $(ui.component.button.render({
-    'content': 'Menu',
+    content: 'Menu',
     'class': 'naked-button--neutral',
-    'action': 'myAction',
-    'icon': 'icon-system-menu'
+    action: 'myAction',
+    icon: 'icon-system-menu'
     })) 
 </code></pre>
                                 </div>
@@ -446,17 +446,17 @@ $(ui.component.button.render({
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
 $(ui.component.composer.render({
-    'input': {
-        'placeholder': 'Share your thoughts'
+    input: {
+        placeholder: 'Share your thoughts'
     },
-    'buttons': [{
+    buttons: [{
         'class': 'solid-button--neutral',
-        'icon': 'icon-solid-camera',
-        'action': 'alert("pick a classy one!")'
+        icon: 'icon-solid-camera',
+        action: 'alert("pick a classy one!")'
     }, {
         'class': 'solid-button--happy pull-right',
-        'content': 'Share post',
-        'action': 'alert("it works")'
+        content: 'Share post',
+        action: 'alert("it works")'
     }]
 }))
 </code></pre>
@@ -529,40 +529,40 @@ $(ui.component.composer.render({
                     <div class="col-md-8">
                         <pre><code class="language-javascript">
 $(ui.component.header.render({
-    'logo': {
-        'src': '/images/logo.png'
+    logo: {
+        src: '/images/logo.png'
     },
-    'input': {
-        'placeholder': 'Search bar..'
+    input: {
+        placeholder: 'Search bar..'
     },
-    'dropdown': [{
-         'icon': 'icon-solid-settings',
-        'dropdownItem': 'Settings',
-        'dropdownOptions': [{
-            'option': 'Profile',
-            'href': '#'
+    dropdown: [{
+        icon: 'icon-solid-settings',
+        dropdownItem: 'Settings',
+        dropdownOptions: [{
+            option: 'Profile',
+            href: '#'
         }, {
-            'option': 'Company',
-            'href': '#',
+            option: 'Company',
+            href: '#',
             'class': 'divider'
         }, {
-            'option': 'Log out',
-            'href': '#'
+            option: 'Log out',
+            href: '#'
         }]
     }, {
-        'icon': 'icon-solid-bell',
-        'dropdownItem': 'Notifs',
-        'dropdownOptions': [{
-            'option': 'You rock',
-            'href': '#',
+        icon: 'icon-solid-bell',
+        dropdownItem: 'Notifs',
+        dropdownOptions: [{
+            option: 'You rock',
+            href: '#',
             'class': 'divider'
         }, {
-            'option': 'Freddie invited you to lunch party',
-            'href': '#',
+            option: 'Freddie invited you to lunch party',
+            href: '#',
             'class': 'divider'
         }, {
-            'option': 'Hans commented on your post-it',
-            'href': '#',
+            option: 'Hans commented on your post-it',
+            href: '#',
             'class': 'divider'
         }]
     }]
@@ -596,7 +596,7 @@ $(ui.component.header.render({
                         </div>
                         <pre><code class="language-javascript">
 $(ui.component.avatar.render({
-    'src':'/*image source*/'
+    src:'/*image source*/'
 }))
 </code></pre>
                     </div>
@@ -617,8 +617,8 @@ $(ui.component.avatar.render({
                         </div>
                         <pre><code class="language-javascript">
 $(ui.component.avatar.render({
-    'src':'/*image source*/',
-    'round': true
+    src:'/*image source*/',
+    round: true
 }))
 </code></pre>
                     </div>
@@ -639,8 +639,8 @@ $(ui.component.avatar.render({
                         </div>
                         <pre><code class="language-javascript">
 $(ui.component.avatar.render({
-    'src':'/*image source*/',
-    'small': true
+    src:'/*image source*/',
+    small: true
 }))
 </code></pre>
                     </div>
@@ -662,9 +662,9 @@ $(ui.component.avatar.render({
                         </div>
                         <pre><code class="language-javascript">
 $(ui.component.avatar.render({
-    'src':'/*image source*/',
-    'round': true,
-    'small': true
+    src:'/*image source*/',
+    round: true,
+    small: true
 }))
 </code></pre>
                     </div>
@@ -690,7 +690,7 @@ $(ui.component.avatar.render({
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
   $(ui.component.image.render({
-    'src':'/*image source*/'
+    src:'/*image source*/'
   }))
 </code></pre>
                         <div class="app-block">
@@ -721,9 +721,9 @@ $(ui.component.avatar.render({
                     <div class="col-xs-6">
                         <pre><code class="language-javascript">
   $(ui.component.image.render({
-    'image': [{
-        'src': '/*image source*/',
-        'cover': true
+    image: [{
+        src: '/*image source*/',
+        cover: true
        }]
     }))
 </code></pre>
@@ -788,7 +788,7 @@ $(ui.component.avatar.render({
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
   $(ui.component.textArea.render({
-    'placeholder': 'Tell people what you\'re all about'
+    placeholder: 'Tell people what you\'re all about'
   }))
 </code></pre>
                     </div>
@@ -813,10 +813,10 @@ $(ui.component.avatar.render({
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
   $(ui.component.textInput.render({
-    'hasLabel': true,
-    'type': 'password',
-    'label': 'Password',
-    'icon': 'icon-user-key'
+    hasLabel': true,
+    type: 'password',
+    label: 'Password',
+    icon: 'icon-user-key'
   }))
 </code></pre>
                     </div>
@@ -834,8 +834,8 @@ $(ui.component.avatar.render({
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
   $(ui.component.textInput.render({
-    'hasLabel': true,
-    'label': 'First name'
+    hasLabel: true,
+    label: 'First name'
   }))
 </code></pre>
                     </div>
@@ -872,20 +872,20 @@ $(ui.component.avatar.render({
                     <div class="col-md-6">
                         <pre><code class="language-javascript">
 $(ui.component.dropdown.render({
-    'dropdownItem': 'Options',
-    'dropdownOptions': [{
-        'option': 'Profile',
-        'href': '#'
+    dropdownItem: 'Options',
+    dropdownOptions: [{
+        option: 'Profile',
+        href: '#'
     }, {
-        'option': 'Privacy',
-        'href': '#'
+        option: 'Privacy',
+        href: '#'
     }, {
-        'option': 'Settings',
-        'href': '#',
+        option: 'Settings',
+        href: '#',
         'class': 'divider'
     }, {
-        'option': 'Log out',
-        'href': '#'
+        option: 'Log out',
+        href: '#'
     }]
 }))
 
@@ -927,12 +927,12 @@ $(ui.component.dropdown.render({
                             <div class="col-xs-7">
                                 <pre><code class="language-javascript">
 $(ui.component.alert.render({
-    'icon': 'icon-user-award',
-    'title': 'YES!',
+    icon: 'icon-user-award',
+    title: 'YES!',
     'class': 'solid-alert--happy',
-    'message': 'You did something right',
-    'button': [{
-        'icon': 'icon-system-close',
+    message: 'You did something right',
+    button: [{
+        icon: 'icon-system-close',
         'class': 'naked-button--icon-only--happy'
     }]
 }))
@@ -1066,13 +1066,13 @@ $(ui.component.alert.render({
                                 <div class="col-xs-7">
                                     <pre><code class="language-javascript">
 $(ui.component.dialog.render({
-    'angry': 'true',
-    'title': 'Deleting this is permanent.',
-    'message': 'Are you sure you want to delete your account?',
-    'button': [{
-        'content': 'Delete account'
+    angry: 'true',
+    title: 'Deleting this is permanent.',
+    message: 'Are you sure you want to delete your account?',
+    button: [{
+        content: 'Delete account'
     }, {
-        'content': 'Cancel'
+        content: 'Cancel'
     }]
 }))
 </code></pre>
@@ -1165,6 +1165,32 @@ $(ui.component.dialog.render({
                             }))
                         );
                         </script>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-8">
+                        <pre><code class="language-javascript">
+    communitySwitch: true,
+    navCommunities: [{
+        src: 'http://erfgoedstem.nl/wp-content/uploads/2012/07/Industriegebouw-Goudsesingel_1.jpg',
+        name: 'Het Industriegeb..',
+        icon: 'icon-system-down-open'
+    }],
+    navItems: [{
+        url: '#',
+        item: 'Dashboard'
+    }, {
+        url: '#',
+        item: 'People'
+    }, {
+        url: '#',
+        item: 'Companies'
+    }, {
+        url: '#',
+        item: 'Messages'
+    }, {
+        url: '#',
+        item: 'Meet-ups'
+    }]
+</code></pre>
                     </div>
                     <div class="col-xs-10 col-sm-6 col-md-4">
                         <div id="navigation"></div>
@@ -1191,6 +1217,26 @@ $(ui.component.dialog.render({
                         );
                         </script>
                     </div>
+                    <div class="col-xs-12 col-sm-6 col-md-8">
+                        <pre><code class="language-javascript">
+    title: true,
+    navTitleIcon: 'icon-solid-settings',
+    navTitle: 'Settings',
+    button: true,
+    'class': 'solid-button--strict',
+    content: 'Dashboard',
+    subTitle: true,
+    category: 'Community',
+    name: 'Katshoek',
+    navItems: [{
+        url: '#',
+        item: 'Profile'
+    }, {
+        url: '#2',
+        item: 'People'
+    }]
+</code></pre>
+                    </div>
                     <div class="col-xs-10 col-sm-6 col-md-4">
                         <div id="side-nav"></div>
                         <script>
@@ -1201,7 +1247,7 @@ $(ui.component.dialog.render({
                                 'class': 'naked-button--strict hover',
                                 'content': 'Add Group',
                                 'navTitle': 'Groups',
-                                navItems: [{
+                                'navItems': [{
                                     'url': '#',
                                     'item': 'Developers',
                                     'icon': 'icon-app-solid-server grey'
@@ -1228,6 +1274,38 @@ $(ui.component.dialog.render({
 
                         );
                         </script>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-8">
+                        <pre><code class="language-javascript">
+title: true,
+button: true,
+'class': 'naked-button--strict hover',
+content: 'Add Group',
+navTitle: 'Groups',
+navItems: [{
+    url: '#',
+    item: 'Developers',
+    icon: 'icon-app-solid-server grey'
+}, {
+    url: '#',
+    item: 'Horse whisperers',
+    icon: 'icon-app-solid-leaf green'
+}, {
+    url: '#',
+    item: 'Cool Cats',
+    icon: 'icon-app-solid-necktie blue'
+}, {
+    url: '#',
+    item: 'BBQ',
+    icon: 'icon-app-solid-burger red'
+}],
+navActionBar: true,
+navActionBarButtons: [{
+    url: '#',
+    'class': 'naked-button--strict',
+    content: 'See all your groups'
+}]
+</code></pre>
                     </div>
                 </div>
                 <div class="row" id="anchor-postits">

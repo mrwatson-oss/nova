@@ -84,17 +84,17 @@
                             }))
                         );</script> </div> <div class=col-md-8> <pre><code class=language-javascript>
   $(ui.component.appbar.render({
-    'navItems': [{
-        'url': '#',
-        'item': 'Past events',
+    navItems: [{
+        url: '#',
+        item: 'Past events',
         'class': 'nav--active divider'
     }, {
-        'url': '#',
-        'item': 'Upcoming events'
+        url: '#',
+        item: 'Upcoming events'
     }],
-    'button': [{
+    button: [{
             'class': 'solid-button--strict pull-right',
-            'content': 'Add new event'
+            content: 'Add new event'
         }]
   }))
 </code></pre> </div> <div class=col-md-4> <div class=app-block> The app bar component is used as header for apps. <br> <br> Just like most other components it scales to the column it's in. <br> <br> Properties includes an array for nav items and an optional one for one or more action buttons. </div> </div> </div> <div class=row id=anchor-appblock> <div class=col-xs-12> <h2>App Block</h2> </div> <div class=col-md-6> <div class=app-block> <p>The app block is a CSS class. <br> <br> All it does at the moment is putting the content in it in a white block <pre><code class=language-css>    display: inline-block;
@@ -118,10 +118,10 @@
 &lt;&#47;div&gt; 
 </code></pre> <!-- </div> --> </div> </div> <div class=row id=anchor-button> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-xs-12> <h2>Buttons</h2> </div> <div class=col-md-5> <div class=row> <div class=col-xs-12> <p> Buttons come in two variations. There's the solid button and the naked button. </p> <h3>Properties</h3> </div> <div class=col-xs-6> Mandatory: <ul> <li>content</li> <li>class</li> <li>action</li> </ul> </div> <div class=col-xs-6> Optional: <ul> <li>icon</li> </ul> </div> </div> </div> <div class="col-sm-8 col-md-7"> <pre><code class=language-javascript>
 $(ui.component.button.render({
-    'content': 'Menu',
+    content: 'Menu',
     'class': 'naked-button--neutral',
-    'action': 'myAction',
-    'icon': 'icon-system-menu'
+    action: 'myAction',
+    icon: 'icon-system-menu'
     })) 
 </code></pre> </div> </div> </div> <div class=row> <div class=col-xs-12> <h3>Naked Button</h3> </div> </div> </div> <div class=col-xs-12> <div id=naked-buttons></div> <script>$('#naked-buttons').replaceWith(
                             $(ui.component.button.render({
@@ -244,17 +244,17 @@ $(ui.component.button.render({
                             }))
                         );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
 $(ui.component.composer.render({
-    'input': {
-        'placeholder': 'Share your thoughts'
+    input: {
+        placeholder: 'Share your thoughts'
     },
-    'buttons': [{
+    buttons: [{
         'class': 'solid-button--neutral',
-        'icon': 'icon-solid-camera',
-        'action': 'alert("pick a classy one!")'
+        icon: 'icon-solid-camera',
+        action: 'alert("pick a classy one!")'
     }, {
         'class': 'solid-button--happy pull-right',
-        'content': 'Share post',
-        'action': 'alert("it works")'
+        content: 'Share post',
+        action: 'alert("it works")'
     }]
 }))
 </code></pre> </div> </div> <div class=row id=anchor-header> <div class=col-xs-12> <div class=app-block> <h2>Header</h2> <p> The header component is used only by the mr.Watson platform, not by apps. <br> If you're looking for an app header check out the app bar component. <br> <br> To do: Make search box work &amp; fix dropdown item </p> </div> </div> <div class=col-xs-12> <div id=header></div> <script>$('#header').replaceWith(
@@ -305,40 +305,40 @@ $(ui.component.composer.render({
                             }))
                         );</script> </div> <div class=col-md-8> <pre><code class=language-javascript>
 $(ui.component.header.render({
-    'logo': {
-        'src': '/images/logo.png'
+    logo: {
+        src: '/images/logo.png'
     },
-    'input': {
-        'placeholder': 'Search bar..'
+    input: {
+        placeholder: 'Search bar..'
     },
-    'dropdown': [{
-         'icon': 'icon-solid-settings',
-        'dropdownItem': 'Settings',
-        'dropdownOptions': [{
-            'option': 'Profile',
-            'href': '#'
+    dropdown: [{
+        icon: 'icon-solid-settings',
+        dropdownItem: 'Settings',
+        dropdownOptions: [{
+            option: 'Profile',
+            href: '#'
         }, {
-            'option': 'Company',
-            'href': '#',
+            option: 'Company',
+            href: '#',
             'class': 'divider'
         }, {
-            'option': 'Log out',
-            'href': '#'
+            option: 'Log out',
+            href: '#'
         }]
     }, {
-        'icon': 'icon-solid-bell',
-        'dropdownItem': 'Notifs',
-        'dropdownOptions': [{
-            'option': 'You rock',
-            'href': '#',
+        icon: 'icon-solid-bell',
+        dropdownItem: 'Notifs',
+        dropdownOptions: [{
+            option: 'You rock',
+            href: '#',
             'class': 'divider'
         }, {
-            'option': 'Freddie invited you to lunch party',
-            'href': '#',
+            option: 'Freddie invited you to lunch party',
+            href: '#',
             'class': 'divider'
         }, {
-            'option': 'Hans commented on your post-it',
-            'href': '#',
+            option: 'Hans commented on your post-it',
+            href: '#',
             'class': 'divider'
         }]
     }]
@@ -352,7 +352,7 @@ $(ui.component.header.render({
                                 }))
                             );</script> </div> <pre><code class=language-javascript>
 $(ui.component.avatar.render({
-    'src':'/*image source*/'
+    src:'/*image source*/'
 }))
 </code></pre> </div> <div class=col-md-6> <div class=app-block> <h4>Round Avatar</h4> <div id=avatar-round></div> <script>$('#avatar-round').replaceWith(
                                 $(ui.component.avatar.render({
@@ -363,8 +363,8 @@ $(ui.component.avatar.render({
                                 }))
                             );</script> </div> <pre><code class=language-javascript>
 $(ui.component.avatar.render({
-    'src':'/*image source*/',
-    'round': true
+    src:'/*image source*/',
+    round: true
 }))
 </code></pre> </div> <div class=col-md-6> <div class=app-block> <h4>Small Square Avatar</h4> <div id=small-square-avatar></div> <script>$('#small-square-avatar').replaceWith(
                                 $(ui.component.avatar.render({
@@ -375,8 +375,8 @@ $(ui.component.avatar.render({
                                 }))
                             );</script> </div> <pre><code class=language-javascript>
 $(ui.component.avatar.render({
-    'src':'/*image source*/',
-    'small': true
+    src:'/*image source*/',
+    small: true
 }))
 </code></pre> </div> <div class=col-md-6> <div class=app-block> <h4>Small Round Avatar</h4> <div id=small-square-avatar-round></div> <script>$('#small-square-avatar-round').replaceWith(
                                 $(ui.component.avatar.render({
@@ -388,9 +388,9 @@ $(ui.component.avatar.render({
                                 }))
                             );</script> </div> <pre><code class=language-javascript>
 $(ui.component.avatar.render({
-    'src':'/*image source*/',
-    'round': true,
-    'small': true
+    src:'/*image source*/',
+    round: true,
+    small: true
 }))
 </code></pre> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Body Image</h3> <!-- </div> --> </div> <div class=col-md-6> <div class=app-block> <div id=bodyimage></div> <script>$('#bodyimage').replaceWith(
                                 $(ui.component.image.render({
@@ -400,7 +400,7 @@ $(ui.component.avatar.render({
                                 }))
                             );</script> </div> </div> <div class=col-md-6> <pre><code class=language-javascript>
   $(ui.component.image.render({
-    'src':'/*image source*/'
+    src:'/*image source*/'
   }))
 </code></pre> <div class=app-block> <p>Body images are used inside content area's. <br> They take up the entire width of the column they are in. <br> <br> To do: create lightbox for larger images.</p> </div> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Cover Image</h3> <!-- </div> --> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <div id=coverimage></div> <script>$('#coverimage').replaceWith(
                             $(ui.component.image.render({
@@ -410,9 +410,9 @@ $(ui.component.avatar.render({
                             }))
                         );</script> </div> <div class=col-xs-6> <pre><code class=language-javascript>
   $(ui.component.image.render({
-    'image': [{
-        'src': '/*image source*/',
-        'cover': true
+    image: [{
+        src: '/*image source*/',
+        cover: true
        }]
     }))
 </code></pre> </div> <div class=col-xs-6> <div class=app-block> <p>Cover images are used for decorational purposes. <br> They are mainly used for headers in apps and events. <br> <br> The max height of an cover image is 200 pixels. If the image is larger only the top 200 pixels are displayed. (Is this what we want?) <br> <br> To do: create lightbox for larger images.</p> </div> </div> </div> <div class=row id=anchor-input> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-xs-12> <h2>Input Fields</h2> <p> Input fields are used in forms and anywhere user input is needed. As the fields are part of a form they should be included between <code class=language-markup> &lt;form&gt; </code> tags. <br> <br> To do: should the form be a component as well? </p> <h3>Properties</h3> </div> <div class="col-xs-6 col-sm-3"> Mandatory: <ul> <li>id</li> <li>name</li> <li>value</li> </ul> </div> <div class="col-xs-6 col-sm-9"> Optional: <ul> <li>placeholder</li> <li>hasLabel (true/false)</li> <li>label</li> <li>icon</li> </ul> </div> </div> </div> </div> <div class=col-xs-12> <h3>Text Area</h3> </div> <div class=col-md-6> <div id=text-area></div> <script>$('#text-area').replaceWith(
@@ -421,7 +421,7 @@ $(ui.component.avatar.render({
                             }))
                         );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
   $(ui.component.textArea.render({
-    'placeholder': 'Tell people what you\'re all about'
+    placeholder: 'Tell people what you\'re all about'
   }))
 </code></pre> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Text Input</h3> <!-- </div> --> </div> <div class=col-md-6> <div id=text-input></div> <script>$('#text-input').replaceWith(
                             $(ui.component.textInput.render({
@@ -432,10 +432,10 @@ $(ui.component.avatar.render({
                             }))
                         );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
   $(ui.component.textInput.render({
-    'hasLabel': true,
-    'type': 'password',
-    'label': 'Password',
-    'icon': 'icon-user-key'
+    hasLabel': true,
+    type: 'password',
+    label: 'Password',
+    icon: 'icon-user-key'
   }))
 </code></pre> </div> <div class=col-md-6> <div id=text-input2></div> <script>$('#text-input2').replaceWith(
                             $(ui.component.textInput.render({
@@ -444,8 +444,8 @@ $(ui.component.avatar.render({
                             }))
                         );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
   $(ui.component.textInput.render({
-    'hasLabel': true,
-    'label': 'First name'
+    hasLabel: true,
+    label: 'First name'
   }))
 </code></pre> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Dropdown</h3> <!-- </div> --> </div> <div class=col-md-6> <div id=drokdown></div> </div> <script>$('#drokdown').replaceWith(
                         $(ui.component.dropdown.render({
@@ -468,31 +468,31 @@ $(ui.component.avatar.render({
                         }))
                     );</script> <div class=col-md-6> <pre><code class=language-javascript>
 $(ui.component.dropdown.render({
-    'dropdownItem': 'Options',
-    'dropdownOptions': [{
-        'option': 'Profile',
-        'href': '#'
+    dropdownItem: 'Options',
+    dropdownOptions: [{
+        option: 'Profile',
+        href: '#'
     }, {
-        'option': 'Privacy',
-        'href': '#'
+        option: 'Privacy',
+        href: '#'
     }, {
-        'option': 'Settings',
-        'href': '#',
+        option: 'Settings',
+        href: '#',
         'class': 'divider'
     }, {
-        'option': 'Log out',
-        'href': '#'
+        option: 'Log out',
+        href: '#'
     }]
 }))
 
 </code></pre> </div> </div> <div class=row id=anchor-messages> <div class=col-xs-12> <div class=app-block> <h2>Messages</h2> <p>There are two types of messages. Alerts &amp; Dialogs <ul> <li>Alerts are used to provide a user with feedback</li> <li>Dialogs are used when user input is needed for an action</li> </ul> </p> </div> <div class=row> <div class=col-xs-12> <h3>Alerts</h3> </div> </div> <div class=row> <div class=col-md-5> <div class=app-block> <p> You can either use the solid or the naked alert. <br> The 'class' property defines the alert style. Possible options are: </p> <ul> <li>naked-alert--happy</li> <li>naked-alert--strict</li> <li>naked-alert--angry</li> </ul> <p>The <i>solid alert</i> stands out more and is to be used for important messages only. <br> If the alert message is not of high importance the use of the <i>naked alert</i> is prefered.</p> to do: simplify properties like <i>dialogs</i> </div> </div> <div class=col-xs-7> <pre><code class=language-javascript>
 $(ui.component.alert.render({
-    'icon': 'icon-user-award',
-    'title': 'YES!',
+    icon: 'icon-user-award',
+    title: 'YES!',
     'class': 'solid-alert--happy',
-    'message': 'You did something right',
-    'button': [{
-        'icon': 'icon-system-close',
+    message: 'You did something right',
+    button: [{
+        icon: 'icon-system-close',
         'class': 'naked-button--icon-only--happy'
     }]
 }))
@@ -572,13 +572,13 @@ $(ui.component.alert.render({
                             }))
                         );</script> <!-- </div> --> </div> <div class=col-xs-12> <div class=row> <div class=col-xs-12> <h3>Dialogs</h3> </div> <div class=col-md-5> <div class=app-block> <p> An dialog is presented to a user when immediate user input is required. <br> <br> There are two types of dialogs: <br> <ul> <li>Strict dialog (automaticly selected)</li> <li>Angry dialog <br>(<code class=language-javascript>'angry': 'true'</code>)</li> </ul> The <i>angry dialog</i> is only to be used for high impact decisions, like deleting an account. </p> </div> </div> <div class=col-xs-7> <pre><code class=language-javascript>
 $(ui.component.dialog.render({
-    'angry': 'true',
-    'title': 'Deleting this is permanent.',
-    'message': 'Are you sure you want to delete your account?',
-    'button': [{
-        'content': 'Delete account'
+    angry: 'true',
+    title: 'Deleting this is permanent.',
+    message: 'Are you sure you want to delete your account?',
+    button: [{
+        content: 'Delete account'
     }, {
-        'content': 'Cancel'
+        content: 'Cancel'
     }]
 }))
 </code></pre> </div> </div> </div> <div class=col-xs-12> <div id=dialog></div> <script>$('#dialog').replaceWith(
@@ -635,7 +635,30 @@ $(ui.component.dialog.render({
                                     'item': 'Meet-ups'
                                 }]
                             }))
-                        );</script> </div> <div class="col-xs-10 col-sm-6 col-md-4"> <div id=navigation></div> <script>$('#navigation').replaceWith(
+                        );</script> </div> <div class="col-xs-12 col-sm-6 col-md-8"> <pre><code class=language-javascript>
+    communitySwitch: true,
+    navCommunities: [{
+        src: 'http://erfgoedstem.nl/wp-content/uploads/2012/07/Industriegebouw-Goudsesingel_1.jpg',
+        name: 'Het Industriegeb..',
+        icon: 'icon-system-down-open'
+    }],
+    navItems: [{
+        url: '#',
+        item: 'Dashboard'
+    }, {
+        url: '#',
+        item: 'People'
+    }, {
+        url: '#',
+        item: 'Companies'
+    }, {
+        url: '#',
+        item: 'Messages'
+    }, {
+        url: '#',
+        item: 'Meet-ups'
+    }]
+</code></pre> </div> <div class="col-xs-10 col-sm-6 col-md-4"> <div id=navigation></div> <script>$('#navigation').replaceWith(
                             $(ui.component.nav.render({
                                 'title': true,
                                 'navTitleIcon': 'icon-solid-settings',
@@ -654,14 +677,31 @@ $(ui.component.dialog.render({
                                     'item': 'People'
                                 }]
                             }))
-                        );</script> </div> <div class="col-xs-10 col-sm-6 col-md-4"> <div id=side-nav></div> <script>$('#side-nav').replaceWith(
+                        );</script> </div> <div class="col-xs-12 col-sm-6 col-md-8"> <pre><code class=language-javascript>
+    title: true,
+    navTitleIcon: 'icon-solid-settings',
+    navTitle: 'Settings',
+    button: true,
+    'class': 'solid-button--strict',
+    content: 'Dashboard',
+    subTitle: true,
+    category: 'Community',
+    name: 'Katshoek',
+    navItems: [{
+        url: '#',
+        item: 'Profile'
+    }, {
+        url: '#2',
+        item: 'People'
+    }]
+</code></pre> </div> <div class="col-xs-10 col-sm-6 col-md-4"> <div id=side-nav></div> <script>$('#side-nav').replaceWith(
                             $(ui.component.nav.render({
                                 'title': true,
                                 'button': true,
                                 'class': 'naked-button--strict hover',
                                 'content': 'Add Group',
                                 'navTitle': 'Groups',
-                                navItems: [{
+                                'navItems': [{
                                     'url': '#',
                                     'item': 'Developers',
                                     'icon': 'icon-app-solid-server grey'
@@ -686,7 +726,36 @@ $(ui.component.dialog.render({
                                 }]
                             }))
 
-                        );</script> </div> </div> <div class=row id=anchor-postits> <div class=col-xs-12> <h2>Post-it's</h2> </div> <div class=col-xs-12> <div class=app-block> <h3>User Post-it</h3> </div> </div> <div class=col-md-8> <div id=userpostit></div> <script>$('#userpostit').replaceWith(
+                        );</script> </div> <div class="col-xs-12 col-sm-6 col-md-8"> <pre><code class=language-javascript>
+title: true,
+button: true,
+'class': 'naked-button--strict hover',
+content: 'Add Group',
+navTitle: 'Groups',
+navItems: [{
+    url: '#',
+    item: 'Developers',
+    icon: 'icon-app-solid-server grey'
+}, {
+    url: '#',
+    item: 'Horse whisperers',
+    icon: 'icon-app-solid-leaf green'
+}, {
+    url: '#',
+    item: 'Cool Cats',
+    icon: 'icon-app-solid-necktie blue'
+}, {
+    url: '#',
+    item: 'BBQ',
+    icon: 'icon-app-solid-burger red'
+}],
+navActionBar: true,
+navActionBarButtons: [{
+    url: '#',
+    'class': 'naked-button--strict',
+    content: 'See all your groups'
+}]
+</code></pre> </div> </div> <div class=row id=anchor-postits> <div class=col-xs-12> <h2>Post-it's</h2> </div> <div class=col-xs-12> <div class=app-block> <h3>User Post-it</h3> </div> </div> <div class=col-md-8> <div id=userpostit></div> <script>$('#userpostit').replaceWith(
                             $(ui.component.userpostit.render({
                                 'userpostitMeta': {
                                     'avatar': {

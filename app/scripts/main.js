@@ -66,7 +66,7 @@ $(document).ready(function() {
     $('#startbutton').on("click", function() {
         $('#start').hide("slow");
         $('#game').show("slow");
-    });
+   
 
     $('#replaybutton').on("click", function() {
         $('#finish').hide("slow");
@@ -256,3 +256,4 @@ $(document).ready(function() {
     });
 
 });
+ });
