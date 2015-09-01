@@ -265,33 +265,85 @@ $(ui.component.composer.render({
                                 'input': {
                                     'placeholder': 'Search bar..'
                                 },
-                                'navItems': [{
-                                    'url': '#',
-                                    'item': 'Item 1'
-                                }, {
-                                    'url': '#',
-                                    'item': 'Active item',
-                                    'class': 'nav--active'
-                                }]
+                                'dropdown': [{
+                                        'icon': 'icon-solid-settings',
+                                        'dropdownItem': 'Settings',
+                                        'dropdownOptions': [{
+                                            'option': 'Profile',
+                                            'href': '#'
+                                        }, {
+                                            'option': 'Company',
+                                            'href': '#',
+                                            'class': 'divider'
+                                        }, {
+                                            'option': 'Log out',
+                                            'href': '#'
+                                        }]
+                                    }, {
+                                        'icon': 'icon-solid-bell',
+                                        'dropdownItem': 'Notifs',
+                                        'dropdownOptions': [{
+                                            'option': 'You rock',
+                                            'href': '#',
+                                            'class': 'divider'
+                                        }, {
+                                            'option': 'Freddie invited you to lunch party',
+                                            'href': '#',
+                                            'class': 'divider'
+                                        }, {
+                                            'option': 'Hans commented on your post-it',
+                                            'href': '#',
+                                            'class': 'divider'
+                                        }]
+                                    }]
+                                    // ,
+                                    // 'navItems': [{
+                                    //         'url': '#',
+                                    //         'item': 'Messages'
+                                    //     }]
+
                             }))
-                        );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
-  $(ui.component.header.render({
+                        );</script> </div> <div class=col-md-8> <pre><code class=language-javascript>
+$(ui.component.header.render({
     'logo': {
         'src': '/images/logo.png'
     },
     'input': {
         'placeholder': 'Search bar..'
     },
-    'navItems': [{
-        'url': '#',
-        'item': 'Item 1'
+    'dropdown': [{
+         'icon': 'icon-solid-settings',
+        'dropdownItem': 'Settings',
+        'dropdownOptions': [{
+            'option': 'Profile',
+            'href': '#'
+        }, {
+            'option': 'Company',
+            'href': '#',
+            'class': 'divider'
+        }, {
+            'option': 'Log out',
+            'href': '#'
+        }]
     }, {
-        'url': '#',
-        'item': 'Active item',
-        'class': 'nav--active'
+        'icon': 'icon-solid-bell',
+        'dropdownItem': 'Notifs',
+        'dropdownOptions': [{
+            'option': 'You rock',
+            'href': '#',
+            'class': 'divider'
+        }, {
+            'option': 'Freddie invited you to lunch party',
+            'href': '#',
+            'class': 'divider'
+        }, {
+            'option': 'Hans commented on your post-it',
+            'href': '#',
+            'class': 'divider'
+        }]
     }]
 }))
-</code></pre> </div> </div> <div class=row id=anchor-image> <div class=col-xs-12> <div class=app-block> <h2>Images</h2> <p>There is three types of images that are used throughout mr.Watson. <br> The three types are avatars, body images and cover images.</p> </div> <h3>Avatars</h3> </div> <div class=col-md-6> <div class=app-block> <h4>Square Avatar</h4> <div id=square-avatar></div> <script>$('#square-avatar').replaceWith(
+</code></pre> </div> </div> <div class=row id=anchor-image> <div class=col-xs-12> <div class=app-block> <h2>Images</h2> <p>There are three types of images that are used throughout mr.Watson. <br> The three types are avatars, body images and cover images.</p> </div> <h3>Avatars</h3> </div> <div class=col-md-6> <div class=app-block> <h4>Square Avatar</h4> <div id=square-avatar></div> <script>$('#square-avatar').replaceWith(
                                 $(ui.component.avatar.render({
                                     'avatar': {
                                         'src': 'http://latetothemovies.com/wp-content/uploads/2015/06/DrStrangelove.gif'
@@ -374,8 +426,8 @@ $(ui.component.avatar.render({
 </code></pre> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Text Input</h3> <!-- </div> --> </div> <div class=col-md-6> <div id=text-input></div> <script>$('#text-input').replaceWith(
                             $(ui.component.textInput.render({
                                 'hasLabel': true,
-                                'type': 'password',
                                 'label': 'Password',
+                                'type': 'password',
                                 'icon': 'icon-user-key'
                             }))
                         );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
@@ -388,170 +440,173 @@ $(ui.component.avatar.render({
 </code></pre> </div> <div class=col-md-6> <div id=text-input2></div> <script>$('#text-input2').replaceWith(
                             $(ui.component.textInput.render({
                                 'hasLabel': true,
-                                'label': 'First name',
+                                'label': 'First name'
                             }))
                         );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
   $(ui.component.textInput.render({
     'hasLabel': true,
-    'type': 'password',
-    'label': 'Password',
-    'icon': 'icon-user-key'
+    'label': 'First name'
   }))
 </code></pre> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Dropdown</h3> <!-- </div> --> </div> <div class=col-md-6> <div id=drokdown></div> </div> <script>$('#drokdown').replaceWith(
                         $(ui.component.dropdown.render({
-                            'dropdownItem': 'Klap mij',
+                            'icon': 'icon-user-key',
+                            'dropdownItem': 'Options',
                             'dropdownOptions': [{
-                                'option': 'dezem',
+                                'option': 'Profile',
                                 'href': '#'
                             }, {
-                                'option': 'dezindez',
+                                'option': 'Privacy',
+                                'href': '#'
+                            }, {
+                                'option': 'Settings',
                                 'href': '#',
                                 'class': 'divider'
                             }, {
-                                'option': 'hier boven staat een divider',
-                                'href': '#'
-                            }, {
-                                'option': 'in',
+                                'option': 'Log out',
                                 'href': '#'
                             }]
                         }))
                     );</script> <div class=col-md-6> <pre><code class=language-javascript>
-  $(ui.component.dropdown.render({
-    // properties
-  }))
-</code></pre> </div> </div> <div class=row id=anchor-messages> <div class=col-xs-12> <h2>Messages</h2> <div class=app-block> <div class=row> <div class=col-xs-12> <h3>Alerts</h3> </div> </div> <div class=row> <div class=col-md-4> <p> You can either use the solid or the naked alert. <br> The 'class' property defines the alert style. Possible options are: </p> <ul> <li>naked-alert--happy</li> <li>naked-alert--strict</li> <li>naked-alert--angry</li> </ul> </div> <div class=col-xs-8> <pre><code class=language-javascript>
+$(ui.component.dropdown.render({
+    'dropdownItem': 'Options',
+    'dropdownOptions': [{
+        'option': 'Profile',
+        'href': '#'
+    }, {
+        'option': 'Privacy',
+        'href': '#'
+    }, {
+        'option': 'Settings',
+        'href': '#',
+        'class': 'divider'
+    }, {
+        'option': 'Log out',
+        'href': '#'
+    }]
+}))
+
+</code></pre> </div> </div> <div class=row id=anchor-messages> <div class=col-xs-12> <div class=app-block> <h2>Messages</h2> <p>There are two types of messages. Alerts &amp; Dialogs <ul> <li>Alerts are used to provide a user with feedback</li> <li>Dialogs are used when user input is needed for an action</li> </ul> </p> </div> <div class=row> <div class=col-xs-12> <h3>Alerts</h3> </div> </div> <div class=row> <div class=col-md-5> <div class=app-block> <p> You can either use the solid or the naked alert. <br> The 'class' property defines the alert style. Possible options are: </p> <ul> <li>naked-alert--happy</li> <li>naked-alert--strict</li> <li>naked-alert--angry</li> </ul> <p>The <i>solid alert</i> stands out more and is to be used for important messages only. <br> If the alert message is not of high importance the use of the <i>naked alert</i> is prefered.</p> to do: simplify properties like <i>dialogs</i> </div> </div> <div class=col-xs-7> <pre><code class=language-javascript>
 $(ui.component.alert.render({
-  'icon': 'icon-user-award',
+    'icon': 'icon-user-award',
     'title': 'YES!',
     'class': 'solid-alert--happy',
     'message': 'You did something right',
     'button': [{
-        'iconOnly': true,
         'icon': 'icon-system-close',
         'class': 'naked-button--icon-only--happy'
     }]
 }))
-</code></pre> </div> </div> </div> </div> <div class=col-xs-12> <div class=app-block> <div id=solid-alert></div> <script>$('#solid-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-user-award',
-                                    'title': 'YES!',
-                                    'class': 'solid-alert--happy',
-                                    'message': 'You did something right',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--happy'
-                                    }]
-                                }))
-                            );</script> <div id=naked-alert></div> <script>$('#naked-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-user-award',
-                                    'title': 'YES!',
-                                    'class': 'naked-alert--happy',
-                                    'message': 'You did something right',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--happy'
-                                    }]
-                                }))
-                            );</script> <div id=solid-alert></div> <script>$('#solid-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-flag',
-                                    'title': 'Heads up!',
-                                    'class': 'solid-alert--strict',
-                                    'message': 'No employees yet.',
-                                    'link': 'Add one now?',
-                                    'href': '#',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--strict'
-                                    }]
-                                }))
-                            );</script> <div id=naked-alert></div> <script>$('#naked-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-flag',
-                                    'title': 'Heads up!',
-                                    'class': 'naked-alert--strict',
-                                    'message': 'No employees yet.',
-                                    'link': 'Add one now?',
-                                    'href': '#',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--strict'
-                                    }]
-                                }))
-                            );</script> <div id=solid-alert></div> <script>$('#solid-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-fire',
-                                    'title': 'Oops!',
-                                    'class': 'solid-alert--angry',
-                                    'message': 'That e-mail address already exists.',
-                                    'link': 'Forgot your password?',
-                                    'href': '#',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--angry'
-                                    }]
-                                }))
-                            );</script> <div id=naked-alert></div> <script>$('#naked-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-fire',
-                                    'title': 'Oops!',
-                                    'class': 'naked-alert--angry',
-                                    'message': 'That e-mail address already exists.',
-                                    'link': 'Forgot your password?',
-                                    'href': '#',
-                                    'button': [{
-                                        'iconOnly': true,
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--angry'
-                                    }]
-                                }))
-                            );</script> </div> </div> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-xs-12> <h3>Dialogs</h3> </div> <div class=col-md-4> <p> An dialog is presented to a user when ... <br> Possible options are: </p> </div> <div class=col-xs-8> <pre><code class=language-javascript>
+</code></pre> </div> </div> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <div id=solid-alert></div> <script>$('#solid-alert').replaceWith(
+                            $(ui.component.alert.render({
+                                'icon': 'icon-user-award',
+                                'title': 'YES!',
+                                'class': 'solid-alert--happy',
+                                'message': 'You did something right',
+                                'button': [{
+                                    'icon': 'icon-system-close',
+                                    'class': 'naked-button--icon-only--happy'
+                                }]
+                            }))
+                        );</script> <div id=naked-alert></div> <script>$('#naked-alert').replaceWith(
+                            $(ui.component.alert.render({
+                                'icon': 'icon-user-award',
+                                'title': 'YES!',
+                                'class': 'naked-alert--happy',
+                                'message': 'You did something right',
+                                'button': [{
+                                    'icon': 'icon-system-close',
+                                    'class': 'naked-button--icon-only--happy'
+                                }]
+                            }))
+                        );</script> <div id=solid-alert></div> <script>$('#solid-alert').replaceWith(
+                            $(ui.component.alert.render({
+                                'icon': 'icon-solid-flag',
+                                'title': 'Heads up!',
+                                'class': 'solid-alert--strict',
+                                'message': 'No employees yet.',
+                                'link': 'Add one now?',
+                                'href': '#',
+                                'button': [{
+                                    'icon': 'icon-system-close',
+                                    'class': 'naked-button--icon-only--strict'
+                                }]
+                            }))
+                        );</script> <div id=naked-alert></div> <script>$('#naked-alert').replaceWith(
+                            $(ui.component.alert.render({
+                                'icon': 'icon-solid-flag',
+                                'title': 'Heads up!',
+                                'class': 'naked-alert--strict',
+                                'message': 'No employees yet.',
+                                'link': 'Add one now?',
+                                'href': '#',
+                                'button': [{
+                                    'icon': 'icon-system-close',
+                                    'class': 'naked-button--icon-only--strict'
+                                }]
+                            }))
+                        );</script> <div id=solid-alert></div> <script>$('#solid-alert').replaceWith(
+                            $(ui.component.alert.render({
+                                'icon': 'icon-solid-fire',
+                                'title': 'Oops!',
+                                'class': 'solid-alert--angry',
+                                'message': 'That e-mail address already exists.',
+                                'link': 'Forgot your password?',
+                                'href': '#',
+                                'button': [{
+                                    'icon': 'icon-system-close',
+                                    'class': 'naked-button--icon-only--angry'
+                                }]
+                            }))
+                        );</script> <div id=naked-alert></div> <script>$('#naked-alert').replaceWith(
+                            $(ui.component.alert.render({
+                                'icon': 'icon-solid-fire',
+                                'title': 'Oops!',
+                                'class': 'naked-alert--angry',
+                                'message': 'That e-mail address already exists.',
+                                'link': 'Forgot your password?',
+                                'href': '#',
+                                'button': [{
+                                    'icon': 'icon-system-close',
+                                    'class': 'naked-button--icon-only--angry'
+                                }]
+                            }))
+                        );</script> <!-- </div> --> </div> <div class=col-xs-12> <div class=row> <div class=col-xs-12> <h3>Dialogs</h3> </div> <div class=col-md-5> <div class=app-block> <p> An dialog is presented to a user when immediate user input is required. <br> <br> There are two types of dialogs: <br> <ul> <li>Strict dialog (automaticly selected)</li> <li>Angry dialog <br>(<code class=language-javascript>'angry': 'true'</code>)</li> </ul> The <i>angry dialog</i> is only to be used for high impact decisions, like deleting an account. </p> </div> </div> <div class=col-xs-7> <pre><code class=language-javascript>
 $(ui.component.dialog.render({
+    'angry': 'true',
     'title': 'Deleting this is permanent.',
     'message': 'Are you sure you want to delete your account?',
     'button': [{
-        'class': 'naked-button--strict',
-        'content': 'No'
+        'content': 'Delete account'
     }, {
-        'class': 'naked-button--strict',
-        'content': 'Yes'
+        'content': 'Cancel'
     }]
 }))
-</code></pre> </div> </div> </div> </div> <div class=col-xs-12> <div id=dialog></div> <script>$('#dialog').replaceWith(
+</code></pre> </div> </div> </div> <div class=col-xs-12> <div id=dialog></div> <script>$('#dialog').replaceWith(
                             $(ui.component.dialog.render({
-                                'class': 'dialog--angry',
-                                'icon': 'icon-solid-fire',
+                                'angry': 'true',
                                 'title': 'Deleting this is permanent.',
                                 'message': 'Are you sure you want to delete your account?',
                                 'button': [{
-                                    'class': 'naked-button--strict hover',
-                                    'content': 'Delete account'
+                                    'content': 'Delete account',
+                                    'action': 'alert("Alrighty deleted")'
                                 }, {
-                                    'class': 'naked-button--strict hover',
-                                    'content': 'Cancel'
+                                    'content': 'Cancel',
+                                    'action': 'alert("Alrighty canceled")'
                                 }]
                             }))
                         );</script> </div> <div class=col-xs-12> <div id=dialog></div> <script>$('#dialog').replaceWith(
                             $(ui.component.dialog.render({
-                                'class': 'dialog--strict',
-                                'icon': 'icon-solid-flag',
                                 'title': 'Do you wish to create a new community?',
                                 'message': 'You should only create a new community if you are setting one up in a new coworking space.',
                                 'button': [{
-                                    'class': 'naked-button--strict hover',
-                                    'content': 'Create community'
+                                    'content': 'Create community',
+                                    'action': 'alert("Alrighty created")'
                                 }, {
-                                    'class': 'naked-button--strict hover',
-                                    'content': 'Cancel'
+                                    'content': 'Cancel',
+                                    'action': 'alert("Alrighty canceled")'
                                 }]
                             }))
-                        );</script> </div> </div> <div class=row id=anchor-navigation> <div class=col-xs-12> <h2>Navigation</h2> </div> <div class=col-xs-12> <div class=app-block> <h3>Side Nav</h3> <div class=row> <div class=col-sm-4> <p>Nav</p> </div> <div class=col-sm-8> <pre><code class=language-javascript>
+                        );</script> </div> </div> <div class=row id=anchor-navigation> <div class=col-xs-12> <div class=app-block> <h2>Navigation</h2> <div class=row> <div class=col-sm-4> <p>There is <em>(should the app bar be under navigation too?)</em> only one type of nav but there's a lot of tweaking possible.</p> </div> <div class=col-sm-8> <pre><code class=language-javascript>
   $(ui.component.nav.render({
     // properties
   }))
@@ -563,8 +618,6 @@ $(ui.component.dialog.render({
                                     'name': 'Het Industriegeb..',
                                     'icon': 'icon-system-down-open'
                                 }],
-                                'title': false,
-                                'navTitle': 'Optional title',
                                 'navItems': [{
                                     'url': '#',
                                     'item': 'Dashboard'
