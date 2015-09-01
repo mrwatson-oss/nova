@@ -8,19 +8,27 @@
         </div>
         <div class="col-md-6"> 
             {{#if input}} {{#input}} {{> PartialTextInput class="text-input__grey"}} {{/input}} {{/if}} 
+        
         </div> 
-        {{#if navItems}}
+
+        {{!-- {{#if navItems}} --}}
         <div class="col-md-3">
+        
             <div class="nav nav--horizontal pull-right">
-                {{#each navItems}}
-                    <li>{{> PartialNavItem}}</li>
-                {{/each}}
+                {{#navItems}}
+                    <li>{{> PartialNavItem}}</li>                    
+                {{/navItems}}
                 {{#each navIcons}}
                     {{> PartialIcon}}
                 {{/each}}
             </div>
-        </div>
+            {{#if dropdown}}
+            {{#dropdown}}
+               <div class="pull-right"> {{> PartialDropdown}}</div>
+            {{/dropdown}}                    
         {{/if}}
+        </div>
+        {{!-- {{/if}} --}}
     </div>
 </div> 
 

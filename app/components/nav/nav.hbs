@@ -23,9 +23,14 @@
 </div>
 {{/if}}
 	<li class="first"></li>
-	{{#each navItems}}
+	{{#navItems}}
 		{{>PartialNavItem}}
-	{{/each}}
+		{{#if dropdown}}
+			{{#dropdown}}
+				{{> PartialDropdown}}
+			{{/dropdown}}
+		{{/if}}
+	{{/navItems}}
 {{#if navActionBar}}
 	{{#navActionBarButtons}}
 		<li class="nav__action-bar__button">{{>PartialButton}}</li>

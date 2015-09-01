@@ -34,7 +34,7 @@
     }
 
 
-.mytest {
+.text-area-label {
 
 .inputMaterial {
   padding: 1em;
@@ -60,9 +60,9 @@ label {
 
 /* active state */
 .inputMaterial:focus ~ label, .inputMaterial:valid ~ label      {
-  bottom: 1em;
+  color: $green;
+  bottom:1.8em;
   font-size:.9em;
-  color: $text-color--accent;
 }
 
 .bar    { position:relative; display:block; width:100%; }

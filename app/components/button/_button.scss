@@ -27,7 +27,7 @@
 // -----------------------------------------------------------------------------
 .naked-button--neutral {
     @extend .btn;
-    @include naked-button($button-color--neutral__text, $button-color--neutral--accent);
+    @include naked-button($button-color--neutral__text, $button-color--neutral__text);
 }
 
 .naked-button--happy {

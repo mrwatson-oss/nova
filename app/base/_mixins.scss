@@ -114,6 +114,7 @@
             &:visited {}
             &:hover {
                 color: $button-color-accent;
+                background: $grey--light;
             }
             &.hover {
                 &:hover {
@@ -128,6 +129,7 @@
                 outline: none;
             }
             &:disabled {
+                background: none;
                 color: lighten($button-text-color, 30%);
                 cursor: default;
             }

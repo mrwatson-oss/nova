@@ -9,6 +9,7 @@
     padding: 4em 4em 1em 4em;
     background: white;
     box-shadow: 0 0 1em $grey;
+    margin: 0 1em 1em 1em;
     .dialog-icon {
         margin-right: -30px;
         .icon {
@@ -29,11 +30,11 @@
 }
 
 .dialog--angry {
-    @extend .dialog;
+    // @extend .dialog;
     @include dialog($button-color--angry);
 }
 .dialog--strict {
-    @extend .dialog;
+    // @extend .dialog;
     @include dialog($button-color--strict);
 }
 
