@@ -1063,8 +1063,8 @@ $(ui.component.alert.render({
                                     </p>
                                 </div>
                             </div>
-                                <div class="col-xs-7">
-                                    <pre><code class="language-javascript">
+                            <div class="col-xs-7">
+                                <pre><code class="language-javascript">
 $(ui.component.dialog.render({
     angry: 'true',
     title: 'Deleting this is permanent.',
@@ -1076,7 +1076,7 @@ $(ui.component.dialog.render({
     }]
 }))
 </code></pre>
-                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-12">
@@ -1165,8 +1165,8 @@ $(ui.component.dialog.render({
                             }))
                         );
                         </script>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-8">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-8">
                         <pre><code class="language-javascript">
     communitySwitch: true,
     navCommunities: [{
@@ -1310,12 +1310,12 @@ navActionBarButtons: [{
                 </div>
                 <div class="row" id="anchor-postits">
                     <div class="col-xs-12">
-                        <h2>Post-it's</h2>
+                        <div class="app-block">
+                            <h2>Post-it's</h2>
+                        </div>
                     </div>
                     <div class="col-xs-12">
-                        <div class="app-block">
-                            <h3>User Post-it</h3>
-                        </div>
+                        <h3>User Post-it</h3>
                     </div>
                     <div class="col-md-8">
                         <div id="userpostit"></div>
@@ -1344,11 +1344,37 @@ navActionBarButtons: [{
                                 'userpostitLikes': {
                                     'number': '17'
                                 }
-
-
                             }))
                         );
                         </script>
+                    </div>
+                    <div class="col-md-10">
+                        <pre><code class="language-javascript">
+$(ui.component.userpostit.render({
+    userpostitMeta: {
+        avatar: {
+            src: 'http://i.ytimg.com/vi/N1KvgtEnABY/hqdefault.jpg'
+        },
+        author: 'Sgt. Sanders',
+        timestamp: '10 aug 2015'
+    },
+    userpostitContent: {
+        content: 'Om deze grijze maandagmiddag wat zonneschijn te geven, staat er op de 2e verdieping op de picknicktafels allerlei lekkers van Marqt wat anders weggegooid zou worden. Ik zou zeggen; sla je slag en geniet :-)'
+    },
+    userpostitActions: [{
+        'class': 'naked-button--happy hover',
+        content: 'Like',
+        icon: 'icon-solid-like'
+    }, {
+        'class': 'naked-button--happy hover',
+        content: 'Comment',
+        icon: 'icon-naked-bubble'
+    }],
+    userpostitLikes: {
+        number: '17'
+    }
+}))
+</code></pre>
                     </div>
                     <div class="col-md-8">
                         <div id="userpostit"></div>
@@ -1403,12 +1429,64 @@ navActionBarButtons: [{
                                     },
                                     'placeholder': 'Add a comment',
                                     'content': 'Comment'
-
                                 }
-
                             }))
                         );
                         </script>
+                    </div>
+                    <div class="col-md-10">
+                        <pre><code class="language-javascript">
+userpostitMeta: {
+    avatar: {
+        src: 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg'
+    },
+    author: 'Dr. Strangelove',
+    timestamp: '10 aug 2015'
+    },
+    userpostitContent: {
+        content: 'Vanochtend kwam ik aan en was het luik niet naar beneden. Allemaal leuk en aardig, maar er staat te veel apparatuur op deze verdieping om hem open te laten. DUS LUIK DICHT!'
+    },
+    userpostitActions: [{
+        'class': 'naked-button--happy hover',
+        content: 'Like',
+        icon: 'icon-naked-like'
+    }, {
+        'class': 'naked-button--happy hover',
+        content: '2 Comments',
+        icon: 'icon-solid-bubble'
+    }],
+    userpostitLikes: {
+        number: '2'
+    },
+    comments: [{
+        author: 'General Dooks',
+        timestamp: '12 aug 2015',
+        avatar: {
+            src: 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png',
+            small: true
+        },
+        content: 'Daarnaast mbt corvee, het is al eerder aangegeven. Het is wel zo netjes om een volgende groep niet met een achterstand te laten beginnen, voor iedereen zijn de maandagochtenden belangrijk, dus zorg ajb dat je op vrijdag je corveeweek netjes afsluit, dan kan iedereen zich op maandag focussen wat belangrijk is'
+
+    }, {
+        author: 'General Dooks',
+        timestamp: '13 aug 2015',
+        avatar: {
+            src: 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png',
+            small: true
+        },
+        content: 'Trouwens, bij onze zuivel-bestelling van deze week is er iets mis gegaan waardoor we met een ietsje-pietsje meer volle melk zitten dan de bedoeling was. Omdat we het natuurlijk zonde vinden als al deze flessen zouden bederven, kunnen jullie voor een mooi prijsje wat flessen mee naar huis nemen.'
+
+    }],
+    commentInputField: {
+        avatar: {
+            src: 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+            small: true
+        },
+        placeholder: 'Add a comment',
+        content: 'Comment'
+    }
+}))
+</code></pre>
                     </div>
                 </div>
             </div>
