@@ -18,7 +18,7 @@ ui.component.postitactionbar = (function($, T) {
         'postitactionbarContent': null
 };
 
-     
+
     // *
     //  * render
     //  *

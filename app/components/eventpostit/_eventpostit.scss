@@ -58,10 +58,10 @@
                 // border-bottom: 1px solid $link-color--accent;
             }
         }
-         .event-post-it__title {
-                padding: 1em 0;
-                display: inline-block;
-            }
+        .event-post-it__title {
+            padding: 1em 0;
+            display: inline-block;
+        }
         p {
             margin: 0;
             .event-post-it--bold {
@@ -108,7 +108,7 @@
 .event-post-it-input {
     @extend .event-post-it;
     margin-top: -1.25em;
-    padding-top: 0;
+    padding-top: 1em;
     padding-bottom: .4em;
     .comment__text-input {
         float: left;

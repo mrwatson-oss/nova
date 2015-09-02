@@ -31,48 +31,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="user-post-it__action-bar">
-						{{#each userpostitActions}}
-							{{>PartialButton}}
-						{{/each}}
-						{{#if userpostitLikes}}
-						{{#userpostitLikes}}
-							<a class="naked-button--strict hover pull-right">{{number}} people like this</a>					
-						{{/userpostitLikes}}
-						{{/if}}
-					</div>
-				</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				{{#userpostitActionBlock}}
+				{{>PartialPostItActionBar}}
+				{{/userpostitActionBlock}}
 			</div>
 		</div>
-		{{#if comments}}
-			<div class="app-block--no-bg user-post-it">
-				{{#each comments}}
-				<div class="post-it__comments">
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="comment-author-avatar">{{>PartialAvatar}}</div>
-							<div class="comment--meta"><span class="comment-author">{{author}}</span><span class="comment-timestamp"> {{timestamp}}</span></div>
-							<div class="comment-content"><p>{{{content}}}</p></div>
-						</div>
-					</div>
-				{{/each}}
-			</div>
-		{{/if}}
-		{{#if commentInputField}}
-			<div class="app-block--no-bg user-post-it-input">
-				{{#commentInputField}}
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="comment-author-avatar">{{>PartialAvatar}}</div>
-							<div class="comment__text-input">{{>PartialTextInput}}</div>
-							<div class="comment__text-input-button">{{>PartialButton class="solid-button--happy pull-right"}}</div>
-						</div>
-					</div>
-				{{/commentInputField}}
-			</div>
-		{{/if}}
-		</div>
+
 	</div>
 </div>

@@ -1330,7 +1330,7 @@ navActionBarButtons: [{
                                     'class': 'naked-button--happy',
                                     'content': '2 comments',
                                     'icon': 'icon-naked-bubble',
-                                    'action': '$(".post-it__comments").slideToggle("slow");'
+                                    'action': '$(".post-it__comments").slideToggle();'
                                 }],
                                 'postitLikes': {
                                     'number': '6'
@@ -1381,17 +1381,27 @@ navActionBarButtons: [{
                                 'userpostitContent': {
                                     'content': 'Om deze grijze maandagmiddag wat zonneschijn te geven, staat er op de 2e verdieping op de picknicktafels allerlei lekkers van Marqt wat anders weggegooid zou worden. Ik zou zeggen; sla je slag en geniet :-)'
                                 },
-                                'userpostitActions': [{
-                                    'class': 'naked-button--happy hover',
-                                    'content': 'Like',
-                                    'icon': 'icon-solid-like'
-                                }, {
-                                    'class': 'naked-button--happy hover',
-                                    'content': 'Comment',
-                                    'icon': 'icon-naked-bubble'
-                                }],
-                                'userpostitLikes': {
-                                    'number': '17'
+                                'userpostitActionBlock': {
+                                    'postitActions': [{
+                                        'class': 'naked-button--happy hover',
+                                        'content': 'Like',
+                                        'icon': 'icon-solid-like'
+                                    }, {
+                                        'class': 'naked-button--happy hover',
+                                        'content': 'Be the first to comment',
+                                        'icon': 'icon-naked-bubble'
+                                    }],
+                                    'postitLikes': {
+                                        'number': '17'
+                                    },
+                                    'commentInputField': {
+                                        'avatar': {
+                                            'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                            'small': true
+                                        },
+                                        'placeholder': 'Add a comment',
+                                        'content': 'Comment'
+                                    }
                                 }
                             }))
                         );
@@ -1440,46 +1450,47 @@ $(ui.component.userpostit.render({
                                 'userpostitContent': {
                                     'content': 'Vanochtend kwam ik aan en was het luik niet naar beneden. Allemaal leuk en aardig, maar er staat te veel apparatuur op deze verdieping om hem open te laten. DUS LUIK DICHT!'
                                 },
-                                'userpostitActions': [{
-                                    'class': 'naked-button--happy hover',
-                                    'content': 'Like',
-                                    'icon': 'icon-naked-like'
-                                }, {
-                                    'class': 'naked-button--happy hover',
-                                    'content': '2 Comments',
-                                    'icon': 'icon-solid-bubble',
-                                    'action': '$(".post-it__comments").slideToggle("slow");'
-                                }],
-                                'userpostitLikes': {
-                                    'number': '2'
-                                },
-                                'comments': [{
-                                    'author': 'General Dooks',
-                                    'timestamp': '12 aug 2015',
-                                    'avatar': {
-                                        'src': 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png',
-                                        'small': true
+                                'userpostitActionBlock': {
+                                    'postitActions': [{
+                                        'class': 'naked-button--happy',
+                                        'content': 'Like',
+                                        'icon': 'icon-naked-like'
+                                    }, {
+                                        'class': 'naked-button--happy',
+                                        'content': '2 comments',
+                                        'icon': 'icon-naked-bubble',
+                                        'action': '$(".post-it__comments").slideToggle("slow");'
+                                    }],
+                                    'postitLikes': {
+                                        'number': '6'
                                     },
-                                    'content': 'Daarnaast mbt corvee, het is al eerder aangegeven. Het is wel zo netjes om een volgende groep niet met een achterstand te laten beginnen, voor iedereen zijn de maandagochtenden belangrijk, dus zorg ajb dat je op vrijdag je corveeweek netjes afsluit, dan kan iedereen zich op maandag focussen wat belangrijk is'
-
-                                }, {
-                                    'author': 'General Dooks',
-                                    'timestamp': '13 aug 2015',
-                                    'avatar': {
-                                        'src': 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png',
-                                        'small': true
-                                    },
-                                    'content': 'Trouwens, bij onze zuivel-bestelling van deze week is er iets mis gegaan waardoor we met een ietsje-pietsje meer volle melk zitten dan de bedoeling was. Omdat we het natuurlijk zonde vinden als al deze flessen zouden bederven, kunnen jullie voor een mooi prijsje wat flessen mee naar huis nemen.'
-
-                                }],
-                                'commentInputField': {
-                                    'avatar': {
-                                        'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
-                                        'small': true
-                                    },
-                                    'placeholder': 'Add a comment',
-                                    'content': 'Comment'
+                                    'comments': [{
+                                        'author': 'Dr. Strangelove',
+                                        'timestamp': '14 aug 2015',
+                                        'avatar': {
+                                            'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                                            'small': true
+                                        },
+                                        'content': 'Wat the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+                                    }, {
+                                        'author': 'Dr. S',
+                                        'timestamp': '12 aug 2015',
+                                        'avatar': {
+                                            'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                                            'small': true
+                                        },
+                                        'content': 'Wit the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+                                    }],
+                                    'commentInputField': {
+                                        'avatar': {
+                                            'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                            'small': true
+                                        },
+                                        'placeholder': 'Add a comment',
+                                        'content': 'Comment'
+                                    }
                                 }
+
                             }))
                         );
                         </script>
@@ -1578,16 +1589,16 @@ userpostitMeta: {
                             'eventpostitLikes': {
                                 'number': '2'
                             },
-                            'comments': [{
-                                'author': 'Dr. Strangelove',
-                                'timestamp': '14 aug 2015',
-                                'avatar': {
-                                    'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
-                                    'small': true
-                                },
-                                'content': 'Wat is duckhunt?'
+                            // 'comments': [{
+                            //     'author': 'Dr. Strangelove',
+                            //     'timestamp': '14 aug 2015',
+                            //     'avatar': {
+                            //         'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                            //         'small': true
+                            //     },
+                            //     'content': 'Wat is duckhunt?'
 
-                            }],
+                            // }],
                             'commentInputField': {
                                 'avatar': {
                                     'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
@@ -1599,6 +1610,13 @@ userpostitMeta: {
                         }))
                     );
                     </script>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sit est quae numquam nobis nemo, quos aliquam adipisci voluptatibus amet voluptatum quas enim, laborum accusamus nihil. Rerum temporibus deleniti maiores.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
