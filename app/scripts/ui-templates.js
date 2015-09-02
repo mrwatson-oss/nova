@@ -340,6 +340,118 @@ this["ui"]["component"]["template"]["dropdown"] = Handlebars.template({"1":funct
     + "</script>\n</li>";
 },"useData":true});
 
+this["ui"]["component"]["template"]["eventpostit"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function";
+
+  return "							<div class=\"postit-avatar\">\n"
+    + ((stack1 = this.invokePartial(partials.PartialAvatar,depth0,{"name":"PartialAvatar","data":data,"indent":"\t\t\t\t\t\t\t\t","helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "							</div>\n							<div class=\"postit-author\">"
+    + this.escapeExpression(((helper = (helper = helpers.author || (depth0 != null ? depth0.author : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"author","hash":{},"data":data}) : helper)))
+    + "</div>\n							<div class=\"postit-timestamp\">Event created on "
+    + ((stack1 = ((helper = (helper = helpers.timestamp || (depth0 != null ? depth0.timestamp : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"timestamp","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "</div>\n";
+},"3":function(depth0,helpers,partials,data) {
+    var stack1, helper;
+
+  return "							<a href=\""
+    + this.escapeExpression(((helper = (helper = helpers.href || (depth0 != null ? depth0.href : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"href","hash":{},"data":data}) : helper)))
+    + "\">"
+    + ((stack1 = this.invokePartial(partials.PartialCoverImage,depth0,{"name":"PartialCoverImage","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</a>\n";
+},"5":function(depth0,helpers,partials,data) {
+    var stack1, helper, options, buffer = "";
+
+  stack1 = ((helper = (helper = helpers.eventpostitContent || (depth0 != null ? depth0.eventpostitContent : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"eventpostitContent","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
+  if (!helpers.eventpostitContent) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  return buffer;
+},"6":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "								<a class=\"event-post-it__title\" href=\""
+    + alias3(((helper = (helper = helpers.href || (depth0 != null ? depth0.href : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"href","hash":{},"data":data}) : helper)))
+    + "\">"
+    + alias3(((helper = (helper = helpers.eventTitle || (depth0 != null ? depth0.eventTitle : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"eventTitle","hash":{},"data":data}) : helper)))
+    + "</a>\n								<p><span class=\"event-post-it--bold\">Where&#58;</span> "
+    + alias3(((helper = (helper = helpers.eventLocation || (depth0 != null ? depth0.eventLocation : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"eventLocation","hash":{},"data":data}) : helper)))
+    + "</p>\n								<p><span class=\"event-post-it--bold\">When&#58;</span> "
+    + alias3(((helper = (helper = helpers.eventDate || (depth0 != null ? depth0.eventDate : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"eventDate","hash":{},"data":data}) : helper)))
+    + "</p>		\n";
+},"8":function(depth0,helpers,partials,data) {
+    return "							<p>...</p>\n";
+},"10":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","data":data,"indent":"\t\t\t\t\t\t\t","helpers":helpers,"partials":partials})) != null ? stack1 : "");
+},"12":function(depth0,helpers,partials,data) {
+    var stack1, helper, options, buffer = "";
+
+  stack1 = ((helper = (helper = helpers.eventpostitLikes || (depth0 != null ? depth0.eventpostitLikes : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"eventpostitLikes","hash":{},"fn":this.program(13, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
+  if (!helpers.eventpostitLikes) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  return buffer;
+},"13":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "							<a class=\"naked-button--strict hover pull-right\">"
+    + this.escapeExpression(((helper = (helper = helpers.number || (depth0 != null ? depth0.number : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"number","hash":{},"data":data}) : helper)))
+    + " people like this</a>					\n";
+},"15":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "		<div class=\"post-it__comments\">\n			<div class=\"app-block--no-bg event-post-it\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"each","hash":{},"fn":this.program(16, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "			</div>\n";
+},"16":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "					<div class=\"row\">\n						<div class=\"col-xs-12\">\n							<div class=\"comment-author-avatar\">"
+    + ((stack1 = this.invokePartial(partials.PartialAvatar,depth0,{"name":"PartialAvatar","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</div>\n							<div class=\"comment--meta\"><span class=\"comment-author\">"
+    + alias3(((helper = (helper = helpers.author || (depth0 != null ? depth0.author : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"author","hash":{},"data":data}) : helper)))
+    + " </span> <span class=\"comment-timestamp\"> "
+    + alias3(((helper = (helper = helpers.timestamp || (depth0 != null ? depth0.timestamp : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"timestamp","hash":{},"data":data}) : helper)))
+    + "</span></div>\n							<div class=\"comment-content\"><p>"
+    + ((stack1 = ((helper = (helper = helpers.content || (depth0 != null ? depth0.content : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"content","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "</p></div>\n						</div>\n					</div>\n";
+},"18":function(depth0,helpers,partials,data) {
+    var stack1, helper, options, buffer = 
+  "			<div class=\"app-block--no-bg event-post-it-input\">\n";
+  stack1 = ((helper = (helper = helpers.commentInputField || (depth0 != null ? depth0.commentInputField : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"commentInputField","hash":{},"fn":this.program(19, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
+  if (!helpers.commentInputField) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  return buffer + "			</div>\n		</div>\n";
+},"19":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "					<div class=\"row\">\n						<div class=\"col-xs-12\">\n							<div class=\"comment-author-avatar\">"
+    + ((stack1 = this.invokePartial(partials.PartialAvatar,depth0,{"name":"PartialAvatar","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</div>\n							<div class=\"comment__text-input\">"
+    + ((stack1 = this.invokePartial(partials.PartialTextInput,depth0,{"name":"PartialTextInput","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</div>\n							<div class=\"comment__text-input-button\">"
+    + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","hash":{"class":"solid-button--happy pull-right"},"data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</div>\n						</div>\n					</div>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1, helper, options, alias1=helpers.helperMissing, alias2="function", alias3=helpers.blockHelperMissing, buffer = 
+  "<div class=\"row\">\n	<div class=\"col-xs-12\">\n		<div class=\"app-block event-post-it\">\n			<div class=\"row\">\n				<div class=\"col-xs-12\">\n					<div class=\"event-post-it--meta\">\n";
+  stack1 = ((helper = (helper = helpers.eventpostitMeta || (depth0 != null ? depth0.eventpostitMeta : depth0)) != null ? helper : alias1),(options={"name":"eventpostitMeta","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data}),(typeof helper === alias2 ? helper.call(depth0,options) : helper));
+  if (!helpers.eventpostitMeta) { stack1 = alias3.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  buffer += "					</div>\n				</div>	\n			</div>\n			<div class=\"row\">\n					<div class=\"event-post-it__header-image\">\n";
+  stack1 = ((helper = (helper = helpers.eventHeaderImage || (depth0 != null ? depth0.eventHeaderImage : depth0)) != null ? helper : alias1),(options={"name":"eventHeaderImage","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data}),(typeof helper === alias2 ? helper.call(depth0,options) : helper));
+  if (!helpers.eventHeaderImage) { stack1 = alias3.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  return buffer + "					</div>\n			</div>		\n			<div class=\"row\">\n				<div class=\"col-xs-12\">\n					<div class=\"event-post-it__content\">\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.eventpostitContent : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.program(8, data, 0),"data":data})) != null ? stack1 : "")
+    + "					</div>\n				</div>\n			</div>\n			<div class=\"row\">\n				<div class=\"col-xs-12\">\n					<div class=\"event-post-it__action-bar\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.eventpostitActions : depth0),{"name":"each","hash":{},"fn":this.program(10, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.eventpostitLikes : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "					</div>\n				</div>\n			</div>\n		</div>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"if","hash":{},"fn":this.program(15, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.commentInputField : depth0),{"name":"if","hash":{},"fn":this.program(18, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "	</div>\n</div>";
+},"usePartial":true,"useData":true});
+
 this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1, helper, options, buffer = 
   "            ";
@@ -540,6 +652,70 @@ this["ui"]["component"]["template"]["partials"] = Handlebars.template({"compiler
     return "";
 },"useData":true});
 
+this["ui"]["component"]["template"]["postitactionbar"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","data":data,"indent":"\t\t\t\t","helpers":helpers,"partials":partials})) != null ? stack1 : "");
+},"3":function(depth0,helpers,partials,data) {
+    var stack1, helper, options, buffer = "";
+
+  stack1 = ((helper = (helper = helpers.postitLikes || (depth0 != null ? depth0.postitLikes : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"postitLikes","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
+  if (!helpers.postitLikes) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  return buffer;
+},"4":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "				<a class=\"naked-button--strict pull-right\">"
+    + this.escapeExpression(((helper = (helper = helpers.number || (depth0 != null ? depth0.number : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"number","hash":{},"data":data}) : helper)))
+    + " people like this</a>	\n";
+},"6":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "			<div class=\"app-block--no-bg\">\n					<div class=\"row\">\n						<div class=\"col-xs-12\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"each","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "						</div>\n					</div>\n";
+},"7":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "							<div class=\"comment-author-avatar\">"
+    + ((stack1 = this.invokePartial(partials.PartialAvatar,depth0,{"name":"PartialAvatar","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</div>\n							<div class=\"comment--meta\"><span class=\"comment-author\">"
+    + alias3(((helper = (helper = helpers.author || (depth0 != null ? depth0.author : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"author","hash":{},"data":data}) : helper)))
+    + " </span> <span class=\"comment-timestamp\"> "
+    + alias3(((helper = (helper = helpers.timestamp || (depth0 != null ? depth0.timestamp : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"timestamp","hash":{},"data":data}) : helper)))
+    + "</span></div>\n							<div class=\"comment-content\"><p>"
+    + ((stack1 = ((helper = (helper = helpers.content || (depth0 != null ? depth0.content : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"content","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "</p></div>\n";
+},"9":function(depth0,helpers,partials,data) {
+    var stack1, helper, options, buffer = 
+  "			<div class=\"app-block--no-bg post-it__input-field\">\n";
+  stack1 = ((helper = (helper = helpers.commentInputField || (depth0 != null ? depth0.commentInputField : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"commentInputField","hash":{},"fn":this.program(10, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
+  if (!helpers.commentInputField) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  return buffer + "			</div>\n";
+},"10":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "					<div class=\"row\">\n						<div class=\"col-xs-12\">\n							<div class=\"comment-author-avatar\">"
+    + ((stack1 = this.invokePartial(partials.PartialAvatar,depth0,{"name":"PartialAvatar","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</div>\n							<div class=\"comment__text-input\">"
+    + ((stack1 = this.invokePartial(partials.PartialTextInput,depth0,{"name":"PartialTextInput","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</div>\n							<div class=\"comment__text-input-button\">"
+    + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","hash":{"class":"solid-button--happy pull-right"},"data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</div>\n						</div>\n					</div>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"post-it__action-bar\">\n<div class=\"row\">\n	<div class=\"col-xs-12\">\n		<div class=\"post-it__actions\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.postitActions : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.postitLikes : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "		</div>\n	</div>\n	<div class=\"col-xs-12\">\n		<div class=\"post-it__comments\">\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"if","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.commentInputField : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "		</div>\n	</div>\n</div>\n</div>";
+},"usePartial":true,"useData":true});
+
 this["ui"]["component"]["template"]["textArea"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     return "class=\"text-input__grey\"";
 },"3":function(depth0,helpers,partials,data) {
@@ -670,7 +846,7 @@ this["ui"]["component"]["template"]["userpostit"] = Handlebars.template({"1":fun
 },"17":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "					<div class=\"row\">\n						<div class=\"col-xs-12\">\n							<div class=\"comment-author-avatar\">"
+  return "				<div class=\"post-it__comments\">\n					<div class=\"row\">\n						<div class=\"col-xs-12\">\n							<div class=\"comment-author-avatar\">"
     + ((stack1 = this.invokePartial(partials.PartialAvatar,depth0,{"name":"PartialAvatar","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</div>\n							<div class=\"comment--meta\"><span class=\"comment-author\">"
     + alias3(((helper = (helper = helpers.author || (depth0 != null ? depth0.author : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"author","hash":{},"data":data}) : helper)))
@@ -710,5 +886,5 @@ this["ui"]["component"]["template"]["userpostit"] = Handlebars.template({"1":fun
     + "					</div>\n				</div>\n			</div>\n		</div>\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"if","hash":{},"fn":this.program(16, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.commentInputField : depth0),{"name":"if","hash":{},"fn":this.program(19, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "	</div>\n</div>";
+    + "		</div>\n	</div>\n</div>";
 },"usePartial":true,"useData":true});

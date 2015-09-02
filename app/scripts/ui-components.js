@@ -312,6 +312,42 @@ ui.component.dropdown = (function($, T) {
 }(jQuery, ui.component.template));
 ;var ui = ui || {};
 
+ui.component.eventpostit = (function($, T) {
+
+    /**
+     * eventpostit
+     * @type {Object}
+     */
+    var eventpostit = {
+        'class': null,
+        'id': null,
+        'content': null,
+        'eventpostitContent': null
+};
+
+     
+    // *
+    //  * render
+    //  *
+    //  * @todo make this method extended or mixin
+    //  * @param {} eventpostit object with all properties
+    //  * @return compiled handlebars template
+     
+    function render(context) {
+ 
+        data = $.extend({}, eventpostit, context);
+
+        return T.eventpostit(data);
+    }
+
+    return {
+        render: render
+    };
+
+
+}
+(jQuery, ui.component.template));;var ui = ui || {};
+
 ui.component.header = (function($, T) {
 
     /**
@@ -466,7 +502,7 @@ ui.component.partials = (function($, T) {
         function render(context) {
 
             Handlebars.registerPartial({
-                'PartialAvatar': '{{#if avatar}}{{#avatar}}<div class="avatar {{#if small}} avatar--small{{/if}} {{#if round}} round{{/if}}"><img {{#if src}}src="{{src}}" {{else}}src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu"{{/if}} alt="avatar"></div>{{/avatar}}{{else}}<div class="avatar {{#if small}}avatar--small{{/if}}"><img src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu" alt="avatar"/></div>{{/if}}',
+                'PartialAvatar': '{{#if avatar}}{{#avatar}}<div class="avatar {{#if small}}avatar--small{{/if}} {{#if round}} round{{/if}}"><img {{#if src}}src="{{src}}" {{else}}src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu"{{/if}} alt="avatar"></div>{{/avatar}}{{else}}<div class="avatar {{#if small}}avatar--small{{/if}}"><img src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu" alt="avatar"/></div>{{/if}}',
                 'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="{{class}} {{#if icon}}icon-only{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}">{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>',
                 'PartialDropdown': '<li class="dropdown" id="dropdown">{{#if icon}}<i class="{{icon}}"></i>{{/if}}{{{dropdownItem}}}<ul class="nav drop-nav">{{#each dropdownOptions}}<li><a id="{{id}}" class="{{class}}" href="{{href}}">{{option}}</a></li>{{/each}}</ul><script>{{script}}</script></li>',
                 'PartialTextInput': ui.component.textInput.render({
@@ -510,6 +546,42 @@ ui.component.partials = (function($, T) {
 // 'round': true,
 // 'small': true
 ;var ui = ui || {};
+
+ui.component.postitactionbar = (function($, T) {
+
+    /**
+     * postitactionbar
+     * @type {Object}
+     */
+    var postitactionbar = {
+        'class': null,
+        'id': null,
+        'content': null,
+        'postitactionbarContent': null
+};
+
+     
+    // *
+    //  * render
+    //  *
+    //  * @todo make this method extended or mixin
+    //  * @param {} postitactionbar object with all properties
+    //  * @return compiled handlebars template
+     
+    function render(context) {
+ 
+        data = $.extend({}, postitactionbar, context);
+
+        return T.postitactionbar(data);
+    }
+
+    return {
+        render: render
+    };
+
+
+}
+(jQuery, ui.component.template));;var ui = ui || {};
 
 ui.component.textArea = (function($, T) {
 

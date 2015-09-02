@@ -1,0 +1,46 @@
+<div class="post-it__action-bar">
+<div class="row">
+	<div class="col-xs-12">
+		<div class="post-it__actions">
+			{{#each postitActions}}
+				{{>PartialButton}}
+			{{/each}}
+			{{#if postitLikes}}
+			{{#postitLikes}}
+				<a class="naked-button--strict pull-right">{{number}} people like this</a>	
+			{{/postitLikes}}
+			{{/if}}
+		</div>
+	</div>
+	<div class="col-xs-12">
+		<div class="post-it__comments">
+	{{#if comments}}
+			<div class="app-block--no-bg">
+					<div class="row">
+						<div class="col-xs-12">
+						{{#each comments}}
+							<div class="comment-author-avatar">{{>PartialAvatar}}</div>
+							<div class="comment--meta"><span class="comment-author">{{author}} </span> <span class="comment-timestamp"> {{timestamp}}</span></div>
+							<div class="comment-content"><p>{{{content}}}</p></div>
+						{{/each}}
+						</div>
+					</div>
+			{{!-- </div> --}}
+			{{/if}}
+			{{#if commentInputField}}
+			<div class="app-block--no-bg post-it__input-field">
+				{{#commentInputField}}
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="comment-author-avatar">{{>PartialAvatar}}</div>
+							<div class="comment__text-input">{{>PartialTextInput}}</div>
+							<div class="comment__text-input-button">{{>PartialButton class="solid-button--happy pull-right"}}</div>
+						</div>
+					</div>
+				{{/commentInputField}}
+			</div>
+	{{/if}}
+		</div>
+	</div>
+</div>
+</div>

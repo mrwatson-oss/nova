@@ -76,16 +76,18 @@
 @import '../components/composer/composer';
 @import '../components/dialog/dialog';
 @import '../components/dropdown/dropdown';
+@import '../components/eventpostit/eventpostit';
 @import '../components/header/header';
 @import '../components/icon/icon';
 @import '../components/image/image';
 @import '../components/nav/nav';
 @import '../components/partials/partials';
+@import '../components/postitactionbar/postitactionbar';
 @import '../components/text-area/textArea';
 @import '../components/text-input/textInput';
 @import '../components/userpostit/userpostit';
 // @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,200italic,300italic);
-@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500|Source+Sans+Pro:400,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500|Source+Sans+Pro:600,400,300);
 body {
     background: $body-background-color;
     // background: url("https://s-media-cache-ak0.pinimg.com/originals/ec/4b/fc/ec4bfc74107f40054417c5fa9f5b0163.jpg");

@@ -1,4 +1,5 @@
 .user-post-it {
+    padding: 15px;
     padding-bottom: 0;
     // background: $white;
     .user-post-it--meta {
@@ -18,6 +19,7 @@
         .postit-timestamp {
             float: left;
             width: 51%;
+            color: $grey;
         }
     }
     .user-post-it__content {
