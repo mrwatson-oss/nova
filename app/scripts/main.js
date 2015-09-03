@@ -257,3 +257,40 @@ $(document).ready(function() {
 
 });
  });
+$.ajax({
+   url: 'http://mrsanwot.moulijn.mrsanwot.nl/api/postits',
+   type: 'GET',
+   crossDomain: true, // enable this
+   dataType: 'jsonp',
+   success: function() { alert("Success"); },
+   error: function() { alert('Failed!'); }
+});
+$.get('http://mrsanwot.moulijn.mrsanwot.nl/api/postits', function(data) {
+    'use strict';
+    if (!data || data === "") {
+        console.log('geen data sorry joh');
+        return;
+    }
+    var json;
+    try {
+        json = jQuery.parseJSON(data);
+    } catch (e) {
+        console.log('die andere error');
+        return;
+    }
+
+    // var testPostit = (Math.floor(Math.random() * json.length - 1));
+
+
+    console.log(json);
+    console.log(json[randomUser].user.profile_picture);
+
+
+    // $('#naam').html(json[randomUser].user.first_name);
+    // $('#foto').attr("src", json[randomUser].user.profile_picture);
+    // .html(json[randomUser].user.profile_picture);
+
+
+
+}, "text");
+ 

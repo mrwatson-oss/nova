@@ -673,9 +673,16 @@ this["ui"]["component"]["template"]["postitactionbar"] = Handlebars.template({"1
     var stack1;
 
   return "			<div class=\"row\">\n				<div class=\"col-xs-12\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"each","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.hiddenComments : depth0),{"name":"if","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"each","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "				</div>\n			</div>\n";
 },"7":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "					<div class=\"show-all-comments\">\n						<p><a href=\""
+    + this.escapeExpression(((helper = (helper = helpers.href || (depth0 != null ? depth0.href : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"href","hash":{},"data":data}) : helper)))
+    + "\">Show all comments</a></p>\n					</div>\n";
+},"9":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "					<div class=\"comment-author-avatar\">"
@@ -685,16 +692,18 @@ this["ui"]["component"]["template"]["postitactionbar"] = Handlebars.template({"1
     + " </span> <span class=\"comment-timestamp\"> "
     + alias3(((helper = (helper = helpers.timestamp || (depth0 != null ? depth0.timestamp : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"timestamp","hash":{},"data":data}) : helper)))
     + "</span></div>\n					<div class=\"comment-content\"><p>"
+    + alias3(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"index","hash":{},"data":data}) : helper)))
+    + " "
     + ((stack1 = ((helper = (helper = helpers.content || (depth0 != null ? depth0.content : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"content","hash":{},"data":data}) : helper))) != null ? stack1 : "")
     + "</p></div>\n";
-},"9":function(depth0,helpers,partials,data) {
+},"11":function(depth0,helpers,partials,data) {
     var stack1, helper, options, buffer = 
   "				<div class=\"post-it__input-field\">\n";
-  stack1 = ((helper = (helper = helpers.commentInputField || (depth0 != null ? depth0.commentInputField : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"commentInputField","hash":{},"fn":this.program(10, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
+  stack1 = ((helper = (helper = helpers.commentInputField || (depth0 != null ? depth0.commentInputField : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"commentInputField","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
   if (!helpers.commentInputField) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
   return buffer + "				</div>\n";
-},"10":function(depth0,helpers,partials,data) {
+},"12":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "						<div class=\"row\">\n							<div class=\"col-xs-12\">\n								<div class=\"comment-author-avatar\">"
@@ -713,7 +722,7 @@ this["ui"]["component"]["template"]["postitactionbar"] = Handlebars.template({"1
     + "		</div>\n	</div>\n	<div class=\"col-xs-12\">\n		<div class=\"app-block--no-bg\">\n			<div class=\"post-it__comments\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"if","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "			</div>\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.commentInputField : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.commentInputField : depth0),{"name":"if","hash":{},"fn":this.program(11, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "		</div>\n	</div>\n</div>\n</div>";
 },"usePartial":true,"useData":true});
 

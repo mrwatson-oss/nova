@@ -18,10 +18,15 @@
 			{{#if comments}}
 			<div class="row">
 				<div class="col-xs-12">
-				{{#each comments}}
+				{{#if hiddenComments}}
+					<div class="show-all-comments">
+						<p><a href="{{href}}">Show all comments</a></p>
+					</div>
+				{{/if}}
+				{{#each comments}}				
 					<div class="comment-author-avatar">{{>PartialAvatar}}</div>
 					<div class="comment--meta"><span class="comment-author">{{author}} </span> <span class="comment-timestamp"> {{timestamp}}</span></div>
-					<div class="comment-content"><p>{{{content}}}</p></div>
+					<div class="comment-content"><p>{{@index}} {{{content}}}</p></div>
 				{{/each}}
 				</div>
 			</div>
