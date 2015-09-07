@@ -18,6 +18,10 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/handlebars/handlebars.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="bower_components/sifter/sifter.js"></script>
+    <script src="bower_components/microplugin/src/microplugin.js"></script>
+    <script src="bower_components/selectize/dist/js/selectize.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
@@ -26,6 +30,7 @@
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
     <link rel="stylesheet" href="vendor/prism.css">
+    <link rel="stylesheet" href="vendor/selectize.css">
     <script src="vendor/prism.js"></script>
     <script src="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js"></script>
 </head>
@@ -118,6 +123,27 @@
                     <div class="col-xs-12">
                         <div class="app-block">
                             <h2>Color Palette</h2>
+<div class="control-group">
+                    <label for="select-beast">Beast:</label>
+                    <select id="select-beast" class="demo-default" placeholder="Select a person...">
+                        <option value="">Select a person...</option>
+                        <option value="4">Thomas Edison</option>
+                        <option value="1">Nikola</option>
+                        <option value="3">Nikola Tesla</option>
+                        <option value="5">Arnold Schwarzenegger</option>
+                    </select>
+                </div>
+                <script>
+                $('#select-beast').selectize({
+                    create: true,
+                    sortField: {
+                        field: 'text',
+                        direction: 'asc'
+                    },
+                    dropdownParent: 'body'
+                });
+                </script>
+                
                             <p>These are the colors used in the mr.Watson UI
                                 <br>
                                 <br> Do not use these colors directly. Instead use the UI color variables.

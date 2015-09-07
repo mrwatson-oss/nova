@@ -3,7 +3,15 @@ ui.component.partials = (function($, T) {
         var partials = {};
 
         function render(context) {
-
+            Handlebars.registerHelper('freshComments', function(comments) {
+                var userComments = JSON.parse(comments);
+                if (userComments.length>2) {return userComments[0];} else{return userComments;};
+                
+            });
+            Handlebars.registerHelper('oldComments', function(comments) {
+                var userComments = JSON.parse(comments);
+                 if (userComments.length>2) {return userComments[2];} else{return;};
+            });
             Handlebars.registerPartial({
                 'PartialAvatar': '{{#if avatar}}{{#avatar}}<div class="avatar {{#if small}}avatar--small{{/if}} {{#if round}} round{{/if}}"><img {{#if src}}src="{{src}}" {{else}}src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu"{{/if}} alt="avatar"></div>{{/avatar}}{{else}}<div class="avatar {{#if small}}avatar--small{{/if}}"><img src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu" alt="avatar"/></div>{{/if}}',
                 'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="{{class}} {{#if icon}}icon-only{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}">{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>',

@@ -7,7 +7,32 @@
     img {
         max-width: 100%;
     }
+    .image-overlay {
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        background: $white;
+        padding: 1em;
+    }
+}
 
+.modal-view {
+    display: none;
+}
+
+.bg-overlay {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $grey--light;
+    opacity: .5;
 }
 
 .image--cover {
@@ -20,22 +45,21 @@
     max-height: 200px;
     overflow: hidden;
     &:hover {
-     max-height: 800px;
-     overflow: hidden;
-     padding-bottom: 5px;
+        max-height: 800px;
+        overflow: hidden;
+        padding-bottom: 5px;
     }
-&:after {
-    background: linear-gradient(-45deg, white 5px, transparent 0), linear-gradient(45deg, white 5px, transparent 0);
-    background-position: left-bottom;
-    background-repeat: repeat-x;
-    background-size: 10px 10px;
-    content: " ";
-    display: block;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 10px;
-}
-
+    &:after {
+        background: linear-gradient(-45deg, white 5px, transparent 0), linear-gradient(45deg, white 5px, transparent 0);
+        background-position: left-bottom;
+        background-repeat: repeat-x;
+        background-size: 10px 10px;
+        content: " ";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 10px;
+    }
 }

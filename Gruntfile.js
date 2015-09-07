@@ -45,7 +45,6 @@ module.exports = function(grunt) {
                 handlebars: {
                     files: ['<%= config.app %>/components/{,*/}*.hbs'],
                     tasks: ['handlebars']
-
                 },
                 jstest: {
                     files: ['test/spec/{,*/}*.js'],
@@ -61,6 +60,10 @@ module.exports = function(grunt) {
                 styles: {
                     files: ['<%= config.app %>/styles/{,*/}*.css'],
                     tasks: ['newer:copy:styles', 'postcss']
+                },
+                vendorstyles: {
+                    files: ['<%= config.app %>/vendor/{,*/}*.css'],
+                    tasks: ['postcss']
                 }
             },
 
@@ -74,6 +77,7 @@ module.exports = function(grunt) {
                         files: [
                             '<%= config.app %>/{,*/}*.html',
                             '.tmp/styles/{,*/}*.css',
+                            '<%= config.app %>/vendor/{,*/}*',
                             '<%= config.app %>/images/{,*/}*',
                             '<%= config.app %>/scripts/{,*/}*.js'
                         ],

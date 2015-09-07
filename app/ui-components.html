@@ -26,9 +26,11 @@
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
     <link rel="stylesheet" href="vendor/prism.css">
+    <link rel="stylesheet" href="vendor/selectize.css">
     <script src="vendor/prism.js"></script>
     <link href="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css" rel="stylesheet">
     <script src="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
 </head>
 
 <body>
@@ -679,9 +681,8 @@ $(ui.component.avatar.render({
                             <script>
                             $('#bodyimage').replaceWith(
                                 $(ui.component.image.render({
-
+                                    'modal': true,
                                     'src': 'https://pbs.twimg.com/profile_images/2112311889/ostrich_head.jpg'
-
                                 }))
                             );
                             </script>
@@ -712,7 +713,8 @@ $(ui.component.avatar.render({
                         $('#coverimage').replaceWith(
                             $(ui.component.image.render({
                                 'src': 'http://www.apnatimepass.com/dumb-and-dumber-to-movie/dumb-and-dumber-to-movie-still-10.jpg',
-                                'cover': true
+                                'cover': true,
+                                'modal': true
 
                             }))
                         );
@@ -792,20 +794,47 @@ $(ui.component.avatar.render({
   }))
 </code></pre>
                     </div>
+                    
+                   
                     <div class="col-xs-12">
                         <!-- <div class="app-block"> -->
                         <h3>Text Input</h3>
                         <!-- </div> -->
+
+                       <!--  <div id="main">
+                            <p>Errors use spans placed within existing label element</p>
+                            <form method="get" class="cmxform" id="form1" action="">
+                                <fieldset>
+                                    <legend>Login Form</legend>
+                                    <p>
+                                        <label for="user">Username</label>
+                                        <input id="user" name="user" required minlength="3">
+                                    </p>
+                                    <p>
+                                        <label for="password">Password</label>
+                                        <input id="password" type="password" maxlength="12" name="password" required minlength="5">
+                                    </p>
+                                    <p>
+                                        <input class="submit" type="submit" value="Login">
+                                    </p>
+                                </fieldset>
+                            </form>
+                            
+                        </div> -->
                     </div>
                     <div class="col-md-6">
                         <div id="text-input"></div>
                         <script>
                         $('#text-input').replaceWith(
                             $(ui.component.textInput.render({
+                                'id': 'form1',
+                                'inputId': 'password',
                                 'hasLabel': true,
                                 'label': 'Password',
                                 'type': 'password',
-                                'icon': 'icon-user-key'
+                                'icon': 'icon-user-key',
+                                'maxlength': '6',
+                                'minlength': '5'
                             }))
                         );
                         </script>
@@ -825,8 +854,11 @@ $(ui.component.avatar.render({
                         <script>
                         $('#text-input2').replaceWith(
                             $(ui.component.textInput.render({
+                                'id': "great",
                                 'hasLabel': true,
-                                'label': 'First name'
+                                'label': 'First name',
+                                'inputId': 'name',
+                                'minlength': '3'
                             }))
                         );
                         </script>
@@ -1590,7 +1622,7 @@ userpostitMeta: {
                             'eventpostitLikes': {
                                 'number': '2'
                             },
-                            
+
                             'commentInputField': {
                                 'avatar': {
                                     'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',

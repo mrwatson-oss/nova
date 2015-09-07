@@ -63,17 +63,18 @@
         }
     }
 }
-    .user-post-it-input {
-        @extend .user-post-it;
-        margin-top: -1.25em;
-        padding-top: 0;
-        padding-bottom: .4em;
-        .comment__text-input {
-            float: left;
-            width: 60%;
-            margin-top: .2em;
-        }
-        .comment__text-input-button {
-            margin-top: .2em;
-        }
+
+.user-post-it-input {
+    @extend .user-post-it;
+    margin-top: -1.25em;
+    padding-top: 0;
+    padding-bottom: .4em;
+    .comment__text-input {
+        float: left;
+        width: 60%;
+        margin-top: .2em;
     }
+    .comment__text-input-button {
+        margin-top: .2em;
+    }
+}

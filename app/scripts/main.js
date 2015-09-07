@@ -1,7 +1,16 @@
 // jshint devel:true
 // Scroll to anchor
 $(document).ready(function() {
-'use strict'; 
+'use strict';
+// var root = 'http://mrsanwot.moulijn.mrsanwot.nl/api/postits';
+
+
+// $.ajax({
+//   url: root,
+//   method: 'GET'
+// }).then(function(data) {
+//   console.log(data);
+// });
 $('a[href*=#]:not([href=#])').click(function() {
     // 'use strict';
     if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') || location.hostname === this.hostname) {
@@ -257,40 +266,9 @@ $(document).ready(function() {
 
 });
  });
-$.ajax({
-   url: 'http://mrsanwot.moulijn.mrsanwot.nl/api/postits',
-   type: 'GET',
-   crossDomain: true, // enable this
-   dataType: 'jsonp',
-   success: function() { alert("Success"); },
-   error: function() { alert('Failed!'); }
-});
-$.get('http://mrsanwot.moulijn.mrsanwot.nl/api/postits', function(data) {
-    'use strict';
-    if (!data || data === "") {
-        console.log('geen data sorry joh');
-        return;
-    }
-    var json;
-    try {
-        json = jQuery.parseJSON(data);
-    } catch (e) {
-        console.log('die andere error');
-        return;
-    }
+// $(document).ready(function() {
+// // 'use strict';
+// var obj = [{"id":"2480","postitID":"2711","dateAdded":"1440667593","dateModified":"1440667593","body":"A single postit!","userId":"1836","user":{"firstName":"Tijs","lastName":"Bakker","gender":"1","description":"Hello, how are you?","emailAddress":"tijs@mrwatson.com","pictureFull":"https:\/\/www.filepicker.io\/api\/file\/7jFjPuXTLWzX9xbr1JBO"}},{"id":"2481","postitID":"2711","dateAdded":"1441274857","dateModified":"1441274857","body":"HAloo\r\n","userId":"1836","user":{"firstName":"Tijs","lastName":"Bakker","gender":"1","description":"Hello, how are you?","emailAddress":"tijs@mrwatson.com","pictureFull":"https:\/\/www.filepicker.io\/api\/file\/7jFjPuXTLWzX9xbr1JBO"}},{"id":"2482","postitID":"2711","dateAdded":"1441274863","dateModified":"1441274863","body":"Yo, yo","userId":"1836","user":{"firstName":"Tijs","lastName":"Bakker","gender":"1","description":"Hello, how are you?","emailAddress":"tijs@mrwatson.com","pictureFull":"https:\/\/www.filepicker.io\/api\/file\/7jFjPuXTLWzX9xbr1JBO"}},{"id":"2483","postitID":"2711","dateAdded":"1441275149","dateModified":"1441275149","body":"Hi","userId":"1836","user":{"firstName":"Tijs","lastName":"Bakker","gender":"1","description":"Hello, how are you?","emailAddress":"tijs@mrwatson.com","pictureFull":"https:\/\/www.filepicker.io\/api\/file\/7jFjPuXTLWzX9xbr1JBO"}}];
+// console.log(obj)
+// });
 
-    // var testPostit = (Math.floor(Math.random() * json.length - 1));
-
-
-    console.log(json);
-    console.log(json[randomUser].user.profile_picture);
-
-
-    // $('#naam').html(json[randomUser].user.first_name);
-    // $('#foto').attr("src", json[randomUser].user.profile_picture);
-    // .html(json[randomUser].user.profile_picture);
-
-
-
-}, "text");
- 

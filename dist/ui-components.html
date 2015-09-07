@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>mr.Watson - Style Guide</title> <meta name=description content=""> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel="shortcut icon" href=icon.ico> <link rel=apple-touch-icon href=apple-touch-icon.png> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> <script src=scripts/vendor.js></script> <script src=scripts/main.js></script> <link rel=stylesheet href=vendor/prism.css> <script src=vendor/prism.js></script> <link href=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css rel=stylesheet> <script src=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js></script>  <body> <div id=partials></div> <script>$('#partials').replaceWith(
+<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>mr.Watson - Style Guide</title> <meta name=description content=""> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel="shortcut icon" href=icon.ico> <link rel=apple-touch-icon href=apple-touch-icon.png> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> <script src=scripts/vendor.js></script> <script src=scripts/main.js></script> <link rel=stylesheet href=vendor/prism.css> <link rel=stylesheet href=vendor/selectize.css> <script src=vendor/prism.js></script> <link href=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css rel=stylesheet> <script src=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js></script> <script src=bower_components/jquery-validation/dist/jquery.validate.js></script>  <body> <div id=partials></div> <script>$('#partials').replaceWith(
         $(ui.component.partials.render({}))
     );</script> <div class=container-fluid> <!-- header --> <div class=row> <div class=col-xs-12> <div id=header></div> <script>var header = ui.component.header;
                 $('#header').replaceWith(
@@ -394,9 +394,8 @@ $(ui.component.avatar.render({
 }))
 </code></pre> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Body Image</h3> <!-- </div> --> </div> <div class=col-md-6> <div class=app-block> <div id=bodyimage></div> <script>$('#bodyimage').replaceWith(
                                 $(ui.component.image.render({
-
+                                    'modal': true,
                                     'src': 'https://pbs.twimg.com/profile_images/2112311889/ostrich_head.jpg'
-
                                 }))
                             );</script> </div> </div> <div class=col-md-6> <pre><code class=language-javascript>
   $(ui.component.image.render({
@@ -405,7 +404,8 @@ $(ui.component.avatar.render({
 </code></pre> <div class=app-block> <p>Body images are used inside content area's. <br> They take up the entire width of the column they are in. <br> <br> To do: create lightbox for larger images.</p> </div> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Cover Image</h3> <!-- </div> --> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <div id=coverimage></div> <script>$('#coverimage').replaceWith(
                             $(ui.component.image.render({
                                 'src': 'http://www.apnatimepass.com/dumb-and-dumber-to-movie/dumb-and-dumber-to-movie-still-10.jpg',
-                                'cover': true
+                                'cover': true,
+                                'modal': true
 
                             }))
                         );</script> </div> <div class=col-xs-6> <pre><code class=language-javascript>
@@ -423,12 +423,35 @@ $(ui.component.avatar.render({
   $(ui.component.textArea.render({
     placeholder: 'Tell people what you\'re all about'
   }))
-</code></pre> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Text Input</h3> <!-- </div> --> </div> <div class=col-md-6> <div id=text-input></div> <script>$('#text-input').replaceWith(
+</code></pre> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Text Input</h3> <!-- </div> --> <!--  <div id="main">
+                            <p>Errors use spans placed within existing label element</p>
+                            <form method="get" class="cmxform" id="form1" action="">
+                                <fieldset>
+                                    <legend>Login Form</legend>
+                                    <p>
+                                        <label for="user">Username</label>
+                                        <input id="user" name="user" required minlength="3">
+                                    </p>
+                                    <p>
+                                        <label for="password">Password</label>
+                                        <input id="password" type="password" maxlength="12" name="password" required minlength="5">
+                                    </p>
+                                    <p>
+                                        <input class="submit" type="submit" value="Login">
+                                    </p>
+                                </fieldset>
+                            </form>
+                            
+                        </div> --> </div> <div class=col-md-6> <div id=text-input></div> <script>$('#text-input').replaceWith(
                             $(ui.component.textInput.render({
+                                'id': 'form1',
+                                'inputId': 'password',
                                 'hasLabel': true,
                                 'label': 'Password',
                                 'type': 'password',
-                                'icon': 'icon-user-key'
+                                'icon': 'icon-user-key',
+                                'maxlength': '6',
+                                'minlength': '5'
                             }))
                         );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
   $(ui.component.textInput.render({
@@ -439,8 +462,11 @@ $(ui.component.avatar.render({
   }))
 </code></pre> </div> <div class=col-md-6> <div id=text-input2></div> <script>$('#text-input2').replaceWith(
                             $(ui.component.textInput.render({
+                                'id': "great",
                                 'hasLabel': true,
-                                'label': 'First name'
+                                'label': 'First name',
+                                'inputId': 'name',
+                                'minlength': '3'
                             }))
                         );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
   $(ui.component.textInput.render({
@@ -994,7 +1020,7 @@ userpostitMeta: {
                             'eventpostitLikes': {
                                 'number': '2'
                             },
-                            
+
                             'commentInputField': {
                                 'avatar': {
                                     'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',

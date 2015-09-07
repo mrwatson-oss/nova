@@ -31,7 +31,7 @@
     }
     &.text-input__grey {
         input[type=text] {
-          background: $grey--light;
+            background: $grey--light;
         }
     }
 }
@@ -46,14 +46,15 @@
         padding: 1em;
         margin: 0;
         width: 100%;
-        // border-bottom:1px solid $grey--light;
-    }
-    .inputMaterial:focus {
-        outline: none;
+        background: $grey--light;
+        border-bottom: 1px solid $grey--dark;
+        &inputMaterial:focus {
+            outline: none;
+        }
     }
     label {
         color: $grey;
-        font-weight: normal;
+        font-weight: $font-weight--bold;
         position: absolute;
         pointer-events: none;
         margin-left: .5em;
@@ -63,7 +64,7 @@
         -moz-transition: 0.2s ease all;
         -webkit-transition: 0.2s ease all;
     }
-     .icon {
+    .icon {
         font-size: 1.6em;
         // line-height: 1.6em;
         vertical-align: bottom;
@@ -90,7 +91,12 @@
     .inputMaterial:valid ~ label {
         bottom: 3.4em;
         // font-size: .8em;
-        color: $text-color;
+        color: $button-color--strict;
+    }
+    .inputMaterial:invalid ~ label {
+        // bottom: 3.4em;
+        // // font-size: .8em;
+        // color: $sec-red;
     }
     .bar {
         position: relative;
@@ -102,9 +108,9 @@
         content: '';
         height: 2px;
         width: 0;
-        bottom: 0;
+        bottom: -1px;
         position: absolute;
-        background: $text-color--accent;
+        background: $button-color--strict;
         transition: 0.2s ease all;
         -moz-transition: 0.2s ease all;
         -webkit-transition: 0.2s ease all;
@@ -119,5 +125,15 @@
     .inputMaterial:focus ~ .bar:before,
     .inputMaterial:focus ~ .bar:after {
         width: 50%;
+    }
+    
+}
+.neu {
+    div.error {
+        position: absolute;
+        color: $sec-red;
+        right: 1em;
+        top: -1em;
+
     }
 }
