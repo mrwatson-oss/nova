@@ -4,8 +4,8 @@
 .btn {
     display: inline-block;
     // margin: .2em 0 .2em 1em;
-    line-height: 1em;
-    font-size: .8em;
+    line-height: $font-size--regular;
+    font-size: $font-size--small;
     text-decoration: none;
     cursor: pointer;
     font-family: $button-font;
@@ -93,7 +93,8 @@
 //     @include solid-button($button-color--neutral,$button-color--neutral--accent);
 // }
 .icon-only {
-    padding: .73em;
+    padding: .66em;
+
     
 
     // margin: 0 !important;

@@ -38,7 +38,7 @@ this["ui"]["component"]["template"]["alert"] = Handlebars.template({"1":function
     var stack1;
 
   return " <span class=\"alert-button\">"
-    + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","hash":{"action":"$(this).closest('div.alert').animate({left:'-=20',opacity: 0},500,function(){$(this).closest('div.alert').hide()})"},"data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</span>";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
@@ -172,7 +172,7 @@ this["ui"]["component"]["template"]["button"] = Handlebars.template({"1":functio
 
   return "<button "
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.disabled : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + " class=\""
+    + " class=\"btn "
     + alias3(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
     + "\" id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
@@ -578,6 +578,66 @@ this["ui"]["component"]["template"]["image"] = Handlebars.template({"1":function
     + alias3(((helper = (helper = helpers.alt || (depth0 != null ? depth0.alt : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"alt","hash":{},"data":data}) : helper)))
     + "\"></div>";
 },"useData":true});
+
+this["ui"]["component"]["template"]["modal"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    return "modal--angry ";
+},"3":function(depth0,helpers,partials,data) {
+    return "modal--neutral ";
+},"5":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "<span class=\"title\"><b>"
+    + this.escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</b></span>";
+},"7":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<span class=\"close pull-right\">"
+    + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","hash":{"action":"$(this).closest('div.modal').fadeOut()","icon":"icon-system-close","class":"naked-button--neutral"},"data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</span>";
+},"9":function(depth0,helpers,partials,data) {
+    var stack1, helper;
+
+  return "<span class=\"message\"> "
+    + this.escapeExpression(((helper = (helper = helpers.body || (depth0 != null ? depth0.body : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"body","hash":{},"data":data}) : helper)))
+    + " "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.link : depth0),{"name":"if","hash":{},"fn":this.program(10, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</span>";
+},"10":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function";
+
+  return " <a href=\""
+    + ((stack1 = ((helper = (helper = helpers.href || (depth0 != null ? depth0.href : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"href","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "\">"
+    + this.escapeExpression(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"link","hash":{},"data":data}) : helper)))
+    + "</a> ";
+},"12":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.button : depth0),{"name":"each","hash":{},"fn":this.program(13, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"13":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<span class=\"modal-button pull-right\">"
+    + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</span>";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1, helper;
+
+  return "<div class=\"modal "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.angry : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(3, data, 0),"data":data})) != null ? stack1 : "")
+    + "\" id=\""
+    + this.escapeExpression(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\">\n	<div class=\"row\">\n		<div class=\"col-xs-12\">\n			<div class=\"modal-title\">\n				"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n				"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.close : depth0),{"name":"if","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n			</div>\n		</div>\n		<div class=\"col-xs-12\">\n			<div class=\"modal-body\">\n				"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.body : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n			</div>\n		</div>\n		<div class=\"col-xs-12\">\n			<div class=\"modal-actions\">\n				"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.button : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n			</div>\n		</div>\n	</div>\n</div>";
+},"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["nav"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1;

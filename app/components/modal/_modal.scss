@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// Base modal
+// -----------------------------------------------------------------------------
+.modal {
+    display: inline-block;
+    position: relative;
+    width: 32em;
+    height: auto;
+    padding: 1em;
+    background: white;
+    box-shadow: 0 0 1em $grey;
+    margin: 0 1em 1em 1em;
+    .modal-title {
+        .title {
+            font-size: $font-size--x-large;
+        }
+        .close {
+            margin-top: -.5em;
+            margin-right: -.5em;
+        }
+    }
+    .modal-body {
+        padding: 1em 0;
+        min-height: 10em;
+    }
+    .modal-actions {
+        .modal-button {
+            margin-left: .5em;
+        }
+    }
+}
+
+.modal--angry {
+    // @extend .modal;
+    @include modal($button-color--angry);
+}
+.modal--neutral {
+    // @extend .modal;
+    @include modal($button-color--neutral__text);
+}
+

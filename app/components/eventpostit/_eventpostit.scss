@@ -32,11 +32,12 @@
         display: block;
         a {
             text-decoration: none;
-            font-family: $font-family--special;
-            font-weight: $font-weight--light;
-            font-size: $font-size--large;
+            // font-family: $font-family;
+            // font-weight: $font-weight--light;
+            // font-size: $font-size--large;
             color: $link-color;
-            text-decoration: none;
+            line-height: 1.4em;
+            // text-decoration: none;
             // transition: all .1s;
             &:link {
                 color: $link-color;
@@ -46,7 +47,7 @@
             }
             &:hover {
                 color: $link-color--accent;
-                // border-bottom: 1px solid $link-color--accent;
+                border-bottom: 1px solid $link-color--accent;
             }
             &:active {
                 color: $link-color;
@@ -55,11 +56,11 @@
                 outline: none;
                 background: $grey--light;
                 color: $link-color--accent;
-                // border-bottom: 1px solid $link-color--accent;
+                border-bottom: 1px solid $link-color--accent;
             }
         }
         .event-post-it__title {
-            padding: 1em 0;
+            margin: 1em 0;
             display: inline-block;
         }
         p {

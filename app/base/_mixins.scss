@@ -44,8 +44,9 @@
             color: $button-text-color;
             padding: 1em 1.4em;
             .icon {
-                font-size: 1.6em;
-                vertical-align: bottom;
+                font-size: $font-size--x-large;
+                line-height: $font-size--regular;
+                // vertical-align: bottom;
             // margin: .2em 0 -.2em 0;
                 &.green {
                     color: $green;
@@ -184,5 +185,16 @@
             }
             .icon {
                 color: $dialog-color;
+            }
+        }
+        // -----------------------------------------------------------------------------
+        // Modal mixins
+        // -----------------------------------------------------------------------------
+        @mixin modal($modal-color) {
+            .modal-title {
+                color: $modal-color;
+            }
+            .icon {
+                color: $modal-color;
             }
         }

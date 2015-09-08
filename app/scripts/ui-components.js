@@ -454,6 +454,43 @@ ui.component.image = (function($, T) {
 }
 (jQuery, ui.component.template));;var ui = ui || {};
 
+ui.component.modal = (function($, T) {
+
+    /**
+     * modal
+     * @type {Object}
+     */
+    var modal = {
+        'class': null,
+        'id': null,
+        'icon': null,
+        'title': null,
+        'modal': null,
+        'button': false
+    };
+     
+    /**
+     * render
+     *
+     * @todo make this method extended or mixin
+     * @param {} modal object with all properties
+     * @return compiled handlebars template
+     */
+    function render(context) {
+
+        data = $.extend({}, modal, context);
+
+        return T.modal(data);
+    }
+
+    return {
+        render: render
+    };
+
+
+}
+(jQuery, ui.component.template));var ui = ui || {};
+
 ui.component.nav = (function($, T) {
 
     /**
@@ -511,7 +548,7 @@ ui.component.partials = (function($, T) {
             });
             Handlebars.registerPartial({
                 'PartialAvatar': '{{#if avatar}}{{#avatar}}<div class="avatar {{#if small}}avatar--small{{/if}} {{#if round}} round{{/if}}"><img {{#if src}}src="{{src}}" {{else}}src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu"{{/if}} alt="avatar"></div>{{/avatar}}{{else}}<div class="avatar {{#if small}}avatar--small{{/if}}"><img src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu" alt="avatar"/></div>{{/if}}',
-                'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="{{class}} {{#if icon}}icon-only{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}">{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>',
+                'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="btn {{class}} {{#if icon}}icon-only{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}">{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>',
                 'PartialDropdown': '<li class="dropdown" id="dropdown">{{#if icon}}<i class="{{icon}}"></i>{{/if}}{{{dropdownItem}}}<ul class="nav drop-nav">{{#each dropdownOptions}}<li><a id="{{id}}" class="{{class}}" href="{{href}}">{{option}}</a></li>{{/each}}</ul><script>{{script}}</script></li>',
                 'PartialTextInput': ui.component.textInput.render({
                     'class': '{{class}}',

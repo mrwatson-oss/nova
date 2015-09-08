@@ -123,27 +123,26 @@
                     <div class="col-xs-12">
                         <div class="app-block">
                             <h2>Color Palette</h2>
-<div class="control-group">
-                    <label for="select-beast">Beast:</label>
-                    <select id="select-beast" class="demo-default" placeholder="Select a person...">
-                        <option value="">Select a person...</option>
-                        <option value="4">Thomas Edison</option>
-                        <option value="1">Nikola</option>
-                        <option value="3">Nikola Tesla</option>
-                        <option value="5">Arnold Schwarzenegger</option>
-                    </select>
-                </div>
-                <script>
-                $('#select-beast').selectize({
-                    create: true,
-                    sortField: {
-                        field: 'text',
-                        direction: 'asc'
-                    },
-                    dropdownParent: 'body'
-                });
-                </script>
-                
+                            <div class="control-group">
+                                <label for="select-beast">Beast:</label>
+                                <select id="select-beast" class="demo-default" placeholder="Select a person...">
+                                    <option value="">Select a person...</option>
+                                    <option value="4">Thomas Edison</option>
+                                    <option value="1">Nikola</option>
+                                    <option value="3">Nikola Tesla</option>
+                                    <option value="5">Arnold Schwarzenegger</option>
+                                </select>
+                            </div>
+                            <script>
+                            $('#select-beast').selectize({
+                                create: true,
+                                sortField: {
+                                    field: 'text',
+                                    direction: 'asc'
+                                },
+                                dropdownParent: 'body'
+                            });
+                            </script>
                             <p>These are the colors used in the mr.Watson UI
                                 <br>
                                 <br> Do not use these colors directly. Instead use the UI color variables.
@@ -791,8 +790,8 @@ $(ui.component.icon.render({
                         </div>
                         <h3>Fonts</h3>
                         <div class="app-block">
-                            <p>We use these fonts</p>
-                            <p>For regular type in <code class="language-markup">&lt;p&gt;</code> we use the <code class="language-css"> $font-family </code> Sass variable. (Currently Source Sans Pro)</p>
+                            <p>Right now the only font used is Source Sans Pro. <br><br>If a new font is to be added please do this in the <code class="language-markup">&#47;styles&#47;main.scss </code> file via the <code class="language-css">@import </code> method.</p>
+                            
                         </div>
                     </div>
                     <div class="col-sm-8">
@@ -809,18 +808,29 @@ $(ui.component.icon.render({
                     <div class="col-xs-6 col-sm-4">
                         <h3>Buttons</h3>
                         <div class="app-block">
-                            <p>For buttons we use</p>
+                            <p>For buttons we use <code class="language-css"> $button-font </code> Sass variable. (Currently Source Sans Pro, but with 1 px letter spacing)</p>
+                            <div id="font-button">
+                                <script>
+                                $('#font-button').replaceWith(
+                                $(ui.component.button.render({
+                                    'content': 'Hi there',
+                                    'class': 'solid-button--neutral',
+                                    'action': '#'
+                                })));
+                                </script>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-4">
                         <h3>Navigation</h3>
                         <div class="app-block">
-                            <p>For navigation we use</p>
+                            <p>For navigation we use the same font but set to <code class="language-css"> $font-size--small </code></p>
                         </div>
                     </div>
                     <div class="col-sm-8">
                         <h3>Paragraph</h3>
                         <div class="app-block">
+                        <p>For regular type in <code class="language-markup">&lt;p&gt;</code> we use the <code class="language-css"> $font-family </code> Sass variable. (Currently Source Sans Pro)</p>
                             <p>This is a paragraph - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, cumque quis possimus dicta illo qui, quaerat deleniti distinctio. Mollitia deleniti praesentium molestias provident facilis facere minus aut quam, ex repellendus.
                                 <a href="#">This is what a link looks like in a paragraph</a> </p>
                         </div>

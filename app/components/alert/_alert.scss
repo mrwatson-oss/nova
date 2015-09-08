@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 .alert {
     display: block;
+    position: relative;
     height: 4em;
     padding: .5em;
     margin-bottom: 1em;
@@ -13,7 +14,7 @@
         line-height: 3em;
         .icon {
             font-size: $font-size--x-large;
-            line-height: $font-size--x-large;
+            line-height: $font-size--xx-large;
             margin: .2em .4em 0 .5em;
         }
     }
@@ -29,7 +30,7 @@
     .alert-button {
         line-height: 3em;
         float: right;
-        button {}
+        margin-top: -.2em;
     }
 }
 
