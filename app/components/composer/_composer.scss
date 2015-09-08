@@ -3,8 +3,40 @@
 // -----------------------------------------------------------------------------
 .composer {
     background: white;
-    // line-height: 1.4em;
+    width: 100%;
     margin: 0;
     padding: 1em 0;
     border-top: 3px solid $border-color--accent;
+    .avatar-span {
+        float: left;
+        max-width: 15%;
+    }
+    .input-span {
+    	float: left;
+        width: 85%;
+        overflow: hidden;
+    }
+    .text-area {
+    	padding-left: .4em;
+        textarea {
+            resize: none;
+            overflow: hidden;
+        }
+    }
+    .button-span {
+    	padding-top: .2em;
+    	button {
+    		&.icon-only {
+    				// transition: all 1s;
+    		padding: .8em .8em 1.2em .8em !important;
+    		&:hover {
+    			color: $sec-blue--dark;
+    			&::after {
+    				content: "2MB max";
+    				color: $sec-blue;
+    			}
+    		}
+    	}
+    	}
+    }
 }

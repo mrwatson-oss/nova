@@ -225,7 +225,7 @@ this["ui"]["component"]["template"]["composer"] = Handlebars.template({"1":funct
     var stack1;
 
   return " "
-    + ((stack1 = this.invokePartial(partials.PartialTextInput,depth0,{"name":"PartialTextInput","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + ((stack1 = this.invokePartial(partials.PartialTextarea,depth0,{"name":"PartialTextarea","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + " ";
 },"3":function(depth0,helpers,partials,data) {
     var stack1;
@@ -241,13 +241,17 @@ this["ui"]["component"]["template"]["composer"] = Handlebars.template({"1":funct
     + " ";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, options, buffer = 
-  "\n			<div class=\"app-block composer\">\n			<div class=\"col-xs-12\">\n				 ";
+  "<div class=\"app-block composer\">\n	<div class=\"col-xs-12\">\n		<div class=\"avatar-span\">"
+    + ((stack1 = this.invokePartial(partials.PartialAvatar,depth0,{"name":"PartialAvatar","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</div>\n		<div class=\"input-span\">";
   stack1 = ((helper = (helper = helpers.input || (depth0 != null ? depth0.input : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"input","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
   if (!helpers.input) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
-  return buffer + "\n			</div>\n			<div class=\"col-xs-12\">\n			<p></p>\n				"
+  return buffer + "</div>\n	</div>\n	<div class=\"col-xs-12\">\n		<div class=\"button-span\">\n"
+    + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","hash":{"icon":"icon-naked-camera","class":"naked-button--strict"},"data":data,"indent":"\t\t\t","helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "			"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.buttons : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\n			</div>\n			</div>	\n\n	\n";
+    + "\n		</div>\n	</div>\n</div>\n<script>\n$(document).one('focus.textarea', '.autoExpand', function(){\n	var savedValue = this.value;\n	this.value = '';\n	this.baseScrollHeight = this.scrollHeight;\n	this.value = savedValue;\n	}).on('input.textarea', '.autoExpand', function(){\n		var minRows = this.getAttribute('data-min-rows')|0,\n			 rows;\n		this.rows = minRows;\n    console.log(this.scrollHeight, this.baseScrollHeight);\n		rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);\n		this.rows = minRows + rows -1;\n	});\n</script>	\n\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["dialog"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

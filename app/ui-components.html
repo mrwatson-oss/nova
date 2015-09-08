@@ -429,14 +429,14 @@ $(ui.component.button.render({
                         <script>
                         $('#composer').replaceWith(
                             $(ui.component.composer.render({
+                                'avatar': {
+                                    'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                    'small': true
+                                },
                                 'input': {
                                     'placeholder': 'Share your thoughts'
                                 },
                                 'buttons': [{
-                                    'class': 'solid-button--neutral',
-                                    'icon': 'icon-solid-camera',
-                                    'action': 'alert("pick a classy one!")'
-                                }, {
                                     'class': 'solid-button--happy pull-right',
                                     'content': 'Share post',
                                     'action': 'alert("it works")'
@@ -1156,29 +1156,32 @@ $(ui.component.dialog.render({
                             <div class="col-md-5">
                                 <div class="app-block">
                                     <p>
-                                        blabla
+                                        The modal component is an overlay field..
                                         <br>
-                                        <br> There are two types of modals:
+                                        <br> Different types of modals?
                                         <br>
                                         <ul>
-                                            <li>Strict modal (automaticly selected)</li>
-                                            <li>Angry modal
-                                                <br>(<code class="language-javascript">'angry': 'true'</code>)</li>
+                                            <li>modal 1 </li>
+                                            <li>modal 2</li>
                                         </ul>
-                                        The <i>angry modal</i> is only to be used for high impact decisions, like deleting an account.
+                                        
                                     </p>
                                 </div>
                             </div>
                             <div class="col-xs-7">
                                 <pre><code class="language-javascript">
 $(ui.component.modal.render({
-    angry: 'true',
-    title: 'Deleting this is permanent.',
-    message: 'Are you sure you want to delete your account?',
-    button: [{
-        content: 'Delete account'
+    'title': 'Invite your friend',
+    'close': true,
+    'body': 'Modal body.. Now find out the different possibilities',
+    'button': [{
+        'class': 'solid-button--happy',
+        'content': 'Send Invitation',
+        'action': 'alert("Alrighty sent")'
     }, {
-        content: 'Cancel'
+        'class': 'solid-button--neutral',
+        'content': 'Cancel',
+        'action': 'alert("Alrighty canceled")'
     }]
 }))
 </code></pre>
