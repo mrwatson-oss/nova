@@ -1,0 +1,19 @@
+<select id="get_value">
+  {{#each options}}
+    <option value="{{value}}" {{#if title}}disabled selected="selected"{{/if}}>{{value}}</option>
+  {{/each}}
+</select>
+<p id="select_value">Current value: <strong></strong></p>
+<script>
+$(function(){
+$('select').selectric();
+  // Cache the target element
+var $selectValue = $('#select_value').find('strong');
+// Get initial value
+$selectValue.text($('#get_value').val());
+// Initialize Selectric and bind to 'change' event
+$('#get_value').selectric().on('change', function() {
+  $selectValue.text($(this).val());
+});
+});
+</script>

@@ -251,7 +251,7 @@ this["ui"]["component"]["template"]["composer"] = Handlebars.template({"1":funct
     + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","hash":{"icon":"icon-naked-camera","class":"naked-button--strict"},"data":data,"indent":"\t\t\t","helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "			"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.buttons : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\n		</div>\n	</div>\n</div>\n<script>\n$(document).one('focus.textarea', '.autoExpand', function(){\n	var savedValue = this.value;\n	this.value = '';\n	this.baseScrollHeight = this.scrollHeight;\n	this.value = savedValue;\n	}).on('input.textarea', '.autoExpand', function(){\n		var minRows = this.getAttribute('data-min-rows')|0,\n			 rows;\n		this.rows = minRows;\n    console.log(this.scrollHeight, this.baseScrollHeight);\n		rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);\n		this.rows = minRows + rows -1;\n	});\n</script>	\n\n";
+    + "\n		</div>\n	</div>\n</div>\n<script>\n$(document).one('focus.textarea', '.autoExpand', function(){\n	var savedValue = this.value;\n	this.value = '';\n	this.baseScrollHeight = this.scrollHeight;\n	this.value = savedValue;\n	}).on('input.textarea', '.autoExpand', function(){\n		var minRows = this.getAttribute('data-min-rows')|0,\n			 rows;\n		this.rows = minRows;\n    // console.log(this.scrollHeight, this.baseScrollHeight);\n		rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);\n		this.rows = minRows + rows -1;\n	});\n</script>	\n\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["dialog"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -376,11 +376,11 @@ this["ui"]["component"]["template"]["eventpostit"] = Handlebars.template({"1":fu
     + alias3(((helper = (helper = helpers.href || (depth0 != null ? depth0.href : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"href","hash":{},"data":data}) : helper)))
     + "\">"
     + alias3(((helper = (helper = helpers.eventTitle || (depth0 != null ? depth0.eventTitle : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"eventTitle","hash":{},"data":data}) : helper)))
-    + "</a>\n								<p><span class=\"event-post-it--bold\">Where&#58;</span> "
-    + alias3(((helper = (helper = helpers.eventLocation || (depth0 != null ? depth0.eventLocation : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"eventLocation","hash":{},"data":data}) : helper)))
-    + "</p>\n								<p><span class=\"event-post-it--bold\">When&#58;</span> "
+    + "</a>\n								<p><span class=\"event-post-it--bold\">When&#58;</span> "
     + alias3(((helper = (helper = helpers.eventDate || (depth0 != null ? depth0.eventDate : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"eventDate","hash":{},"data":data}) : helper)))
-    + "</p>		\n";
+    + "</p>		\n								<p><span class=\"event-post-it--bold\">Where&#58;</span> "
+    + alias3(((helper = (helper = helpers.eventLocation || (depth0 != null ? depth0.eventLocation : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"eventLocation","hash":{},"data":data}) : helper)))
+    + "</p>\n";
 },"8":function(depth0,helpers,partials,data) {
     return "							<p>...</p>\n";
 },"10":function(depth0,helpers,partials,data) {
@@ -817,6 +817,26 @@ this["ui"]["component"]["template"]["postitactionbar"] = Handlebars.template({"1
     + "		</div>\n	</div>\n</div>\n</div>";
 },"usePartial":true,"useData":true});
 
+this["ui"]["component"]["template"]["select"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "    <option value=\""
+    + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
+    + "\" "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"if","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ">"
+    + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
+    + "</option>\n";
+},"2":function(depth0,helpers,partials,data) {
+    return "disabled selected=\"selected\"";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<select id=\"get_value\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.options : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</select>\n<p id=\"select_value\">Current value: <strong></strong></p>\n<script>\n$(function(){\n$('select').selectric();\n  // Cache the target element\nvar $selectValue = $('#select_value').find('strong');\n// Get initial value\n$selectValue.text($('#get_value').val());\n// Initialize Selectric and bind to 'change' event\n$('#get_value').selectric().on('change', function() {\n  $selectValue.text($(this).val());\n});\n});\n</script>";
+},"useData":true});
+
 this["ui"]["component"]["template"]["textArea"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     return "class=\"text-input__grey\"";
 },"3":function(depth0,helpers,partials,data) {
@@ -862,7 +882,7 @@ this["ui"]["component"]["template"]["textInput"] = Handlebars.template({"1":func
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.icon : depth0),{"name":"if","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + " "
     + alias3(((helper = (helper = helpers.label || (depth0 != null ? depth0.label : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"label","hash":{},"data":data}) : helper)))
-    + "</label>         \n   </div>\n";
+    + "</label>\n   </div>\n";
 },"2":function(depth0,helpers,partials,data) {
     var helper;
 

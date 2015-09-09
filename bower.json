@@ -4,6 +4,7 @@
   "dependencies": {
     "handlebars": "~3.0.3",
     "jquery": "~2.1.4",
+    "jquery-selectric": "~1.9.3",
     "jquery-validation": "~1.14.0",
     "modernizr": "~2.8.3",
     "selectize": "~0.12.1"

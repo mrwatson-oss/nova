@@ -31,6 +31,7 @@
     <link href="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css" rel="stylesheet">
     <script src="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js"></script>
     <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="bower_components/jquery-selectric/public/jquery.selectric.js"></script>
 </head>
 
 <body>
@@ -832,8 +833,7 @@ $(ui.component.avatar.render({
                                 'hasLabel': true,
                                 'label': 'Password',
                                 'type': 'password',
-                                'icon': 'icon-user-key',
-                                'maxlength': '6',
+                                'maxlength': '12',
                                 'minlength': '5'
                             }))
                         );
@@ -871,6 +871,28 @@ $(ui.component.avatar.render({
   }))
 </code></pre>
                     </div>
+                    <div class="col-xs-12">
+                        <h3>Select</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="select-test">
+                                 <script>
+                        $('#select-test').replaceWith(
+                            $(ui.component.select.render({                            
+                                'options': [{
+                                    'value': 'Select your gender',
+                                    'title': true
+                                }, {
+                                    'value': 'Male'
+                                }, {
+                                    'value': 'Female'
+                                }, {
+                                    'value': 'Other'
+                                }]
+                            })));
+                        </script>
+                    </div>
+                </div>
                     <div class="col-xs-12">
                         <!-- <div class="app-block"> -->
                         <h3>Dropdown</h3>
@@ -923,6 +945,7 @@ $(ui.component.dropdown.render({
 
 </code></pre>
                     </div>
+                    
                 </div>
                 <div class="row" id="anchor-messages">
                     <div class="col-xs-12">
