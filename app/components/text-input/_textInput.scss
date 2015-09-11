@@ -1,6 +1,11 @@
 // -----------------------------------------------------------------------------
 // Base input
 // -----------------------------------------------------------------------------
+form.mytest {
+    input {
+        // margin-top: 1em;
+    }
+}
 .text-input {
     input {
         border: none;
@@ -47,13 +52,13 @@
         margin: 0;
         width: 100%;
         background: $grey--light;
-        border-bottom: 1px solid $grey--dark;
+        border-bottom: 1px solid $grey;
         &inputMaterial:focus {
             outline: none;
         }
     }
     label {
-        color: $grey;
+        color: $grey--dark;
         font-weight: $font-weight--bold;
         position: absolute;
         pointer-events: none;
@@ -89,7 +94,7 @@
     /* active state */
     .inputMaterial:focus ~ label,
     .inputMaterial:valid ~ label {
-        bottom: 3.4em;
+        bottom: 3em;
         // font-size: .8em;
         color: $button-color--strict;
     }
@@ -133,7 +138,7 @@
         position: absolute;
         color: $sec-red;
         right: 1em;
-        top: -1em;
+        top: -1.6em;
 
     }
 }

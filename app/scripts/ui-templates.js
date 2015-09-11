@@ -456,6 +456,110 @@ this["ui"]["component"]["template"]["eventpostit"] = Handlebars.template({"1":fu
     + "	</div>\n</div>";
 },"usePartial":true,"useData":true});
 
+this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "		<div class=\"form__input\">\n			<div class=\""
+    + alias3(((helper = (helper = helpers.inputId || (depth0 != null ? depth0.inputId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"inputId","hash":{},"data":data}) : helper)))
+    + "\">\n			    <input id=\""
+    + alias3(((helper = (helper = helpers.inputId || (depth0 != null ? depth0.inputId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"inputId","hash":{},"data":data}) : helper)))
+    + "\" class=\"inputMaterial\" type=\""
+    + alias3(((helper = (helper = helpers.type || (depth0 != null ? depth0.type : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"type","hash":{},"data":data}) : helper)))
+    + "\" name=\""
+    + alias3(((helper = (helper = helpers.inputId || (depth0 != null ? depth0.inputId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"inputId","hash":{},"data":data}) : helper)))
+    + "\" required "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.minlength : depth0),{"name":"if","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + " "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.maxlength : depth0),{"name":"if","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + " >\n			    <span class=\"bar\"></span>\n			    <label for=\""
+    + alias3(((helper = (helper = helpers.inputId || (depth0 != null ? depth0.inputId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"inputId","hash":{},"data":data}) : helper)))
+    + "\">"
+    + alias3(((helper = (helper = helpers.label || (depth0 != null ? depth0.label : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"label","hash":{},"data":data}) : helper)))
+    + "</label>\n	   		</div>\n		</div>\n";
+},"2":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "\n			    minlength=\""
+    + this.escapeExpression(((helper = (helper = helpers.minlength || (depth0 != null ? depth0.minlength : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"minlength","hash":{},"data":data}) : helper)))
+    + "\" ";
+},"4":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return " maxlength=\""
+    + this.escapeExpression(((helper = (helper = helpers.maxlength || (depth0 != null ? depth0.maxlength : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"maxlength","hash":{},"data":data}) : helper)))
+    + "\" ";
+},"6":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "		<div class=\"form__select\">\n			<div class=\""
+    + alias3(((helper = (helper = helpers.selectId || (depth0 != null ? depth0.selectId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"selectId","hash":{},"data":data}) : helper)))
+    + "\">\n				<select id=\""
+    + alias3(((helper = (helper = helpers.selectId || (depth0 != null ? depth0.selectId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"selectId","hash":{},"data":data}) : helper)))
+    + "\" name=\""
+    + alias3(((helper = (helper = helpers.selectId || (depth0 != null ? depth0.selectId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"selectId","hash":{},"data":data}) : helper)))
+    + "\" required>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.options : depth0),{"name":"each","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "				</select>\n			</div>\n		</div>\n";
+},"7":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "				    <option value=\""
+    + ((stack1 = helpers.unless.call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"unless","hash":{},"fn":this.program(8, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\" name=\""
+    + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
+    + "\" "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"if","hash":{},"fn":this.program(10, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ">"
+    + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
+    + "</option>\n				    <label class=\""
+    + alias3(((helper = (helper = helpers.selectId || (depth0 != null ? depth0.selectId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"selectId","hash":{},"data":data}) : helper)))
+    + "\" for=\""
+    + alias3(((helper = (helper = helpers.selectId || (depth0 != null ? depth0.selectId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"selectId","hash":{},"data":data}) : helper)))
+    + "\">"
+    + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
+    + "</label>\n";
+},"8":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return this.escapeExpression(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)));
+},"10":function(depth0,helpers,partials,data) {
+    return "disabled selected=\"selected\"";
+},"12":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "		<div class=\"form__textarea\">\n			<div class=\""
+    + alias3(((helper = (helper = helpers.textareaId || (depth0 != null ? depth0.textareaId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"textareaId","hash":{},"data":data}) : helper)))
+    + "\">\n				<textarea name=\""
+    + alias3(((helper = (helper = helpers.textareaId || (depth0 != null ? depth0.textareaId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"textareaId","hash":{},"data":data}) : helper)))
+    + "\" class=\"inputMaterial\" id=\""
+    + alias3(((helper = (helper = helpers.textareaId || (depth0 != null ? depth0.textareaId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"textareaId","hash":{},"data":data}) : helper)))
+    + "\" cols=\""
+    + alias3(((helper = (helper = helpers.cols || (depth0 != null ? depth0.cols : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"cols","hash":{},"data":data}) : helper)))
+    + "\" rows=\""
+    + alias3(((helper = (helper = helpers.rows || (depth0 != null ? depth0.rows : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"rows","hash":{},"data":data}) : helper)))
+    + "\" required></textarea>\n				<span class=\"bar\"></span>\n			    <label for=\""
+    + alias3(((helper = (helper = helpers.textareaId || (depth0 != null ? depth0.textareaId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"textareaId","hash":{},"data":data}) : helper)))
+    + "\">"
+    + alias3(((helper = (helper = helpers.label || (depth0 != null ? depth0.label : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"label","hash":{},"data":data}) : helper)))
+    + "</label>\n			</div>\n		</div>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "<form method=\""
+    + alias3(((helper = (helper = helpers.method || (depth0 != null ? depth0.method : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"method","hash":{},"data":data}) : helper)))
+    + "\" class=\"form\" id=\""
+    + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\" action=\""
+    + alias3(((helper = (helper = helpers.action || (depth0 != null ? depth0.action : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"action","hash":{},"data":data}) : helper)))
+    + "\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.inputs : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.selects : depth0),{"name":"each","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.textareas : depth0),{"name":"each","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "	<input type=\"submit\">\n</form>\n<script>\n    // validate the form when it is submitted\n    var validator = $(\"#"
+    + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\").validate({\n    	debug: true,\n    	ignore: [],\n        errorPlacement: function(error, element) {\n            // Append error within linked label\n            $( element )\n                .closest( \"form\" )\n                    .find( \"div[class='\" + element.attr( \"id\" ) + \"']\" )\n                        .append( error );   \n        },\n        errorElement: \"span\",\n        success: \"valid\",\n  		submitHandler: function() { alert(\"Submitted!\") }\n    });\n	$('select[name=\"mySelect\"]').on('change', function() { // fires when the value changes\n	    $(this).valid(); // trigger validation on hidden select\n	});\n	$(\".cancel\").click(function() {\n	    validator.resetForm();\n    });\n</script>";
+},"useData":true});
+
 this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1, helper, options, buffer = 
   "            ";
@@ -847,7 +951,7 @@ this["ui"]["component"]["template"]["textArea"] = Handlebars.template({"1":funct
   return "<div class=\"text-area "
     + alias3(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
     + "\"><textarea "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.background : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.unless.call(depth0,(depth0 != null ? depth0.nobackground : depth0),{"name":"unless","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + " "
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.required : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + " name=\""

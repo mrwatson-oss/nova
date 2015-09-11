@@ -5,13 +5,12 @@ $sel-main-color: $grey;
 $sel-secondary-color: $grey;
 $sel-bg-color: $grey--light;
 $sel-text-color: $grey--dark;
-$sel-height: 40px;
+$sel-height: 43px;
 $sel-spacing: 1em;
 $sel-border-width: 1px;
 $sel-inner-height: $sel-height - ($sel-border-width * 2);
 .selectric-wrapper {
     position: relative;
-    cursor: pointer;
 }
 
 .selectric-responsive {
@@ -19,10 +18,11 @@ $sel-inner-height: $sel-height - ($sel-border-width * 2);
 }
 
 .selectric {
+    cursor: pointer;
     border-bottom: $sel-border-width solid $sel-main-color;
     background: $sel-bg-color;
     position: relative;
-    max-width: 25em;
+    max-width: 50%;
     .label {
         display: block;
         white-space: nowrap;
