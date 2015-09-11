@@ -59,13 +59,13 @@
             line-height: $font-size--large;
         }
         .nav-title__button {
-            margin: -.5em -.5em 0 0;
+            margin: -.9em -.5em 0 0;
             font-size: $font-size--small;
             .naked-button--neutral,
             .naked-button--strict,
             .naked-button--happy,
             .naked-button--angry {
-                margin-top: -.3em;
+                margin-top: -.1em;
                 font-size: $font-size--regular;
             }
         }
