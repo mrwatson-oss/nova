@@ -2,7 +2,7 @@
 	{{#each inputs}}
 		<div class="form__input">
 			<div class="{{inputId}}">
-			    <input id="{{inputId}}" class="inputMaterial" type="{{type}}" name="{{inputId}}" required {{#if minlength}}
+			    <input id="{{inputId}}" value="{{value}}" class="inputMaterial" type="{{type}}" name="{{inputId}}" required {{#if minlength}}
 			    minlength="{{minlength}}" {{/if}} {{#if maxlength}} maxlength="{{maxlength}}" {{/if}} >
 			    <span class="bar"></span>
 			    <label for="{{inputId}}">{{label}}</label>
