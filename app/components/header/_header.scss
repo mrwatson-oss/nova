@@ -3,6 +3,11 @@
 // -----------------------------------------------------------------------------
 .header {
     background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
     padding: 1em;
     border-bottom: 3px solid $border-color--accent;
     margin-bottom: 1em;
