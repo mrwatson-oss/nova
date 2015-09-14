@@ -45,8 +45,8 @@
                         .append( error );   
         },
         errorElement: "span",
-        success: "valid",
-  		submitHandler: function() { alert("Submitted!") }
+        success: "valid"
+  		// submitHandler: function() { alert("Submitted!") }
     });
 	$('select[name="mySelect"]').on('change', function() { // fires when the value changes
 	    $(this).valid(); // trigger validation on hidden select
