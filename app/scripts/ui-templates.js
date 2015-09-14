@@ -574,36 +574,23 @@ this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":functio
     + this.escapeExpression(((helper = (helper = helpers.src || (depth0 != null ? depth0.src : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"src","hash":{},"data":data}) : helper)))
     + "\" class=\"header-logo pull-left\"></a>";
 },"4":function(depth0,helpers,partials,data) {
-    var stack1, helper, options, buffer = 
-  " ";
-  stack1 = ((helper = (helper = helpers.input || (depth0 != null ? depth0.input : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"input","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
-  if (!helpers.input) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
-  if (stack1 != null) { buffer += stack1; }
-  return buffer + " ";
-},"5":function(depth0,helpers,partials,data) {
-    var stack1;
-
-  return " "
-    + ((stack1 = this.invokePartial(partials.PartialTextInput,depth0,{"name":"PartialTextInput","hash":{"class":"text-input__grey"},"data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
-    + " ";
-},"7":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "                    <li>"
     + ((stack1 = this.invokePartial(partials.PartialNavItem,depth0,{"name":"PartialNavItem","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</li>                    \n";
-},"9":function(depth0,helpers,partials,data) {
+},"6":function(depth0,helpers,partials,data) {
     var stack1;
 
   return ((stack1 = this.invokePartial(partials.PartialIcon,depth0,{"name":"PartialIcon","data":data,"indent":"                    ","helpers":helpers,"partials":partials})) != null ? stack1 : "");
-},"11":function(depth0,helpers,partials,data) {
+},"8":function(depth0,helpers,partials,data) {
     var stack1, helper, options, buffer = "";
 
-  stack1 = ((helper = (helper = helpers.dropdown || (depth0 != null ? depth0.dropdown : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"dropdown","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
+  stack1 = ((helper = (helper = helpers.dropdown || (depth0 != null ? depth0.dropdown : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"dropdown","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
   if (!helpers.dropdown) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
   return buffer;
-},"12":function(depth0,helpers,partials,data) {
+},"9":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "               <div class=\"pull-right\"> "
@@ -613,15 +600,13 @@ this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":functio
     var stack1, helper, options, buffer = 
   "\n<div class=\"row header\">\n    <div class=\"header-container\">\n        <div class=\"col-md-3\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.logo : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\n        <div class=\"col-md-6\"> \n            "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.input : depth0),{"name":"if","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + " \n        \n        </div> \n\n        <div class=\"col-md-3\">\n        \n            <div class=\"nav nav--horizontal pull-right\">\n";
-  stack1 = ((helper = (helper = helpers.navItems || (depth0 != null ? depth0.navItems : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"navItems","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
+    + "        </div>\n        <div class=\"col-md-6\"> \n        \n        </div> \n\n        <div class=\"col-md-3\">\n        \n            <div class=\"nav nav--horizontal pull-right\">\n";
+  stack1 = ((helper = (helper = helpers.navItems || (depth0 != null ? depth0.navItems : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"navItems","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
   if (!helpers.navItems) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
-  return buffer + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navIcons : depth0),{"name":"each","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+  return buffer + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navIcons : depth0),{"name":"each","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "            </div>\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":this.program(11, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":this.program(8, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "        </div>\n    </div>\n</div> \n\n";
 },"usePartial":true,"useData":true});
 
@@ -1038,19 +1023,19 @@ this["ui"]["component"]["template"]["textInput"] = Handlebars.template({"1":func
     + alias3(((helper = (helper = helpers.action || (depth0 != null ? depth0.action : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"action","hash":{},"data":data}) : helper)))
     + "\">\n		\n	\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.hasLabel : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(8, data, 0),"data":data})) != null ? stack1 : "")
-    + "</form>\n// <script>\n//     // validate the form when it is submitted\n//     var validator = $(\"#"
+    + "</form>\n<script>\n    // validate the form when it is submitted\n    var validator = $(\"#"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\").validate({\n//         errorPlacement: function(error, element) {\n//             // Append error within linked label\n//             $( element )\n//                 .closest( \"form\" )\n//                     .find( \"div[class='\" + element.attr( \"id\" ) + \"']\" )\n//                         .prepend( error );\n//         },\n//         errorElement: \"div\",\n//         messages: {\n//             "
+    + "\").validate({\n        errorPlacement: function(error, element) {\n            // Append error within linked label\n            $( element )\n                .closest( \"form\" )\n                    .find( \"div[class='\" + element.attr( \"id\" ) + \"']\" )\n                        .prepend( error );\n        },\n        errorElement: \"div\",\n        messages: {\n            "
     + ((stack1 = ((helper = (helper = helpers.inputId || (depth0 != null ? depth0.inputId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"inputId","hash":{},"data":data}) : helper))) != null ? stack1 : "")
-    + ": {\n//                 required: \" required\",\n//                 minlength: \" must be between "
+    + ": {\n                required: \" required\",\n                minlength: \" must be between "
     + alias3(((helper = (helper = helpers.minlength || (depth0 != null ? depth0.minlength : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"minlength","hash":{},"data":data}) : helper)))
     + " and "
     + alias3(((helper = (helper = helpers.maxlength || (depth0 != null ? depth0.maxlength : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"maxlength","hash":{},"data":data}) : helper)))
-    + " characters\",\n//                 maxlength: \" must be between "
+    + " characters\",\n                maxlength: \" must be between "
     + alias3(((helper = (helper = helpers.minlength || (depth0 != null ? depth0.minlength : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"minlength","hash":{},"data":data}) : helper)))
     + " and "
     + alias3(((helper = (helper = helpers.maxlength || (depth0 != null ? depth0.maxlength : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"maxlength","hash":{},"data":data}) : helper)))
-    + " characters\"\n//             }\n//         }\n//     });\n//     $(\".cancel\").click(function() {\n//         validator.resetForm();\n//     });\n// </script>";
+    + " characters\"\n            }\n        }\n    });\n    $(\".cancel\").click(function() {\n        validator.resetForm();\n    });\n</script>";
 },"useData":true});
 
 this["ui"]["component"]["template"]["userpostit"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
