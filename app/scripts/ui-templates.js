@@ -1038,19 +1038,19 @@ this["ui"]["component"]["template"]["textInput"] = Handlebars.template({"1":func
     + alias3(((helper = (helper = helpers.action || (depth0 != null ? depth0.action : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"action","hash":{},"data":data}) : helper)))
     + "\">\n		\n	\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.hasLabel : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(8, data, 0),"data":data})) != null ? stack1 : "")
-    + "</form>\n<script>\n    // validate the form when it is submitted\n    var validator = $(\"#"
+    + "</form>\n// <script>\n//     // validate the form when it is submitted\n//     var validator = $(\"#"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\").validate({\n        errorPlacement: function(error, element) {\n            // Append error within linked label\n            $( element )\n                .closest( \"form\" )\n                    .find( \"div[class='\" + element.attr( \"id\" ) + \"']\" )\n                        .prepend( error );\n        },\n        errorElement: \"div\",\n        messages: {\n            "
+    + "\").validate({\n//         errorPlacement: function(error, element) {\n//             // Append error within linked label\n//             $( element )\n//                 .closest( \"form\" )\n//                     .find( \"div[class='\" + element.attr( \"id\" ) + \"']\" )\n//                         .prepend( error );\n//         },\n//         errorElement: \"div\",\n//         messages: {\n//             "
     + ((stack1 = ((helper = (helper = helpers.inputId || (depth0 != null ? depth0.inputId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"inputId","hash":{},"data":data}) : helper))) != null ? stack1 : "")
-    + ": {\n                required: \" required\",\n                minlength: \" must be between "
+    + ": {\n//                 required: \" required\",\n//                 minlength: \" must be between "
     + alias3(((helper = (helper = helpers.minlength || (depth0 != null ? depth0.minlength : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"minlength","hash":{},"data":data}) : helper)))
     + " and "
     + alias3(((helper = (helper = helpers.maxlength || (depth0 != null ? depth0.maxlength : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"maxlength","hash":{},"data":data}) : helper)))
-    + " characters\",\n                maxlength: \" must be between "
+    + " characters\",\n//                 maxlength: \" must be between "
     + alias3(((helper = (helper = helpers.minlength || (depth0 != null ? depth0.minlength : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"minlength","hash":{},"data":data}) : helper)))
     + " and "
     + alias3(((helper = (helper = helpers.maxlength || (depth0 != null ? depth0.maxlength : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"maxlength","hash":{},"data":data}) : helper)))
-    + " characters\"\n            }\n        }\n    });\n    $(\".cancel\").click(function() {\n        validator.resetForm();\n    });\n</script>";
+    + " characters\"\n//             }\n//         }\n//     });\n//     $(\".cancel\").click(function() {\n//         validator.resetForm();\n//     });\n// </script>";
 },"useData":true});
 
 this["ui"]["component"]["template"]["userpostit"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
