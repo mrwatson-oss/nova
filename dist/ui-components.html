@@ -1,6 +1,6 @@
 <!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>mr.Watson - Style Guide</title> <meta name=description content=""> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel="shortcut icon" href=icon.ico> <link rel=apple-touch-icon href=apple-touch-icon.png> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> <script src=scripts/vendor.js></script> <script src=scripts/main.js></script> <link rel=stylesheet href=vendor/prism.css> <link rel=stylesheet href=vendor/selectize.css> <script src=vendor/prism.js></script> <link href=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css rel=stylesheet> <script src=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js></script> <script src=bower_components/jquery-validation/dist/jquery.validate.js></script> <script src=bower_components/jquery-selectric/public/jquery.selectric.js></script>  <body> <div id=partials></div> <script>$('#partials').replaceWith(
         $(ui.component.partials.render({}))
-    );</script> <div class=container-fluid> <!-- header --> <div class=row> <div class=col-xs-12> <div id=header></div> <script>var header = ui.component.header;
+    );</script> <div class=container-fluid> <!-- header --> <div class=row> <div class=col-xs-12> <div id=header> <script>var header = ui.component.header;
                 $('#header').replaceWith(
                     $(header.render({
                         'logo': {
@@ -20,7 +20,7 @@
                             'class': 'nav--active'
                         }]
                     }))
-                );</script> </div> </div> </div> <div class=container> <div class=row> <div class="hidden-xs hidden-sm hidden-md col-lg-3"> <!-- <div class="fixed-nav"> --> <div id=side-nav> <script>$('#side-nav').replaceWith(
+                );</script> </div> </div> </div> </div> <div class=container> <div class=row> <div class="hidden-xs hidden-sm hidden-md col-lg-3"> <!-- <div class="fixed-nav"> --> <div id=side-nav> <script>$('#side-nav').replaceWith(
                         $(ui.component.nav.render({
                             'title': true,
                             'navTitle': 'Components',
@@ -257,7 +257,7 @@ $(ui.component.composer.render({
         action: 'alert("it works")'
     }]
 }))
-</code></pre> </div> </div> <div class=row id=anchor-header> <div class=col-xs-12> <div class=app-block> <h2>Header</h2> <p> The header component is used only by the mr.Watson platform, not by apps. <br> If you're looking for an app header check out the app bar component. <br> <br> To do: Make search box work &amp; fix dropdown item </p> </div> </div> <div class=col-xs-12> <div id=header></div> <script>$('#header').replaceWith(
+</code></pre> </div> </div> <div class=row id=anchor-header> <div class=col-xs-12> <div class=app-block> <h2>Header</h2> <p> The header component is used only by the mr.Watson platform, not by apps. <br> If you're looking for an app header check out the app bar component. <br> <br> To do: Make search box work &amp; fix dropdown item </p> </div> </div> <div class=col-xs-12> <div id=headerSG> <script>$('#headerSG').replaceWith(
                             $(ui.component.header.render({
                                 'logo': {
                                     'src': '/images/logo.png'
@@ -303,7 +303,7 @@ $(ui.component.composer.render({
                                     //     }]
 
                             }))
-                        );</script> </div> <div class=col-md-8> <pre><code class=language-javascript>
+                        );</script> </div> </div> <div class=col-md-8> <pre><code class=language-javascript>
 $(ui.component.header.render({
     logo: {
         src: '/images/logo.png'

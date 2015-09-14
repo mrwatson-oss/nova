@@ -45,7 +45,7 @@
         <!-- header -->
         <div class="row">
             <div class="col-xs-12">
-                <div id="header"></div>
+                <div id="header">
                 <script>
                 var header = ui.component.header;
                 $('#header').replaceWith(
@@ -69,6 +69,7 @@
                     }))
                 );
                 </script>
+                </div>
             </div>
         </div>
     </div>
@@ -478,9 +479,9 @@ $(ui.component.composer.render({
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <div id="header"></div>
+                        <div id="headerSG">
                         <script>
-                        $('#header').replaceWith(
+                        $('#headerSG').replaceWith(
                             $(ui.component.header.render({
                                 'logo': {
                                     'src': '/images/logo.png'
@@ -528,6 +529,7 @@ $(ui.component.composer.render({
                             }))
                         );
                         </script>
+                        </div>
                     </div>
                     <div class="col-md-8">
                         <pre><code class="language-javascript">
