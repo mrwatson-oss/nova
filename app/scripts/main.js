@@ -92,7 +92,7 @@ $(document).ready(function() {
 
 
     //load the JSON-object with all users
-    $.getJSON('http://api.testing.mrwatson.com/users', function(userData) {
+    $.getJSON('http://mariusdecorte.nl/dist/users.json', function(userData) {
 
         var pastUsers = [];
         var randomUsers = [];
