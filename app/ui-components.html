@@ -46,29 +46,29 @@
         <div class="row">
             <div class="col-xs-12">
                 <div id="header">
-                <script>
-                var header = ui.component.header;
-                $('#header').replaceWith(
-                    $(header.render({
-                        'logo': {
-                            'src': '/images/logo.png'
-                        },
-                        'input': {
-                            'placeholder': 'Seach for components or whatever'
-                        },
-                        'navItems': [{
-                            'url': '/',
-                            'item': 'UI base',
-                            'class': 'divider'
-                        }, {
+                    <script>
+                    var header = ui.component.header;
+                    $('#header').replaceWith(
+                        $(header.render({
+                            'logo': {
+                                'src': '/images/logo.png'
+                            },
+                            'input': {
+                                'placeholder': 'Seach for components or whatever'
+                            },
+                            'navItems': [{
+                                'url': '/',
+                                'item': 'UI base',
+                                'class': 'divider'
+                            }, {
 
-                            'url': '#',
-                            'item': 'UI components',
-                            'class': 'nav--active'
-                        }]
-                    }))
-                );
-                </script>
+                                'url': '#',
+                                'item': 'UI components',
+                                'class': 'nav--active'
+                            }]
+                        }))
+                    );
+                    </script>
                 </div>
             </div>
         </div>
@@ -480,55 +480,55 @@ $(ui.component.composer.render({
                     </div>
                     <div class="col-xs-12">
                         <div id="headerSG">
-                        <script>
-                        $('#headerSG').replaceWith(
-                            $(ui.component.header.render({
-                                'logo': {
-                                    'src': '/images/logo.png'
-                                },
-                                'input': {
-                                    'placeholder': 'Search bar..'
-                                },
-                                'dropdown': [{
-                                        'icon': 'icon-solid-settings',
-                                        'dropdownItem': 'Settings',
-                                        'dropdownOptions': [{
-                                            'option': 'Profile',
-                                            'href': '#'
+                            <script>
+                            $('#headerSG').replaceWith(
+                                $(ui.component.header.render({
+                                    'logo': {
+                                        'src': '/images/logo.png'
+                                    },
+                                    'input': {
+                                        'placeholder': 'Search bar..'
+                                    },
+                                    'dropdown': [{
+                                            'icon': 'icon-solid-settings',
+                                            'dropdownItem': 'Settings',
+                                            'dropdownOptions': [{
+                                                'option': 'Profile',
+                                                'href': '#'
+                                            }, {
+                                                'option': 'Company',
+                                                'href': '#',
+                                                'class': 'divider'
+                                            }, {
+                                                'option': 'Log out',
+                                                'href': '#'
+                                            }]
                                         }, {
-                                            'option': 'Company',
-                                            'href': '#',
-                                            'class': 'divider'
-                                        }, {
-                                            'option': 'Log out',
-                                            'href': '#'
+                                            'icon': 'icon-solid-bell',
+                                            'dropdownItem': 'Notifs',
+                                            'dropdownOptions': [{
+                                                'option': 'You rock',
+                                                'href': '#',
+                                                'class': 'divider'
+                                            }, {
+                                                'option': 'Freddie invited you to lunch party',
+                                                'href': '#',
+                                                'class': 'divider'
+                                            }, {
+                                                'option': 'Hans commented on your post-it',
+                                                'href': '#',
+                                                'class': 'divider'
+                                            }]
                                         }]
-                                    }, {
-                                        'icon': 'icon-solid-bell',
-                                        'dropdownItem': 'Notifs',
-                                        'dropdownOptions': [{
-                                            'option': 'You rock',
-                                            'href': '#',
-                                            'class': 'divider'
-                                        }, {
-                                            'option': 'Freddie invited you to lunch party',
-                                            'href': '#',
-                                            'class': 'divider'
-                                        }, {
-                                            'option': 'Hans commented on your post-it',
-                                            'href': '#',
-                                            'class': 'divider'
-                                        }]
-                                    }]
-                                    // ,
-                                    // 'navItems': [{
-                                    //         'url': '#',
-                                    //         'item': 'Messages'
-                                    //     }]
+                                        // ,
+                                        // 'navItems': [{
+                                        //         'url': '#',
+                                        //         'item': 'Messages'
+                                        //     }]
 
-                            }))
-                        );
-                        </script>
+                                }))
+                            );
+                            </script>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -783,19 +783,23 @@ $(ui.component.avatar.render({
                                     $(ui.component.form.render({
                                         'id': 'form2',
                                         'method': 'get',
+                                        'required': true,
                                         inputs: [{
+                                            'required': true,
                                             'inputId': 'userPassword',
                                             'label': 'Password',
                                             'type': 'password',
                                             'maxlength': '12',
                                             'minlength': '5'
                                         }, {
+                                            'required': true,
                                             'inputId': 'firstName',
                                             'label': 'First name',
                                             'type': 'text',
                                             'minlength': '2'
                                         }],
                                         'selects': [{
+                                            'required': true,
                                             'selectId': 'age',
                                             'options': [{
                                                 'value': 'What\'s your age?',
@@ -810,6 +814,7 @@ $(ui.component.avatar.render({
                                         }, {
                                             'selectId': 'sex',
                                             'options': [{
+                                                'required': true,
                                                 'value': 'What\'s your gender?',
                                                 'title': true
                                             }, {
@@ -821,8 +826,19 @@ $(ui.component.avatar.render({
                                             }]
                                         }],
                                         'textareas': [{
+                                            'required': true,
                                             'textareaId': 'AboutMe',
                                             'label': 'What are you about?'
+                                        }],
+                                        'buttons': [{
+                                            'class': 'solid-button--happy',
+                                            'content': 'Doe doe'
+                                        }, {
+                                            'class': 'solid-button--neutral',
+                                            'cancel': 'true',
+                                            'name': 'cancel',
+                                            // 'type': 'reset',
+                                            'content': 'Cancel'
                                         }]
                                     }))
                                 );

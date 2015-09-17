@@ -1,26 +1,26 @@
 <!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>mr.Watson - Style Guide</title> <meta name=description content=""> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel="shortcut icon" href=icon.ico> <link rel=apple-touch-icon href=apple-touch-icon.png> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> <script src=scripts/vendor.js></script> <script src=scripts/main.js></script> <link rel=stylesheet href=vendor/prism.css> <link rel=stylesheet href=vendor/selectize.css> <script src=vendor/prism.js></script> <link href=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css rel=stylesheet> <script src=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js></script> <script src=bower_components/jquery-validation/dist/jquery.validate.js></script> <script src=bower_components/jquery-selectric/public/jquery.selectric.js></script>  <body> <div id=partials></div> <script>$('#partials').replaceWith(
         $(ui.component.partials.render({}))
     );</script> <div class=container-fluid> <!-- header --> <div class=row> <div class=col-xs-12> <div id=header> <script>var header = ui.component.header;
-                $('#header').replaceWith(
-                    $(header.render({
-                        'logo': {
-                            'src': '/images/logo.png'
-                        },
-                        'input': {
-                            'placeholder': 'Seach for components or whatever'
-                        },
-                        'navItems': [{
-                            'url': '/',
-                            'item': 'UI base',
-                            'class': 'divider'
-                        }, {
+                    $('#header').replaceWith(
+                        $(header.render({
+                            'logo': {
+                                'src': '/images/logo.png'
+                            },
+                            'input': {
+                                'placeholder': 'Seach for components or whatever'
+                            },
+                            'navItems': [{
+                                'url': '/',
+                                'item': 'UI base',
+                                'class': 'divider'
+                            }, {
 
-                            'url': '#',
-                            'item': 'UI components',
-                            'class': 'nav--active'
-                        }]
-                    }))
-                );</script> </div> </div> </div> </div> <div class=container> <div class=row> <div class="hidden-xs hidden-sm hidden-md col-lg-3"> <!-- <div class="fixed-nav"> --> <div id=side-nav> <script>$('#side-nav').replaceWith(
+                                'url': '#',
+                                'item': 'UI components',
+                                'class': 'nav--active'
+                            }]
+                        }))
+                    );</script> </div> </div> </div> </div> <div class=container> <div class=row> <div class="hidden-xs hidden-sm hidden-md col-lg-3"> <!-- <div class="fixed-nav"> --> <div id=side-nav> <script>$('#side-nav').replaceWith(
                         $(ui.component.nav.render({
                             'title': true,
                             'navTitle': 'Components',
@@ -258,52 +258,52 @@ $(ui.component.composer.render({
     }]
 }))
 </code></pre> </div> </div> <div class=row id=anchor-header> <div class=col-xs-12> <div class=app-block> <h2>Header</h2> <p> The header component is used only by the mr.Watson platform, not by apps. <br> If you're looking for an app header check out the app bar component. <br> <br> To do: Make search box work &amp; fix dropdown item </p> </div> </div> <div class=col-xs-12> <div id=headerSG> <script>$('#headerSG').replaceWith(
-                            $(ui.component.header.render({
-                                'logo': {
-                                    'src': '/images/logo.png'
-                                },
-                                'input': {
-                                    'placeholder': 'Search bar..'
-                                },
-                                'dropdown': [{
-                                        'icon': 'icon-solid-settings',
-                                        'dropdownItem': 'Settings',
-                                        'dropdownOptions': [{
-                                            'option': 'Profile',
-                                            'href': '#'
+                                $(ui.component.header.render({
+                                    'logo': {
+                                        'src': '/images/logo.png'
+                                    },
+                                    'input': {
+                                        'placeholder': 'Search bar..'
+                                    },
+                                    'dropdown': [{
+                                            'icon': 'icon-solid-settings',
+                                            'dropdownItem': 'Settings',
+                                            'dropdownOptions': [{
+                                                'option': 'Profile',
+                                                'href': '#'
+                                            }, {
+                                                'option': 'Company',
+                                                'href': '#',
+                                                'class': 'divider'
+                                            }, {
+                                                'option': 'Log out',
+                                                'href': '#'
+                                            }]
                                         }, {
-                                            'option': 'Company',
-                                            'href': '#',
-                                            'class': 'divider'
-                                        }, {
-                                            'option': 'Log out',
-                                            'href': '#'
+                                            'icon': 'icon-solid-bell',
+                                            'dropdownItem': 'Notifs',
+                                            'dropdownOptions': [{
+                                                'option': 'You rock',
+                                                'href': '#',
+                                                'class': 'divider'
+                                            }, {
+                                                'option': 'Freddie invited you to lunch party',
+                                                'href': '#',
+                                                'class': 'divider'
+                                            }, {
+                                                'option': 'Hans commented on your post-it',
+                                                'href': '#',
+                                                'class': 'divider'
+                                            }]
                                         }]
-                                    }, {
-                                        'icon': 'icon-solid-bell',
-                                        'dropdownItem': 'Notifs',
-                                        'dropdownOptions': [{
-                                            'option': 'You rock',
-                                            'href': '#',
-                                            'class': 'divider'
-                                        }, {
-                                            'option': 'Freddie invited you to lunch party',
-                                            'href': '#',
-                                            'class': 'divider'
-                                        }, {
-                                            'option': 'Hans commented on your post-it',
-                                            'href': '#',
-                                            'class': 'divider'
-                                        }]
-                                    }]
-                                    // ,
-                                    // 'navItems': [{
-                                    //         'url': '#',
-                                    //         'item': 'Messages'
-                                    //     }]
+                                        // ,
+                                        // 'navItems': [{
+                                        //         'url': '#',
+                                        //         'item': 'Messages'
+                                        //     }]
 
-                            }))
-                        );</script> </div> </div> <div class=col-md-8> <pre><code class=language-javascript>
+                                }))
+                            );</script> </div> </div> <div class=col-md-8> <pre><code class=language-javascript>
 $(ui.component.header.render({
     logo: {
         src: '/images/logo.png'
@@ -424,19 +424,23 @@ $(ui.component.avatar.render({
                                     $(ui.component.form.render({
                                         'id': 'form2',
                                         'method': 'get',
+                                        'required': true,
                                         inputs: [{
+                                            'required': true,
                                             'inputId': 'userPassword',
                                             'label': 'Password',
                                             'type': 'password',
                                             'maxlength': '12',
                                             'minlength': '5'
                                         }, {
+                                            'required': true,
                                             'inputId': 'firstName',
                                             'label': 'First name',
                                             'type': 'text',
                                             'minlength': '2'
                                         }],
                                         'selects': [{
+                                            'required': true,
                                             'selectId': 'age',
                                             'options': [{
                                                 'value': 'What\'s your age?',
@@ -451,6 +455,7 @@ $(ui.component.avatar.render({
                                         }, {
                                             'selectId': 'sex',
                                             'options': [{
+                                                'required': true,
                                                 'value': 'What\'s your gender?',
                                                 'title': true
                                             }, {
@@ -462,8 +467,19 @@ $(ui.component.avatar.render({
                                             }]
                                         }],
                                         'textareas': [{
+                                            'required': true,
                                             'textareaId': 'AboutMe',
                                             'label': 'What are you about?'
+                                        }],
+                                        'buttons': [{
+                                            'class': 'solid-button--happy',
+                                            'content': 'Doe doe'
+                                        }, {
+                                            'class': 'solid-button--neutral',
+                                            'cancel': 'true',
+                                            'name': 'cancel',
+                                            // 'type': 'reset',
+                                            'content': 'Cancel'
                                         }]
                                     }))
                                 );</script> </div> </div> </div> <div class=row id=anchor-input> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-xs-12> <h2>Input Fields</h2> <p> Input fields are used in forms and anywhere user input is needed. As the fields are part of a form they should be included between <code class=language-markup> &lt;form&gt; </code> tags. <br> <br> To do: should the form be a component as well? </p> <h3>Properties</h3> </div> <div class="col-xs-6 col-sm-3"> Mandatory: <ul> <li>id</li> <li>name</li> <li>value</li> </ul> </div> <div class="col-xs-6 col-sm-9"> Optional: <ul> <li>placeholder</li> <li>hasLabel (true/false)</li> <li>label</li> <li>icon</li> </ul> </div> </div> </div> </div> <div class=col-xs-12> <h3>Text Area</h3> </div> <div class=col-md-6> <div id=text-area></div> <script>$('#text-area').replaceWith(

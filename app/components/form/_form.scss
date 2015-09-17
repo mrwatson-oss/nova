@@ -87,15 +87,11 @@
         display: block;
         margin-top: 2em;
         margin-bottom: 2em;
-    .selectric {
-        // display: block;
-
-
+        .selectric {
+            // display: block;
+        }
+        .selectric-wrapper {}
     }
-    .selectric-wrapper {
-
-    }
-}
     .form__textarea {
         display: block;
         margin-top: 3em;
@@ -170,5 +166,8 @@
         span.error {
             margin-top: -6.7em;
         }
+    }
+    .form-button {
+        margin-left: .5em;
     }
 }
