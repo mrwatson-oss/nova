@@ -783,7 +783,6 @@ $(ui.component.avatar.render({
                                     $(ui.component.form.render({
                                         'id': 'form2',
                                         'method': 'get',
-                                        'required': true,
                                         inputs: [{
                                             'required': true,
                                             'inputId': 'userPassword',
@@ -813,8 +812,8 @@ $(ui.component.avatar.render({
                                             }]
                                         }, {
                                             'selectId': 'sex',
+                                            'required': true,
                                             'options': [{
-                                                'required': true,
                                                 'value': 'What\'s your gender?',
                                                 'title': true
                                             }, {
@@ -830,15 +829,10 @@ $(ui.component.avatar.render({
                                             'textareaId': 'AboutMe',
                                             'label': 'What are you about?'
                                         }],
+                                        'cancel': true,
                                         'buttons': [{
                                             'class': 'solid-button--happy',
                                             'content': 'Doe doe'
-                                        }, {
-                                            'class': 'solid-button--neutral',
-                                            'cancel': 'true',
-                                            'name': 'cancel',
-                                            // 'type': 'reset',
-                                            'content': 'Cancel'
                                         }]
                                     }))
                                 );

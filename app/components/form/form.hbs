@@ -30,10 +30,13 @@
 			</div>
 		</div>
 	{{/each}}
-	{{!-- <input class="submit" type="submit" value="Submit"> --}}
+	{{!-- <input class="submit" type="submit" value="Submit"> --}}		
 	{{#each buttons}}
 		<span class="form-button pull-right">{{>PartialButton}}</span>
 	{{/each}}	
+	{{#if cancel}}	
+		<span class="form-button pull-right"><a href="#" novalidate name="cancel" id="cancel" class="solid-button--neutral">Cancel</a></span>
+	{{/if}}
 </form>
 <script>
     // validate the form when it is submitted
@@ -53,11 +56,8 @@
 	$('select[name="mySelect"]').on('change', function() { // fires when the value changes
 	    $(this).valid(); // trigger validation on hidden select
 	});
-	$("#cancel").click(function() {
-	    validator.resetForm();
-    });
-    $("button").click(function() {
-    	$(this).closest('form').find("input[type=text], textarea").val("");
+    $("#cancel").click(function() {
 	    validator.resetForm();    	
+    	$(this).closest('form').find("input").val("");
 });
 </script>

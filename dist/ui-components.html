@@ -424,7 +424,6 @@ $(ui.component.avatar.render({
                                     $(ui.component.form.render({
                                         'id': 'form2',
                                         'method': 'get',
-                                        'required': true,
                                         inputs: [{
                                             'required': true,
                                             'inputId': 'userPassword',
@@ -454,8 +453,8 @@ $(ui.component.avatar.render({
                                             }]
                                         }, {
                                             'selectId': 'sex',
+                                            'required': true,
                                             'options': [{
-                                                'required': true,
                                                 'value': 'What\'s your gender?',
                                                 'title': true
                                             }, {
@@ -471,15 +470,10 @@ $(ui.component.avatar.render({
                                             'textareaId': 'AboutMe',
                                             'label': 'What are you about?'
                                         }],
+                                        'cancel': true,
                                         'buttons': [{
                                             'class': 'solid-button--happy',
                                             'content': 'Doe doe'
-                                        }, {
-                                            'class': 'solid-button--neutral',
-                                            'cancel': 'true',
-                                            'name': 'cancel',
-                                            // 'type': 'reset',
-                                            'content': 'Cancel'
                                         }]
                                     }))
                                 );</script> </div> </div> </div> <div class=row id=anchor-input> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-xs-12> <h2>Input Fields</h2> <p> Input fields are used in forms and anywhere user input is needed. As the fields are part of a form they should be included between <code class=language-markup> &lt;form&gt; </code> tags. <br> <br> To do: should the form be a component as well? </p> <h3>Properties</h3> </div> <div class="col-xs-6 col-sm-3"> Mandatory: <ul> <li>id</li> <li>name</li> <li>value</li> </ul> </div> <div class="col-xs-6 col-sm-9"> Optional: <ul> <li>placeholder</li> <li>hasLabel (true/false)</li> <li>label</li> <li>icon</li> </ul> </div> </div> </div> </div> <div class=col-xs-12> <h3>Text Area</h3> </div> <div class=col-md-6> <div id=text-area></div> <script>$('#text-area').replaceWith(
