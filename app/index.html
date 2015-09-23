@@ -77,47 +77,8 @@
         <div class="row">
             <div class="hidden-xs hidden-sm hidden-md col-lg-3">
                 <!-- <div class="fixed-nav"> -->
-                <div id="side-nav">
-                    <script>
-                    $('#side-nav').replaceWith(
-                        $(ui.component.nav.render({
-                            'title': true,
-                            'navTitle': 'Design',
-                            navItems: [{
-                                'url': '#anchor-color',
-                                'item': 'Colors'
-                            }, {
-                                'url': '#anchor-icons',
-                                'item': 'Icons'
-                            }, {
-                                'url': '#anchor-layout',
-                                'item': 'Layout'
-                            }, {
-                                'url': '#anchor-typography',
-                                'item': 'Typography'
-                            }]
-                        }))
-
-                    );
-                    </script>
-                </div>
-                <div id="side-nav2">
-                    <script>
-                    $('#side-nav2').replaceWith(
-                        $(ui.component.nav.render({
-                            'title': true,
-                            'navTitle': 'Starting a project',
-                            'navItems': [{
-                                'url': '#',
-                                'item': 'Scaffolding'
-                            }, {
-                                'url': '#anchor-sampleapps',
-                                'item': 'Sample App&#39;s'
-                            }]
-                        }))
-                    );
-                    </script>
-                </div>
+                <component data-type="nav" data-properties="navData.navData1"></component>
+                <component data-type="nav" data-properties="navData.navData2"></component>
                 <!-- </div> -->
             </div>
             <div class="col-xs-12 col-lg-9">
@@ -402,36 +363,7 @@ $(ui.component.icon.render({
                     <h3>Header Icons</h3>
                 </div>
                 <div class="col-xs-12">
-                    <div id="header-icons"></div>
-                    <script>
-                    $('#header-icons').replaceWith(
-                        $(ui.component.icon.render({
-                            'styleguide': true,
-                            'icons': [{
-                                'icon': 'icon-solid-bell',
-                                'label': true
-                            }, {
-                                'icon': 'icon-naked-bell',
-                                'label': true
-                            }, {
-                                'icon': 'icon-solid-bubbles',
-                                'label': true
-                            }, {
-                                'icon': 'icon-naked-bubbles',
-                                'label': true
-                            }, {
-                                'icon': 'icon-solid-user',
-                                'label': true
-                            }, {
-                                'icon': 'icon-naked-user',
-                                'label': true
-                            }, {
-                                'icon': 'icon-solid-menu',
-                                'label': true
-                            }]
-                        }))
-                    );
-                    </script>
+                    <component data-type="icon" data-properties="iconData.iconData1"></component>
                 </div>
                 <div class="col-xs-12">
                     <!-- <div class="app-block"> -->
@@ -439,36 +371,7 @@ $(ui.component.icon.render({
                     <!-- </div> -->
                 </div>
                 <div class="col-xs-12">
-                    <div id="system-icons"></div>
-                    <script>
-                    $('#system-icons').replaceWith(
-                        $(ui.component.icon.render({
-                            'styleguide': true,
-                            'icons': [{
-                                'icon': 'icon-system-menu',
-                                'label': true
-                            }, {
-                                'icon': 'icon-system-refresh',
-                                'label': true
-                            }, {
-                                'icon': 'icon-system-down-open',
-                                'label': true
-                            }, {
-                                'icon': 'icon-system-up-open',
-                                'label': true
-                            }, {
-                                'icon': 'icon-system-close',
-                                'label': true
-                            }, {
-                                'icon': 'icon-solid-magnifier',
-                                'label': true
-                            }, {
-                                'icon': 'icon-naked-magnifier',
-                                'label': true
-                            }]
-                        }))
-                    );
-                    </script>
+                    <component data-type="icon" data-properties="iconData.iconData2"></component>
                 </div>
                 <div class="col-xs-12">
                     <!-- <div class="app-block"> -->
@@ -476,147 +379,7 @@ $(ui.component.icon.render({
                     <!-- </div> -->
                 </div>
                 <div class="col-xs-12">
-                    <div id="user-icons"></div>
-                    <script>
-                    $('#user-icons').replaceWith(
-                        $(ui.component.icon.render({
-                            'styleguide': true,
-                            'icons': [{
-                                'icon': 'icon-solid-bubble',
-                                'label': true
-                            }, {
-                                'icon': 'icon-naked-bubble',
-                                'label': true
-                            }, {
-                                'icon': 'icon-solid-like',
-                                'label': true
-                            }, {
-                                'icon': 'icon-naked-like',
-                                'label': true
-                            }, {
-                                'icon': 'icon-solid-add',
-                                'label': true
-                            }, {
-                                'icon': 'icon-naked-add',
-                                'label': true
-                            }, {
-                                'icon': 'icon-solid-settings',
-                                'label': true
-                            }, {
-                                'icon': 'icon-naked-settings',
-                                'label': true
-                            }, {
-                                'icon': 'icon-solid-flag',
-                                'label': true
-                            }, {
-                                'icon': 'icon-solid-fire',
-                                'label': true
-                            }, {
-                                'icon': 'icon-solid-cup',
-                                'label': true
-                            }, {
-                                'icon': 'icon-naked-cup',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-arrow-left',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-arrow-right',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-star-big',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-star-small',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-check',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-award',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-star-flag',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-megaphone',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-github',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-linkedin',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-googleplus',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-pinterest',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-twitter',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-facebook',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-instagram',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-skype',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-key',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-url',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-help',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-mail',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-phone',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-school',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-clock',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-location',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-compass',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-map',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-mobile',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-monitor',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-suitcase',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-calendar',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-location-2',
-                                'label': true
-                            }, {
-                                'icon': 'icon-user-user',
-                                'label': true
-                            }]
-                        }))
-                    );
-                    </script>
+                    <component data-type="icon" data-properties="iconData.iconData3"></component>
                 </div>
             </div>
             <div class="row" id="anchor-layout">
@@ -929,6 +692,15 @@ $(ui.component.icon.render({
             <!--app-->
         </div>
     </div>
+    <script type="text/javascript">
+    $('component').replaceWith(function() {
+        var type = $(this).data('type');
+        var properties = eval($(this).data('properties'));
+        var component = 'ui.component.' + type + '.render';
+        console.log($(this).data('properties'));
+        return eval(component)(properties);
+    });
+    </script>
 </body>
 
 </html>

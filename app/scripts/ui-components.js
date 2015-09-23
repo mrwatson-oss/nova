@@ -191,7 +191,113 @@ clickButton = function() {
 
 
 }
-(jQuery, ui.component.template));;var ui = ui || {};
+(jQuery, ui.component.template));;var buttonData = {
+    'buttonData1': {
+        'styleguide': true,
+        'buttons': [{
+            'content': 'Meetings',
+            'class': 'naked-button--neutral',
+        }, {
+            'content': 'Like',
+            'class': 'naked-button--happy'
+        }, {
+            'content': 'Back',
+            'class': 'naked-button--strict'
+        }, {
+            'content': 'Destroy',
+            'class': 'naked-button--angry'
+        }, {
+            'content': 'Menu',
+            'class': 'naked-button--neutral',
+            'icon': 'icon-system-menu'
+        }, {
+            'icon': 'icon-solid-camera',
+            'class': 'naked-button--neutral'
+        }]
+    },
+    'buttonData2': {
+        'styleguide': true,
+        'buttons': [{
+            'content': 'Meetings',
+            'class': 'naked-button--neutral',
+            'disabled': 'disabled'
+        }, {
+            'content': 'Like',
+            'class': 'naked-button--happy',
+            'disabled': 'disabled'
+        }, {
+            'content': 'Back',
+            'class': 'naked-button--strict',
+            'disabled': 'disabled'
+        }, {
+            'content': 'Destroy',
+            'class': 'naked-button--angry',
+            'disabled': 'disabled'
+        }, {
+            'content': 'Menu',
+            'class': 'naked-button--neutral',
+            'icon': 'icon-system-menu',
+            'disabled': 'disabled'
+        }, {
+            'icon': 'icon-solid-camera',
+            'class': 'naked-button--neutral',
+            'disabled': 'disabled'
+        }]
+    },
+    'buttonData3': {
+        'styleguide': true,
+        'buttons': [{
+            'content': 'Cancel',
+            'class': 'solid-button--neutral'
+        }, {
+            'content': 'Share post',
+            'class': 'solid-button--happy'
+        }, {
+            'content': 'Check availability',
+            'class': 'solid-button--strict'
+        }, {
+            'content': 'Delete user',
+            'class': 'solid-button--angry'
+        }, {
+            'content': 'Settings',
+            'icon': 'icon-solid-settings',
+            'class': 'solid-button--neutral'
+        }, {
+            'icon': 'icon-user-arrow-right',
+            'class': 'solid-button--strict'
+        }]
+    },
+    'buttonData4': {
+        'styleguide': true,
+        'buttons': [{
+            'content': 'Cancel',
+            'class': 'solid-button--neutral',
+            'disabled': 'disabled'
+        }, {
+            'content': 'Share post',
+            'class': 'solid-button--happy',
+            'disabled': 'disabled'
+        }, {
+            'content': 'Check availability',
+            'class': 'solid-button--strict',
+            'disabled': 'disabled'
+        }, {
+            'content': 'Delete user',
+            'class': 'solid-button--angry',
+            'disabled': 'disabled'
+        }, {
+            'content': 'Settings',
+            'icon': 'icon-solid-settings',
+            'class': 'solid-button--neutral',
+            'disabled': 'disabled'
+        }, {
+            'icon': 'icon-user-arrow-right',
+            'class': 'solid-button--strict',
+            'disabled': 'disabled'
+        }]
+    }
+};
+;var ui = ui || {};
 
 ui.component.composer = (function($, T) {
 
@@ -460,7 +566,195 @@ ui.component.icon = (function($, T) {
 
 
 }
-(jQuery, ui.component.template));;var ui = ui || {};
+(jQuery, ui.component.template));;var iconData = {
+    'iconData1': {
+        'styleguide': true,
+        'icons': [{
+            'icon': 'icon-solid-bell',
+            'label': true
+        }, {
+            'icon': 'icon-naked-bell',
+            'label': true
+        }, {
+            'icon': 'icon-solid-bubbles',
+            'label': true
+        }, {
+            'icon': 'icon-naked-bubbles',
+            'label': true
+        }, {
+            'icon': 'icon-solid-user',
+            'label': true
+        }, {
+            'icon': 'icon-naked-user',
+            'label': true
+        }, {
+            'icon': 'icon-solid-menu',
+            'label': true
+        }]
+    },
+    'iconData2': {
+        'styleguide': true,
+        'icons': [{
+            'icon': 'icon-system-menu',
+            'label': true
+        }, {
+            'icon': 'icon-system-refresh',
+            'label': true
+        }, {
+            'icon': 'icon-system-down-open',
+            'label': true
+        }, {
+            'icon': 'icon-system-up-open',
+            'label': true
+        }, {
+            'icon': 'icon-system-close',
+            'label': true
+        }, {
+            'icon': 'icon-solid-magnifier',
+            'label': true
+        }, {
+            'icon': 'icon-naked-magnifier',
+            'label': true
+        }]
+    },
+    'iconData3': {
+        'styleguide': true,
+        'icons': [{
+            'icon': 'icon-solid-bubble',
+            'label': true
+        }, {
+            'icon': 'icon-naked-bubble',
+            'label': true
+        }, {
+            'icon': 'icon-solid-like',
+            'label': true
+        }, {
+            'icon': 'icon-naked-like',
+            'label': true
+        }, {
+            'icon': 'icon-solid-add',
+            'label': true
+        }, {
+            'icon': 'icon-naked-add',
+            'label': true
+        }, {
+            'icon': 'icon-solid-settings',
+            'label': true
+        }, {
+            'icon': 'icon-naked-settings',
+            'label': true
+        }, {
+            'icon': 'icon-solid-flag',
+            'label': true
+        }, {
+            'icon': 'icon-solid-fire',
+            'label': true
+        }, {
+            'icon': 'icon-solid-cup',
+            'label': true
+        }, {
+            'icon': 'icon-naked-cup',
+            'label': true
+        }, {
+            'icon': 'icon-user-arrow-left',
+            'label': true
+        }, {
+            'icon': 'icon-user-arrow-right',
+            'label': true
+        }, {
+            'icon': 'icon-user-star-big',
+            'label': true
+        }, {
+            'icon': 'icon-user-star-small',
+            'label': true
+        }, {
+            'icon': 'icon-user-check',
+            'label': true
+        }, {
+            'icon': 'icon-user-award',
+            'label': true
+        }, {
+            'icon': 'icon-user-star-flag',
+            'label': true
+        }, {
+            'icon': 'icon-user-megaphone',
+            'label': true
+        }, {
+            'icon': 'icon-user-github',
+            'label': true
+        }, {
+            'icon': 'icon-user-linkedin',
+            'label': true
+        }, {
+            'icon': 'icon-user-googleplus',
+            'label': true
+        }, {
+            'icon': 'icon-user-pinterest',
+            'label': true
+        }, {
+            'icon': 'icon-user-twitter',
+            'label': true
+        }, {
+            'icon': 'icon-user-facebook',
+            'label': true
+        }, {
+            'icon': 'icon-user-instagram',
+            'label': true
+        }, {
+            'icon': 'icon-user-skype',
+            'label': true
+        }, {
+            'icon': 'icon-user-key',
+            'label': true
+        }, {
+            'icon': 'icon-user-url',
+            'label': true
+        }, {
+            'icon': 'icon-user-help',
+            'label': true
+        }, {
+            'icon': 'icon-user-mail',
+            'label': true
+        }, {
+            'icon': 'icon-user-phone',
+            'label': true
+        }, {
+            'icon': 'icon-user-school',
+            'label': true
+        }, {
+            'icon': 'icon-user-clock',
+            'label': true
+        }, {
+            'icon': 'icon-user-location',
+            'label': true
+        }, {
+            'icon': 'icon-user-compass',
+            'label': true
+        }, {
+            'icon': 'icon-user-map',
+            'label': true
+        }, {
+            'icon': 'icon-user-mobile',
+            'label': true
+        }, {
+            'icon': 'icon-user-monitor',
+            'label': true
+        }, {
+            'icon': 'icon-user-suitcase',
+            'label': true
+        }, {
+            'icon': 'icon-user-calendar',
+            'label': true
+        }, {
+            'icon': 'icon-user-location-2',
+            'label': true
+        }, {
+            'icon': 'icon-user-user',
+            'label': true
+        }]
+    }
+};
+;var ui = ui || {};
 
 ui.component.image = (function($, T) {
 
@@ -575,7 +869,86 @@ ui.component.nav = (function($, T) {
 
 
 }
-(jQuery, ui.component.template));;var ui = ui || {};
+(jQuery, ui.component.template));;// -----------------------------------------------------------------------------
+// Base Button
+// -----------------------------------------------------------------------------
+
+var navData = {
+    'navData1': {
+        'title': true,
+        'navTitle': 'Design',
+        'navItems': [{
+            'url': '#anchor-color',
+            'item': 'Colors'
+        }, {
+            'url': '#anchor-icons',
+            'item': 'Icons'
+        }, {
+            'url': '#anchor-layout',
+            'item': 'Layout'
+        }, {
+            'url': '#anchor-typography',
+            'item': 'Typography'
+        }]
+    },
+    'navData2': {
+        'title': true,
+        'navTitle': 'Starting a project',
+        'navItems': [{
+            'url': '#',
+            'item': 'Scaffolding'
+        }, {
+            'url': '#anchor-sampleapps',
+            'item': 'Sample App&#39;s'
+        }]
+    },
+    'navData3': {
+        'title': true,
+        'navTitle': 'Components',
+        'navItems': [{
+            'url': '#anchor-appbar',
+            'item': 'App Bar',
+            'icon': 'icon-app-naked-list blue'
+        }, {
+            'url': '#anchor-appblock',
+            'item': 'App Block',
+            'icon': 'icon-user-naked-thumbnails blue'
+        }, {
+            'url': '#anchor-button',
+            'item': 'Buttons',
+            'icon': 'icon-app-coins blue'
+        }, {
+            'url': '#anchor-composer',
+            'item': 'Composer',
+            'icon': 'icon-user-naked-pencil blue'
+        }, {
+            'url': '#anchor-header',
+            'item': 'Header',
+            'icon': 'icon-app-naked-school blue'
+        }, {
+            'url': '#anchor-image',
+            'item': 'Images',
+            'icon': 'icon-app-naked-flower blue'
+        }, {
+            'url': '#anchor-input',
+            'item': 'Input Fields',
+            'icon': 'icon-app-naked-notebook blue'
+        }, {
+            'url': '#anchor-messages',
+            'item': 'Messages',
+            'icon': 'icon-naked-bubbles blue'
+        }, {
+            'url': '#anchor-navigation',
+            'item': 'Navigation',
+            'icon': 'icon-app-naked-direction-sign blue'
+        }, {
+            'url': '#anchor-postits',
+            'item': 'Post-it&#39;s',
+            'icon': 'icon-app-naked-pen blue'
+        }]
+    }
+};
+;var ui = ui || {};
 ui.component.partials = (function($, T) {
         var partials = {};
 
