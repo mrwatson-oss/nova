@@ -476,67 +476,7 @@ $(ui.component.avatar.render({
                             </div>
                             <div class="col-md-6">
                                 <div class="app-block">
-                                    <div id="form">
-                                        <script>
-                                        $('#form').replaceWith(
-                                            $(ui.component.form.render({
-                                                'id': 'form2',
-                                                'method': 'get',
-                                                inputs: [{
-                                                    'required': true,
-                                                    'inputId': 'userPassword',
-                                                    'label': 'Password',
-                                                    'type': 'password',
-                                                    'maxlength': '12',
-                                                    'minlength': '5'
-                                                }, {
-                                                    'required': true,
-                                                    'inputId': 'firstName',
-                                                    'label': 'First name',
-                                                    'type': 'text',
-                                                    'minlength': '2'
-                                                }],
-                                                'selects': [{
-                                                    'required': true,
-                                                    'selectId': 'age',
-                                                    'options': [{
-                                                        'value': 'What\'s your age?',
-                                                        'title': true
-                                                    }, {
-                                                        'value': '11'
-                                                    }, {
-                                                        'value': '12'
-                                                    }, {
-                                                        'value': '15'
-                                                    }]
-                                                }, {
-                                                    'selectId': 'sex',
-                                                    'required': true,
-                                                    'options': [{
-                                                        'value': 'What\'s your gender?',
-                                                        'title': true
-                                                    }, {
-                                                        'value': 'man'
-                                                    }, {
-                                                        'value': 'female'
-                                                    }, {
-                                                        'value': 'who cares'
-                                                    }]
-                                                }],
-                                                'textareas': [{
-                                                    'required': true,
-                                                    'textareaId': 'AboutMe',
-                                                    'label': 'What are you about?'
-                                                }],
-                                                'cancel': true,
-                                                'buttons': [{
-                                                    'class': 'solid-button--happy',
-                                                    'content': 'Doe doe'
-                                                }]
-                                            }))
-                                        );
-                                        </script>
-                                    </div>
+                                    <component data-type="form" data-properties="formData.formData1"></component>
                                 </div>
                             </div>
                             <div class="row" id="anchor-input">
@@ -576,15 +516,7 @@ $(ui.component.avatar.render({
                                     <h3>Text Area</h3>
                                 </div>
                                 <div class="col-md-6">
-                                    <div id="text-area"></div>
-                                    <script>
-                                    $('#text-area').replaceWith(
-                                        $(ui.component.textArea.render({
-                                            'placeholder': 'Tell people what you\'re all about',
-                                            'hasLabel': true
-                                        }))
-                                    );
-                                    </script>
+                                    <component data-type="textArea" data-properties="textareaData.textareaData1"></component>
                                 </div>
                                 <div class="col-md-6">
                                     <pre><code class="language-javascript">
@@ -619,20 +551,7 @@ $(ui.component.avatar.render({
                         </div> -->
                                 </div>
                                 <div class="col-md-6">
-                                    <div id="text-input"></div>
-                                    <script>
-                                    $('#text-input').replaceWith(
-                                        $(ui.component.textInput.render({
-                                            'id': 'form1',
-                                            'inputId': 'password',
-                                            'hasLabel': true,
-                                            'label': 'Password',
-                                            'type': 'password',
-                                            'maxlength': '12',
-                                            'minlength': '5'
-                                        }))
-                                    );
-                                    </script>
+                                    <component data-type="textInput" data-properties="textinputData.textinputData1"></component>
                                 </div>
                                 <div class="col-md-6">
                                     <pre><code class="language-javascript">
@@ -645,18 +564,7 @@ $(ui.component.avatar.render({
 </code></pre>
                                 </div>
                                 <div class="col-md-6">
-                                    <div id="text-input2"></div>
-                                    <script>
-                                    $('#text-input2').replaceWith(
-                                        $(ui.component.textInput.render({
-                                            'id': "great",
-                                            'hasLabel': true,
-                                            'label': 'First name',
-                                            'inputId': 'name',
-                                            'minlength': '3'
-                                        }))
-                                    );
-                                    </script>
+                                    <component data-type="textInput" data-properties="textinputData.textinputData2">
                                 </div>
                                 <div class="col-md-6">
                                     <pre><code class="language-javascript">
@@ -670,23 +578,7 @@ $(ui.component.avatar.render({
                                     <h3>Select</h3>
                                 </div>
                                 <div class="col-md-6">
-                                    <div id="select-test">
-                                        <script>
-                                        $('#select-test').replaceWith(
-                                            $(ui.component.select.render({
-                                                'options': [{
-                                                    'value': 'Select your gender',
-                                                    'title': true
-                                                }, {
-                                                    'value': 'Male'
-                                                }, {
-                                                    'value': 'Female'
-                                                }, {
-                                                    'value': 'Other'
-                                                }]
-                                            })));
-                                        </script>
-                                    </div>
+                                    <component data-type="select" data-properties="selectData.selectData1">
                                 </div>
                                 <div class="col-xs-12">
                                     <!-- <div class="app-block"> -->
@@ -694,30 +586,8 @@ $(ui.component.avatar.render({
                                     <!-- </div> -->
                                 </div>
                                 <div class="col-md-6">
-                                    <div id="drokdown"></div>
+                                    <component data-type="dropdown" data-properties="dropdownData.dropdownData1">
                                 </div>
-                                <script>
-                                $('#drokdown').replaceWith(
-                                    $(ui.component.dropdown.render({
-                                        'icon': 'icon-naked-bell',
-                                        'badge': 'true',
-                                        'dropdownOptions': [{
-                                            'option': 'Profile',
-                                            'href': '#'
-                                        }, {
-                                            'option': 'Privacy',
-                                            'href': '#'
-                                        }, {
-                                            'option': 'Settings',
-                                            'href': '#',
-                                            'class': 'divider'
-                                        }, {
-                                            'option': 'Log out',
-                                            'href': '#'
-                                        }]
-                                    }))
-                                );
-                                </script>
                                 <div class="col-md-6">
                                     <pre><code class="language-javascript">
 $(ui.component.dropdown.render({

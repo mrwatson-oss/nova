@@ -487,6 +487,26 @@ ui.component.dropdown = (function($, T) {
     };
 
 }(jQuery, ui.component.template));
+;var dropdownData = {
+    'dropdownData1': {
+        'icon': 'icon-naked-bell',
+        'badge': 'true',
+        'dropdownOptions': [{
+            'option': 'Profile',
+            'href': '#'
+        }, {
+            'option': 'Privacy',
+            'href': '#'
+        }, {
+            'option': 'Settings',
+            'href': '#',
+            'class': 'divider'
+        }, {
+            'option': 'Log out',
+            'href': '#'
+        }]
+    }
+}
 ;var ui = ui || {};
 
 ui.component.eventpostit = (function($, T) {
@@ -566,6 +586,63 @@ ui.component.form = (function($, T) {
 
 
 
+;var formData = {
+    'formData1': {
+        'id': 'form2',
+        'method': 'get',
+        inputs: [{
+            'required': true,
+            'inputId': 'userPassword',
+            'label': 'Password',
+            'type': 'password',
+            'maxlength': '12',
+            'minlength': '5'
+        }, {
+            'required': true,
+            'inputId': 'firstName',
+            'label': 'First name',
+            'type': 'text',
+            'minlength': '2'
+        }],
+        'selects': [{
+            'required': true,
+            'selectId': 'age',
+            'options': [{
+                'value': 'What\'s your age?',
+                'title': true
+            }, {
+                'value': '11'
+            }, {
+                'value': '12'
+            }, {
+                'value': '15'
+            }]
+        }, {
+            'selectId': 'sex',
+            'required': true,
+            'options': [{
+                'value': 'What\'s your gender?',
+                'title': true
+            }, {
+                'value': 'man'
+            }, {
+                'value': 'female'
+            }, {
+                'value': 'who cares'
+            }]
+        }],
+        'textareas': [{
+            'required': true,
+            'textareaId': 'AboutMe',
+            'label': 'What are you about?'
+        }],
+        'cancel': true,
+        'buttons': [{
+            'class': 'solid-button--happy',
+            'content': 'Doe doe'
+        }]
+    }
+}
 ;var ui = ui || {};
 
 ui.component.header = (function($, T) {
@@ -1221,6 +1298,20 @@ ui.component.select = (function($, T) {
 
 
 
+;var selectData = {
+    'selectData1': {
+        'options': [{
+            'value': 'Select your gender',
+            'title': true
+        }, {
+            'value': 'Male'
+        }, {
+            'value': 'Female'
+        }, {
+            'value': 'Other'
+        }]
+    }
+}
 ;var ui = ui || {};
 
 ui.component.textArea = (function($, T) {
@@ -1261,6 +1352,12 @@ ui.component.textArea = (function($, T) {
 
 
 
+;var textareaData = {
+    'textareaData1': {
+        'placeholder': 'Tell people what you\'re all about',
+        'hasLabel': true
+    }
+}
 ;var ui = ui || {};
 
 ui.component.textInput = (function($, T) {
@@ -1304,6 +1401,36 @@ ui.component.textInput = (function($, T) {
 
 
 
+;var textinputData = {
+    'textinputData1': {
+        'id': 'form1',
+        'inputId': 'password',
+        'hasLabel': true,
+        'label': 'Password',
+        'type': 'password',
+        'maxlength': '12',
+        'minlength': '5'
+    },
+    'textinputData2': {
+        'id': "great",
+        'hasLabel': true,
+        'label': 'First name',
+        'inputId': 'name',
+        'minlength': '3'
+    },
+    'textinputData3': {
+        'options': [{
+            'value': 'Select your gender',
+            'title': true
+        }, {
+            'value': 'Male'
+        }, {
+            'value': 'Female'
+        }, {
+            'value': 'Other'
+        }]
+    }
+}
 ;var ui = ui || {};
 
 ui.component.userpostit = (function($, T) {
