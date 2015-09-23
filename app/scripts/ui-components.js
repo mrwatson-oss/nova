@@ -35,7 +35,77 @@ ui.component.alert = (function($, T) {
 
 
 }
-(jQuery, ui.component.template));var ui = ui || {};
+(jQuery, ui.component.template));var alertData = {
+    'alertData1': {
+        'icon': 'icon-user-award',
+        'title': 'YES!',
+        'class': 'solid-alert--happy',
+        'message': 'You did something right',
+        'button': [{
+            'icon': 'icon-system-close',
+            'class': 'naked-button--icon-only--happy'
+        }]
+    },
+    'alertData2': {
+        'icon': 'icon-user-award',
+        'title': 'YES!',
+        'class': 'naked-alert--happy',
+        'message': 'You did something right',
+        'button': [{
+            'icon': 'icon-system-close',
+            'class': 'naked-button--icon-only--happy'
+        }]
+    },
+    'alertData3': {
+        'icon': 'icon-solid-flag',
+        'title': 'Heads up!',
+        'class': 'solid-alert--strict',
+        'message': 'No employees yet.',
+        'link': 'Add one now?',
+        'href': '#',
+        'button': [{
+            'icon': 'icon-system-close',
+            'class': 'naked-button--icon-only--strict'
+        }]
+    },
+    'alertData4': {
+        'icon': 'icon-solid-flag',
+        'title': 'Heads up!',
+        'class': 'naked-alert--strict',
+        'message': 'No employees yet.',
+        'link': 'Add one now?',
+        'href': '#',
+        'button': [{
+            'icon': 'icon-system-close',
+            'class': 'naked-button--icon-only--strict'
+        }]
+    },
+    'alertData5': {
+        'icon': 'icon-solid-fire',
+        'title': 'Oops!',
+        'class': 'solid-alert--angry',
+        'message': 'That e-mail address already exists.',
+        'link': 'Forgot your password?',
+        'href': '#',
+        'button': [{
+            'icon': 'icon-system-close',
+            'class': 'naked-button--icon-only--angry'
+        }]
+    },
+    'alertData6': {
+        'icon': 'icon-solid-fire',
+        'title': 'Oops!',
+        'class': 'naked-alert--angry',
+        'message': 'That e-mail address already exists.',
+        'link': 'Forgot your password?',
+        'href': '#',
+        'button': [{
+            'icon': 'icon-system-close',
+            'class': 'naked-button--icon-only--angry'
+        }]
+    }
+}
+;var ui = ui || {};
 
 ui.component.appbar = (function($, T) {
 
@@ -424,7 +494,32 @@ ui.component.dialog = (function($, T) {
 
 
 }
-(jQuery, ui.component.template));var ui = ui || {};
+(jQuery, ui.component.template));var dialogData = {
+    'dialogData1': {
+        'angry': 'true',
+        'title': 'Deleting this is permanent.',
+        'message': 'Are you sure you want to delete your account?',
+        'button': [{
+            'content': 'Delete account',
+            'action': 'alert("Alrighty deleted")'
+        }, {
+            'content': 'Cancel',
+            'action': 'alert("Alrighty canceled")'
+        }]
+    },
+    'dialogData2': {
+        'title': 'Do you wish to create a new community?',
+        'message': 'You should only create a new community if you are setting one up in a new coworking space.',
+        'button': [{
+            'content': 'Create community',
+            'action': 'alert("Alrighty created")'
+        }, {
+            'content': 'Cancel',
+            'action': 'alert("Alrighty canceled")'
+        }]
+    }
+}
+;var ui = ui || {};
 
 ui.component.dropdown = (function($, T) {
 
@@ -1047,7 +1142,23 @@ ui.component.modal = (function($, T) {
 
 
 }
-(jQuery, ui.component.template));var ui = ui || {};
+(jQuery, ui.component.template));var modalData = {
+    'modalData1': {
+        'title': 'Invite your friend',
+        'close': true,
+        'body': 'Modal body.. Now find out the different possibilities',
+        'button': [{
+            'class': 'solid-button--happy',
+            'content': 'Send Invitation',
+            'action': 'alert("Alrighty sent")'
+        }, {
+            'class': 'solid-button--neutral',
+            'content': 'Cancel',
+            'action': 'alert("Alrighty canceled")'
+        }]
+    },
+}
+;var ui = ui || {};
 
 ui.component.nav = (function($, T) {
 
