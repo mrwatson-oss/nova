@@ -12,7 +12,10 @@ ui.component.header = (function($, T) {
      * @type {Object}
      */
     var params = {
-
+        'navItems': null,
+        'dropdown': null,
+        'logo': null,
+        'navIcons': null
     };
 
 
@@ -25,10 +28,7 @@ ui.component.header = (function($, T) {
      */
     function render(context) {
 
-
-
         data = $.extend({}, params, context);
-
 
         return T.header(data);
     }

@@ -7,10 +7,12 @@ $(document).ready(function() {
 $('component').replaceWith(function() {
         var type = $(this).data('type');
         var properties = eval($(this).data('properties'));
+        console.log(Object.keys(properties));
         var component = 'ui.component.' + type + '.render';
-        console.log($(this).data('properties'));
+        // console.log($(this).data('properties'));
         return eval(component)(properties);
     });
+
 // var root = 'http://mrsanwot.moulijn.mrsanwot.nl/api/postits';
 
 

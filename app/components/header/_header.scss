@@ -11,13 +11,17 @@
     padding: 1em;
     border-bottom: 3px solid $border-color--accent;
     margin-bottom: 1em;
-	.header-container {
-		position: relative;
-		max-width: 1170px;
-		margin: 0 auto;
-	}
-	.header-logo {
-		padding: .2em;
-		max-height: 3em;
-	}
+    &.header--styleguide {
+        position: relative;
+        display: block;
+    }
+    .header-container {
+        position: relative;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    .header-logo {
+        padding: .2em;
+        max-height: 3em;
+    }
 }
