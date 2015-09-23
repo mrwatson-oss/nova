@@ -72,7 +72,22 @@ ui.component.appbar = (function($, T) {
     };
 
 }(jQuery, ui.component.template));
-;var ui = ui || {};
+;var appbarData = {
+    'appbarData1': {
+        'navItems': [{
+            'url': '#',
+            'item': 'Past events',
+            'class': 'nav--active divider'
+        }, {
+            'url': '#',
+            'item': 'Upcoming events'
+        }],
+        'button': [{
+            'class': 'solid-button--strict pull-right',
+            'content': 'Add new event'
+        }]
+    }
+};var ui = ui || {};
 
 ui.component.appblock = (function($, T) {
 
@@ -143,7 +158,33 @@ ui.component.avatar = (function($, T) {
 
 
 }
-(jQuery, ui.component.template));;var ui = ui || {};
+(jQuery, ui.component.template));;var avatarData = {
+    'avatarData1': {
+        'avatar': {
+            'src': 'https://randomuser.me/api/portraits/men/75.jpg'
+        }
+    },
+    'avatarData2': {
+        'avatar': {
+            'src': 'https://randomuser.me/api/portraits/men/75.jpg',
+            'round': true
+        }
+    },
+    'avatarData3': {
+        'avatar': {
+            'src': 'https://randomuser.me/api/portraits/men/75.jpg',
+            'small': true
+        }
+    },
+    'avatarData4': {
+        'avatar': {
+            'src': 'https://randomuser.me/api/portraits/men/75.jpg',
+            'round': true,
+            'small': true
+        }
+    }
+}
+;var ui = ui || {};
 
 ui.component.button = (function($, T) {
 
@@ -331,7 +372,22 @@ ui.component.composer = (function($, T) {
     };
 
 }(jQuery, ui.component.template));
-;var ui = ui || {};
+;var composerData = {
+    'composerData1': {
+        'avatar': {
+            'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+            'small': true
+        },
+        'input': {
+            'placeholder': 'Share your thoughts'
+        },
+        'buttons': [{
+            'class': 'solid-button--happy pull-right',
+            'content': 'Share post',
+            'action': 'alert("it works")'
+        }]
+    }
+};var ui = ui || {};
 
 ui.component.dialog = (function($, T) {
 
@@ -545,6 +601,68 @@ ui.component.header = (function($, T) {
     };
 
 }(jQuery, ui.component.template));
+;var headerData = {
+    'headerData1': {
+        'logo': {
+            'src': '/images/logo.png'
+        },
+        'input': {
+            'placeholder': 'Seach for components or whatever'
+        },
+        'navItems': [{
+            'url': '/',
+            'item': 'UI base',
+            'class': 'divider'
+        }, {
+
+            'url': '#',
+            'item': 'UI components',
+            'class': 'nav--active'
+        }]
+    },
+    'headerData2': {
+        'styleguide': true,
+        'logo': {
+            'src': '/images/logo.png'
+        },
+        'input': {
+            'placeholder': 'Search bar..'
+        },
+        'dropdown': [{
+            'icon': 'icon-naked-settings',
+            // 'dropdownItem': 'Settings',
+            'dropdownOptions': [{
+                'option': 'Profile',
+                'href': '#'
+            }, {
+                'option': 'Company',
+                'href': '#',
+                'class': 'divider'
+            }, {
+                'option': 'Log out',
+                'href': '#'
+            }]
+        }, 
+        {
+            'icon': 'icon-naked-bell',
+            'badge': true,
+            // 'dropdownItem': 'Notifs',
+            'dropdownOptions': [{
+                'option': 'You rock',
+                'href': '#',
+                'class': 'divider'
+            }, {
+                'option': 'Freddie invited you to lunch party',
+                'href': '#',
+                'class': 'divider'
+            }, {
+                'option': 'Hans commented on your post-it',
+                'href': '#',
+                'class': 'divider'
+            }]
+        }]
+    }
+}
 ;var ui = ui || {};
 
 ui.component.icon = (function($, T) {
@@ -804,7 +922,18 @@ ui.component.image = (function($, T) {
 
 
 }
-(jQuery, ui.component.template));;var ui = ui || {};
+(jQuery, ui.component.template));;var imageData = {
+    'imageData1': {
+        'modal': true,
+        'src': 'https://pbs.twimg.com/profile_images/2112311889/ostrich_head.jpg'
+    },
+    'imageData2': {
+        'src': 'http://www.apnatimepass.com/dumb-and-dumber-to-movie/dumb-and-dumber-to-movie-still-10.jpg',
+        'cover': true,
+        'modal': true
+    }
+}
+;var ui = ui || {};
 
 ui.component.modal = (function($, T) {
 
