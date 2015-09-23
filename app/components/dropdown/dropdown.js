@@ -19,22 +19,24 @@ ui.component.dropdown = (function($, T) {
 
     dropDown = function() {
         $('html').on('click', function(e) {
-            if (! $(e.target).closest(".dropdown").length) { 
+            if (!$(e.target).closest(".dropdown").length) {
                 $('.drop-nav').slideUp(50);
-                $('li.dropdown').removeClass('dropdown--active');   
+                $('li.dropdown').removeClass('dropdown--active');
             } else {
                 return false;
             }
         });
         $('li.dropdown').on('click', function() {
-            $(this).addClass('dropdown--active');                        
+           // console.log($('li.dropdown').children('span.dropdown-badge').length);
+           //  $('li.dropdown').children('span.dropdown-badge').html($('li.dropdown').children('span.dropdown-badge').length);
+            $(this).addClass('dropdown--active');
             if ($(this).children('.drop-nav').is(':visible')) {
                 $(this).removeClass('dropdown--active');
                 $('.drop-nav').slideUp(100);
             } else {
                 $('.drop-nav').hide();
                 $('li.dropdown').removeClass('dropdown--active');
-                $(this).addClass('dropdown--active');            
+                $(this).addClass('dropdown--active');
                 $(this).children('.drop-nav').slideDown(100);
             }
         });

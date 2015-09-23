@@ -10,10 +10,13 @@
     margin: -.4em 0;
     background: white;
     &:hover {
-        background: $grey--light;
+        background: $grey--light;         
     }
     &:active, &.dropdown--active {
         background: $grey;
+        .dropdown-badge {
+            // display: none;
+    }
     }
     i {
         display: inline-block;
@@ -42,5 +45,20 @@
     }
     .divider {
         border-bottom: 2px solid $divider-color;
+    }
+    .dropdown-badge {
+        position: absolute;
+        right: .3em;
+        top: .3em;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.6em;
+        text-align: center;
+        background: $sec-blue;
+        color: $white;
+        overflow: hidden;
+        height: 1.7em;
+        width: 1.7em;
+        border-radius: 50%;
     }
 }
