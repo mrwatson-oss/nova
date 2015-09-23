@@ -1656,15 +1656,6 @@ userpostitMeta: {
                     </div>
                 </div>
             </div>
-    <script type="text/javascript">
-        $('component').replaceWith(function() {
-            var type = $(this).data('type');
-            var properties = eval($(this).data('properties'));
-            var component = 'ui.component.' + type + '.render';
-            console.log($(this).data('properties'));
-            return eval(component)(properties);
-        });
-    </script>
 </body>
 
 </html>

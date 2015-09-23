@@ -2,6 +2,15 @@
 // Scroll to anchor
 $(document).ready(function() {
 'use strict';
+
+//This loads the components from a JSON-file and renders them on the page.
+$('component').replaceWith(function() {
+        var type = $(this).data('type');
+        var properties = eval($(this).data('properties'));
+        var component = 'ui.component.' + type + '.render';
+        console.log($(this).data('properties'));
+        return eval(component)(properties);
+    });
 // var root = 'http://mrsanwot.moulijn.mrsanwot.nl/api/postits';
 
 
@@ -271,4 +280,5 @@ $(document).ready(function() {
 // var obj = [{"id":"2480","postitID":"2711","dateAdded":"1440667593","dateModified":"1440667593","body":"A single postit!","userId":"1836","user":{"firstName":"Tijs","lastName":"Bakker","gender":"1","description":"Hello, how are you?","emailAddress":"tijs@mrwatson.com","pictureFull":"https:\/\/www.filepicker.io\/api\/file\/7jFjPuXTLWzX9xbr1JBO"}},{"id":"2481","postitID":"2711","dateAdded":"1441274857","dateModified":"1441274857","body":"HAloo\r\n","userId":"1836","user":{"firstName":"Tijs","lastName":"Bakker","gender":"1","description":"Hello, how are you?","emailAddress":"tijs@mrwatson.com","pictureFull":"https:\/\/www.filepicker.io\/api\/file\/7jFjPuXTLWzX9xbr1JBO"}},{"id":"2482","postitID":"2711","dateAdded":"1441274863","dateModified":"1441274863","body":"Yo, yo","userId":"1836","user":{"firstName":"Tijs","lastName":"Bakker","gender":"1","description":"Hello, how are you?","emailAddress":"tijs@mrwatson.com","pictureFull":"https:\/\/www.filepicker.io\/api\/file\/7jFjPuXTLWzX9xbr1JBO"}},{"id":"2483","postitID":"2711","dateAdded":"1441275149","dateModified":"1441275149","body":"Hi","userId":"1836","user":{"firstName":"Tijs","lastName":"Bakker","gender":"1","description":"Hello, how are you?","emailAddress":"tijs@mrwatson.com","pictureFull":"https:\/\/www.filepicker.io\/api\/file\/7jFjPuXTLWzX9xbr1JBO"}}];
 // console.log(obj)
 // });
+
 
