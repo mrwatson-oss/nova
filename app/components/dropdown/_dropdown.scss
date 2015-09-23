@@ -10,20 +10,19 @@
     margin: -.4em 0;
     background: white;
     &:hover {
-        background: $grey--light;         
+        background: $grey--light;
     }
-    &:active, &.dropdown--active {
+    &:active,
+    &.dropdown--active {
         background: $grey;
         .dropdown-badge {
             // display: none;
-    }
+        }
     }
     i {
         display: inline-block;
         font-size: 1.4em;
         line-height: 1em;
-
-
         // left: -.2em;
         // top: .16em;
         &.dropdown-icon {
