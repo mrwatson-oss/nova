@@ -476,67 +476,7 @@ $(ui.component.avatar.render({
                             </div>
                             <div class="col-md-6">
                                 <div class="app-block">
-                                    <div id="form">
-                                        <script>
-                                        $('#form').replaceWith(
-                                            $(ui.component.form.render({
-                                                'id': 'form2',
-                                                'method': 'get',
-                                                inputs: [{
-                                                    'required': true,
-                                                    'inputId': 'userPassword',
-                                                    'label': 'Password',
-                                                    'type': 'password',
-                                                    'maxlength': '12',
-                                                    'minlength': '5'
-                                                }, {
-                                                    'required': true,
-                                                    'inputId': 'firstName',
-                                                    'label': 'First name',
-                                                    'type': 'text',
-                                                    'minlength': '2'
-                                                }],
-                                                'selects': [{
-                                                    'required': true,
-                                                    'selectId': 'age',
-                                                    'options': [{
-                                                        'value': 'What\'s your age?',
-                                                        'title': true
-                                                    }, {
-                                                        'value': '11'
-                                                    }, {
-                                                        'value': '12'
-                                                    }, {
-                                                        'value': '15'
-                                                    }]
-                                                }, {
-                                                    'selectId': 'sex',
-                                                    'required': true,
-                                                    'options': [{
-                                                        'value': 'What\'s your gender?',
-                                                        'title': true
-                                                    }, {
-                                                        'value': 'man'
-                                                    }, {
-                                                        'value': 'female'
-                                                    }, {
-                                                        'value': 'who cares'
-                                                    }]
-                                                }],
-                                                'textareas': [{
-                                                    'required': true,
-                                                    'textareaId': 'AboutMe',
-                                                    'label': 'What are you about?'
-                                                }],
-                                                'cancel': true,
-                                                'buttons': [{
-                                                    'class': 'solid-button--happy',
-                                                    'content': 'Doe doe'
-                                                }]
-                                            }))
-                                        );
-                                        </script>
-                                    </div>
+                                    <component data-type="form" data-properties="formData.formData1"></component>
                                 </div>
                             </div>
                             <div class="row" id="anchor-input">
@@ -576,15 +516,7 @@ $(ui.component.avatar.render({
                                     <h3>Text Area</h3>
                                 </div>
                                 <div class="col-md-6">
-                                    <div id="text-area"></div>
-                                    <script>
-                                    $('#text-area').replaceWith(
-                                        $(ui.component.textArea.render({
-                                            'placeholder': 'Tell people what you\'re all about',
-                                            'hasLabel': true
-                                        }))
-                                    );
-                                    </script>
+                                    <component data-type="textArea" data-properties="textareaData.textareaData1"></component>
                                 </div>
                                 <div class="col-md-6">
                                     <pre><code class="language-javascript">
@@ -619,20 +551,7 @@ $(ui.component.avatar.render({
                         </div> -->
                                 </div>
                                 <div class="col-md-6">
-                                    <div id="text-input"></div>
-                                    <script>
-                                    $('#text-input').replaceWith(
-                                        $(ui.component.textInput.render({
-                                            'id': 'form1',
-                                            'inputId': 'password',
-                                            'hasLabel': true,
-                                            'label': 'Password',
-                                            'type': 'password',
-                                            'maxlength': '12',
-                                            'minlength': '5'
-                                        }))
-                                    );
-                                    </script>
+                                    <component data-type="textInput" data-properties="textinputData.textinputData1"></component>
                                 </div>
                                 <div class="col-md-6">
                                     <pre><code class="language-javascript">
@@ -645,18 +564,7 @@ $(ui.component.avatar.render({
 </code></pre>
                                 </div>
                                 <div class="col-md-6">
-                                    <div id="text-input2"></div>
-                                    <script>
-                                    $('#text-input2').replaceWith(
-                                        $(ui.component.textInput.render({
-                                            'id': "great",
-                                            'hasLabel': true,
-                                            'label': 'First name',
-                                            'inputId': 'name',
-                                            'minlength': '3'
-                                        }))
-                                    );
-                                    </script>
+                                    <component data-type="textInput" data-properties="textinputData.textinputData2"></component>
                                 </div>
                                 <div class="col-md-6">
                                     <pre><code class="language-javascript">
@@ -670,23 +578,7 @@ $(ui.component.avatar.render({
                                     <h3>Select</h3>
                                 </div>
                                 <div class="col-md-6">
-                                    <div id="select-test">
-                                        <script>
-                                        $('#select-test').replaceWith(
-                                            $(ui.component.select.render({
-                                                'options': [{
-                                                    'value': 'Select your gender',
-                                                    'title': true
-                                                }, {
-                                                    'value': 'Male'
-                                                }, {
-                                                    'value': 'Female'
-                                                }, {
-                                                    'value': 'Other'
-                                                }]
-                                            })));
-                                        </script>
-                                    </div>
+                                    <component data-type="select" data-properties="selectData.selectData1"></component>
                                 </div>
                                 <div class="col-xs-12">
                                     <!-- <div class="app-block"> -->
@@ -694,30 +586,8 @@ $(ui.component.avatar.render({
                                     <!-- </div> -->
                                 </div>
                                 <div class="col-md-6">
-                                    <div id="drokdown"></div>
+                                    <component data-type="dropdown" data-properties="dropdownData.dropdownData1">
                                 </div>
-                                <script>
-                                $('#drokdown').replaceWith(
-                                    $(ui.component.dropdown.render({
-                                        'icon': 'icon-naked-bell',
-                                        'badge': 'true',
-                                        'dropdownOptions': [{
-                                            'option': 'Profile',
-                                            'href': '#'
-                                        }, {
-                                            'option': 'Privacy',
-                                            'href': '#'
-                                        }, {
-                                            'option': 'Settings',
-                                            'href': '#',
-                                            'class': 'divider'
-                                        }, {
-                                            'option': 'Log out',
-                                            'href': '#'
-                                        }]
-                                    }))
-                                );
-                                </script>
                                 <div class="col-md-6">
                                     <pre><code class="language-javascript">
 $(ui.component.dropdown.render({
@@ -790,106 +660,12 @@ $(ui.component.alert.render({
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
-                                    <!-- <div class="app-block"> -->
-                                    <div id="solid-alert"></div>
-                                    <script>
-                                    $('#solid-alert').replaceWith(
-                                        $(ui.component.alert.render({
-                                            'icon': 'icon-user-award',
-                                            'title': 'YES!',
-                                            'class': 'solid-alert--happy',
-                                            'message': 'You did something right',
-                                            'button': [{
-                                                'icon': 'icon-system-close',
-                                                'class': 'naked-button--icon-only--happy'
-                                            }]
-                                        }))
-                                    );
-                                    </script>
-                                    <div id="naked-alert"></div>
-                                    <script>
-                                    $('#naked-alert').replaceWith(
-                                        $(ui.component.alert.render({
-                                            'icon': 'icon-user-award',
-                                            'title': 'YES!',
-                                            'class': 'naked-alert--happy',
-                                            'message': 'You did something right',
-                                            'button': [{
-                                                'icon': 'icon-system-close',
-                                                'class': 'naked-button--icon-only--happy'
-                                            }]
-                                        }))
-                                    );
-                                    </script>
-                                    <div id="solid-alert"></div>
-                                    <script>
-                                    $('#solid-alert').replaceWith(
-                                        $(ui.component.alert.render({
-                                            'icon': 'icon-solid-flag',
-                                            'title': 'Heads up!',
-                                            'class': 'solid-alert--strict',
-                                            'message': 'No employees yet.',
-                                            'link': 'Add one now?',
-                                            'href': '#',
-                                            'button': [{
-                                                'icon': 'icon-system-close',
-                                                'class': 'naked-button--icon-only--strict'
-                                            }]
-                                        }))
-                                    );
-                                    </script>
-                                    <div id="naked-alert"></div>
-                                    <script>
-                                    $('#naked-alert').replaceWith(
-                                        $(ui.component.alert.render({
-                                            'icon': 'icon-solid-flag',
-                                            'title': 'Heads up!',
-                                            'class': 'naked-alert--strict',
-                                            'message': 'No employees yet.',
-                                            'link': 'Add one now?',
-                                            'href': '#',
-                                            'button': [{
-                                                'icon': 'icon-system-close',
-                                                'class': 'naked-button--icon-only--strict'
-                                            }]
-                                        }))
-                                    );
-                                    </script>
-                                    <div id="solid-alert"></div>
-                                    <script>
-                                    $('#solid-alert').replaceWith(
-                                        $(ui.component.alert.render({
-                                            'icon': 'icon-solid-fire',
-                                            'title': 'Oops!',
-                                            'class': 'solid-alert--angry',
-                                            'message': 'That e-mail address already exists.',
-                                            'link': 'Forgot your password?',
-                                            'href': '#',
-                                            'button': [{
-                                                'icon': 'icon-system-close',
-                                                'class': 'naked-button--icon-only--angry'
-                                            }]
-                                        }))
-                                    );
-                                    </script>
-                                    <div id="naked-alert"></div>
-                                    <script>
-                                    $('#naked-alert').replaceWith(
-                                        $(ui.component.alert.render({
-                                            'icon': 'icon-solid-fire',
-                                            'title': 'Oops!',
-                                            'class': 'naked-alert--angry',
-                                            'message': 'That e-mail address already exists.',
-                                            'link': 'Forgot your password?',
-                                            'href': '#',
-                                            'button': [{
-                                                'icon': 'icon-system-close',
-                                                'class': 'naked-button--icon-only--angry'
-                                            }]
-                                        }))
-                                    );
-                                    </script>
-                                    <!-- </div> -->
+                                    <component data-type="alert" data-properties="alertData.alertData1"></component>
+                                    <component data-type="alert" data-properties="alertData.alertData2"></component>
+                                    <component data-type="alert" data-properties="alertData.alertData3"></component>
+                                    <component data-type="alert" data-properties="alertData.alertData4"></component>
+                                    <component data-type="alert" data-properties="alertData.alertData5"></component>
+                                    <component data-type="alert" data-properties="alertData.alertData6"></component>
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="row">
@@ -929,41 +705,10 @@ $(ui.component.dialog.render({
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
-                                    <div id="dialog"></div>
-                                    <script>
-                                    $('#dialog').replaceWith(
-                                        $(ui.component.dialog.render({
-                                            'angry': 'true',
-                                            'title': 'Deleting this is permanent.',
-                                            'message': 'Are you sure you want to delete your account?',
-                                            'button': [{
-                                                'content': 'Delete account',
-                                                'action': 'alert("Alrighty deleted")'
-                                            }, {
-                                                'content': 'Cancel',
-                                                'action': 'alert("Alrighty canceled")'
-                                            }]
-                                        }))
-                                    );
-                                    </script>
+                                    <component data-type="dialog" data-properties="dialogData.dialogData1"></component>
                                 </div>
                                 <div class="col-xs-12">
-                                    <div id="dialog"></div>
-                                    <script>
-                                    $('#dialog').replaceWith(
-                                        $(ui.component.dialog.render({
-                                            'title': 'Do you wish to create a new community?',
-                                            'message': 'You should only create a new community if you are setting one up in a new coworking space.',
-                                            'button': [{
-                                                'content': 'Create community',
-                                                'action': 'alert("Alrighty created")'
-                                            }, {
-                                                'content': 'Cancel',
-                                                'action': 'alert("Alrighty canceled")'
-                                            }]
-                                        }))
-                                    );
-                                    </script>
+                                    <component data-type="dialog" data-properties="dialogData.dialogData2"></component>
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="row">
@@ -1005,25 +750,7 @@ $(ui.component.modal.render({
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
-                                    <div id="modal"></div>
-                                    <script>
-                                    $('#modal').replaceWith(
-                                        $(ui.component.modal.render({
-                                            'title': 'Invite your friend',
-                                            'close': true,
-                                            'body': 'Modal body.. Now find out the different possibilities',
-                                            'button': [{
-                                                'class': 'solid-button--happy',
-                                                'content': 'Send Invitation',
-                                                'action': 'alert("Alrighty sent")'
-                                            }, {
-                                                'class': 'solid-button--neutral',
-                                                'content': 'Cancel',
-                                                'action': 'alert("Alrighty canceled")'
-                                            }]
-                                        }))
-                                    );
-                                    </script>
+                                    <component data-type="modal" data-properties="modalData.modalData1"></component>
                                 </div>
                             </div>
                             <div class="row" id="anchor-navigation">
