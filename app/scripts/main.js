@@ -6,16 +6,16 @@ $(document).ready(function() {
     //This loads the components from a JSON-file and renders them on the page.
     $('component').replaceWith(function() {
         var type = $(this).data('type');
-        var properties = eval($(this).data('properties'));
-            console.log($(this).data('random'));
-
-        if ($(this).data('random') == 'true') {
-            var objectLength = Object.keys(properties).length + 1;
-            console.log('hi');
-            console.log(objectLength);
-        }
+        var properties = eval($(this).data('properties'));      
         var component = 'ui.component.' + type + '.render';
         // console.log($(this).data('properties'));
+        if ($(this).data('random')) {
+            var objectLength = Object.keys(properties).length;
+            var randomObjectNumber = Math.floor(Math.random() * objectLength);
+            var properties = eval($(this).data('properties') + '.' + Object.keys(properties)[randomObjectNumber]);
+            console.log(properties);
+            return eval(component)(properties);
+        }
         return eval(component)(properties);
     });
 
