@@ -1,4 +1,4 @@
-<form method="{{method}}" class="form" id="{{id}}" action="{{action}}">
+<form method="{{method}}" class="form" action="{{action}}" id="{{id}}" >
 	{{#each inputs}}
 		<div class="form__input">
 			<div class="{{inputId}}">
@@ -30,12 +30,17 @@
 			</div>
 		</div>
 	{{/each}}
-	<input class="submit" type="submit" value="Submit">
+	{{!-- <input class="submit" type="submit" value="Submit"> --}}		
+	{{#each buttons}}
+		<span class="form-button pull-right">{{>PartialButton type="submit"}}</span>
+	{{/each}}	
+	{{#if cancel}}	
+		<span class="form-button pull-right"><a href="#" novalidate name="cancel" id="cancel" class="solid-button--neutral">Cancel</a></span>
+	{{/if}}
 </form>
 <script>
     // validate the form when it is submitted
     var validator = $("#{{id}}").validate({
-    	debug: true,
     	ignore: [],
         errorPlacement: function(error, element) {
             // Append error within linked label
@@ -51,7 +56,8 @@
 	$('select[name="mySelect"]').on('change', function() { // fires when the value changes
 	    $(this).valid(); // trigger validation on hidden select
 	});
-	$(".cancel").click(function() {
-	    validator.resetForm();
-    });
+    $("#cancel").click(function() {
+	    validator.resetForm();    	
+    	$(this).closest('form').find("input").val("");
+});
 </script>

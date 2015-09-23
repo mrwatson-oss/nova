@@ -377,18 +377,33 @@ ui.component.dropdown = (function($, T) {
      * @type {Object}
      */
     var dropdown = {
-        'class': null, 
-        'script': 'comeDown()',
+        'class': null,
+        'script': 'dropDown()',
         'dropdownItem': null
     };
 
-    comeDown = function() {
-        $('li.dropdown').click(function(event) {
-            event.stopPropagation();
-            $(this).addClass('drop-nav-active');
+    dropDown = function() {
+        $('html').on('click', function(e) {
+            if (!$(e.target).closest(".dropdown").length) {
+                $('.drop-nav').slideUp(50);
+                $('li.dropdown').removeClass('dropdown--active');
+            } else {
+                return false;
+            }
         });
-        $(document).click(function() {
-            $('li.dropdown').removeClass('drop-nav-active');
+        $('li.dropdown').on('click', function() {
+           // console.log($('li.dropdown').children('span.dropdown-badge').length);
+           //  $('li.dropdown').children('span.dropdown-badge').html($('li.dropdown').children('span.dropdown-badge').length);
+            $(this).addClass('dropdown--active');
+            if ($(this).children('.drop-nav').is(':visible')) {
+                $(this).removeClass('dropdown--active');
+                $('.drop-nav').slideUp(100);
+            } else {
+                $('.drop-nav').hide();
+                $('li.dropdown').removeClass('dropdown--active');
+                $(this).addClass('dropdown--active');
+                $(this).children('.drop-nav').slideDown(100);
+            }
         });
     };
 
@@ -964,8 +979,8 @@ ui.component.partials = (function($, T) {
             });
             Handlebars.registerPartial({
                 'PartialAvatar': '{{#if avatar}}{{#avatar}}<div class="avatar {{#if small}}avatar--small{{/if}} {{#if round}} round{{/if}}"><img {{#if src}}src="{{src}}" {{else}}src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu"{{/if}} alt="avatar"></div>{{/avatar}}{{else}}<div class="avatar {{#if small}}avatar--small{{/if}}"><img src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu" alt="avatar"/></div>{{/if}}',
-                'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="btn {{class}} {{#if icon}}icon-only{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}">{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>',
-                'PartialDropdown': '<li class="dropdown" id="dropdown">{{#if icon}}<i class="{{icon}}"></i>{{/if}}{{{dropdownItem}}}<ul class="nav drop-nav">{{#each dropdownOptions}}<li><a id="{{id}}" class="{{class}}" href="{{href}}">{{option}}</a></li>{{/each}}</ul><script>{{script}}</script></li>',
+                'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="btn {{class}} {{#if icon}}icon-only{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}" {{#if cancel}} formnovalidate {{/if}}>{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>',
+                'PartialDropdown': '<li class="dropdown" id="dropdown">{{#if icon}}<i class="{{icon}}"></i>{{/if}}{{{dropdownItem}}}{{#if badge}}<span class="dropdown-badge">{{dropdownOptions.length}}</span>{{/if}}<ul class="nav drop-nav">{{#each dropdownOptions}}<li><a id="{{id}}" class="{{class}}" href="{{href}}">{{option}}</a></li>{{/each}}</ul><script>{{script}}</script></li>',
                 'PartialTextInput': ui.component.textInput.render({
                     'class': '{{class}}',
                     'id': '{{id}}',

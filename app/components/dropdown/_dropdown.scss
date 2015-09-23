@@ -2,46 +2,63 @@
 // Base dropdown
 // -----------------------------------------------------------------------------
 .dropdown {
-    // position: relative;
-    // float: left;
+    display: inline-block;
     list-style-type: none;
     cursor: default;
     color: $text-color;
     padding: 1em;
+    margin: -.4em 0;
     background: white;
-    line-height: 1.4em;
-    font-size: .9em;
+    &:hover {
+        background: $grey--light;         
+    }
+    &:active, &.dropdown--active {
+        background: $grey;
+        .dropdown-badge {
+            // display: none;
+    }
+    }
     i {
-        position: relative;
-        // font-size: 1.2em;
-        left: -.2em;
-        top: .14em;
+        display: inline-block;
+        font-size: 1.4em;
+        line-height: 1em;
+
+
+        // left: -.2em;
+        // top: .16em;
+        &.dropdown-icon {
+            position: relative;
+            margin: 0;
+            // top: .15em;
+            // padding: .3em;
+        }
     }
     .drop-nav {
         list-style-type: none;
         position: absolute;
         display: none;
+        width: 10em;
+        right: 0;
+        overflow: hidden;
         background: white;
+        border: 2px solid $grey;
     }
-    &:hover{
-        .drop-nav {
-            width: 9em;
-            display: block;
-            left: 0;
-            z-index: 1;
-            box-shadow: 0px 1px 5px $border-color;
-        }
-
-    }
-    // .drop-nav-active {
-    //     .drop-nav {
-    //         min-width: 8em;
-    //         display: block;
-    //         z-index: 1;
-    //         box-shadow: 0px 1px 5px $border-color;
-    //     }
-    // }
     .divider {
         border-bottom: 2px solid $divider-color;
+    }
+    .dropdown-badge {
+        position: absolute;
+        right: .3em;
+        top: .3em;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.6em;
+        text-align: center;
+        background: $sec-blue;
+        color: $white;
+        overflow: hidden;
+        height: 1.7em;
+        width: 1.7em;
+        border-radius: 50%;
     }
 }
