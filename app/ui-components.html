@@ -45,31 +45,7 @@
         <!-- header -->
         <div class="row">
             <div class="col-xs-12">
-                <div id="header">
-                    <script>
-                    var header = ui.component.header;
-                    $('#header').replaceWith(
-                        $(header.render({
-                            'logo': {
-                                'src': '/images/logo.png'
-                            },
-                            'input': {
-                                'placeholder': 'Seach for components or whatever'
-                            },
-                            'navItems': [{
-                                'url': '/',
-                                'item': 'UI base',
-                                'class': 'divider'
-                            }, {
-
-                                'url': '#',
-                                'item': 'UI components',
-                                'class': 'nav--active'
-                            }]
-                        }))
-                    );
-                    </script>
-                </div>
+                <component data-type="header" data-properties="headerData.headerData1"></component>
             </div>
         </div>
     </div>
@@ -215,73 +191,73 @@ $(ui.component.button.render({
                                 </div>
                             </div>
                         </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <!-- <div class="app-block"> -->
-                        <h3>Naked Button</h3>
-                        <!-- </div> -->
-                    </div>
-                    <div class="col-xs-12">
-                        <component data-type="button" data-properties="buttonData.buttonData1"></component>
-                    </div>
-                    <div class="col-xs-12">
-                        <!-- <div class="app-block"> -->
-                        <h3>Naked Button - disabled</h3>
-                        <!-- </div> -->
-                    </div>
-                    <div class="col-xs-12">
-                        <component data-type="button" data-properties="buttonData.buttonData2"></component>
-                    </div>
-                    <div class="col-xs-12">
-                        <!-- <div class="app-block"> -->
-                        <h3>Solid Button</h3>
-                        <!-- </div> -->
-                    </div>
-                    <div class="col-xs-12">
-                        <component data-type="button" data-properties="buttonData.buttonData3"></component>
-                    </div>
-                    <div class="col-xs-12">
-                        <!-- <div class="app-block"> -->
-                        <h3>Solid Button - disabled</h3>
-                        <!-- </div> -->
-                    </div>
-                    <div class="col-xs-12">
-                        <component data-type="button" data-properties="buttonData.buttonData4"></component>
-                    </div>
-                </div>
-                <div class="row" id="anchor-composer">
-                    <div class="col-xs-12">
-                        <div class="app-block">
-                            <h2>Composer</h2>
-                            <p>The composer component is used for creating post-its
-                                <br> Typically it contains an input field and two buttons.
-                            </p>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- <div class="app-block"> -->
+                                <h3>Naked Button</h3>
+                                <!-- </div> -->
+                            </div>
+                            <div class="col-xs-12">
+                                <component data-type="button" data-properties="buttonData.buttonData1"></component>
+                            </div>
+                            <div class="col-xs-12">
+                                <!-- <div class="app-block"> -->
+                                <h3>Naked Button - disabled</h3>
+                                <!-- </div> -->
+                            </div>
+                            <div class="col-xs-12">
+                                <component data-type="button" data-properties="buttonData.buttonData2"></component>
+                            </div>
+                            <div class="col-xs-12">
+                                <!-- <div class="app-block"> -->
+                                <h3>Solid Button</h3>
+                                <!-- </div> -->
+                            </div>
+                            <div class="col-xs-12">
+                                <component data-type="button" data-properties="buttonData.buttonData3"></component>
+                            </div>
+                            <div class="col-xs-12">
+                                <!-- <div class="app-block"> -->
+                                <h3>Solid Button - disabled</h3>
+                                <!-- </div> -->
+                            </div>
+                            <div class="col-xs-12">
+                                <component data-type="button" data-properties="buttonData.buttonData4"></component>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- composer -->
-                        <div id="composer"></div>
-                        <script>
-                        $('#composer').replaceWith(
-                            $(ui.component.composer.render({
-                                'avatar': {
-                                    'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
-                                    'small': true
-                                },
-                                'input': {
-                                    'placeholder': 'Share your thoughts'
-                                },
-                                'buttons': [{
-                                    'class': 'solid-button--happy pull-right',
-                                    'content': 'Share post',
-                                    'action': 'alert("it works")'
-                                }]
-                            }))
-                        );
-                        </script>
-                    </div>
-                    <div class="col-md-6">
-                        <pre><code class="language-javascript">
+                        <div class="row" id="anchor-composer">
+                            <div class="col-xs-12">
+                                <div class="app-block">
+                                    <h2>Composer</h2>
+                                    <p>The composer component is used for creating post-its
+                                        <br> Typically it contains an input field and two buttons.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- composer -->
+                                <div id="composer"></div>
+                                <script>
+                                $('#composer').replaceWith(
+                                    $(ui.component.composer.render({
+                                        'avatar': {
+                                            'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                            'small': true
+                                        },
+                                        'input': {
+                                            'placeholder': 'Share your thoughts'
+                                        },
+                                        'buttons': [{
+                                            'class': 'solid-button--happy pull-right',
+                                            'content': 'Share post',
+                                            'action': 'alert("it works")'
+                                        }]
+                                    }))
+                                );
+                                </script>
+                            </div>
+                            <div class="col-md-6">
+                                <pre><code class="language-javascript">
 $(ui.component.composer.render({
     input: {
         placeholder: 'Share your thoughts'
@@ -297,77 +273,25 @@ $(ui.component.composer.render({
     }]
 }))
 </code></pre>
-                    </div>
-                </div>
-                <div class="row" id="anchor-header">
-                    <div class="col-xs-12">
-                        <div class="app-block">
-                            <h2>Header</h2>
-                            <p>
-                                The header component is used only by the mr.Watson platform, not by apps.
-                                <br> If you're looking for an app header check out the app bar component.
-                                <br>
-                                <br> To do: Make search box work &amp; fix dropdown item
-                            </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div id="headerSG">
-                            <script>
-                            $('#headerSG').replaceWith(
-                                $(ui.component.header.render({
-                                    'styleguide': true,
-                                    'logo': {
-                                        'src': '/images/logo.png'
-                                    },
-                                    'input': {
-                                        'placeholder': 'Search bar..'
-                                    },
-                                    'dropdown': [{
-                                            'icon': 'icon-naked-settings',
-                                            // 'dropdownItem': 'Settings',
-                                            'dropdownOptions': [{
-                                                'option': 'Profile',
-                                                'href': '#'
-                                            }, {
-                                                'option': 'Company',
-                                                'href': '#',
-                                                'class': 'divider'
-                                            }, {
-                                                'option': 'Log out',
-                                                'href': '#'
-                                            }]
-                                        }, {
-                                            'icon': 'icon-naked-bell',
-                                            'badge': true,
-                                            // 'dropdownItem': 'Notifs',
-                                            'dropdownOptions': [{
-                                                'option': 'You rock',
-                                                'href': '#',
-                                                'class': 'divider'
-                                            }, {
-                                                'option': 'Freddie invited you to lunch party',
-                                                'href': '#',
-                                                'class': 'divider'
-                                            }, {
-                                                'option': 'Hans commented on your post-it',
-                                                'href': '#',
-                                                'class': 'divider'
-                                            }]
-                                        }]
-                                        // ,
-                                        // 'navItems': [{
-                                        //         'url': '#',
-                                        //         'item': 'Messages'
-                                        //     }]
-
-                                }))
-                            );
-                            </script>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <pre><code class="language-javascript">
+                        <div class="row" id="anchor-header">
+                            <div class="col-xs-12">
+                                <div class="app-block">
+                                    <h2>Header</h2>
+                                    <p>
+                                        The header component is used only by the mr.Watson platform, not by apps.
+                                        <br> If you're looking for an app header check out the app bar component.
+                                        <br>
+                                        <br> To do: Make search box work &amp; fix dropdown item
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <component data-type="header" data-properties="headerData.headerData2"></component>
+                            </div>
+                            <div class="col-md-8">
+                                <pre><code class="language-javascript">
 $(ui.component.header.render({
     logo: {
         src: '/images/logo.png'
@@ -408,158 +332,98 @@ $(ui.component.header.render({
     }]
 }))
 </code></pre>
-                    </div>
-                </div>
-                <div class="row" id="anchor-image">
-                    <div class="col-xs-12 ">
-                        <div class="app-block">
-                            <h2>Images</h2>
-                            <p>There are three types of images that are used throughout mr.Watson.
-                                <br> The three types are avatars, body images and cover images.</p>
+                            </div>
                         </div>
-                        <h3>Avatars</h3>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <h4>Square Avatar</h4>
-                            <div id="square-avatar"></div>
-                            <script>
-                            $('#square-avatar').replaceWith(
-                                $(ui.component.avatar.render({
-                                    'avatar': {
-                                        'src': 'http://latetothemovies.com/wp-content/uploads/2015/06/DrStrangelove.gif'
-                                    }
-
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <pre><code class="language-javascript">
+                        <div class="row" id="anchor-image">
+                            <div class="col-xs-12 ">
+                                <div class="app-block">
+                                    <h2>Images</h2>
+                                    <p>There are three types of images that are used throughout mr.Watson.
+                                        <br> The three types are avatars, body images and cover images.</p>
+                                </div>
+                                <h3>Avatars</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="app-block">
+                                    <h4>Square Avatar</h4>
+                                    <component data-type="avatar" data-properties="avatarData.avatarData1"></component>
+                                </div>
+                                <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     src:'/*image source*/'
 }))
 </code></pre>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <h4>Round Avatar</h4>
-                            <div id="avatar-round"></div>
-                            <script>
-                            $('#avatar-round').replaceWith(
-                                $(ui.component.avatar.render({
-                                    'avatar': {
-                                        'src': 'http://latetothemovies.com/wp-content/uploads/2015/06/DrStrangelove.gif',
-                                        'round': true
-                                    }
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <pre><code class="language-javascript">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="app-block">
+                                    <h4>Round Avatar</h4>
+                                    <component data-type="avatar" data-properties="avatarData.avatarData2"></component>
+                                </div>
+                                <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     src:'/*image source*/',
     round: true
 }))
 </code></pre>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <h4>Small Square Avatar</h4>
-                            <div id="small-square-avatar"></div>
-                            <script>
-                            $('#small-square-avatar').replaceWith(
-                                $(ui.component.avatar.render({
-                                    'avatar': {
-                                        'src': 'http://latetothemovies.com/wp-content/uploads/2015/06/DrStrangelove.gif',
-                                        'small': true
-                                    }
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <pre><code class="language-javascript">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="app-block">
+                                    <h4>Small Square Avatar</h4>
+                                    <component data-type="avatar" data-properties="avatarData.avatarData3"></component>
+                                </div>
+                                <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     src:'/*image source*/',
     small: true
 }))
 </code></pre>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <h4>Small Round Avatar</h4>
-                            <div id="small-square-avatar-round"></div>
-                            <script>
-                            $('#small-square-avatar-round').replaceWith(
-                                $(ui.component.avatar.render({
-                                    'avatar': {
-                                        'src': 'http://latetothemovies.com/wp-content/uploads/2015/06/DrStrangelove.gif',
-                                        'round': true,
-                                        'small': true
-                                    }
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <pre><code class="language-javascript">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="app-block">
+                                    <h4>Small Round Avatar</h4>
+                                    <component data-type="avatar" data-properties="avatarData.avatarData4"></component>
+                                </div>
+                                <pre><code class="language-javascript">
 $(ui.component.avatar.render({
     src:'/*image source*/',
     round: true,
     small: true
 }))
 </code></pre>
-                    </div>
-                    <div class="col-xs-12">
-                        <!-- <div class="app-block"> -->
-                        <h3>Body Image</h3>
-                        <!-- </div> -->
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <div id="bodyimage"></div>
-                            <script>
-                            $('#bodyimage').replaceWith(
-                                $(ui.component.image.render({
-                                    'modal': true,
-                                    'src': 'https://pbs.twimg.com/profile_images/2112311889/ostrich_head.jpg'
-                                }))
-                            );
-                            </script>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <pre><code class="language-javascript">
+                            </div>
+                            <div class="col-xs-12">
+                                <!-- <div class="app-block"> -->
+                                <h3>Body Image</h3>
+                                <!-- </div> -->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="app-block">
+                                    <component data-type="image" data-properties="imageData.imageData1"></component>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <pre><code class="language-javascript">
   $(ui.component.image.render({
     src:'/*image source*/'
   }))
 </code></pre>
-                        <div class="app-block">
-                            <p>Body images are used inside content area's.
-                                <br> They take up the entire width of the column they are in.
-                                <br>
-                                <br> To do: create lightbox for larger images.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <!-- <div class="app-block"> -->
-                        <h3>Cover Image</h3>
-                        <!-- </div> -->
-                    </div>
-                    <div class="col-xs-12">
-                        <!-- <div class="app-block"> -->
-                        <div id="coverimage"></div>
-                        <script>
-                        $('#coverimage').replaceWith(
-                            $(ui.component.image.render({
-                                'src': 'http://www.apnatimepass.com/dumb-and-dumber-to-movie/dumb-and-dumber-to-movie-still-10.jpg',
-                                'cover': true,
-                                'modal': true
-
-                            }))
-                        );
-                        </script>
-                    </div>
-                    <div class="col-xs-6">
-                        <pre><code class="language-javascript">
+                                <div class="app-block">
+                                    <p>Body images are used inside content area's.
+                                        <br> They take up the entire width of the column they are in.
+                                        <br>
+                                        <br> To do: create lightbox for larger images.</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <!-- <div class="app-block"> -->
+                                <h3>Cover Image</h3>
+                                <!-- </div> -->
+                            </div>
+                            <div class="col-xs-12">
+                                <component data-type="image" data-properties="imageData.imageData2"></component>
+                            </div>
+                            <div class="col-xs-6">
+                                <pre><code class="language-javascript">
   $(ui.component.image.render({
     image: [{
         src: '/*image source*/',
@@ -567,173 +431,173 @@ $(ui.component.avatar.render({
        }]
     }))
 </code></pre>
-                    </div>
-                    <div class="col-xs-6">
-                        <div class="app-block">
-                            <p>Cover images are used for decorational purposes.
-                                <br> They are mainly used for headers in apps and events.
-                                <br>
-                                <br> The max height of an cover image is 200 pixels. If the image is larger only the top 200 pixels are displayed. (Is this what we want?)
-                                <br>
-                                <br> To do: create lightbox for larger images.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" id="anchor-form">
-                    <div class="col-xs-12">
-                        <div class="app-block">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <h2>Forms</h2>
-                                    <p>
-                                        Forms
-                                    </p>
-                                    <h3>Properties</h3>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="app-block">
+                                    <p>Cover images are used for decorational purposes.
+                                        <br> They are mainly used for headers in apps and events.
+                                        <br>
+                                        <br> The max height of an cover image is 200 pixels. If the image is larger only the top 200 pixels are displayed. (Is this what we want?)
+                                        <br>
+                                        <br> To do: create lightbox for larger images.</p>
                                 </div>
-                                <div class="col-xs-6 col-sm-3">
-                                    Mandatory:
-                                    <ul>
-                                        <!-- <li>id</li>
+                            </div>
+                        </div>
+                        <div class="row" id="anchor-form">
+                            <div class="col-xs-12">
+                                <div class="app-block">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h2>Forms</h2>
+                                            <p>
+                                                Forms
+                                            </p>
+                                            <h3>Properties</h3>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-3">
+                                            Mandatory:
+                                            <ul>
+                                                <!-- <li>id</li>
                                         <li>name</li>
                                         <li>value</li> -->
-                                    </ul>
-                                </div>
-                                <div class="col-xs-6 col-sm-9">
-                                    Optional:
-                                    <ul>
-                                        <!--  <li>placeholder</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-9">
+                                            Optional:
+                                            <ul>
+                                                <!--  <li>placeholder</li>
                                         <li>hasLabel (true/false)</li>
                                         <li>label</li>
                                         <li>icon</li> -->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="app-block">
-                            <div id="form">
-                                <script>
-                                $('#form').replaceWith(
-                                    $(ui.component.form.render({
-                                        'id': 'form2',
-                                        'method': 'get',
-                                        inputs: [{
-                                            'required': true,
-                                            'inputId': 'userPassword',
-                                            'label': 'Password',
-                                            'type': 'password',
-                                            'maxlength': '12',
-                                            'minlength': '5'
-                                        }, {
-                                            'required': true,
-                                            'inputId': 'firstName',
-                                            'label': 'First name',
-                                            'type': 'text',
-                                            'minlength': '2'
-                                        }],
-                                        'selects': [{
-                                            'required': true,
-                                            'selectId': 'age',
-                                            'options': [{
-                                                'value': 'What\'s your age?',
-                                                'title': true
-                                            }, {
-                                                'value': '11'
-                                            }, {
-                                                'value': '12'
-                                            }, {
-                                                'value': '15'
-                                            }]
-                                        }, {
-                                            'selectId': 'sex',
-                                            'required': true,
-                                            'options': [{
-                                                'value': 'What\'s your gender?',
-                                                'title': true
-                                            }, {
-                                                'value': 'man'
-                                            }, {
-                                                'value': 'female'
-                                            }, {
-                                                'value': 'who cares'
-                                            }]
-                                        }],
-                                        'textareas': [{
-                                            'required': true,
-                                            'textareaId': 'AboutMe',
-                                            'label': 'What are you about?'
-                                        }],
-                                        'cancel': true,
-                                        'buttons': [{
-                                            'class': 'solid-button--happy',
-                                            'content': 'Doe doe'
-                                        }]
-                                    }))
-                                );
-                                </script>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" id="anchor-input">
-                        <div class="col-xs-12">
-                            <div class="app-block">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <h2>Input Fields</h2>
-                                        <p>
-                                            Input fields are used in forms and anywhere user input is needed. As the fields are part of a form they should be included between <code class="language-markup"> &lt;form&gt; </code> tags.
-                                            <br>
-                                            <br> To do: should the form be a component as well?
-                                        </p>
-                                        <h3>Properties</h3>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3">
-                                        Mandatory:
-                                        <ul>
-                                            <li>id</li>
-                                            <li>name</li>
-                                            <li>value</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-9">
-                                        Optional:
-                                        <ul>
-                                            <li>placeholder</li>
-                                            <li>hasLabel (true/false)</li>
-                                            <li>label</li>
-                                            <li>icon</li>
-                                        </ul>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <h3>Text Area</h3>
-                        </div>
-                        <div class="col-md-6">
-                            <div id="text-area"></div>
-                            <script>
-                            $('#text-area').replaceWith(
-                                $(ui.component.textArea.render({
-                                    'placeholder': 'Tell people what you\'re all about',
-                                    'hasLabel': true
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <div class="col-md-6">
-                            <pre><code class="language-javascript">
+                            <div class="col-md-6">
+                                <div class="app-block">
+                                    <div id="form">
+                                        <script>
+                                        $('#form').replaceWith(
+                                            $(ui.component.form.render({
+                                                'id': 'form2',
+                                                'method': 'get',
+                                                inputs: [{
+                                                    'required': true,
+                                                    'inputId': 'userPassword',
+                                                    'label': 'Password',
+                                                    'type': 'password',
+                                                    'maxlength': '12',
+                                                    'minlength': '5'
+                                                }, {
+                                                    'required': true,
+                                                    'inputId': 'firstName',
+                                                    'label': 'First name',
+                                                    'type': 'text',
+                                                    'minlength': '2'
+                                                }],
+                                                'selects': [{
+                                                    'required': true,
+                                                    'selectId': 'age',
+                                                    'options': [{
+                                                        'value': 'What\'s your age?',
+                                                        'title': true
+                                                    }, {
+                                                        'value': '11'
+                                                    }, {
+                                                        'value': '12'
+                                                    }, {
+                                                        'value': '15'
+                                                    }]
+                                                }, {
+                                                    'selectId': 'sex',
+                                                    'required': true,
+                                                    'options': [{
+                                                        'value': 'What\'s your gender?',
+                                                        'title': true
+                                                    }, {
+                                                        'value': 'man'
+                                                    }, {
+                                                        'value': 'female'
+                                                    }, {
+                                                        'value': 'who cares'
+                                                    }]
+                                                }],
+                                                'textareas': [{
+                                                    'required': true,
+                                                    'textareaId': 'AboutMe',
+                                                    'label': 'What are you about?'
+                                                }],
+                                                'cancel': true,
+                                                'buttons': [{
+                                                    'class': 'solid-button--happy',
+                                                    'content': 'Doe doe'
+                                                }]
+                                            }))
+                                        );
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="anchor-input">
+                                <div class="col-xs-12">
+                                    <div class="app-block">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <h2>Input Fields</h2>
+                                                <p>
+                                                    Input fields are used in forms and anywhere user input is needed. As the fields are part of a form they should be included between <code class="language-markup"> &lt;form&gt; </code> tags.
+                                                    <br>
+                                                    <br> To do: should the form be a component as well?
+                                                </p>
+                                                <h3>Properties</h3>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-3">
+                                                Mandatory:
+                                                <ul>
+                                                    <li>id</li>
+                                                    <li>name</li>
+                                                    <li>value</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-9">
+                                                Optional:
+                                                <ul>
+                                                    <li>placeholder</li>
+                                                    <li>hasLabel (true/false)</li>
+                                                    <li>label</li>
+                                                    <li>icon</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <h3>Text Area</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="text-area"></div>
+                                    <script>
+                                    $('#text-area').replaceWith(
+                                        $(ui.component.textArea.render({
+                                            'placeholder': 'Tell people what you\'re all about',
+                                            'hasLabel': true
+                                        }))
+                                    );
+                                    </script>
+                                </div>
+                                <div class="col-md-6">
+                                    <pre><code class="language-javascript">
   $(ui.component.textArea.render({
     placeholder: 'Tell people what you\'re all about'
   }))
 </code></pre>
-                        </div>
-                        <div class="col-xs-12">
-                            <!-- <div class="app-block"> -->
-                            <h3>Text Input</h3>
-                            <!-- </div> -->
-                            <!--  <div id="main">
+                                </div>
+                                <div class="col-xs-12">
+                                    <!-- <div class="app-block"> -->
+                                    <h3>Text Input</h3>
+                                    <!-- </div> -->
+                                    <!--  <div id="main">
                             <p>Errors use spans placed within existing label element</p>
                             <form method="get" class="cmxform" id="form1" action="">
                                 <fieldset>
@@ -753,25 +617,25 @@ $(ui.component.avatar.render({
                             </form>
                             
                         </div> -->
-                        </div>
-                        <div class="col-md-6">
-                            <div id="text-input"></div>
-                            <script>
-                            $('#text-input').replaceWith(
-                                $(ui.component.textInput.render({
-                                    'id': 'form1',
-                                    'inputId': 'password',
-                                    'hasLabel': true,
-                                    'label': 'Password',
-                                    'type': 'password',
-                                    'maxlength': '12',
-                                    'minlength': '5'
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <div class="col-md-6">
-                            <pre><code class="language-javascript">
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="text-input"></div>
+                                    <script>
+                                    $('#text-input').replaceWith(
+                                        $(ui.component.textInput.render({
+                                            'id': 'form1',
+                                            'inputId': 'password',
+                                            'hasLabel': true,
+                                            'label': 'Password',
+                                            'type': 'password',
+                                            'maxlength': '12',
+                                            'minlength': '5'
+                                        }))
+                                    );
+                                    </script>
+                                </div>
+                                <div class="col-md-6">
+                                    <pre><code class="language-javascript">
   $(ui.component.textInput.render({
     hasLabel': true,
     type: 'password',
@@ -779,83 +643,83 @@ $(ui.component.avatar.render({
     icon: 'icon-user-key'
   }))
 </code></pre>
-                        </div>
-                        <div class="col-md-6">
-                            <div id="text-input2"></div>
-                            <script>
-                            $('#text-input2').replaceWith(
-                                $(ui.component.textInput.render({
-                                    'id': "great",
-                                    'hasLabel': true,
-                                    'label': 'First name',
-                                    'inputId': 'name',
-                                    'minlength': '3'
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <div class="col-md-6">
-                            <pre><code class="language-javascript">
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="text-input2"></div>
+                                    <script>
+                                    $('#text-input2').replaceWith(
+                                        $(ui.component.textInput.render({
+                                            'id': "great",
+                                            'hasLabel': true,
+                                            'label': 'First name',
+                                            'inputId': 'name',
+                                            'minlength': '3'
+                                        }))
+                                    );
+                                    </script>
+                                </div>
+                                <div class="col-md-6">
+                                    <pre><code class="language-javascript">
   $(ui.component.textInput.render({
     hasLabel: true,
     label: 'First name'
   }))
 </code></pre>
-                        </div>
-                        <div class="col-xs-12">
-                            <h3>Select</h3>
-                        </div>
-                        <div class="col-md-6">
-                            <div id="select-test">
+                                </div>
+                                <div class="col-xs-12">
+                                    <h3>Select</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="select-test">
+                                        <script>
+                                        $('#select-test').replaceWith(
+                                            $(ui.component.select.render({
+                                                'options': [{
+                                                    'value': 'Select your gender',
+                                                    'title': true
+                                                }, {
+                                                    'value': 'Male'
+                                                }, {
+                                                    'value': 'Female'
+                                                }, {
+                                                    'value': 'Other'
+                                                }]
+                                            })));
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <!-- <div class="app-block"> -->
+                                    <h3>Dropdown</h3>
+                                    <!-- </div> -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="drokdown"></div>
+                                </div>
                                 <script>
-                                $('#select-test').replaceWith(
-                                    $(ui.component.select.render({
-                                        'options': [{
-                                            'value': 'Select your gender',
-                                            'title': true
+                                $('#drokdown').replaceWith(
+                                    $(ui.component.dropdown.render({
+                                        'icon': 'icon-naked-bell',
+                                        'badge': 'true',
+                                        'dropdownOptions': [{
+                                            'option': 'Profile',
+                                            'href': '#'
                                         }, {
-                                            'value': 'Male'
+                                            'option': 'Privacy',
+                                            'href': '#'
                                         }, {
-                                            'value': 'Female'
+                                            'option': 'Settings',
+                                            'href': '#',
+                                            'class': 'divider'
                                         }, {
-                                            'value': 'Other'
+                                            'option': 'Log out',
+                                            'href': '#'
                                         }]
-                                    })));
+                                    }))
+                                );
                                 </script>
-                            </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <!-- <div class="app-block"> -->
-                            <h3>Dropdown</h3>
-                            <!-- </div> -->
-                        </div>
-                        <div class="col-md-6">
-                            <div id="drokdown"></div>
-                        </div>
-                        <script>
-                        $('#drokdown').replaceWith(
-                            $(ui.component.dropdown.render({
-                                'icon': 'icon-naked-bell',
-                                'badge': 'true',
-                                'dropdownOptions': [{
-                                    'option': 'Profile',
-                                    'href': '#'
-                                }, {
-                                    'option': 'Privacy',
-                                    'href': '#'
-                                }, {
-                                    'option': 'Settings',
-                                    'href': '#',
-                                    'class': 'divider'
-                                }, {
-                                    'option': 'Log out',
-                                    'href': '#'
-                                }]
-                            }))
-                        );
-                        </script>
-                        <div class="col-md-6">
-                            <pre><code class="language-javascript">
+                                <div class="col-md-6">
+                                    <pre><code class="language-javascript">
 $(ui.component.dropdown.render({
     dropdownItem: 'Options',
     dropdownOptions: [{
@@ -875,42 +739,42 @@ $(ui.component.dropdown.render({
 }))
 
 </code></pre>
-                        </div>
-                    </div>
-                    <div class="row" id="anchor-messages">
-                        <div class="col-xs-12">
-                            <div class="app-block">
-                                <h2>Messages</h2>
-                                <p>There are two types of messages. Alerts &amp; Dialogs
-                                    <ul>
-                                        <li>Alerts are used to provide a user with feedback</li>
-                                        <li>Dialogs are used when user input is needed for an action</li>
-                                    </ul>
-                                </p>
+                                </div>
                             </div>
-                            <div class="row">
+                            <div class="row" id="anchor-messages">
                                 <div class="col-xs-12">
-                                    <h3>Alerts</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-5">
                                     <div class="app-block">
-                                        <p>
-                                            You can either use the solid or the naked alert.
-                                            <br> The 'class' property defines the alert style. Possible options are:
+                                        <h2>Messages</h2>
+                                        <p>There are two types of messages. Alerts &amp; Dialogs
+                                            <ul>
+                                                <li>Alerts are used to provide a user with feedback</li>
+                                                <li>Dialogs are used when user input is needed for an action</li>
+                                            </ul>
                                         </p>
-                                        <ul>
-                                            <li>naked-alert--happy</li>
-                                            <li>naked-alert--strict</li>
-                                            <li>naked-alert--angry</li>
-                                        </ul>
-                                        <p>The <i>solid alert</i> stands out more and is to be used for important messages only.
-                                            <br> If the alert message is not of high importance the use of the <i>naked alert</i> is prefered.</p> to do: simplify properties like <i>dialogs</i>
                                     </div>
-                                </div>
-                                <div class="col-xs-7">
-                                    <pre><code class="language-javascript">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h3>Alerts</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="app-block">
+                                                <p>
+                                                    You can either use the solid or the naked alert.
+                                                    <br> The 'class' property defines the alert style. Possible options are:
+                                                </p>
+                                                <ul>
+                                                    <li>naked-alert--happy</li>
+                                                    <li>naked-alert--strict</li>
+                                                    <li>naked-alert--angry</li>
+                                                </ul>
+                                                <p>The <i>solid alert</i> stands out more and is to be used for important messages only.
+                                                    <br> If the alert message is not of high importance the use of the <i>naked alert</i> is prefered.</p> to do: simplify properties like <i>dialogs</i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-7">
+                                            <pre><code class="language-javascript">
 $(ui.component.alert.render({
     icon: 'icon-user-award',
     title: 'YES!',
@@ -922,134 +786,134 @@ $(ui.component.alert.render({
     }]
 }))
 </code></pre>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <!-- <div class="app-block"> -->
-                            <div id="solid-alert"></div>
-                            <script>
-                            $('#solid-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-user-award',
-                                    'title': 'YES!',
-                                    'class': 'solid-alert--happy',
-                                    'message': 'You did something right',
-                                    'button': [{
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--happy'
-                                    }]
-                                }))
-                            );
-                            </script>
-                            <div id="naked-alert"></div>
-                            <script>
-                            $('#naked-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-user-award',
-                                    'title': 'YES!',
-                                    'class': 'naked-alert--happy',
-                                    'message': 'You did something right',
-                                    'button': [{
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--happy'
-                                    }]
-                                }))
-                            );
-                            </script>
-                            <div id="solid-alert"></div>
-                            <script>
-                            $('#solid-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-flag',
-                                    'title': 'Heads up!',
-                                    'class': 'solid-alert--strict',
-                                    'message': 'No employees yet.',
-                                    'link': 'Add one now?',
-                                    'href': '#',
-                                    'button': [{
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--strict'
-                                    }]
-                                }))
-                            );
-                            </script>
-                            <div id="naked-alert"></div>
-                            <script>
-                            $('#naked-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-flag',
-                                    'title': 'Heads up!',
-                                    'class': 'naked-alert--strict',
-                                    'message': 'No employees yet.',
-                                    'link': 'Add one now?',
-                                    'href': '#',
-                                    'button': [{
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--strict'
-                                    }]
-                                }))
-                            );
-                            </script>
-                            <div id="solid-alert"></div>
-                            <script>
-                            $('#solid-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-fire',
-                                    'title': 'Oops!',
-                                    'class': 'solid-alert--angry',
-                                    'message': 'That e-mail address already exists.',
-                                    'link': 'Forgot your password?',
-                                    'href': '#',
-                                    'button': [{
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--angry'
-                                    }]
-                                }))
-                            );
-                            </script>
-                            <div id="naked-alert"></div>
-                            <script>
-                            $('#naked-alert').replaceWith(
-                                $(ui.component.alert.render({
-                                    'icon': 'icon-solid-fire',
-                                    'title': 'Oops!',
-                                    'class': 'naked-alert--angry',
-                                    'message': 'That e-mail address already exists.',
-                                    'link': 'Forgot your password?',
-                                    'href': '#',
-                                    'button': [{
-                                        'icon': 'icon-system-close',
-                                        'class': 'naked-button--icon-only--angry'
-                                    }]
-                                }))
-                            );
-                            </script>
-                            <!-- </div> -->
-                        </div>
-                        <div class="col-xs-12">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <h3>Dialogs</h3>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="app-block">
-                                        <p>
-                                            An dialog is presented to a user when immediate user input is required.
-                                            <br>
-                                            <br> There are two types of dialogs:
-                                            <br>
-                                            <ul>
-                                                <li>Strict dialog (automaticly selected)</li>
-                                                <li>Angry dialog
-                                                    <br>(<code class="language-javascript">'angry': 'true'</code>)</li>
-                                            </ul>
-                                            The <i>angry dialog</i> is only to be used for high impact decisions, like deleting an account.
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-7">
-                                    <pre><code class="language-javascript">
+                                <div class="col-xs-12">
+                                    <!-- <div class="app-block"> -->
+                                    <div id="solid-alert"></div>
+                                    <script>
+                                    $('#solid-alert').replaceWith(
+                                        $(ui.component.alert.render({
+                                            'icon': 'icon-user-award',
+                                            'title': 'YES!',
+                                            'class': 'solid-alert--happy',
+                                            'message': 'You did something right',
+                                            'button': [{
+                                                'icon': 'icon-system-close',
+                                                'class': 'naked-button--icon-only--happy'
+                                            }]
+                                        }))
+                                    );
+                                    </script>
+                                    <div id="naked-alert"></div>
+                                    <script>
+                                    $('#naked-alert').replaceWith(
+                                        $(ui.component.alert.render({
+                                            'icon': 'icon-user-award',
+                                            'title': 'YES!',
+                                            'class': 'naked-alert--happy',
+                                            'message': 'You did something right',
+                                            'button': [{
+                                                'icon': 'icon-system-close',
+                                                'class': 'naked-button--icon-only--happy'
+                                            }]
+                                        }))
+                                    );
+                                    </script>
+                                    <div id="solid-alert"></div>
+                                    <script>
+                                    $('#solid-alert').replaceWith(
+                                        $(ui.component.alert.render({
+                                            'icon': 'icon-solid-flag',
+                                            'title': 'Heads up!',
+                                            'class': 'solid-alert--strict',
+                                            'message': 'No employees yet.',
+                                            'link': 'Add one now?',
+                                            'href': '#',
+                                            'button': [{
+                                                'icon': 'icon-system-close',
+                                                'class': 'naked-button--icon-only--strict'
+                                            }]
+                                        }))
+                                    );
+                                    </script>
+                                    <div id="naked-alert"></div>
+                                    <script>
+                                    $('#naked-alert').replaceWith(
+                                        $(ui.component.alert.render({
+                                            'icon': 'icon-solid-flag',
+                                            'title': 'Heads up!',
+                                            'class': 'naked-alert--strict',
+                                            'message': 'No employees yet.',
+                                            'link': 'Add one now?',
+                                            'href': '#',
+                                            'button': [{
+                                                'icon': 'icon-system-close',
+                                                'class': 'naked-button--icon-only--strict'
+                                            }]
+                                        }))
+                                    );
+                                    </script>
+                                    <div id="solid-alert"></div>
+                                    <script>
+                                    $('#solid-alert').replaceWith(
+                                        $(ui.component.alert.render({
+                                            'icon': 'icon-solid-fire',
+                                            'title': 'Oops!',
+                                            'class': 'solid-alert--angry',
+                                            'message': 'That e-mail address already exists.',
+                                            'link': 'Forgot your password?',
+                                            'href': '#',
+                                            'button': [{
+                                                'icon': 'icon-system-close',
+                                                'class': 'naked-button--icon-only--angry'
+                                            }]
+                                        }))
+                                    );
+                                    </script>
+                                    <div id="naked-alert"></div>
+                                    <script>
+                                    $('#naked-alert').replaceWith(
+                                        $(ui.component.alert.render({
+                                            'icon': 'icon-solid-fire',
+                                            'title': 'Oops!',
+                                            'class': 'naked-alert--angry',
+                                            'message': 'That e-mail address already exists.',
+                                            'link': 'Forgot your password?',
+                                            'href': '#',
+                                            'button': [{
+                                                'icon': 'icon-system-close',
+                                                'class': 'naked-button--icon-only--angry'
+                                            }]
+                                        }))
+                                    );
+                                    </script>
+                                    <!-- </div> -->
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h3>Dialogs</h3>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="app-block">
+                                                <p>
+                                                    An dialog is presented to a user when immediate user input is required.
+                                                    <br>
+                                                    <br> There are two types of dialogs:
+                                                    <br>
+                                                    <ul>
+                                                        <li>Strict dialog (automaticly selected)</li>
+                                                        <li>Angry dialog
+                                                            <br>(<code class="language-javascript">'angry': 'true'</code>)</li>
+                                                    </ul>
+                                                    The <i>angry dialog</i> is only to be used for high impact decisions, like deleting an account.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-7">
+                                            <pre><code class="language-javascript">
 $(ui.component.dialog.render({
     angry: 'true',
     title: 'Deleting this is permanent.',
@@ -1061,67 +925,67 @@ $(ui.component.dialog.render({
     }]
 }))
 </code></pre>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <div id="dialog"></div>
-                            <script>
-                            $('#dialog').replaceWith(
-                                $(ui.component.dialog.render({
-                                    'angry': 'true',
-                                    'title': 'Deleting this is permanent.',
-                                    'message': 'Are you sure you want to delete your account?',
-                                    'button': [{
-                                        'content': 'Delete account',
-                                        'action': 'alert("Alrighty deleted")'
-                                    }, {
-                                        'content': 'Cancel',
-                                        'action': 'alert("Alrighty canceled")'
-                                    }]
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <div class="col-xs-12">
-                            <div id="dialog"></div>
-                            <script>
-                            $('#dialog').replaceWith(
-                                $(ui.component.dialog.render({
-                                    'title': 'Do you wish to create a new community?',
-                                    'message': 'You should only create a new community if you are setting one up in a new coworking space.',
-                                    'button': [{
-                                        'content': 'Create community',
-                                        'action': 'alert("Alrighty created")'
-                                    }, {
-                                        'content': 'Cancel',
-                                        'action': 'alert("Alrighty canceled")'
-                                    }]
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <div class="col-xs-12">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <h3>Modals</h3>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="app-block">
-                                        <p>
-                                            The modal component is an overlay field..
-                                            <br>
-                                            <br> Different types of modals?
-                                            <br>
-                                            <ul>
-                                                <li>modal 1 </li>
-                                                <li>modal 2</li>
-                                            </ul>
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-7">
-                                    <pre><code class="language-javascript">
+                                <div class="col-xs-12">
+                                    <div id="dialog"></div>
+                                    <script>
+                                    $('#dialog').replaceWith(
+                                        $(ui.component.dialog.render({
+                                            'angry': 'true',
+                                            'title': 'Deleting this is permanent.',
+                                            'message': 'Are you sure you want to delete your account?',
+                                            'button': [{
+                                                'content': 'Delete account',
+                                                'action': 'alert("Alrighty deleted")'
+                                            }, {
+                                                'content': 'Cancel',
+                                                'action': 'alert("Alrighty canceled")'
+                                            }]
+                                        }))
+                                    );
+                                    </script>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div id="dialog"></div>
+                                    <script>
+                                    $('#dialog').replaceWith(
+                                        $(ui.component.dialog.render({
+                                            'title': 'Do you wish to create a new community?',
+                                            'message': 'You should only create a new community if you are setting one up in a new coworking space.',
+                                            'button': [{
+                                                'content': 'Create community',
+                                                'action': 'alert("Alrighty created")'
+                                            }, {
+                                                'content': 'Cancel',
+                                                'action': 'alert("Alrighty canceled")'
+                                            }]
+                                        }))
+                                    );
+                                    </script>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h3>Modals</h3>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="app-block">
+                                                <p>
+                                                    The modal component is an overlay field..
+                                                    <br>
+                                                    <br> Different types of modals?
+                                                    <br>
+                                                    <ul>
+                                                        <li>modal 1 </li>
+                                                        <li>modal 2</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-7">
+                                            <pre><code class="language-javascript">
 $(ui.component.modal.render({
     'title': 'Invite your friend',
     'close': true,
@@ -1137,82 +1001,82 @@ $(ui.component.modal.render({
     }]
 }))
 </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div id="modal"></div>
+                                    <script>
+                                    $('#modal').replaceWith(
+                                        $(ui.component.modal.render({
+                                            'title': 'Invite your friend',
+                                            'close': true,
+                                            'body': 'Modal body.. Now find out the different possibilities',
+                                            'button': [{
+                                                'class': 'solid-button--happy',
+                                                'content': 'Send Invitation',
+                                                'action': 'alert("Alrighty sent")'
+                                            }, {
+                                                'class': 'solid-button--neutral',
+                                                'content': 'Cancel',
+                                                'action': 'alert("Alrighty canceled")'
+                                            }]
+                                        }))
+                                    );
+                                    </script>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <div id="modal"></div>
-                            <script>
-                            $('#modal').replaceWith(
-                                $(ui.component.modal.render({
-                                    'title': 'Invite your friend',
-                                    'close': true,
-                                    'body': 'Modal body.. Now find out the different possibilities',
-                                    'button': [{
-                                        'class': 'solid-button--happy',
-                                        'content': 'Send Invitation',
-                                        'action': 'alert("Alrighty sent")'
-                                    }, {
-                                        'class': 'solid-button--neutral',
-                                        'content': 'Cancel',
-                                        'action': 'alert("Alrighty canceled")'
-                                    }]
-                                }))
-                            );
-                            </script>
-                        </div>
-                    </div>
-                    <div class="row" id="anchor-navigation">
-                        <div class="col-xs-12">
-                            <div class="app-block">
-                                <h2>Navigation</h2>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <p>There is <em>(should the app bar be under navigation too?)</em> only one type of nav but there's a lot of tweaking possible.</p>
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <pre><code class="language-javascript">
+                            <div class="row" id="anchor-navigation">
+                                <div class="col-xs-12">
+                                    <div class="app-block">
+                                        <h2>Navigation</h2>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <p>There is <em>(should the app bar be under navigation too?)</em> only one type of nav but there's a lot of tweaking possible.</p>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <pre><code class="language-javascript">
   $(ui.component.nav.render({
     // properties
   }))
 </code></pre>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-10 col-sm-6 col-md-4">
-                            <div id="voorbeeld"></div>
-                            <script>
-                            $('#voorbeeld').replaceWith(
-                                $(ui.component.nav.render({
-                                    'communitySwitch': true,
-                                    'navCommunities': [{
-                                        'src': 'http://erfgoedstem.nl/wp-content/uploads/2012/07/Industriegebouw-Goudsesingel_1.jpg',
-                                        'name': 'Het Industriegeb..',
-                                        'icon': 'icon-system-down-open'
-                                    }],
-                                    'navItems': [{
-                                        'url': '#',
-                                        'item': 'Dashboard'
-                                    }, {
-                                        'url': '#',
-                                        'item': 'People'
-                                    }, {
-                                        'url': '#',
-                                        'item': 'Companies'
-                                    }, {
-                                        'url': '#',
-                                        'item': 'Messages'
-                                    }, {
-                                        'url': '#',
-                                        'item': 'Meet-ups'
-                                    }]
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-8">
-                            <pre><code class="language-javascript">
+                                <div class="col-xs-10 col-sm-6 col-md-4">
+                                    <div id="voorbeeld"></div>
+                                    <script>
+                                    $('#voorbeeld').replaceWith(
+                                        $(ui.component.nav.render({
+                                            'communitySwitch': true,
+                                            'navCommunities': [{
+                                                'src': 'http://erfgoedstem.nl/wp-content/uploads/2012/07/Industriegebouw-Goudsesingel_1.jpg',
+                                                'name': 'Het Industriegeb..',
+                                                'icon': 'icon-system-down-open'
+                                            }],
+                                            'navItems': [{
+                                                'url': '#',
+                                                'item': 'Dashboard'
+                                            }, {
+                                                'url': '#',
+                                                'item': 'People'
+                                            }, {
+                                                'url': '#',
+                                                'item': 'Companies'
+                                            }, {
+                                                'url': '#',
+                                                'item': 'Messages'
+                                            }, {
+                                                'url': '#',
+                                                'item': 'Meet-ups'
+                                            }]
+                                        }))
+                                    );
+                                    </script>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <pre><code class="language-javascript">
     communitySwitch: true,
     navCommunities: [{
         src: 'http://erfgoedstem.nl/wp-content/uploads/2012/07/Industriegebouw-Goudsesingel_1.jpg',
@@ -1236,34 +1100,34 @@ $(ui.component.modal.render({
         item: 'Meet-ups'
     }]
 </code></pre>
-                        </div>
-                        <div class="col-xs-10 col-sm-6 col-md-4">
-                            <div id="navigation"></div>
-                            <script>
-                            $('#navigation').replaceWith(
-                                $(ui.component.nav.render({
-                                    'title': true,
-                                    'navTitleIcon': 'icon-solid-settings',
-                                    'navTitle': 'Settings',
-                                    'button': true,
-                                    'class': 'solid-button--strict',
-                                    'content': 'Dashboard',
-                                    'subTitle': true,
-                                    'category': 'Community',
-                                    'name': 'Katshoek',
-                                    'navItems': [{
-                                        'url': '#',
-                                        'item': 'Profile'
-                                    }, {
-                                        'url': '#2',
-                                        'item': 'People'
-                                    }]
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-8">
-                            <pre><code class="language-javascript">
+                                </div>
+                                <div class="col-xs-10 col-sm-6 col-md-4">
+                                    <div id="navigation"></div>
+                                    <script>
+                                    $('#navigation').replaceWith(
+                                        $(ui.component.nav.render({
+                                            'title': true,
+                                            'navTitleIcon': 'icon-solid-settings',
+                                            'navTitle': 'Settings',
+                                            'button': true,
+                                            'class': 'solid-button--strict',
+                                            'content': 'Dashboard',
+                                            'subTitle': true,
+                                            'category': 'Community',
+                                            'name': 'Katshoek',
+                                            'navItems': [{
+                                                'url': '#',
+                                                'item': 'Profile'
+                                            }, {
+                                                'url': '#2',
+                                                'item': 'People'
+                                            }]
+                                        }))
+                                    );
+                                    </script>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <pre><code class="language-javascript">
     title: true,
     navTitleIcon: 'icon-solid-settings',
     navTitle: 'Settings',
@@ -1281,47 +1145,47 @@ $(ui.component.modal.render({
         item: 'People'
     }]
 </code></pre>
-                        </div>
-                        <div class="col-xs-10 col-sm-6 col-md-4">
-                            <div id="side-nav"></div>
-                            <script>
-                            $('#side-nav').replaceWith(
-                                $(ui.component.nav.render({
-                                    'title': true,
-                                    'button': true,
-                                    'class': 'naked-button--strict hover',
-                                    'content': 'Add Group',
-                                    'navTitle': 'Groups',
-                                    'navItems': [{
-                                        'url': '#',
-                                        'item': 'Developers',
-                                        'icon': 'icon-app-solid-server grey'
-                                    }, {
-                                        'url': '#',
-                                        'item': 'Horse whisperers',
-                                        'icon': 'icon-app-solid-leaf green'
-                                    }, {
-                                        'url': '#',
-                                        'item': 'Cool Cats',
-                                        'icon': 'icon-app-solid-necktie blue'
-                                    }, {
-                                        'url': '#',
-                                        'item': 'BBQ',
-                                        'icon': 'icon-app-solid-burger red'
-                                    }],
-                                    'navActionBar': true,
-                                    'navActionBarButtons': [{
-                                        'url': '#',
-                                        'class': 'naked-button--strict',
-                                        'content': 'See all your groups'
-                                    }]
-                                }))
+                                </div>
+                                <div class="col-xs-10 col-sm-6 col-md-4">
+                                    <div id="side-nav"></div>
+                                    <script>
+                                    $('#side-nav').replaceWith(
+                                        $(ui.component.nav.render({
+                                            'title': true,
+                                            'button': true,
+                                            'class': 'naked-button--strict hover',
+                                            'content': 'Add Group',
+                                            'navTitle': 'Groups',
+                                            'navItems': [{
+                                                'url': '#',
+                                                'item': 'Developers',
+                                                'icon': 'icon-app-solid-server grey'
+                                            }, {
+                                                'url': '#',
+                                                'item': 'Horse whisperers',
+                                                'icon': 'icon-app-solid-leaf green'
+                                            }, {
+                                                'url': '#',
+                                                'item': 'Cool Cats',
+                                                'icon': 'icon-app-solid-necktie blue'
+                                            }, {
+                                                'url': '#',
+                                                'item': 'BBQ',
+                                                'icon': 'icon-app-solid-burger red'
+                                            }],
+                                            'navActionBar': true,
+                                            'navActionBarButtons': [{
+                                                'url': '#',
+                                                'class': 'naked-button--strict',
+                                                'content': 'See all your groups'
+                                            }]
+                                        }))
 
-                            );
-                            </script>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-8">
-                            <pre><code class="language-javascript">
+                                    );
+                                    </script>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <pre><code class="language-javascript">
 title: true,
 button: true,
 'class': 'naked-button--strict hover',
@@ -1351,110 +1215,110 @@ navActionBarButtons: [{
     content: 'See all your groups'
 }]
 </code></pre>
-                        </div>
-                    </div>
-                    <div class="row" id="anchor-postits">
-                        <div class="col-xs-12">
-                            <div class="app-block">
-                                <h2>Post-it's</h2>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <h3>Post-it Action Bar</h3>
-                        </div>
-                        <div class="col-md-8">
-                            <div id="postitactionbar"></div>
-                            <script>
-                            $('#postitactionbar').replaceWith(
-                                $(ui.component.postitactionbar.render({
-                                    'postitActions': [{
-                                        'class': 'naked-button--happy',
-                                        'content': 'Like',
-                                        'icon': 'icon-naked-like'
-                                    }, {
-                                        'class': 'naked-button--happy',
-                                        'content': '2 comments',
-                                        'icon': 'icon-naked-bubble',
-                                        'action': '$(".post-it__comments").slideToggle();'
-                                    }],
-                                    'postitLikes': {
-                                        'number': '6'
-                                    },
-                                    'hiddenComments': true,
-                                    'comments': [{
-                                        'author': 'Dr. Strangelove',
-                                        'timestamp': '14 aug 2015',
-                                        'avatar': {
-                                            'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
-                                            'small': true
-                                        },
-                                        'content': 'Wat the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
-                                    }, {
-                                        'author': 'Dr. S',
-                                        'timestamp': '12 aug 2015',
-                                        'avatar': {
-                                            'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
-                                            'small': true
-                                        },
-                                        'content': 'Wit the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
-                                    }],
-                                    'commentInputField': {
-                                        'avatar': {
-                                            'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
-                                            'small': true
-                                        },
-                                        'placeholder': 'Add a comment',
-                                        'content': 'Comment'
-                                    }
-                                })));
-                            </script>
-                        </div>
-                        <div class="col-xs-12">
-                            <h3>User Post-it</h3>
-                        </div>
-                        <div class="col-md-8">
-                            <div id="userpostit"></div>
-                            <script>
-                            $('#userpostit').replaceWith(
-                                $(ui.component.userpostit.render({
-                                    'userpostitMeta': {
-                                        'avatar': {
-                                            'src': 'http://i.ytimg.com/vi/N1KvgtEnABY/hqdefault.jpg'
-                                        },
-                                        'author': 'Sgt. Sanders',
-                                        'timestamp': '10 aug 2015'
-                                    },
-                                    'userpostitContent': {
-                                        'content': 'Om deze grijze maandagmiddag wat zonneschijn te geven, staat er op de 2e verdieping op de picknicktafels allerlei lekkers van Marqt wat anders weggegooid zou worden. Ik zou zeggen; sla je slag en geniet :-)'
-                                    },
-                                    'userpostitActionBlock': {
-                                        'postitActions': [{
-                                            'class': 'naked-button--happy hover',
-                                            'content': 'Like',
-                                            'icon': 'icon-solid-like'
-                                        }, {
-                                            'class': 'naked-button--happy hover',
-                                            'content': 'Be the first to comment',
-                                            'icon': 'icon-naked-bubble'
-                                        }],
-                                        'postitLikes': {
-                                            'number': '17'
-                                        },
-                                        'commentInputField': {
-                                            'avatar': {
-                                                'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
-                                                'small': true
+                            <div class="row" id="anchor-postits">
+                                <div class="col-xs-12">
+                                    <div class="app-block">
+                                        <h2>Post-it's</h2>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <h3>Post-it Action Bar</h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <div id="postitactionbar"></div>
+                                    <script>
+                                    $('#postitactionbar').replaceWith(
+                                        $(ui.component.postitactionbar.render({
+                                            'postitActions': [{
+                                                'class': 'naked-button--happy',
+                                                'content': 'Like',
+                                                'icon': 'icon-naked-like'
+                                            }, {
+                                                'class': 'naked-button--happy',
+                                                'content': '2 comments',
+                                                'icon': 'icon-naked-bubble',
+                                                'action': '$(".post-it__comments").slideToggle();'
+                                            }],
+                                            'postitLikes': {
+                                                'number': '6'
                                             },
-                                            'placeholder': 'Add a comment',
-                                            'content': 'Comment'
-                                        }
-                                    }
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <div class="col-md-10">
-                            <pre><code class="language-javascript">
+                                            'hiddenComments': true,
+                                            'comments': [{
+                                                'author': 'Dr. Strangelove',
+                                                'timestamp': '14 aug 2015',
+                                                'avatar': {
+                                                    'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                                                    'small': true
+                                                },
+                                                'content': 'Wat the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+                                            }, {
+                                                'author': 'Dr. S',
+                                                'timestamp': '12 aug 2015',
+                                                'avatar': {
+                                                    'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                                                    'small': true
+                                                },
+                                                'content': 'Wit the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+                                            }],
+                                            'commentInputField': {
+                                                'avatar': {
+                                                    'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                                    'small': true
+                                                },
+                                                'placeholder': 'Add a comment',
+                                                'content': 'Comment'
+                                            }
+                                        })));
+                                    </script>
+                                </div>
+                                <div class="col-xs-12">
+                                    <h3>User Post-it</h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <div id="userpostit"></div>
+                                    <script>
+                                    $('#userpostit').replaceWith(
+                                        $(ui.component.userpostit.render({
+                                            'userpostitMeta': {
+                                                'avatar': {
+                                                    'src': 'http://i.ytimg.com/vi/N1KvgtEnABY/hqdefault.jpg'
+                                                },
+                                                'author': 'Sgt. Sanders',
+                                                'timestamp': '10 aug 2015'
+                                            },
+                                            'userpostitContent': {
+                                                'content': 'Om deze grijze maandagmiddag wat zonneschijn te geven, staat er op de 2e verdieping op de picknicktafels allerlei lekkers van Marqt wat anders weggegooid zou worden. Ik zou zeggen; sla je slag en geniet :-)'
+                                            },
+                                            'userpostitActionBlock': {
+                                                'postitActions': [{
+                                                    'class': 'naked-button--happy hover',
+                                                    'content': 'Like',
+                                                    'icon': 'icon-solid-like'
+                                                }, {
+                                                    'class': 'naked-button--happy hover',
+                                                    'content': 'Be the first to comment',
+                                                    'icon': 'icon-naked-bubble'
+                                                }],
+                                                'postitLikes': {
+                                                    'number': '17'
+                                                },
+                                                'commentInputField': {
+                                                    'avatar': {
+                                                        'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                                        'small': true
+                                                    },
+                                                    'placeholder': 'Add a comment',
+                                                    'content': 'Comment'
+                                                }
+                                            }
+                                        }))
+                                    );
+                                    </script>
+                                </div>
+                                <div class="col-md-10">
+                                    <pre><code class="language-javascript">
 $(ui.component.userpostit.render({
     userpostitMeta: {
         avatar: {
@@ -1480,69 +1344,69 @@ $(ui.component.userpostit.render({
     }
 }))
 </code></pre>
-                        </div>
-                        <div class="col-md-8">
-                            <div id="userpostit"></div>
-                            <script>
-                            $('#userpostit').replaceWith(
-                                $(ui.component.userpostit.render({
-                                    'userpostitMeta': {
-                                        'avatar': {
-                                            'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg'
-                                        },
-                                        'author': 'Dr. Strangelove',
-                                        'timestamp': '10 aug 2015'
-                                    },
-                                    'userpostitContent': {
-                                        'content': 'Vanochtend kwam ik aan en was het luik niet naar beneden. Allemaal leuk en aardig, maar er staat te veel apparatuur op deze verdieping om hem open te laten. DUS LUIK DICHT!'
-                                    },
-                                    'userpostitActionBlock': {
-                                        'postitActions': [{
-                                            'class': 'naked-button--happy',
-                                            'content': 'Like',
-                                            'icon': 'icon-naked-like'
-                                        }, {
-                                            'class': 'naked-button--happy',
-                                            'content': '2 comments',
-                                            'icon': 'icon-naked-bubble',
-                                            'action': '$(".post-it__comments").slideToggle("slow");'
-                                        }],
-                                        'postitLikes': {
-                                            'number': '6'
-                                        },
-                                        'comments': [{
-                                            'author': 'Dr. Strangelove',
-                                            'timestamp': '14 aug 2015',
-                                            'avatar': {
-                                                'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
-                                                'small': true
+                                </div>
+                                <div class="col-md-8">
+                                    <div id="userpostit"></div>
+                                    <script>
+                                    $('#userpostit').replaceWith(
+                                        $(ui.component.userpostit.render({
+                                            'userpostitMeta': {
+                                                'avatar': {
+                                                    'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg'
+                                                },
+                                                'author': 'Dr. Strangelove',
+                                                'timestamp': '10 aug 2015'
                                             },
-                                            'content': 'Wat the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
-                                        }, {
-                                            'author': 'Dr. S',
-                                            'timestamp': '12 aug 2015',
-                                            'avatar': {
-                                                'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
-                                                'small': true
+                                            'userpostitContent': {
+                                                'content': 'Vanochtend kwam ik aan en was het luik niet naar beneden. Allemaal leuk en aardig, maar er staat te veel apparatuur op deze verdieping om hem open te laten. DUS LUIK DICHT!'
                                             },
-                                            'content': 'Wit the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
-                                        }],
-                                        'commentInputField': {
-                                            'avatar': {
-                                                'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
-                                                'small': true
-                                            },
-                                            'placeholder': 'Add a comment',
-                                            'content': 'Comment'
-                                        }
-                                    }
+                                            'userpostitActionBlock': {
+                                                'postitActions': [{
+                                                    'class': 'naked-button--happy',
+                                                    'content': 'Like',
+                                                    'icon': 'icon-naked-like'
+                                                }, {
+                                                    'class': 'naked-button--happy',
+                                                    'content': '2 comments',
+                                                    'icon': 'icon-naked-bubble',
+                                                    'action': '$(".post-it__comments").slideToggle("slow");'
+                                                }],
+                                                'postitLikes': {
+                                                    'number': '6'
+                                                },
+                                                'comments': [{
+                                                    'author': 'Dr. Strangelove',
+                                                    'timestamp': '14 aug 2015',
+                                                    'avatar': {
+                                                        'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                                                        'small': true
+                                                    },
+                                                    'content': 'Wat the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+                                                }, {
+                                                    'author': 'Dr. S',
+                                                    'timestamp': '12 aug 2015',
+                                                    'avatar': {
+                                                        'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                                                        'small': true
+                                                    },
+                                                    'content': 'Wit the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+                                                }],
+                                                'commentInputField': {
+                                                    'avatar': {
+                                                        'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                                        'small': true
+                                                    },
+                                                    'placeholder': 'Add a comment',
+                                                    'content': 'Comment'
+                                                }
+                                            }
 
-                                }))
-                            );
-                            </script>
-                        </div>
-                        <div class="col-md-10">
-                            <pre><code class="language-javascript">
+                                        }))
+                                    );
+                                    </script>
+                                </div>
+                                <div class="col-md-10">
+                                    <pre><code class="language-javascript">
 userpostitMeta: {
     avatar: {
         src: 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg'
@@ -1594,69 +1458,69 @@ userpostitMeta: {
     }
 }))
 </code></pre>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <h3>Event Post-it</h3>
-                    </div>
-                    <div class="col-md-8">
-                        <div id="eventpostit"></div>
-                        <script>
-                        $('#eventpostit').replaceWith(
-                            $(ui.component.eventpostit.render({
-                                'eventpostitMeta': {
-                                    'avatar': {
-                                        'small': true,
-                                        'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg'
-                                    },
-                                    'author': 'Ringo Starr',
-                                    'timestamp': '11 aug 2015'
-                                },
-                                'eventHeaderImage': {
-                                    'src': 'http://thepinkpuck.com/wp-content/uploads/2015/05/Duck-Hunt.jpeg',
-                                    'href': '#'
-                                },
-                                'eventpostitContent': {
-                                    'eventTitle': 'Duckhunt party',
-                                    'href': '#',
-                                    'eventLocation': 'Industriegebouw 3e verdieping',
-                                    'eventDate': '10 aug 2015 - 15:00'
-                                },
-                                'eventpostitActions': [{
-                                    'class': 'naked-button--happy hover',
-                                    'content': 'Like',
-                                    'icon': 'icon-solid-like'
-                                }, {
-                                    'class': 'naked-button--happy hover',
-                                    'content': 'Comments',
-                                    'icon': 'icon-naked-bubble',
-                                    'action': '$(".post-it__comments").slideToggle("slow");'
-                                }],
-                                'eventpostitLikes': {
-                                    'number': '2'
-                                },
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <h3>Event Post-it</h3>
+                            </div>
+                            <div class="col-md-8">
+                                <div id="eventpostit"></div>
+                                <script>
+                                $('#eventpostit').replaceWith(
+                                    $(ui.component.eventpostit.render({
+                                        'eventpostitMeta': {
+                                            'avatar': {
+                                                'small': true,
+                                                'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg'
+                                            },
+                                            'author': 'Ringo Starr',
+                                            'timestamp': '11 aug 2015'
+                                        },
+                                        'eventHeaderImage': {
+                                            'src': 'http://thepinkpuck.com/wp-content/uploads/2015/05/Duck-Hunt.jpeg',
+                                            'href': '#'
+                                        },
+                                        'eventpostitContent': {
+                                            'eventTitle': 'Duckhunt party',
+                                            'href': '#',
+                                            'eventLocation': 'Industriegebouw 3e verdieping',
+                                            'eventDate': '10 aug 2015 - 15:00'
+                                        },
+                                        'eventpostitActions': [{
+                                            'class': 'naked-button--happy hover',
+                                            'content': 'Like',
+                                            'icon': 'icon-solid-like'
+                                        }, {
+                                            'class': 'naked-button--happy hover',
+                                            'content': 'Comments',
+                                            'icon': 'icon-naked-bubble',
+                                            'action': '$(".post-it__comments").slideToggle("slow");'
+                                        }],
+                                        'eventpostitLikes': {
+                                            'number': '2'
+                                        },
 
-                                'commentInputField': {
-                                    'avatar': {
-                                        'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
-                                        'small': true
-                                    },
-                                    'placeholder': 'Add a comment',
-                                    'content': 'Comment'
-                                }
-                            }))
-                        );
-                        </script>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sit est quae numquam nobis nemo, quos aliquam adipisci voluptatibus amet voluptatum quas enim, laborum accusamus nihil. Rerum temporibus deleniti maiores.</p>
+                                        'commentInputField': {
+                                            'avatar': {
+                                                'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                                'small': true
+                                            },
+                                            'placeholder': 'Add a comment',
+                                            'content': 'Comment'
+                                        }
+                                    }))
+                                );
+                                </script>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sit est quae numquam nobis nemo, quos aliquam adipisci voluptatibus amet voluptatum quas enim, laborum accusamus nihil. Rerum temporibus deleniti maiores.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 </body>
 
 </html>
