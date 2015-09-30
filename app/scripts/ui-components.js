@@ -655,7 +655,51 @@ ui.component.eventpostit = (function($, T) {
 
 
 }
-(jQuery, ui.component.template));;var ui = ui || {};
+(jQuery, ui.component.template));;var eventpostitData = {
+    'eventpostitData1': {
+        'eventpostitMeta': {
+            'avatar': {
+                'small': true,
+                'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg'
+            },
+            'author': 'Ringo Starr',
+            'timestamp': '11 aug 2015'
+        },
+        'eventHeaderImage': {
+            'src': 'http://thepinkpuck.com/wp-content/uploads/2015/05/Duck-Hunt.jpeg',
+            'href': '#'
+        },
+        'eventpostitContent': {
+            'eventTitle': 'Duckhunt party',
+            'href': '#',
+            'eventLocation': 'Industriegebouw 3e verdieping',
+            'eventDate': '10 aug 2015 - 15:00'
+        },
+        'eventpostitActions': [{
+            'class': 'naked-button--happy hover',
+            'content': 'Like',
+            'icon': 'icon-solid-like'
+        }, {
+            'class': 'naked-button--happy hover',
+            'content': 'Comments',
+            'icon': 'icon-naked-bubble',
+            'action': '$(".post-it__comments").slideToggle("slow");'
+        }],
+        'eventpostitLikes': {
+            'number': '2'
+        },
+
+        'commentInputField': {
+            'avatar': {
+                'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                'small': true
+            },
+            'placeholder': 'Add a comment',
+            'content': 'Comment'
+        }
+    }
+}
+;var ui = ui || {};
 
 ui.component.form = (function($, T) {
 
@@ -1218,11 +1262,7 @@ ui.component.nav = (function($, T) {
 
 
 }
-(jQuery, ui.component.template));;// -----------------------------------------------------------------------------
-// Base Button
-// -----------------------------------------------------------------------------
-
-var navData = {
+(jQuery, ui.component.template));;var navData = {
     'navData1': {
         'title': true,
         'navTitle': 'Design',
@@ -1294,6 +1334,78 @@ var navData = {
             'url': '#anchor-postits',
             'item': 'Post-it&#39;s',
             'icon': 'icon-app-naked-pen blue'
+        }]
+    },
+    'navData4': {
+        'communitySwitch': true,
+        'navCommunities': [{
+            'src': 'http://erfgoedstem.nl/wp-content/uploads/2012/07/Industriegebouw-Goudsesingel_1.jpg',
+            'name': 'Het Industriegeb..',
+            'icon': 'icon-system-down-open'
+        }],
+        'navItems': [{
+            'url': '#',
+            'item': 'Dashboard'
+        }, {
+            'url': '#',
+            'item': 'People'
+        }, {
+            'url': '#',
+            'item': 'Companies'
+        }, {
+            'url': '#',
+            'item': 'Messages'
+        }, {
+            'url': '#',
+            'item': 'Meet-ups'
+        }]
+    },
+    'navData5': {
+        'title': true,
+        'navTitleIcon': 'icon-solid-settings',
+        'navTitle': 'Settings',
+        'button': true,
+        'class': 'solid-button--strict',
+        'content': 'Dashboard',
+        'subTitle': true,
+        'category': 'Community',
+        'name': 'Katshoek',
+        'navItems': [{
+            'url': '#',
+            'item': 'Profile'
+        }, {
+            'url': '#2',
+            'item': 'People'
+        }]
+    },
+    'navData6': {
+        'title': true,
+        'button': true,
+        'class': 'naked-button--strict hover',
+        'content': 'Add Group',
+        'navTitle': 'Groups',
+        'navItems': [{
+            'url': '#',
+            'item': 'Developers',
+            'icon': 'icon-app-solid-server grey'
+        }, {
+            'url': '#',
+            'item': 'Horse whisperers',
+            'icon': 'icon-app-solid-leaf green'
+        }, {
+            'url': '#',
+            'item': 'Cool Cats',
+            'icon': 'icon-app-solid-necktie blue'
+        }, {
+            'url': '#',
+            'item': 'BBQ',
+            'icon': 'icon-app-solid-burger red'
+        }],
+        'navActionBar': true,
+        'navActionBarButtons': [{
+            'url': '#',
+            'class': 'naked-button--strict',
+            'content': 'See all your groups'
         }]
     }
 };
@@ -1393,7 +1505,50 @@ ui.component.postitactionbar = (function($, T) {
 
 
 }
-(jQuery, ui.component.template));;var ui = ui || {};
+(jQuery, ui.component.template));;var postitactionbarData = {
+    'postitactionbarData1': {
+        'postitActions': [{
+            'class': 'naked-button--happy',
+            'content': 'Like',
+            'icon': 'icon-naked-like'
+        }, {
+            'class': 'naked-button--happy',
+            'content': '2 comments',
+            'icon': 'icon-naked-bubble',
+            'action': '$(".post-it__comments").slideToggle();'
+        }],
+        'postitLikes': {
+            'number': '6'
+        },
+        'hiddenComments': true,
+        'comments': [{
+            'author': 'Dr. Strangelove',
+            'timestamp': '14 aug 2015',
+            'avatar': {
+                'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                'small': true
+            },
+            'content': 'Wat the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+        }, {
+            'author': 'Dr. S',
+            'timestamp': '12 aug 2015',
+            'avatar': {
+                'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                'small': true
+            },
+            'content': 'Wit the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+        }],
+        'commentInputField': {
+            'avatar': {
+                'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                'small': true
+            },
+            'placeholder': 'Add a comment',
+            'content': 'Comment'
+        }
+    }
+}
+;var ui = ui || {};
 
 ui.component.select = (function($, T) {
 
@@ -1600,4 +1755,91 @@ ui.component.userpostit = (function($, T) {
 
 
 }
-(jQuery, ui.component.template));
+(jQuery, ui.component.template));;var userpostitData = {
+    'userpostitData1': {
+        'userpostitMeta': {
+            'avatar': {
+                'src': 'http://i.ytimg.com/vi/N1KvgtEnABY/hqdefault.jpg'
+            },
+            'author': 'Sgt. Sanders',
+            'timestamp': '10 aug 2015'
+        },
+        'userpostitContent': {
+            'content': 'Om deze grijze maandagmiddag wat zonneschijn te geven, staat er op de 2e verdieping op de picknicktafels allerlei lekkers van Marqt wat anders weggegooid zou worden. Ik zou zeggen; sla je slag en geniet :-)'
+        },
+        'userpostitActionBlock': {
+            'postitActions': [{
+                'class': 'naked-button--happy hover',
+                'content': 'Like',
+                'icon': 'icon-solid-like'
+            }, {
+                'class': 'naked-button--happy hover',
+                'content': 'Be the first to comment',
+                'icon': 'icon-naked-bubble'
+            }],
+            'postitLikes': {
+                'number': '17'
+            },
+            'commentInputField': {
+                'avatar': {
+                    'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                    'small': true
+                },
+                'placeholder': 'Add a comment',
+                'content': 'Comment'
+            }
+        }
+    },
+    'userpostitData2': {
+        'userpostitMeta': {
+            'avatar': {
+                'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg'
+            },
+            'author': 'Dr. Strangelove',
+            'timestamp': '10 aug 2015'
+        },
+        'userpostitContent': {
+            'content': 'Vanochtend kwam ik aan en was het luik niet naar beneden. Allemaal leuk en aardig, maar er staat te veel apparatuur op deze verdieping om hem open te laten. DUS LUIK DICHT!'
+        },
+        'userpostitActionBlock': {
+            'postitActions': [{
+                'class': 'naked-button--happy',
+                'content': 'Like',
+                'icon': 'icon-naked-like'
+            }, {
+                'class': 'naked-button--happy',
+                'content': '2 comments',
+                'icon': 'icon-naked-bubble',
+                'action': '$(".post-it__comments").slideToggle("slow");'
+            }],
+            'postitLikes': {
+                'number': '6'
+            },
+            'comments': [{
+                'author': 'Dr. Strangelove',
+                'timestamp': '14 aug 2015',
+                'avatar': {
+                    'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                    'small': true
+                },
+                'content': 'Wat the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+            }, {
+                'author': 'Dr. S',
+                'timestamp': '12 aug 2015',
+                'avatar': {
+                    'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                    'small': true
+                },
+                'content': 'Wit the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+            }],
+            'commentInputField': {
+                'avatar': {
+                    'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                    'small': true
+                },
+                'placeholder': 'Add a comment',
+                'content': 'Comment'
+            }
+        }
+    }
+}

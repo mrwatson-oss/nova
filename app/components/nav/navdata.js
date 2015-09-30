@@ -1,7 +1,3 @@
-// -----------------------------------------------------------------------------
-// Base Button
-// -----------------------------------------------------------------------------
-
 var navData = {
     'navData1': {
         'title': true,
@@ -74,6 +70,78 @@ var navData = {
             'url': '#anchor-postits',
             'item': 'Post-it&#39;s',
             'icon': 'icon-app-naked-pen blue'
+        }]
+    },
+    'navData4': {
+        'communitySwitch': true,
+        'navCommunities': [{
+            'src': 'http://erfgoedstem.nl/wp-content/uploads/2012/07/Industriegebouw-Goudsesingel_1.jpg',
+            'name': 'Het Industriegeb..',
+            'icon': 'icon-system-down-open'
+        }],
+        'navItems': [{
+            'url': '#',
+            'item': 'Dashboard'
+        }, {
+            'url': '#',
+            'item': 'People'
+        }, {
+            'url': '#',
+            'item': 'Companies'
+        }, {
+            'url': '#',
+            'item': 'Messages'
+        }, {
+            'url': '#',
+            'item': 'Meet-ups'
+        }]
+    },
+    'navData5': {
+        'title': true,
+        'navTitleIcon': 'icon-solid-settings',
+        'navTitle': 'Settings',
+        'button': true,
+        'class': 'solid-button--strict',
+        'content': 'Dashboard',
+        'subTitle': true,
+        'category': 'Community',
+        'name': 'Katshoek',
+        'navItems': [{
+            'url': '#',
+            'item': 'Profile'
+        }, {
+            'url': '#2',
+            'item': 'People'
+        }]
+    },
+    'navData6': {
+        'title': true,
+        'button': true,
+        'class': 'naked-button--strict hover',
+        'content': 'Add Group',
+        'navTitle': 'Groups',
+        'navItems': [{
+            'url': '#',
+            'item': 'Developers',
+            'icon': 'icon-app-solid-server grey'
+        }, {
+            'url': '#',
+            'item': 'Horse whisperers',
+            'icon': 'icon-app-solid-leaf green'
+        }, {
+            'url': '#',
+            'item': 'Cool Cats',
+            'icon': 'icon-app-solid-necktie blue'
+        }, {
+            'url': '#',
+            'item': 'BBQ',
+            'icon': 'icon-app-solid-burger red'
+        }],
+        'navActionBar': true,
+        'navActionBarButtons': [{
+            'url': '#',
+            'class': 'naked-button--strict',
+            'content': 'See all your groups'
         }]
     }
 };
