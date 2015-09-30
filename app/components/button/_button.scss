@@ -88,6 +88,13 @@
     @include solid-button($button-color--angry, $button-color--angry--accent);
 }
 
+.button--scroll-to-top {
+    position: fixed;
+    right: 3em;
+    bottom: 3em;
+    display:none;
+}
+
 // .solid-button--icon {
 //     @extend .btn;
 //     @include solid-button($button-color--neutral,$button-color--neutral--accent);

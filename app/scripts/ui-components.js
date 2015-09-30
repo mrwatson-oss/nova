@@ -296,7 +296,16 @@ ui.component.button = (function($, T) {
 clickButton = function() {
         alert('No action defined. Try calling button with "action":"yourFunction()"');
     };
-     
+
+    //action to be executed on button click, scrolls the page back to the top.
+    scrollToTop = function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+        console.log("why no scroll");
+    };
+
     /**
      * render
      *
@@ -423,9 +432,13 @@ clickButton = function() {
             'class': 'solid-button--strict',
             'disabled': 'disabled'
         }]
+    },
+    'scrollToTop': {
+        'icon': 'icon-system-up-open',
+        'class': 'solid-button--neutral button--scroll-to-top',
+        'action': 'scrollToTop()'
     }
-};
-;var ui = ui || {};
+};;var ui = ui || {};
 
 ui.component.composer = (function($, T) {
 

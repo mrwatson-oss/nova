@@ -3,10 +3,19 @@
 $(document).ready(function() {
     'use strict';
 
+    // Hide the scroll-to-top button on page load and show it when you scroll down.
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('.button--scroll-to-top').fadeIn();
+        } else {
+            $('.button--scroll-to-top').fadeOut();
+        }
+    });
+
     //This loads the components from a JSON-file and renders them on the page.
     $('component').replaceWith(function() {
         var type = $(this).data('type');
-        var properties = eval($(this).data('properties'));      
+        var properties = eval($(this).data('properties'));
         var component = 'ui.component.' + type + '.render';
         // console.log($(this).data('properties'));
         if ($(this).data('random')) {

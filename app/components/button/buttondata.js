@@ -102,5 +102,10 @@ var buttonData = {
             'class': 'solid-button--strict',
             'disabled': 'disabled'
         }]
+    },
+    'scrollToTop': {
+        'icon': 'icon-system-up-open',
+        'class': 'solid-button--neutral button--scroll-to-top',
+        'action': 'scrollToTop()'
     }
 };
