@@ -850,6 +850,22 @@ ui.component.header = (function($, T) {
 ;var headerData = {
     'headerData1': {
         'logo': {
+            'src': 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQu_xfJl58dyqhtrVuCW8YIn3lAGD2BqbVLb4Vvak2QSv7UBZctbcx1h1Be'
+        },
+        'input': {
+            'placeholder': 'Seach for colors or whatever'
+        },
+        'navItems': [{
+            'url': '#',
+            'item': 'UI base',
+            'class': 'nav--active divider'
+        }, {
+            'url': '/ui-components.html',
+            'item': 'UI components'
+        }]
+    },
+    'headerData2': {
+        'logo': {
             'src': '/images/logo.png'
         },
         'input': {
@@ -866,7 +882,7 @@ ui.component.header = (function($, T) {
             'class': 'nav--active'
         }]
     },
-    'headerData2': {
+    'headerData3': {
         'styleguide': true,
         'logo': {
             'src': '/images/logo.png'
@@ -888,8 +904,7 @@ ui.component.header = (function($, T) {
                 'option': 'Log out',
                 'href': '#'
             }]
-        }, 
-        {
+        }, {
             'icon': 'icon-naked-bell',
             'badge': true,
             // 'dropdownItem': 'Notifs',

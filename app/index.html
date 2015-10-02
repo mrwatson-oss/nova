@@ -38,9 +38,7 @@
 </head>
 
 <body>
-    
     <component data-type="button" data-properties="buttonData.scrollToTop"></component>
-    
     <div id="partials"></div>
     <script>
     $('#partials').replaceWith(
@@ -51,28 +49,7 @@
         <!-- header -->
         <div class="row">
             <div class="col-xs-12">
-                <div id="header"></div>
-                <script>
-                var header = ui.component.header;
-                $('#header').replaceWith(
-                    $(header.render({
-                        'logo': {
-                            'src': 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQu_xfJl58dyqhtrVuCW8YIn3lAGD2BqbVLb4Vvak2QSv7UBZctbcx1h1Be'
-                        },
-                        'input': {
-                            'placeholder': 'Seach for colors or whatever'
-                        },
-                        'navItems': [{
-                            'url': '#',
-                            'item': 'UI base',
-                            'class': 'nav--active divider'
-                        }, {
-                            'url': '/ui-components.html',
-                            'item': 'UI components'
-                        }]
-                    }))
-                );
-                </script>
+                <component data-type="header" data-properties="headerData.headerData1"></component>
             </div>
         </div>
     </div>
