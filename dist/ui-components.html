@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>mr.Watson - Style Guide</title> <meta name=description content=""> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel="shortcut icon" href=icon.ico> <link rel=apple-touch-icon href=apple-touch-icon.png> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> <script src=scripts/vendor.js></script> <script src=scripts/main.js></script> <link rel=stylesheet href=vendor/prism.css> <link rel=stylesheet href=vendor/selectize.css> <script src=vendor/prism.js></script> <link href=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css rel=stylesheet> <script src=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js></script> <script src=bower_components/jquery-validation/dist/jquery.validate.js></script> <script src=bower_components/jquery-selectric/public/jquery.selectric.js></script>  <body> <component data-type=button data-properties=buttonData.scrollToTop></component> <div id=partials></div> <script>$('#partials').replaceWith(
+<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>mr.Watson - Style Guide</title> <meta name=description content=""> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel="shortcut icon" href=icon.ico> <link rel=apple-touch-icon href=apple-touch-icon.png> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> <script src=scripts/vendor.js></script> <script src=scripts/main.js></script> <link rel=stylesheet href=vendor/prism.css> <link rel=stylesheet href=vendor/selectize.css> <script src=vendor/prism.js></script> <link href=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css rel=stylesheet> <script src=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js></script> <script src=bower_components/jquery-validation/dist/jquery.validate.js></script> <script src=bower_components/jquery-selectric/public/jquery.selectric.js></script> <script src=bower_components/selectize/dist/js/selectize.js></script> <!-- <link rel="stylesheet" href="bower_components/jquery-selectric/public/selectric.css"> -->  <body> <component data-type=button data-properties=buttonData.scrollToTop></component> <div id=partials></div> <script>$('#partials').replaceWith(
         $(ui.component.partials.render({}))
     );</script> <div class=container-fluid> <!-- header --> <div class=row> <div class=col-xs-12> <component data-type=header data-properties=headerData.headerData2></component> </div> </div> </div> <div class=container> <div class=row> <div class="hidden-xs hidden-sm hidden-md col-lg-3"> <!-- <div class="fixed-nav"> --> <component data-type=nav data-properties=navData.navData3></component> <!-- </div> --> </div> <div class="col-xs-12 col-lg-9"> <div class=row id=anchor-appbar> <div class=col-xs-12> <h2>App Bar</h2> </div> <div class=col-xs-12> <div id=appbar></div> <script>$('#appbar').replaceWith(
                             $(ui.component.appbar.render({
@@ -57,21 +57,21 @@ $(ui.component.button.render({
     icon: 'icon-system-menu'
     })) 
 </code></pre> </div> </div> </div> <div class=row> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Naked Button</h3> <!-- </div> --> </div> <div class=col-xs-12> <component data-type=button data-properties=buttonData.buttonData1></component> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Naked Button - disabled</h3> <!-- </div> --> </div> <div class=col-xs-12> <component data-type=button data-properties=buttonData.buttonData2></component> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Solid Button</h3> <!-- </div> --> </div> <div class=col-xs-12> <component data-type=button data-properties=buttonData.buttonData3></component> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Solid Button - disabled</h3> <!-- </div> --> </div> <div class=col-xs-12> <component data-type=button data-properties=buttonData.buttonData4></component> </div> </div> </div> <div class=row id=anchor-composer> <div class=col-xs-12> <div class=app-block> <h2>Composer</h2> <p>The composer component is used for creating post-its <br> Typically it contains an input field and two buttons. </p> </div> </div> <div class=col-md-6> <!-- composer --> <div id=composer></div> <script>$('#composer').replaceWith(
-                                    $(ui.component.composer.render({
-                                        'avatar': {
-                                            'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
-                                            'small': true
-                                        },
-                                        'input': {
-                                            'placeholder': 'Share your thoughts'
-                                        },
-                                        'buttons': [{
-                                            'class': 'solid-button--happy pull-right',
-                                            'content': 'Share post',
-                                            'action': 'alert("it works")'
-                                        }]
-                                    }))
-                                );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
+                                $(ui.component.composer.render({
+                                    'avatar': {
+                                        'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                        'small': true
+                                    },
+                                    'input': {
+                                        'placeholder': 'Share your thoughts'
+                                    },
+                                    'buttons': [{
+                                        'class': 'solid-button--happy pull-right',
+                                        'content': 'Share post',
+                                        'action': 'alert("it works")'
+                                    }]
+                                }))
+                            );</script> </div> <div class=col-md-6> <pre><code class=language-javascript>
 $(ui.component.composer.render({
     input: {
         placeholder: 'Share your thoughts'
@@ -197,7 +197,21 @@ $(ui.component.avatar.render({
     hasLabel: true,
     label: 'First name'
   }))
-</code></pre> </div> <div class=col-xs-12> <h3>Select</h3> </div> <div class=col-md-6> <component data-type=select data-properties=selectData.selectData1></component> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Dropdown</h3> <!-- </div> --> </div> <div class=col-md-6> <component data-type=dropdown data-properties=dropdownData.dropdownData1> </component></div> <div class=col-md-6> <pre><code class=language-javascript>
+</code></pre> </div> <div class=col-xs-12> <h3>Select</h3> </div> <div class=col-md-6> <component data-type=select data-properties=selectData.selectData1></component> <div id=try1> <script>$('#try1').replaceWith(
+                                        $(ui.component.select.render({
+                                            'options': [{
+                                                'value': 'Select your gender',
+                                                'title': true
+                                            }, {
+                                                'value': 'Male'
+                                            }, {
+                                                'value': 'Even more male'
+                                            }, {
+                                                'value': 'Other'
+                                            }]
+                                        }))
+                                            );
+                                    $('select').selectric();</script> </div> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Dropdown</h3> <!-- </div> --> </div> <div class=col-md-6> <component data-type=dropdown data-properties=dropdownData.dropdownData1> </component></div> <div class=col-md-6> <pre><code class=language-javascript>
 $(ui.component.dropdown.render({
     dropdownItem: 'Options',
     dropdownOptions: [{
@@ -327,41 +341,41 @@ navActionBarButtons: [{
     content: 'See all your groups'
 }]
 </code></pre> </div> </div> <div class=row id=anchor-postits> <div class=col-xs-12> <div class=app-block> <h2>Post-it's</h2> </div> </div> <div class=col-xs-12> <h3>Post-it Action Bar</h3> </div> <div class=col-md-8> <component data-type=postitactionbar data-properties=postitactionbarData.postitactionbarData1></component> </div> <div class=col-xs-12> <h3>User Post-it</h3> </div> <div class=col-md-8> <component data-type=userpostit data-properties=userpostitData.userpostitData1></component> <!-- User postits don't seem to work probably with a single component tag. --> <div id=userpostit></div> <script>$('#userpostit').replaceWith(
-                                        $(ui.component.userpostit.render({
-                                            'userpostitMeta': {
+                                    $(ui.component.userpostit.render({
+                                        'userpostitMeta': {
+                                            'avatar': {
+                                                'src': 'http://i.ytimg.com/vi/N1KvgtEnABY/hqdefault.jpg'
+                                            },
+                                            'author': 'Sgt. Sanders',
+                                            'timestamp': '10 aug 2015'
+                                        },
+                                        'userpostitContent': {
+                                            'content': 'Om deze grijze maandagmiddag wat zonneschijn te geven, staat er op de 2e verdieping op de picknicktafels allerlei lekkers van Marqt wat anders weggegooid zou worden. Ik zou zeggen; sla je slag en geniet :-)'
+                                        },
+                                        'userpostitActionBlock': {
+                                            'postitActions': [{
+                                                'class': 'naked-button--happy hover',
+                                                'content': 'Like',
+                                                'icon': 'icon-solid-like'
+                                            }, {
+                                                'class': 'naked-button--happy hover',
+                                                'content': 'Be the first to comment',
+                                                'icon': 'icon-naked-bubble'
+                                            }],
+                                            'postitLikes': {
+                                                'number': '17'
+                                            },
+                                            'commentInputField': {
                                                 'avatar': {
-                                                    'src': 'http://i.ytimg.com/vi/N1KvgtEnABY/hqdefault.jpg'
+                                                    'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                                    'small': true
                                                 },
-                                                'author': 'Sgt. Sanders',
-                                                'timestamp': '10 aug 2015'
-                                            },
-                                            'userpostitContent': {
-                                                'content': 'Om deze grijze maandagmiddag wat zonneschijn te geven, staat er op de 2e verdieping op de picknicktafels allerlei lekkers van Marqt wat anders weggegooid zou worden. Ik zou zeggen; sla je slag en geniet :-)'
-                                            },
-                                            'userpostitActionBlock': {
-                                                'postitActions': [{
-                                                    'class': 'naked-button--happy hover',
-                                                    'content': 'Like',
-                                                    'icon': 'icon-solid-like'
-                                                }, {
-                                                    'class': 'naked-button--happy hover',
-                                                    'content': 'Be the first to comment',
-                                                    'icon': 'icon-naked-bubble'
-                                                }],
-                                                'postitLikes': {
-                                                    'number': '17'
-                                                },
-                                                'commentInputField': {
-                                                    'avatar': {
-                                                        'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
-                                                        'small': true
-                                                    },
-                                                    'placeholder': 'Add a comment',
-                                                    'content': 'Comment'
-                                                }
+                                                'placeholder': 'Add a comment',
+                                                'content': 'Comment'
                                             }
-                                        }))
-                                    );</script> </div> <div class=col-md-10> <pre><code class=language-javascript>
+                                        }
+                                    }))
+                                );</script> </div> <div class=col-md-10> <pre><code class=language-javascript>
 $(ui.component.userpostit.render({
     userpostitMeta: {
         avatar: {
@@ -387,60 +401,60 @@ $(ui.component.userpostit.render({
     }
 }))
 </code></pre> </div> <div class=col-md-8> <component data-type=userpostit data-properties=userpostitData.userpostitData2></component> <!-- User postits don't seem to work probably with a single component tag. --> <div id=userpostit></div> <script>$('#userpostit').replaceWith(
-                                        $(ui.component.userpostit.render({
-                                            'userpostitMeta': {
-                                                'avatar': {
-                                                    'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg'
-                                                },
+                                    $(ui.component.userpostit.render({
+                                        'userpostitMeta': {
+                                            'avatar': {
+                                                'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg'
+                                            },
+                                            'author': 'Dr. Strangelove',
+                                            'timestamp': '10 aug 2015'
+                                        },
+                                        'userpostitContent': {
+                                            'content': 'Vanochtend kwam ik aan en was het luik niet naar beneden. Allemaal leuk en aardig, maar er staat te veel apparatuur op deze verdieping om hem open te laten. DUS LUIK DICHT!'
+                                        },
+                                        'userpostitActionBlock': {
+                                            'postitActions': [{
+                                                'class': 'naked-button--happy',
+                                                'content': 'Like',
+                                                'icon': 'icon-naked-like'
+                                            }, {
+                                                'class': 'naked-button--happy',
+                                                'content': '2 comments',
+                                                'icon': 'icon-naked-bubble',
+                                                'action': '$(".post-it__comments").slideToggle("slow");'
+                                            }],
+                                            'postitLikes': {
+                                                'number': '6'
+                                            },
+                                            'comments': [{
                                                 'author': 'Dr. Strangelove',
-                                                'timestamp': '10 aug 2015'
-                                            },
-                                            'userpostitContent': {
-                                                'content': 'Vanochtend kwam ik aan en was het luik niet naar beneden. Allemaal leuk en aardig, maar er staat te veel apparatuur op deze verdieping om hem open te laten. DUS LUIK DICHT!'
-                                            },
-                                            'userpostitActionBlock': {
-                                                'postitActions': [{
-                                                    'class': 'naked-button--happy',
-                                                    'content': 'Like',
-                                                    'icon': 'icon-naked-like'
-                                                }, {
-                                                    'class': 'naked-button--happy',
-                                                    'content': '2 comments',
-                                                    'icon': 'icon-naked-bubble',
-                                                    'action': '$(".post-it__comments").slideToggle("slow");'
-                                                }],
-                                                'postitLikes': {
-                                                    'number': '6'
+                                                'timestamp': '14 aug 2015',
+                                                'avatar': {
+                                                    'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                                                    'small': true
                                                 },
-                                                'comments': [{
-                                                    'author': 'Dr. Strangelove',
-                                                    'timestamp': '14 aug 2015',
-                                                    'avatar': {
-                                                        'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
-                                                        'small': true
-                                                    },
-                                                    'content': 'Wat the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
-                                                }, {
-                                                    'author': 'Dr. S',
-                                                    'timestamp': '12 aug 2015',
-                                                    'avatar': {
-                                                        'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
-                                                        'small': true
-                                                    },
-                                                    'content': 'Wit the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
-                                                }],
-                                                'commentInputField': {
-                                                    'avatar': {
-                                                        'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
-                                                        'small': true
-                                                    },
-                                                    'placeholder': 'Add a comment',
-                                                    'content': 'Comment'
-                                                }
+                                                'content': 'Wat the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+                                            }, {
+                                                'author': 'Dr. S',
+                                                'timestamp': '12 aug 2015',
+                                                'avatar': {
+                                                    'src': 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+                                                    'small': true
+                                                },
+                                                'content': 'Wit the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis ea nisi, expedita aliquam quas mollitia! Eos repudiandae vitae dolor saepe et tempore. Voluptas ea, voluptatum ad aut, impedit laudantium.?'
+                                            }],
+                                            'commentInputField': {
+                                                'avatar': {
+                                                    'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                                    'small': true
+                                                },
+                                                'placeholder': 'Add a comment',
+                                                'content': 'Comment'
                                             }
+                                        }
 
-                                        }))
-                                    );</script> </div> <div class=col-md-10> <pre><code class=language-javascript>
+                                    }))
+                                );</script> </div> <div class=col-md-10> <pre><code class=language-javascript>
 userpostitMeta: {
     avatar: {
         src: 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg'
@@ -492,46 +506,46 @@ userpostitMeta: {
     }
 }))
 </code></pre> </div> </div> <div class=col-xs-12> <h3>Event Post-it</h3> </div> <div class=col-md-8> <component data-type=eventpostit data-properties=eventpostitData.eventpostitData1></component> <!-- User postits don't seem to work probably with a single component tag. --> <div id=eventpostit></div> <script>$('#eventpostit').replaceWith(
-                                    $(ui.component.eventpostit.render({
-                                        'eventpostitMeta': {
-                                            'avatar': {
-                                                'small': true,
-                                                'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg'
-                                            },
-                                            'author': 'Ringo Starr',
-                                            'timestamp': '11 aug 2015'
+                                $(ui.component.eventpostit.render({
+                                    'eventpostitMeta': {
+                                        'avatar': {
+                                            'small': true,
+                                            'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg'
                                         },
-                                        'eventHeaderImage': {
-                                            'src': 'http://thepinkpuck.com/wp-content/uploads/2015/05/Duck-Hunt.jpeg',
-                                            'href': '#'
-                                        },
-                                        'eventpostitContent': {
-                                            'eventTitle': 'Duckhunt party',
-                                            'href': '#',
-                                            'eventLocation': 'Industriegebouw 3e verdieping',
-                                            'eventDate': '10 aug 2015 - 15:00'
-                                        },
-                                        'eventpostitActions': [{
-                                            'class': 'naked-button--happy hover',
-                                            'content': 'Like',
-                                            'icon': 'icon-solid-like'
-                                        }, {
-                                            'class': 'naked-button--happy hover',
-                                            'content': 'Comments',
-                                            'icon': 'icon-naked-bubble',
-                                            'action': '$(".post-it__comments").slideToggle("slow");'
-                                        }],
-                                        'eventpostitLikes': {
-                                            'number': '2'
-                                        },
+                                        'author': 'Ringo Starr',
+                                        'timestamp': '11 aug 2015'
+                                    },
+                                    'eventHeaderImage': {
+                                        'src': 'http://thepinkpuck.com/wp-content/uploads/2015/05/Duck-Hunt.jpeg',
+                                        'href': '#'
+                                    },
+                                    'eventpostitContent': {
+                                        'eventTitle': 'Duckhunt party',
+                                        'href': '#',
+                                        'eventLocation': 'Industriegebouw 3e verdieping',
+                                        'eventDate': '10 aug 2015 - 15:00'
+                                    },
+                                    'eventpostitActions': [{
+                                        'class': 'naked-button--happy hover',
+                                        'content': 'Like',
+                                        'icon': 'icon-solid-like'
+                                    }, {
+                                        'class': 'naked-button--happy hover',
+                                        'content': 'Comments',
+                                        'icon': 'icon-naked-bubble',
+                                        'action': '$(".post-it__comments").slideToggle("slow");'
+                                    }],
+                                    'eventpostitLikes': {
+                                        'number': '2'
+                                    },
 
-                                        'commentInputField': {
-                                            'avatar': {
-                                                'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
-                                                'small': true
-                                            },
-                                            'placeholder': 'Add a comment',
-                                            'content': 'Comment'
-                                        }
-                                    }))
-                                );</script> </div> <div class=row> <div class=col-xs-12> <div> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sit est quae numquam nobis nemo, quos aliquam adipisci voluptatibus amet voluptatum quas enim, laborum accusamus nihil. Rerum temporibus deleniti maiores.</p> </div> </div> </div> </div> </div> </div></div></div> 
+                                    'commentInputField': {
+                                        'avatar': {
+                                            'src': 'http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2MDcwNjQzMjEx.jpg',
+                                            'small': true
+                                        },
+                                        'placeholder': 'Add a comment',
+                                        'content': 'Comment'
+                                    }
+                                }))
+                            );</script> </div> <div class=row> <div class=col-xs-12> <div> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sit est quae numquam nobis nemo, quos aliquam adipisci voluptatibus amet voluptatum quas enim, laborum accusamus nihil. Rerum temporibus deleniti maiores.</p> </div> </div> </div> </div> </div> </div></div></div> 
