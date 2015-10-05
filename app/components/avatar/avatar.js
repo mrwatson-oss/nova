@@ -17,7 +17,7 @@ ui.component.avatar = (function($, T) {
         'small': null
     };
 
-     
+
     /**
      * render
      *
@@ -27,7 +27,7 @@ ui.component.avatar = (function($, T) {
      */
     function render(context) {
 
- 
+
         data = $.extend({}, avatar, context);
 
         return T.avatar(data);

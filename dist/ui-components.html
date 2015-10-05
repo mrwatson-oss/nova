@@ -38,24 +38,24 @@
     margin-bottom: 1em;</code></pre> Just like all other components the app block should be placed directly in a column. </p> </div> </div> <div class="col-sm-8 col-md-6"> <!-- <div class="app-block"> --> <pre><code class=language-markup>
 &lt;div class="col-md-6"&gt;
     &lt;div class="app-block"&gt;
-        &lt;p&gt;The app block is a CSS 
-        class. All it does at the moment 
-        is putting the content in it in 
-        a white block 
+        &lt;p&gt;The app block is a CSS
+        class. All it does at the moment
+        is putting the content in it in
+        a white block
         &lt;!-- code example --&gt;
-        Just like all other components 
-        the app block should be 
+        Just like all other components
+        the app block should be
         placed directly in a column.
         &lt;&#47;p&gt;
-    &lt;&#47;div&gt; 
-&lt;&#47;div&gt; 
+    &lt;&#47;div&gt;
+&lt;&#47;div&gt;
 </code></pre> <!-- </div> --> </div> </div> <div class=row id=anchor-button> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-xs-12> <h2>Buttons</h2> </div> <div class=col-md-5> <div class=row> <div class=col-xs-12> <p> Buttons come in two variations. There's the solid button and the naked button. </p> <h3>Properties</h3> </div> <div class=col-xs-6> Mandatory: <ul> <li>content</li> <li>class</li> <li>action</li> </ul> </div> <div class=col-xs-6> Optional: <ul> <li>icon</li> </ul> </div> </div> </div> <div class="col-sm-8 col-md-7"> <pre><code class=language-javascript>
 $(ui.component.button.render({
     content: 'Menu',
     'class': 'naked-button--neutral',
     action: 'myAction',
     icon: 'icon-system-menu'
-    })) 
+    }))
 </code></pre> </div> </div> </div> <div class=row> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Naked Button</h3> <!-- </div> --> </div> <div class=col-xs-12> <component data-type=button data-properties=buttonData.buttonData1></component> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Naked Button - disabled</h3> <!-- </div> --> </div> <div class=col-xs-12> <component data-type=button data-properties=buttonData.buttonData2></component> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Solid Button</h3> <!-- </div> --> </div> <div class=col-xs-12> <component data-type=button data-properties=buttonData.buttonData3></component> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Solid Button - disabled</h3> <!-- </div> --> </div> <div class=col-xs-12> <component data-type=button data-properties=buttonData.buttonData4></component> </div> </div> </div> <div class=row id=anchor-composer> <div class=col-xs-12> <div class=app-block> <h2>Composer</h2> <p>The composer component is used for creating post-its <br> Typically it contains an input field and two buttons. </p> </div> </div> <div class=col-md-6> <!-- composer --> <div id=composer></div> <script>$('#composer').replaceWith(
                                 $(ui.component.composer.render({
                                     'avatar': {
@@ -126,7 +126,7 @@ $(ui.component.header.render({
         }]
     }]
 }))
-</code></pre> </div> </div> <div class=row id=anchor-image> <div class=col-xs-12> <div class=app-block> <h2>Images</h2> <p>There are three types of images that are used throughout mr.Watson. <br> The three types are avatars, body images and cover images.</p> </div> <h3>Avatars</h3> </div> <div class=col-md-6> <div class=app-block> <h4>Square Avatar</h4> <component data-type=avatar data-properties=avatarData.avatarData1></component> </div> <pre><code class=language-javascript>
+</code></pre> </div> </div> <div class=row id=anchor-image> <div class=col-xs-12> <div class=app-block> <h2>Images</h2> <p>There are three types of images that are used throughout mr.Watson. <br> The three types are avatars, body images and cover images.</p> </div> <h3>Avatars <component data-type=button data-properties=avatarData.avatarDataRandom></component></h3> </div> <div class=col-md-6> <div class=app-block> <h4>Square Avatar</h4><component data-type=avatar data-properties=avatarData.avatarData1></component> </div> <pre><code class=language-javascript>
 $(ui.component.avatar.render({
     src:'/*image source*/'
 }))
@@ -184,7 +184,7 @@ $(ui.component.avatar.render({
                                     </p>
                                 </fieldset>
                             </form>
-                            
+
                         </div> --> </div> <div class=col-md-6> <component data-type=textInput data-properties=textinputData.textinputData1></component> </div> <div class=col-md-6> <pre><code class=language-javascript>
   $(ui.component.textInput.render({
     hasLabel': true,

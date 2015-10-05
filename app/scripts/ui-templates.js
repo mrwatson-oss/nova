@@ -150,7 +150,8 @@ this["ui"]["component"]["template"]["avatar"] = Handlebars.template({"1":functio
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.avatar : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(11, data, 0),"data":data})) != null ? stack1 : "");
+  return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.avatar : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(11, data, 0),"data":data})) != null ? stack1 : "")
+    + "\n";
 },"useData":true});
 
 this["ui"]["component"]["template"]["button"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -301,7 +302,7 @@ this["ui"]["component"]["template"]["dialog"] = Handlebars.template({"1":functio
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.angry : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(3, data, 0),"data":data})) != null ? stack1 : "")
     + "\" id=\""
     + this.escapeExpression(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\n	<div class=\"row\"> \n		<div class=\"col-xs-3\">\n			<span class=\"dialog-icon\"> <i class=\"icon "
+    + "\">\n	<div class=\"row\">\n		<div class=\"col-xs-3\">\n			<span class=\"dialog-icon\"> <i class=\"icon "
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.angry : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.program(7, data, 0),"data":data})) != null ? stack1 : "")
     + "\"></i></span>\n		</div>\n		<div class=\"col-xs-9\">\n			<div class=\"dialog-title\">\n				"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
@@ -309,7 +310,7 @@ this["ui"]["component"]["template"]["dialog"] = Handlebars.template({"1":functio
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.message : depth0),{"name":"if","hash":{},"fn":this.program(11, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n			</div>\n		</div>\n	<div class=\"row\">\n		<div class=\"col-xs-12\">\n			<div class=\"dialog-actions\">\n				"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.button : depth0),{"name":"if","hash":{},"fn":this.program(14, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\n			</div>\n		</div>\n	</div>\n</div>";
+    + "\n			</div>\n		</div>\n	</div>\n</div>\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["dropdown"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -703,7 +704,7 @@ this["ui"]["component"]["template"]["image"] = Handlebars.template({"1":function
     + alias3(((helper = (helper = helpers.src || (depth0 != null ? depth0.src : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"src","hash":{},"data":data}) : helper)))
     + "\" alt=\""
     + alias3(((helper = (helper = helpers.alt || (depth0 != null ? depth0.alt : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"alt","hash":{},"data":data}) : helper)))
-    + "\"></div>";
+    + "\"></div>\n";
 },"useData":true});
 
 this["ui"]["component"]["template"]["modal"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -869,7 +870,7 @@ this["ui"]["component"]["template"]["postitactionbar"] = Handlebars.template({"1
 
   return "				<a class=\"naked-button--strict pull-right\">"
     + this.escapeExpression(((helper = (helper = helpers.number || (depth0 != null ? depth0.number : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"number","hash":{},"data":data}) : helper)))
-    + " people like this</a>	\n";
+    + " people like this</a>\n";
 },"6":function(depth0,helpers,partials,data) {
     var stack1;
 
@@ -901,7 +902,7 @@ this["ui"]["component"]["template"]["postitactionbar"] = Handlebars.template({"1
 
   return "					"
     + alias2((helpers.freshComments || (depth0 && depth0.freshComments) || alias1).call(depth0,"[{\"id\":\"2480\",\"postitID\":\"2711\",\"dateAdded\":\"1440667593\",\"dateModified\":\"1440667593\",\"body\":\"A single postit!\",\"userId\":\"1836\",\"user\":{\"firstName\":\"Tijs\",\"lastName\":\"Bakker\",\"gender\":\"1\",\"description\":\"Hello, how are you?\",\"emailAddress\":\"tijs@mrwatson.com\",\"pictureFull\":\"https:\\/\\/www.filepicker.io\\/api\\/file\\/7jFjPuXTLWzX9xbr1JBO\"}},{\"id\":\"2481\",\"postitID\":\"2711\",\"dateAdded\":\"1441274857\",\"dateModified\":\"1441274857\",\"body\":\"HAloo\\r\\n\",\"userId\":\"1836\",\"user\":{\"firstName\":\"Tijs\",\"lastName\":\"Bakker\",\"gender\":\"1\",\"description\":\"Hello, how are you?\",\"emailAddress\":\"tijs@mrwatson.com\",\"pictureFull\":\"https:\\/\\/www.filepicker.io\\/api\\/file\\/7jFjPuXTLWzX9xbr1JBO\"}},{\"id\":\"2482\",\"postitID\":\"2711\",\"dateAdded\":\"1441274863\",\"dateModified\":\"1441274863\",\"body\":\"Yo, yo\",\"userId\":\"1836\",\"user\":{\"firstName\":\"Tijs\",\"lastName\":\"Bakker\",\"gender\":\"1\",\"description\":\"Hello, how are you?\",\"emailAddress\":\"tijs@mrwatson.com\",\"pictureFull\":\"https:\\/\\/www.filepicker.io\\/api\\/file\\/7jFjPuXTLWzX9xbr1JBO\"}},{\"id\":\"2483\",\"postitID\":\"2711\",\"dateAdded\":\"1441275149\",\"dateModified\":\"1441275149\",\"body\":\"Hi\",\"userId\":\"1836\",\"user\":{\"firstName\":\"Tijs\",\"lastName\":\"Bakker\",\"gender\":\"1\",\"description\":\"Hello, how are you?\",\"emailAddress\":\"tijs@mrwatson.com\",\"pictureFull\":\"https:\\/\\/www.filepicker.io\\/api\\/file\\/7jFjPuXTLWzX9xbr1JBO\"}}]",{"name":"freshComments","hash":{},"data":data}))
-    + "				\n					<div class=\"comment-author-avatar\">"
+    + "\n					<div class=\"comment-author-avatar\">"
     + ((stack1 = this.invokePartial(partials.PartialAvatar,depth0,{"name":"PartialAvatar","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</div>\n					<div class=\"comment--meta\"><span class=\"comment-author\">"
     + alias2(((helper = (helper = helpers.author || (depth0 != null ? depth0.author : depth0)) != null ? helper : alias1),(typeof helper === alias3 ? helper.call(depth0,{"name":"author","hash":{},"data":data}) : helper)))
@@ -933,11 +934,11 @@ this["ui"]["component"]["template"]["postitactionbar"] = Handlebars.template({"1
   return "<div class=\"post-it__action-bar\">\n<div class=\"row\">\n	<div class=\"col-xs-12\">\n		<div class=\"post-it__actions\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.postitActions : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.postitLikes : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "		</div>\n	</div> \n	<div class=\"col-xs-12\">\n		<div class=\"app-block--no-bg\">\n			<div class=\"post-it__comments\">\n"
+    + "		</div>\n	</div>\n	<div class=\"col-xs-12\">\n		<div class=\"app-block--no-bg\">\n			<div class=\"post-it__comments\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"if","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "			</div>\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.commentInputField : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "		</div>\n	</div>\n</div>\n</div>";
+    + "		</div>\n	</div>\n</div>\n</div>\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["select"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -1114,11 +1115,11 @@ this["ui"]["component"]["template"]["userpostit"] = Handlebars.template({"1":fun
   stack1 = ((helper = (helper = helpers.userpostitMeta || (depth0 != null ? depth0.userpostitMeta : depth0)) != null ? helper : alias1),(options={"name":"userpostitMeta","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data}),(typeof helper === alias2 ? helper.call(depth0,options) : helper));
   if (!helpers.userpostitMeta) { stack1 = alias3.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
-  buffer += "					</div>\n				</div>	\n			</div>		\n			<div class=\"row\">\n				<div class=\"col-xs-12\">\n					<div class=\"user-post-it__content\">\n"
+  buffer += "					</div>\n				</div>\n			</div>\n			<div class=\"row\">\n				<div class=\"col-xs-12\">\n					<div class=\"user-post-it__content\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.userpostitContent : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.program(9, data, 0),"data":data})) != null ? stack1 : "")
     + "					</div>\n				</div>\n			</div>\n		</div>\n		<div class=\"row\">\n			<div class=\"col-xs-12\">\n";
   stack1 = ((helper = (helper = helpers.userpostitActionBlock || (depth0 != null ? depth0.userpostitActionBlock : depth0)) != null ? helper : alias1),(options={"name":"userpostitActionBlock","hash":{},"fn":this.program(11, data, 0),"inverse":this.noop,"data":data}),(typeof helper === alias2 ? helper.call(depth0,options) : helper));
   if (!helpers.userpostitActionBlock) { stack1 = alias3.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
-  return buffer + "			</div>\n		</div>\n\n	</div>\n</div>";
+  return buffer + "			</div>\n		</div>\n\n	</div>\n</div>\n";
 },"usePartial":true,"useData":true});

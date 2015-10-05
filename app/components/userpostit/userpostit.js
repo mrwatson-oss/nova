@@ -19,20 +19,20 @@ ui.component.userpostit = (function($, T) {
 
 };
 
-     
+
     // *
     //  * render
     //  *
     //  * @todo make this method extended or mixin
     //  * @param {} userpostit object with all properties
     //  * @return compiled handlebars template
-     
+
     function render(context) {
 
 // Handlebars.registerPartial('theTitle', '{{title}}');
 // Handlebars.registerPartial('theCopy', '{{copy}}');
 // Handlebars.registerPartial('theThumbnail', '{{thumbnail}}');
- 
+
         data = $.extend({}, userpostit, context);
 
         return T.userpostit(data);
