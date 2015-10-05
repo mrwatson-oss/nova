@@ -1473,7 +1473,7 @@ ui.component.partials = (function($, T) {
                     'alt': '{{alt}}'
                 }),
                 'PartialCommunitySwitch': '<div class="community-switch" style="background: no-repeat center url({{src}})"><span class="community-switch-name">{{name}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}</span></div>',
-                'PartialNavItem': '<li><a class="{{class}} "href="{{baseurl}}{{url}}">{{#if icon}}<i class="icon {{icon}}"></i>{{/if}} {{item}}</a></li>'
+                'PartialNavItem': '<li><a class="{{class}} "href="{{baseurl}}{{url}}">{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{{item}}}</a></li>'
             });
             data = $.extend({}, partials, context);
 
