@@ -1,7 +1,7 @@
 var headerData = {
     'headerData1': {
         'logo': {
-            'src': 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQu_xfJl58dyqhtrVuCW8YIn3lAGD2BqbVLb4Vvak2QSv7UBZctbcx1h1Be'
+            'src': 'https://welcome.mrwatson.com/views/ass/img/logo.png'
         },
         'input': {
             'placeholder': 'Seach for colors or whatever'
