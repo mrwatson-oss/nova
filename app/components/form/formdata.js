@@ -1,6 +1,6 @@
 var formData = {
     'formData1': {
-        'id': 'form2',
+        'id': 'style-guide__form',
         'method': 'get',
         inputs: [{
             'required': true,

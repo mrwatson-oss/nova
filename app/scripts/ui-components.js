@@ -438,7 +438,8 @@ clickButton = function() {
         'class': 'solid-button--neutral button--scroll-to-top',
         'action': 'scrollToTop()'
     }
-};;var ui = ui || {};
+}
+;var ui = ui || {};
 
 ui.component.composer = (function($, T) {
 
@@ -757,7 +758,7 @@ ui.component.form = (function($, T) {
 
 ;var formData = {
     'formData1': {
-        'id': 'form2',
+        'id': 'style-guide__form',
         'method': 'get',
         inputs: [{
             'required': true,

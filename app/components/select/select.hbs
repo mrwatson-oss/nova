@@ -1,7 +1,7 @@
 <select id="get_value">
-  {{#each options}}
+  {{#options}}
     <option value="{{value}}" {{#if title}}disabled selected="selected"{{/if}}>{{value}}</option>
-  {{/each}}
+  {{/options}}
 </select>
 <p id="select_value">Current value: <strong></strong></p>
 <script>
@@ -15,5 +15,5 @@ $selectValue.text($('#get_value').val());
 $('#get_value').selectric().on('change', function() {
   $selectValue.text($(this).val());
 });
-});
+}());
 </script>

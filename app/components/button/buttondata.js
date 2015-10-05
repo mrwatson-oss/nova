@@ -108,4 +108,4 @@ var buttonData = {
         'class': 'solid-button--neutral button--scroll-to-top',
         'action': 'scrollToTop()'
     }
-};
+}
