@@ -79,7 +79,8 @@ module.exports = function(grunt) {
                             '.tmp/styles/{,*/}*.css',
                             '<%= config.app %>/vendor/{,*/}*',
                             '<%= config.app %>/images/{,*/}*',
-                            '<%= config.app %>/scripts/{,*/}*.js'
+                            '<%= config.app %>/scripts/{,*/}*.js',
+                            '<%= config.app %>/styleguide/{,*/}*.js'
                         ],
                         port: 9000,
                         server: {
@@ -136,8 +137,8 @@ module.exports = function(grunt) {
                 all: [
                     'Gruntfile.js',
                     '<%= config.app %>/scripts/{,*/}*.js',
+                    '<%= config.app %>/styleguide/{,*/}*.js',
                     '!<%= config.app %>/scripts/vendor/*',
-                    '!<%= config.app %>/scripts/prism.js',
                     '!<%= config.app %>/scripts/ui-templates.js',
                     '!<%= config.app %>/scripts/ui-components.js',
                     'test/spec/{,*/}*.js'
@@ -232,6 +233,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     '<%= config.dist %>/scripts/{,*/}*.js',
+                    '<%= config.dist %>/styleguide/{,*/}*.js',
                     '<%= config.dist %>/styles/{,*/}*.css',
                     '<%= config.dist %>/images/{,*/}*.*',
                     '<%= config.dist %>/styles/fonts/{,*/}*.*',
@@ -369,6 +371,7 @@ module.exports = function(grunt) {
                 files: {
                     src: [
                         '<%= config.dist %>/scripts/{,*/}*.js',
+                        '<%= config.dist %>/styleguide/{,*/}*.js',
                         '<%= config.dist %>/styles/{,*/}*.css',
                         '<%= config.dist %>/scripts/vendor/*'
                     ]

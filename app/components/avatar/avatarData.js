@@ -22,7 +22,7 @@ function avatarDataImg(){
 avatarDataImg();
 function watwat () {
    avatarDataImg();
-   console.log(verticalImg);
+  //  console.log(verticalImg);
    if (verticalImg) {
      $('.avatar').children('img').width('100%').height('auto');
    } else {
