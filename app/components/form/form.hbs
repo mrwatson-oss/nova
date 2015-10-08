@@ -2,6 +2,11 @@
 	{{#if formTitle}}
 		<h4>{{{formTitle}}}</h4>
 	{{/if}}
+	{{#if invisibleInputs}}
+		{{#each invisibleInputs}}
+			<input id="{{inputId}}" value="{{value}}" type="{{type}}" name="{{inputId}}">	
+		{{/each}}
+	{{/if}}
 	{{#each inputs}}
 		<div class="form__input">
 			<div class="{{inputId}}">
@@ -9,7 +14,7 @@
 			    minlength="{{minlength}}" {{/if}} {{#if maxlength}} maxlength="{{maxlength}}" {{/if}} >
 			    <span class="bar"></span>
 			    <label for="{{inputId}}">{{label}}</label>
-	   		</div>
+	   	</div>
 		</div>
 	{{/each}}
 	{{#each selects}}
