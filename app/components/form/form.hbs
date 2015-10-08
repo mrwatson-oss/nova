@@ -1,4 +1,7 @@
 <form method="{{method}}" class="form" action="{{action}}" id="{{id}}" >
+	{{#if formTitle}}
+		<h4>{{{formTitle}}}</h4>
+	{{/if}}
 	{{#each inputs}}
 		<div class="form__input">
 			<div class="{{inputId}}">
@@ -30,11 +33,11 @@
 			</div>
 		</div>
 	{{/each}}
-	{{!-- <input class="submit" type="submit" value="Submit"> --}}		
+	{{!-- <input class="submit" type="submit" value="Submit"> --}}
 	{{#each buttons}}
 		<span class="form-button pull-right">{{>PartialButton type="submit"}}</span>
-	{{/each}}	
-	{{#if cancel}}	
+	{{/each}}
+	{{#if cancel}}
 		<span class="form-button pull-right"><a href="#" novalidate name="cancel" id="cancel" class="solid-button--neutral">Cancel</a></span>
 	{{/if}}
 </form>
@@ -47,7 +50,7 @@
             $( element )
                 .closest( "form" )
                     .find( "div[class='" + element.attr( "id" ) + "']" )
-                        .append( error );   
+                        .append( error );
         },
         errorElement: "span",
         success: "valid"
@@ -57,7 +60,7 @@
 	    $(this).valid(); // trigger validation on hidden select
 	});
     $("#cancel").click(function() {
-	    validator.resetForm();    	
+	    validator.resetForm();
     	$(this).closest('form').find("input").val("");
 });
 </script>

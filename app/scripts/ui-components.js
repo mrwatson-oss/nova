@@ -782,6 +782,7 @@ ui.component.form = (function($, T) {
     'formData1': {
         'id': 'style-guide__form',
         'method': 'get',
+        'formTitle': 'Form Title',
         inputs: [{
             'required': true,
             'inputId': 'userPassword',
