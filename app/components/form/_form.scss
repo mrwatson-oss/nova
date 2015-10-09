@@ -8,6 +8,7 @@
         margin-bottom: -.5em;
         // padding-top: 2em;
         // background: tomato;
+
         .inputMaterial {
             border: none;
             outline: none;
@@ -20,6 +21,11 @@
             border-bottom: 1px solid $grey;
             &inputMaterial:focus {
                 outline: none;
+            }
+            &[type=file] {
+
+                // display: none;
+
             }
         }
         label {

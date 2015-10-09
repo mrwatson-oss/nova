@@ -794,7 +794,7 @@ ui.component.form = (function($, T) {
             'required': true,
             'inputId': 'firstName',
             'label': 'First name',
-            'type': 'text',
+            'type': 'file',
             'minlength': '2'
         }],
         'selects': [{

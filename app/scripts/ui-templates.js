@@ -488,7 +488,7 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
     + alias3(((helper = (helper = helpers.type || (depth0 != null ? depth0.type : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"type","hash":{},"data":data}) : helper)))
     + "\" name=\""
     + alias3(((helper = (helper = helpers.inputId || (depth0 != null ? depth0.inputId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"inputId","hash":{},"data":data}) : helper)))
-    + "\">	\n";
+    + "\">\n";
 },"6":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
@@ -612,7 +612,7 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.cancel : depth0),{"name":"if","hash":{},"fn":this.program(23, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</form>\n<script>\n    // validate the form when it is submitted\n    var validator = $(\"#"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\").validate({\n    	ignore: [],\n        errorPlacement: function(error, element) {\n            // Append error within linked label\n            $( element )\n                .closest( \"form\" )\n                    .find( \"div[class='\" + element.attr( \"id\" ) + \"']\" )\n                        .append( error );\n        },\n        errorElement: \"span\",\n        success: \"valid\"\n  		// submitHandler: function() { alert(\"Submitted!\") }\n    });\n	$('select[name=\"mySelect\"]').on('change', function() { // fires when the value changes\n	    $(this).valid(); // trigger validation on hidden select\n	});\n    $(\"#cancel\").click(function() {\n	    validator.resetForm();\n    	$(this).closest('form').find(\"input\").val(\"\");\n});\n</script>\n";
+    + "\").validate({\n    	ignore: [],\n        errorPlacement: function(error, element) {\n            // Append error within linked label\n            $( element )\n                .closest( \"form\" )\n                    .find( \"div[class='\" + element.attr( \"id\" ) + \"']\" )\n                        .append( error );\n        },\n        errorElement: \"span\",\n        success: \"valid\"\n  		// submitHandler: function() { alert(\"Submitted!\") }\n    });\n	$('select[name=\"mySelect\"]').on('change', function() { // fires when the value changes\n	    $(this).valid(); // trigger validation on hidden select\n	});\n    $(\"#cancel\").click(function() {\n	    validator.resetForm();\n    	$(this).closest('form').find(\"input\").val(\"\");\n});\n$(function(){\n$('select').selectric();\n  // Cache the target element\nvar $selectValue = $('#select_value').find('strong');\n// Get initial value\n$selectValue.text($('#get_value').val());\n// Initialize Selectric and bind to 'change' event\n$('#get_value').selectric().on('change', function() {\n  $selectValue.text($(this).val());\n});\n}());\n</script>\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

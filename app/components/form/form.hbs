@@ -4,7 +4,7 @@
 	{{/if}}
 	{{#if invisibleInputs}}
 		{{#each invisibleInputs}}
-			<input id="{{inputId}}" value="{{value}}" type="{{type}}" name="{{inputId}}">	
+			<input id="{{inputId}}" value="{{value}}" type="{{type}}" name="{{inputId}}">
 		{{/each}}
 	{{/if}}
 	{{#each inputs}}
@@ -68,4 +68,15 @@
 	    validator.resetForm();
     	$(this).closest('form').find("input").val("");
 });
+$(function(){
+$('select').selectric();
+  // Cache the target element
+var $selectValue = $('#select_value').find('strong');
+// Get initial value
+$selectValue.text($('#get_value').val());
+// Initialize Selectric and bind to 'change' event
+$('#get_value').selectric().on('change', function() {
+  $selectValue.text($(this).val());
+});
+}());
 </script>
