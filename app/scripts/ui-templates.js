@@ -570,7 +570,9 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
 
   return "		<div class=\"form__textarea\">\n			<div class=\""
     + alias3(((helper = (helper = helpers.textareaId || (depth0 != null ? depth0.textareaId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"textareaId","hash":{},"data":data}) : helper)))
-    + "\">\n				<textarea name=\""
+    + "\">\n				<textarea value=\""
+    + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
+    + "\" name=\""
     + alias3(((helper = (helper = helpers.textareaId || (depth0 != null ? depth0.textareaId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"textareaId","hash":{},"data":data}) : helper)))
     + "\" class=\"inputMaterial\" id=\""
     + alias3(((helper = (helper = helpers.textareaId || (depth0 != null ? depth0.textareaId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"textareaId","hash":{},"data":data}) : helper)))
@@ -580,7 +582,9 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
     + alias3(((helper = (helper = helpers.rows || (depth0 != null ? depth0.rows : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"rows","hash":{},"data":data}) : helper)))
     + "\" "
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.required : depth0),{"name":"if","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "></textarea>\n				<span class=\"bar\"></span>\n			    <label for=\""
+    + ">"
+    + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
+    + "</textarea>\n				<span class=\"bar\"></span>\n			    <label for=\""
     + alias3(((helper = (helper = helpers.textareaId || (depth0 != null ? depth0.textareaId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"textareaId","hash":{},"data":data}) : helper)))
     + "\">"
     + alias3(((helper = (helper = helpers.label || (depth0 != null ? depth0.label : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"label","hash":{},"data":data}) : helper)))
@@ -802,9 +806,9 @@ this["ui"]["component"]["template"]["nav"] = Handlebars.template({"1":function(d
 },"4":function(depth0,helpers,partials,data) {
     var stack1, helper;
 
-  return "<div class=\"nav-title\">\n\n	"
+  return "<div class=\"nav-title\">\n	"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.navTitleIcon : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\n\n	"
+    + "\n	"
     + this.escapeExpression(((helper = (helper = helpers.navTitle || (depth0 != null ? depth0.navTitle : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"navTitle","hash":{},"data":data}) : helper)))
     + "\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.button : depth0),{"name":"if","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
@@ -871,7 +875,7 @@ this["ui"]["component"]["template"]["nav"] = Handlebars.template({"1":function(d
   if (!helpers.navItems) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
   return buffer + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.navActionBar : depth0),{"name":"if","hash":{},"fn":this.program(15, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "	<li class=\"last\"></li>\n</div>";
+    + "	<li class=\"last\"></li>\n</div>\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["partials"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
