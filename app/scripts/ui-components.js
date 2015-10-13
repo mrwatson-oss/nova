@@ -592,10 +592,12 @@ ui.component.dropdown = (function($, T) {
                 $('.drop-nav').slideUp(50);
                 $('li.dropdown').removeClass('dropdown--active');
             } else {
-                return false;
+                return true;
             }
         });
-        $('li.dropdown').on('click', function() {
+        $('li.dropdown').on('click', function(e) {
+
+
            // console.log($('li.dropdown').children('span.dropdown-badge').length);
            //  $('li.dropdown').children('span.dropdown-badge').html($('li.dropdown').children('span.dropdown-badge').length);
             $(this).addClass('dropdown--active');
