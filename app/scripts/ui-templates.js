@@ -604,7 +604,9 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
     + alias3(((helper = (helper = helpers.action || (depth0 != null ? depth0.action : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"action","hash":{},"data":data}) : helper)))
     + "\" id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\" >\n"
+    + "\" enctype=\""
+    + alias3(((helper = (helper = helpers.enctype || (depth0 != null ? depth0.enctype : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"enctype","hash":{},"data":data}) : helper)))
+    + "\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.formTitle : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.invisibleInputs : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.inputs : depth0),{"name":"each","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
