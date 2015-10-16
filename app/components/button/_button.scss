@@ -11,7 +11,10 @@
     font-family: $button-font;
     border-radius: 2px;
     letter-spacing: 1px;
-   
+    // giving all buttons (exept first one) left margin
+    &+& {
+      margin-left: .5em;
+    }
 }
 
 .border-left {

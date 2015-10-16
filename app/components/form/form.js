@@ -21,7 +21,8 @@ ui.component.form = (function($, T) {
         'hasLabel': null,
         'label': null,
         'background': null,
-        'icon': null
+        'icon': null,
+        'rows': '5'
     };
 
     /**
@@ -43,6 +44,3 @@ ui.component.form = (function($, T) {
     };
 
 }(jQuery, ui.component.template));
-
-
-

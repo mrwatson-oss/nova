@@ -169,7 +169,7 @@ var iconData = {
             'icon': 'icon-user-mobile',
             'label': true
         }, {
-            'icon': 'icon-user-monitor',
+            'icon': 'user-monitor',
             'label': true
         }, {
             'icon': 'icon-user-suitcase',

@@ -11,42 +11,53 @@ var formData = {
             'maxlength': '12',
             'minlength': '5'
         }, {
-            'required': true,
+            'required': false,
             'inputId': 'firstName',
             'label': 'First name',
-            'type': 'file',
+            'type': 'text',
             'minlength': '2'
         }],
         'selects': [{
-            'required': true,
+            'required': false,
             'selectId': 'age',
+            'label': 'What\'s your age?',
             'options': [{
-                'value': 'What\'s your age?',
+                'value': 'null',
+                'option': '',
                 'title': true
             }, {
+                'option': '0-19',
                 'value': '11'
             }, {
+                'option': '20-49',
                 'value': '12'
             }, {
+                'option': '50+',
                 'value': '15'
             }]
         }, {
             'selectId': 'sex',
+            'label': 'What\'s your gender?',
             'required': true,
             'options': [{
-                'value': 'What\'s your gender?',
+                'value': 'null',
+                'option': '',
                 'title': true
             }, {
-                'value': 'man'
+                'value': '1',
+                'option': 'man'
             }, {
-                'value': 'female'
+                'value': '0',
+                'option': 'female'
             }, {
-                'value': 'who cares'
+                'value': 'who cares',
+                'option': 'who cares'
             }]
         }],
         'textareas': [{
             'required': true,
             'textareaId': 'AboutMe',
+            'rows': '5',
             'label': 'What are you about?'
         }],
         'cancel': true,

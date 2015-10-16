@@ -755,7 +755,8 @@ ui.component.form = (function($, T) {
         'hasLabel': null,
         'label': null,
         'background': null,
-        'icon': null
+        'icon': null,
+        'rows': '5'
     };
 
     /**
@@ -777,9 +778,6 @@ ui.component.form = (function($, T) {
     };
 
 }(jQuery, ui.component.template));
-
-
-
 ;var formData = {
     'formData1': {
         'id': 'style-guide__form',
@@ -793,42 +791,53 @@ ui.component.form = (function($, T) {
             'maxlength': '12',
             'minlength': '5'
         }, {
-            'required': true,
+            'required': false,
             'inputId': 'firstName',
             'label': 'First name',
-            'type': 'file',
+            'type': 'text',
             'minlength': '2'
         }],
         'selects': [{
-            'required': true,
+            'required': false,
             'selectId': 'age',
+            'label': 'What\'s your age?',
             'options': [{
-                'value': 'What\'s your age?',
+                'value': 'null',
+                'option': '',
                 'title': true
             }, {
+                'option': '0-19',
                 'value': '11'
             }, {
+                'option': '20-49',
                 'value': '12'
             }, {
+                'option': '50+',
                 'value': '15'
             }]
         }, {
             'selectId': 'sex',
+            'label': 'What\'s your gender?',
             'required': true,
             'options': [{
-                'value': 'What\'s your gender?',
+                'value': 'null',
+                'option': '',
                 'title': true
             }, {
-                'value': 'man'
+                'value': '1',
+                'option': 'man'
             }, {
-                'value': 'female'
+                'value': '0',
+                'option': 'female'
             }, {
-                'value': 'who cares'
+                'value': 'who cares',
+                'option': 'who cares'
             }]
         }],
         'textareas': [{
             'required': true,
             'textareaId': 'AboutMe',
+            'rows': '5',
             'label': 'What are you about?'
         }],
         'cancel': true,
@@ -1157,7 +1166,7 @@ ui.component.icon = (function($, T) {
             'icon': 'icon-user-mobile',
             'label': true
         }, {
-            'icon': 'icon-user-monitor',
+            'icon': 'user-monitor',
             'label': true
         }, {
             'icon': 'icon-user-suitcase',
@@ -1471,7 +1480,7 @@ ui.component.partials = (function($, T) {
             Handlebars.registerHelper('freshComments', function(comments) {
                 var userComments = JSON.parse(comments);
                 if (userComments.length>2) {return userComments[0];} else{return userComments;};
-                
+
             });
             Handlebars.registerHelper('oldComments', function(comments) {
                 var userComments = JSON.parse(comments);
@@ -1492,7 +1501,7 @@ ui.component.partials = (function($, T) {
                 }),
                 'PartialTextarea': '<div class="text-area {{class}}"><textarea class="autoExpand" rows="0" data-min-rows="1" {{#if background}}class="text-input__grey"{{/if}} {{#if required}}required{{/if}} name="{{name}}" id="{{id}}" type="text" placeholder="{{placeholder}}" value="{{value}}"></textarea></div>',
                 'PartialPostItActionBar': '<div class="post-it__action-bar"><div class="row"><div class="col-xs-12"><div class="post-it__actions">{{#each postitActions}}{{>PartialButton}}{{/each}}{{#if postitLikes}}{{#postitLikes}}<a class="naked-button--strict pull-right">{{number}} people like this</a>{{/postitLikes}}{{/if}}</div></div><div class="col-xs-12"><div class="app-block--no-bg"><div class="post-it__comments" class="post-it__comments">{{#if comments}}<div class="row"><div class="col-xs-12">{{#each comments}}<div class="comment-author-avatar">{{>PartialAvatar}}</div><div class="comment--meta"><span class="comment-author">{{author}} </span> <span class="comment-timestamp"> {{timestamp}}</span></div><div class="comment-content"><p>{{{content}}}</p></div>{{/each}}</div></div>{{/if}}</div>{{#if commentInputField}}<div class="post-it__input-field">{{#commentInputField}}<div class="row"><div class="col-xs-12"><div class="comment-author-avatar">{{>PartialAvatar}}</div><div class="comment__text-input">{{>PartialTextInput}}</div><div class="comment__text-input-button">{{>PartialButton class="solid-button--happy pull-right"}}</div></div></div>{{/commentInputField}}</div>{{/if}}</div></div></div></div>',
-                'PartialIcon': '<i class="icon {{class}}"><svg class="{{icon}} {{color}}"><use xlink:href="#{{icon}}"></use></svg></i>{{#if label}}<pre class="language-markup"><code class="language-markup">{{icon}}</code></pre>{{/if}}',
+                'PartialIcon': '<i class="{{icon}} {{class}}"></i>{{#if label}}<pre class="language-markup"><code class="language-markup">{{icon}}</code></pre>{{/if}}',
                 'PartialCoverImage': ui.component.image.render({
                     'cover': true,
                     'src': '{{{src}}}',

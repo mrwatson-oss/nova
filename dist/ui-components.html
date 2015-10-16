@@ -1,4 +1,5 @@
-<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>mr.Watson - Style Guide</title> <meta name=description content=""> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel="shortcut icon" href=/icon.ico> <link rel=apple-touch-icon href=/apple-touch-icon.png> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> <script src=scripts/vendor.js></script> <script src=scripts/main.js></script> <script src=styleguide/styleguide.js></script> <link rel=stylesheet href=vendor/prism.css> <link rel=stylesheet href=vendor/selectize.css> <script src=vendor/prism.js></script> <link href=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css rel=stylesheet> <script src=https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js></script> <script src=bower_components/jquery-validation/dist/jquery.validate.js></script> <script src=bower_components/jquery-selectric/public/jquery.selectric.js></script> <script src=bower_components/selectize/dist/js/selectize.js></script> <!-- <link rel="stylesheet" href="bower_components/jquery-selectric/public/selectric.css"> -->  <body> <component data-type=button data-properties=buttonData.scrollToTop></component> <div id=partials></div> <script>$('#partials').replaceWith(
+<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>mr.Watson - Style Guide</title> <meta name=description content=""> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel="shortcut icon" href=/icon.ico> <link rel=apple-touch-icon href=/apple-touch-icon.png> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> <script src=scripts/vendor.js></script> <script src=scripts/main.js></script> <script src=styleguide/styleguide.js></script> <link rel=stylesheet href=vendor/prism.css> <link rel=stylesheet href=vendor/selectize.css> <script src=vendor/prism.js></script> <link rel=stylesheet href=vendor/icons.css> <!-- <link href="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css" rel="stylesheet">
+    <script src="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js"></script> --> <script src=bower_components/jquery-validation/dist/jquery.validate.js></script> <script src=bower_components/jquery-selectric/public/jquery.selectric.js></script> <script src=bower_components/selectize/dist/js/selectize.js></script> <!-- <link rel="stylesheet" href="bower_components/jquery-selectric/public/selectric.css"> -->  <body> <component data-type=button data-properties=buttonData.scrollToTop></component> <div id=partials></div> <script>$('#partials').replaceWith(
         $(ui.component.partials.render({}))
     );</script> <div class=container-fluid> <!-- header --> <div class=row> <div class=col-xs-12> <component data-type=header data-properties=headerData.headerData2></component> </div> </div> </div> <div class=container> <div class=row> <div class="hidden-xs hidden-sm hidden-md col-lg-3"> <!-- <div class="fixed-nav"> --> <component data-type=nav data-properties=navData.navData3></component> <!-- </div> --> </div> <div class="col-xs-12 col-lg-9"> <div class=row id=anchor-appbar> <div class=col-xs-12> <h2>App Bar</h2> </div> <div class=col-xs-12> <div id=appbar></div> <script>$('#appbar').replaceWith(
                             $(ui.component.appbar.render({
@@ -49,7 +50,7 @@
         &lt;&#47;p&gt;
     &lt;&#47;div&gt;
 &lt;&#47;div&gt;
-</code></pre> <!-- </div> --> </div> </div> <div class=row id=anchor-button> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-xs-12> <h2>Buttons</h2> </div> <div class=col-md-5> <div class=row> <div class=col-xs-12> <p> Buttons come in two variations. There's the solid button and the naked button. </p> <h3>Properties</h3> </div> <div class=col-xs-6> Mandatory: <ul> <li>content</li> <li>class</li> <li>action</li> </ul> </div> <div class=col-xs-6> Optional: <ul> <li>icon</li> </ul> </div> </div> </div> <div class="col-sm-8 col-md-7"> <pre><code class=language-javascript>
+</code></pre> <!-- </div> --> </div> </div> <div class=row id=anchor-button> <div class=col-xs-12> <div class=app-block> <div class=row> <div class=col-xs-12> <h2>Buttons</h2> <button class=solid-button--happy>Hoi</button> <button class=solid-button--happy>Hoi</button> <button class=solid-button--happy>Hoi</button> </div> <div class=col-md-5> <div class=row> <div class=col-xs-12> <p> Buttons come in two variations. There's the solid button and the naked button. </p> <h3>Properties</h3> </div> <div class=col-xs-6> Mandatory: <ul> <li>content</li> <li>class</li> <li>action</li> </ul> </div> <div class=col-xs-6> Optional: <ul> <li>icon</li> </ul> </div> </div> </div> <div class="col-sm-8 col-md-7"> <pre><code class=language-javascript>
 $(ui.component.button.render({
     content: 'Menu',
     'class': 'naked-button--neutral',
@@ -197,21 +198,7 @@ $(ui.component.avatar.render({
     hasLabel: true,
     label: 'First name'
   }))
-</code></pre> </div> <div class=col-xs-12> <h3>Select</h3> </div> <div class=col-md-6> <component data-type=select data-properties=selectData.selectData1></component> <div id=try1> <script>$('#try1').replaceWith(
-                                        $(ui.component.select.render({
-                                            'options': [{
-                                                'value': 'Select your gender',
-                                                'title': true
-                                            }, {
-                                                'value': 'Male'
-                                            }, {
-                                                'value': 'Even more male'
-                                            }, {
-                                                'value': 'Other'
-                                            }]
-                                        }))
-                                            );
-                                    $('select').selectric();</script> </div> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Dropdown</h3> <!-- </div> --> </div> <div class=col-md-6> <component data-type=dropdown data-properties=dropdownData.dropdownData1> </component></div> <div class=col-md-6> <pre><code class=language-javascript>
+</code></pre> </div> <div class=col-xs-12> <h3>Select</h3> </div> <div class=col-md-6> <component data-type=select data-properties=selectData.selectData1></component> </div> <div class=col-xs-12> <!-- <div class="app-block"> --> <h3>Dropdown</h3> <!-- </div> --> </div> <div class=col-md-6> <component data-type=dropdown data-properties=dropdownData.dropdownData1> </component></div> <div class=col-md-6> <pre><code class=language-javascript>
 $(ui.component.dropdown.render({
     dropdownItem: 'Options',
     dropdownOptions: [{

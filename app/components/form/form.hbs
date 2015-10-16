@@ -22,19 +22,19 @@
 			<div class="{{selectId}}">
 				<select id="{{selectId}}" name="{{selectId}}" {{#if required}}required{{/if}}>
 				  {{#each options}}
-				    <option value="{{#unless title}}{{value}}{{/unless}}"  {{#if title}}disabled selected="selected"{{/if}}>{{option}}</option>
-				    <label class="{{selectId}}" for="{{selectId}}">{{value}}</label>
+				    <option value="{{#unless title}}{{value}}{{/unless}}" {{#if title}}disabled selected="selected"{{/if}}>{{option}}</option>
 				  {{/each}}
 				</select>
+				<label class="label" for="{{selectId}}">{{label}}</label>
 			</div>
 		</div>
 	{{/each}}
 	{{#each textareas}}
 		<div class="form__textarea">
 			<div class="{{textareaId}}">
+			    <label for="{{textareaId}}">{{label}}</label>
 				<textarea value="{{value}}" name="{{textareaId}}" class="inputMaterial" id="{{textareaId}}" cols="{{cols}}" rows="{{rows}}" {{#if required}}required{{/if}}>{{value}}</textarea>
 				<span class="bar"></span>
-			    <label for="{{textareaId}}">{{label}}</label>
 			</div>
 		</div>
 	{{/each}}
@@ -55,9 +55,9 @@
             $( element )
                 .closest( "form" )
                     .find( "div[class='" + element.attr( "id" ) + "']" )
-                        .append( error );
+                        .prepend( error );
         },
-        errorElement: "span",
+        errorElement: "div",
         success: "valid"
   		// submitHandler: function() { alert("Submitted!") }
     });

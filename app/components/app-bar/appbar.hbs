@@ -2,15 +2,11 @@
 <div class="innerContainer">
    <div class="nav nav--horizontal">
    {{#each navItems}}
-        <li>{{> PartialNavItem}}</li>
+      {{> PartialNavItem}}
     {{/each}}
-    {{!-- {{#appbarDropdown}}
-    	{{> PartialDropdown }}
-    {{/appbarDropdown}} --}}
-    {{#each button}} 
-        {{> PartialButton }} 
+    {{#each button}}
+        {{> PartialButton }}
     {{/each}}
-
     </div>
 </div>
 </div>

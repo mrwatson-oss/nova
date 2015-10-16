@@ -45,7 +45,7 @@
         .inputMaterial:valid ~ label {
             bottom: 5em;
             // font-size: .8em;
-            color: $button-color--strict;
+            color: $button-color--neutral__text;
         }
         .error ~ label {
             bottom: 5em;
@@ -81,27 +81,51 @@
             width: 50%;
         }
     }
-    span.error {
-        position: relative;
-        color: $sec-red;
+    div.error {
         float: right;
-        margin-top: -5em;
-        // right: 1em;
-        // top: -1.6em;
+        margin: -.5em 0 .5em 0;
+        color: $sec-red;
     }
     .form__select {
         display: block;
         margin-top: 2em;
-        margin-bottom: 2em;
-        .selectric {
-            // display: block;
+        // margin-bottom: 1em;
+        label {
+            color: $grey--dark;
+            font-weight: $font-weight--bold;
+            position: relative;
+            pointer-events: none;
+            margin-left: .5em;
+            padding: .5em;
+            bottom: 5em;
+            transition: 0.2s ease all !important;
+            -moz-transition: 0.2s ease all !important;
+            -webkit-transition: 0.2s ease all !important;
         }
-        .selectric-wrapper {}
+        div.error {
+            float: right;
+            margin: -1.5em 0 0 0;
+            color: $sec-red;
+        }
+        &:focus ~ label,
+        &:valid ~ label {
+            // bottom: 5em;
+            // font-size: .8em;
+            color: $button-color--strict;
+        }
+        .selectric {
+            p.label {
+              font-weight: normal;
+            }
+        }
+        .selectric-wrapper {
+          display: block;
+        }
     }
     .form__textarea {
         display: block;
-        margin-top: 3em;
-        // margin-bottom: -1em;
+        margin-top: 1em;
+        margin-bottom: .5em;
         .inputMaterial {
             border: none;
             outline: none;
@@ -124,7 +148,7 @@
             pointer-events: none;
             margin-left: .5em;
             padding: .5em;
-            bottom: 4em;
+            bottom: .7em;
             transition: 0.2s ease all !important;
             -moz-transition: 0.2s ease all !important;
             -webkit-transition: 0.2s ease all !important;
@@ -132,14 +156,16 @@
         /* active state */
         .inputMaterial:focus ~ label,
         .inputMaterial:valid ~ label {
-            bottom: 6.7em;
+            // bottom: 6.7em;
             // font-size: .8em;
-            color: $button-color--strict;
+            color: $button-color--neutral__text;
         }
-        .error ~ label {
-            bottom: 6.7em;
+        .error ~ span {
+            // position: relative;
+            // float: right;
+            // top: -4.4em;
             // // font-size: .8em;
-            color: $grey;
+            // color: $grey;
         }
         .bar {
             position: relative;
@@ -169,8 +195,10 @@
         .inputMaterial:focus ~ .bar:after {
             width: 50%;
         }
-        span.error {
-            margin-top: -6.7em;
+        div.error {
+            float: right;
+            margin: -.5em 0 .5em 0;
+            color: $sec-red;
         }
     }
     .form-button {
