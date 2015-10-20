@@ -22,7 +22,7 @@
 			<div class="{{selectId}}">
 				<select id="{{selectId}}" name="{{selectId}}" {{#if required}}required{{/if}}>
 				  {{#each options}}
-				    <option value="{{#unless title}}{{value}}{{/unless}}" {{#if title}}disabled selected="selected"{{/if}}>{{option}}</option>
+				    <option value="{{value}}" {{#if title}}disabled selected="selected"{{/if}}>{{option}}</option>
 				  {{/each}}
 				</select>
 				<label class="label" for="{{selectId}}">{{label}}</label>
