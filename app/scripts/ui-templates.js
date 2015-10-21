@@ -71,7 +71,7 @@ this["ui"]["component"]["template"]["appbar"] = Handlebars.template({"1":functio
     + "\">\n<div class=\"innerContainer\">\n   <div class=\"nav nav--horizontal\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navItems : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.button : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    </div>\n</div>\n</div>\n";
+    + "    </div>\n</div>\n</div>\n<script type=\"text/javascript\">\n$('.nav--horizontal li a').on( \"click\", function() {\n  $(this).parent().siblings().children().removeClass('nav--active');\n  $(this).addClass('nav--active');\n});\n</script>\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["appblock"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
