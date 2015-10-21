@@ -1,6 +1,5 @@
 #Mr.Watson | Nova (v0.0.1)
-Front-end framework & style guide for [www.mrwatson.com](www.mrwatson.com) 
-
+Front-end framework & style guide for [www.mrwatson.com](http://www.mrwatson.com)
 ## Dependencies
 
 - [Node](https://nodejs.org/download/)
