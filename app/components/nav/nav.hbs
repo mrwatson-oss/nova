@@ -37,12 +37,12 @@
 	<li class="last"></li>
 </div>
 <script type="text/javascript">
-  var activator = function() {
+var activator = function() {
+    var windowUrl = '/' + $(location).attr('pathname').split('/')[1];
     function checkIfActiveUrl(sideNavLink, sideNavUrl) {
-      if ($(location).attr('pathname') == sideNavLink || $(location).attr('href') == sideNavLink) {
-				// console.log(sideNavLink);
-        activateMe.addClass('side-nav--active');
+      if (windowUrl == sideNavLink || $(location).attr('href') == sideNavLink) {
         activateMe.parent().siblings().children().removeClass('side-nav--active');
+        activateMe.addClass('side-nav--active');
       }
     };
     var sideNavLinks = $('.side-nav li a');
@@ -51,11 +51,6 @@
       activateMe = $(this);
       var thisLink = this.pathname;
 			var thisUrl = $(this).attr('href');
-			// console.log(thisLink);
-			// console.log(thisUrl);
-			// console.log($(location).attr('pathname'));
-			// console.log($(location).attr('href'));
-
       checkIfActiveUrl(thisLink, thisUrl);
     });
   }();
