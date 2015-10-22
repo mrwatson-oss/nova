@@ -5,7 +5,7 @@ var appbarData = {
             'item': 'Past events',
             'class': 'nav--active divider'
         }, {
-            'url': '#',
+            'url': 'ui-components.html',
             'item': 'Upcoming events'
         }],
         'button': [{

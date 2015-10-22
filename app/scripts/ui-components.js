@@ -149,7 +149,7 @@ ui.component.appbar = (function($, T) {
             'item': 'Past events',
             'class': 'nav--active divider'
         }, {
-            'url': '#',
+            'url': 'ui-components.html',
             'item': 'Upcoming events'
         }],
         'button': [{
@@ -157,7 +157,8 @@ ui.component.appbar = (function($, T) {
             'content': 'Add new event'
         }]
     }
-};var ui = ui || {};
+}
+;var ui = ui || {};
 
 ui.component.appblock = (function($, T) {
 

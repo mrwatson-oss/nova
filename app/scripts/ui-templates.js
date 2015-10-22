@@ -58,7 +58,7 @@ this["ui"]["component"]["template"]["alert"] = Handlebars.template({"1":function
 this["ui"]["component"]["template"]["appbar"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = this.invokePartial(partials.PartialNavItem,depth0,{"name":"PartialNavItem","data":data,"indent":"      ","helpers":helpers,"partials":partials})) != null ? stack1 : "");
+  return ((stack1 = this.invokePartial(partials.PartialNavItem,depth0,{"name":"PartialNavItem","data":data,"indent":"        ","helpers":helpers,"partials":partials})) != null ? stack1 : "");
 },"3":function(depth0,helpers,partials,data) {
     var stack1;
 
@@ -68,10 +68,10 @@ this["ui"]["component"]["template"]["appbar"] = Handlebars.template({"1":functio
 
   return "<div class=\"app-bar "
     + this.escapeExpression(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
-    + "\">\n<div class=\"innerContainer\">\n   <div class=\"nav nav--horizontal\">\n"
+    + "\">\n  <div class=\"innerContainer\">\n    <div class=\"nav nav--horizontal\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navItems : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.button : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    </div>\n</div>\n</div>\n<script type=\"text/javascript\">\n$('.nav--horizontal li a').on( \"click\", function() {\n  $(this).parent().siblings().children().removeClass('nav--active');\n  $(this).addClass('nav--active');\n});\n</script>\n";
+    + "    </div>\n  </div>\n</div>\n<script type=\"text/javascript\">\n  var activator = function() {\n    function checkIfActiveUrl(appbarLink) {\n      if ($(location).attr('pathname') == appbarLink) {\n        activateMe.addClass('nav--active');\n        activateMe.parent().siblings().children().removeClass('nav--active');\n      }\n    };\n    var appbarLinks = $('.nav--horizontal li a');\n    var activateMe;\n    appbarLinks.each(function() {\n      activateMe = $(this);\n      var thisLink = $(this).attr('href');\n      checkIfActiveUrl(thisLink);\n    });\n  }();\n  $('.nav--horizontal li a').on(\"click\", function() {\n    $(this).parent().siblings().children().removeClass('nav--active');\n    $(this).addClass('nav--active');\n  });\n</script>\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["appblock"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
