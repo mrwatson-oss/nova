@@ -39,10 +39,11 @@
 <script type="text/javascript">
 	var activator = function() {
 		var windowUrl;
-		function checkIfActiveUrl(sideNavLink) {
+		function checkIfActiveUrl(sideNavLastItem, sideNavSecondLastItem) {
 			windowUrl = $(location).attr('pathname').split('/');
 			var WindowUrlLast = windowUrl[sideNavLength];
-			if (WindowUrlLast == sideNavLink) {
+			var WindowUrlSecondLast = windowUrl[sideNavLength-1];
+			if (WindowUrlLast == sideNavLastItem && WindowUrlSecondLast == sideNavSecondLastItem) {
 				activateMe.parent().siblings().children().removeClass('side-nav--active');
 				activateMe.addClass('side-nav--active');
 			}
@@ -55,7 +56,8 @@
 			var thisLink = this.pathname;
 			sideNavLength = thisLink.split('/').length - 1;
 			var sideNavLast = thisLink.split('/')[sideNavLength]
-			checkIfActiveUrl(sideNavLast);
+			var sideNavSecondLast = thisLink.split('/')[sideNavLength-1]
+			checkIfActiveUrl(sideNavLast, sideNavSecondLast);
 		});
 	}();
 	$('.side-nav li a').on("click", function() {
