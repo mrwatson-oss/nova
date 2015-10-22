@@ -31,7 +31,7 @@ var navData = {
         'title': true,
         'navTitle': 'Components',
         'navItems': [{
-            'url': '/ui-components.html',
+            'url': '#anchor-appbar',
             'item': 'App Bar',
             'icon': 'icon-app-naked-list blue'
         }, {

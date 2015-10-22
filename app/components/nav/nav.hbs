@@ -38,8 +38,9 @@
 </div>
 <script type="text/javascript">
   var activator = function() {
-    function checkIfActiveUrl(sideNavLink) {
-      if ($(location).attr('pathname') == sideNavLink) {
+    function checkIfActiveUrl(sideNavLink, sideNavUrl) {
+      if ($(location).attr('pathname') == sideNavLink || $(location).attr('href') == sideNavLink) {
+				// console.log(sideNavLink);
         activateMe.addClass('side-nav--active');
         activateMe.parent().siblings().children().removeClass('side-nav--active');
       }
@@ -48,9 +49,18 @@
     var activateMe;
     sideNavLinks.each(function() {
       activateMe = $(this);
-      var thisLink = $(this).attr('href');
-      checkIfActiveUrl(thisLink);
+      var thisLink = this.pathname;
+			var thisUrl = $(this).attr('href');
+			// console.log(thisLink);
+			// console.log(thisUrl);
+			// console.log($(location).attr('pathname'));
+			// console.log($(location).attr('href'));
+
+      checkIfActiveUrl(thisLink, thisUrl);
     });
   }();
-
+	$('.side-nav li a').on("click", function() {
+    $(this).parent().siblings().children().removeClass('side-nav--active');
+    $(this).addClass('side-nav--active');
+  });
 </script>
