@@ -29,16 +29,13 @@
             font-size: $font-size--regular;
             &:focus {
                 background: $grey--light;
-                background: -webkit-linear-gradient(left, $white, $grey--light);
             }
             &:hover {
                 // background: $grey--light;
-                background: -webkit-linear-gradient(left, $white, $grey--light);
             }
             &:active {
                 // background: $grey--light;
                 background: $grey;
-                background: -webkit-linear-gradient(left, $white, $grey--light);
             }
         }
     }
@@ -154,4 +151,7 @@
 
 .nav--active {
     border-bottom: .2em solid $border-color--accent;
+}
+.side-nav--active {
+    background: $grey--light;
 }

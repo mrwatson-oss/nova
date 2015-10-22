@@ -856,7 +856,7 @@ this["ui"]["component"]["template"]["nav"] = Handlebars.template({"1":function(d
     + "</li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, options, alias1=helpers.helperMissing, alias2="function", buffer = 
-  "<div class=\"nav app-block\" id=\""
+  "<div class=\"nav side-nav app-block\" id=\""
     + this.escapeExpression(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.communitySwitch : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
@@ -867,7 +867,7 @@ this["ui"]["component"]["template"]["nav"] = Handlebars.template({"1":function(d
   if (!helpers.navItems) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
   return buffer + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.navActionBar : depth0),{"name":"if","hash":{},"fn":this.program(15, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "	<li class=\"last\"></li>\n</div>\n";
+    + "	<li class=\"last\"></li>\n</div>\n<script type=\"text/javascript\">\n  var activator = function() {\n    function checkIfActiveUrl(sideNavLink) {\n      if ($(location).attr('pathname') == sideNavLink) {\n        activateMe.addClass('side-nav--active');\n        activateMe.parent().siblings().children().removeClass('side-nav--active');\n      }\n    };\n    var sideNavLinks = $('.side-nav li a');\n    var activateMe;\n    sideNavLinks.each(function() {\n      activateMe = $(this);\n      var thisLink = $(this).attr('href');\n      checkIfActiveUrl(thisLink);\n    });\n  }();\n\n</script>\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["partials"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

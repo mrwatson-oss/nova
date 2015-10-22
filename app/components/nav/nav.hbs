@@ -1,4 +1,4 @@
-<div class="nav app-block" id="{{id}}">
+<div class="nav side-nav app-block" id="{{id}}">
 {{#if communitySwitch}}
 	{{#each navCommunities}}
 		{{>PartialCommunitySwitch}}
@@ -36,3 +36,21 @@
 {{/if}}
 	<li class="last"></li>
 </div>
+<script type="text/javascript">
+  var activator = function() {
+    function checkIfActiveUrl(sideNavLink) {
+      if ($(location).attr('pathname') == sideNavLink) {
+        activateMe.addClass('side-nav--active');
+        activateMe.parent().siblings().children().removeClass('side-nav--active');
+      }
+    };
+    var sideNavLinks = $('.side-nav li a');
+    var activateMe;
+    sideNavLinks.each(function() {
+      activateMe = $(this);
+      var thisLink = $(this).attr('href');
+      checkIfActiveUrl(thisLink);
+    });
+  }();
+
+</script>

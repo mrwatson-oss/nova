@@ -1359,7 +1359,7 @@ ui.component.nav = (function($, T) {
         'title': true,
         'navTitle': 'Components',
         'navItems': [{
-            'url': '#anchor-appbar',
+            'url': '/ui-components.html',
             'item': 'App Bar',
             'icon': 'icon-app-naked-list blue'
         }, {
