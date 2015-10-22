@@ -790,21 +790,22 @@ this["ui"]["component"]["template"]["modal"] = Handlebars.template({"1":function
 this["ui"]["component"]["template"]["nav"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navCommunities : depth0),{"name":"each","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+  return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navCommunities : depth0),{"name":"each","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "		 ";
 },"2":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = this.invokePartial(partials.PartialCommunitySwitch,depth0,{"name":"PartialCommunitySwitch","data":data,"indent":"\t\t","helpers":helpers,"partials":partials})) != null ? stack1 : "");
+  return ((stack1 = this.invokePartial(partials.PartialCommunitySwitch,depth0,{"name":"PartialCommunitySwitch","data":data,"indent":"\t\t\t","helpers":helpers,"partials":partials})) != null ? stack1 : "");
 },"4":function(depth0,helpers,partials,data) {
     var stack1, helper;
 
-  return "<div class=\"nav-title\">\n	"
+  return "				<div class=\"nav-title\">\n					"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.navTitleIcon : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\n	"
+    + "\n					"
     + this.escapeExpression(((helper = (helper = helpers.navTitle || (depth0 != null ? depth0.navTitle : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"navTitle","hash":{},"data":data}) : helper)))
     + "\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.button : depth0),{"name":"if","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</div>\n";
+    + "				</div>\n";
 },"5":function(depth0,helpers,partials,data) {
     var helper;
 
@@ -814,21 +815,21 @@ this["ui"]["component"]["template"]["nav"] = Handlebars.template({"1":function(d
 },"7":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "	<div class=\"nav-title__button pull-right\">"
+  return "						<div class=\"nav-title__button pull-right\">"
     + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</div>\n";
 },"9":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"sub-title\">\n	<span class=\"category\">"
+  return "				<div class=\"sub-title\">\n					<span class=\"category\">"
     + alias3(((helper = (helper = helpers.category || (depth0 != null ? depth0.category : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"category","hash":{},"data":data}) : helper)))
-    + "</span>\n	<span class=\"name\">"
+    + "</span>\n					<span class=\"name\">"
     + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
-    + "</span>\n</div>\n";
+    + "</span>\n				</div>\n";
 },"11":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = this.invokePartial(partials.PartialNavItem,depth0,{"name":"PartialNavItem","data":data,"indent":"\t\t","helpers":helpers,"partials":partials})) != null ? stack1 : "")
+  return ((stack1 = this.invokePartial(partials.PartialNavItem,depth0,{"name":"PartialNavItem","data":data,"indent":"\t\t\t\t","helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"12":function(depth0,helpers,partials,data) {
     var stack1, helper, options, buffer = "";
@@ -840,7 +841,7 @@ this["ui"]["component"]["template"]["nav"] = Handlebars.template({"1":function(d
 },"13":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = this.invokePartial(partials.PartialDropdown,depth0,{"name":"PartialDropdown","data":data,"indent":"\t\t\t\t","helpers":helpers,"partials":partials})) != null ? stack1 : "");
+  return ((stack1 = this.invokePartial(partials.PartialDropdown,depth0,{"name":"PartialDropdown","data":data,"indent":"\t\t\t\t\t\t","helpers":helpers,"partials":partials})) != null ? stack1 : "");
 },"15":function(depth0,helpers,partials,data) {
     var stack1, helper, options, buffer = "";
 
@@ -851,7 +852,7 @@ this["ui"]["component"]["template"]["nav"] = Handlebars.template({"1":function(d
 },"16":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "		<li class=\"nav__action-bar__button\">"
+  return "					<li class=\"nav__action-bar__button\">"
     + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -860,14 +861,15 @@ this["ui"]["component"]["template"]["nav"] = Handlebars.template({"1":function(d
     + this.escapeExpression(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.communitySwitch : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"if","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.subTitle : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "	<li class=\"first\"></li>\n";
+    + "			<li class=\"first\"></li>\n";
   stack1 = ((helper = (helper = helpers.navItems || (depth0 != null ? depth0.navItems : depth0)) != null ? helper : alias1),(options={"name":"navItems","hash":{},"fn":this.program(11, data, 0),"inverse":this.noop,"data":data}),(typeof helper === alias2 ? helper.call(depth0,options) : helper));
   if (!helpers.navItems) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
   return buffer + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.navActionBar : depth0),{"name":"if","hash":{},"fn":this.program(15, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "	<li class=\"last\"></li>\n</div>\n<script type=\"text/javascript\">\nvar activator = function() {\n    var windowUrl = '/' + $(location).attr('pathname').split('/')[1];\n    function checkIfActiveUrl(sideNavLink, sideNavUrl) {\n      if (windowUrl == sideNavLink || $(location).attr('href') == sideNavLink) {\n        activateMe.parent().siblings().children().removeClass('side-nav--active');\n        activateMe.addClass('side-nav--active');\n      }\n    };\n    var sideNavLinks = $('.side-nav li a');\n    var activateMe;\n    sideNavLinks.each(function() {\n      activateMe = $(this);\n      var thisLink = this.pathname;\n			var thisUrl = $(this).attr('href');\n      checkIfActiveUrl(thisLink, thisUrl);\n    });\n  }();\n	$('.side-nav li a').on(\"click\", function() {\n    $(this).parent().siblings().children().removeClass('side-nav--active');\n    $(this).addClass('side-nav--active');\n  });\n</script>\n";
+    + "			<li class=\"last\"></li>\n</div>\n<script type=\"text/javascript\">\n	var activator = function() {\n		var windowUrl;\n		function checkIfActiveUrl(sideNavLink) {\n			windowUrl = $(location).attr('pathname').split('/');\n			var WindowUrlLast = windowUrl[sideNavLength];\n			if (WindowUrlLast == sideNavLink) {\n				activateMe.parent().siblings().children().removeClass('side-nav--active');\n				activateMe.addClass('side-nav--active');\n			}\n		};\n		var sideNavLinks = $('.side-nav li a');\n		var activateMe;\n		var sideNavLength;\n		sideNavLinks.each(function() {\n			activateMe = $(this);\n			var thisLink = this.pathname;\n			sideNavLength = thisLink.split('/').length - 1;\n			var sideNavLast = thisLink.split('/')[sideNavLength]\n			checkIfActiveUrl(sideNavLast);\n		});\n	}();\n	$('.side-nav li a').on(\"click\", function() {\n		$(this).parent().siblings().children().removeClass('side-nav--active');\n		$(this).addClass('side-nav--active');\n	});\n</script>\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["partials"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
