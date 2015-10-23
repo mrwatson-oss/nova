@@ -1,7 +1,7 @@
 var headerData = {
     'headerData1': {
         'logo': {
-            'src': 'https://welcome.mrwatson.com/views/ass/img/logo.png'
+            'src': '/images/logo_transp.png'
         },
         'input': {
             'placeholder': 'Seach for colors or whatever'
@@ -17,7 +17,7 @@ var headerData = {
     },
     'headerData2': {
         'logo': {
-            'src': '/images/logo.png'
+            'src': '/images/logo_transp.png'
         },
         'input': {
             'placeholder': 'Seach for components or whatever'
@@ -34,9 +34,10 @@ var headerData = {
         }]
     },
     'headerData3': {
+        'settings': true,
         'styleguide': true,
         'logo': {
-            'src': '/images/logo.png'
+            'src': '/images/logo_transp.png'
         },
         'input': {
             'placeholder': 'Search bar..'

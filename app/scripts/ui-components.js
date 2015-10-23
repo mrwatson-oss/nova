@@ -886,7 +886,7 @@ ui.component.header = (function($, T) {
 ;var headerData = {
     'headerData1': {
         'logo': {
-            'src': 'https://welcome.mrwatson.com/views/ass/img/logo.png'
+            'src': '/images/logo_transp.png'
         },
         'input': {
             'placeholder': 'Seach for colors or whatever'
@@ -902,7 +902,7 @@ ui.component.header = (function($, T) {
     },
     'headerData2': {
         'logo': {
-            'src': '/images/logo.png'
+            'src': '/images/logo_transp.png'
         },
         'input': {
             'placeholder': 'Seach for components or whatever'
@@ -919,9 +919,10 @@ ui.component.header = (function($, T) {
         }]
     },
     'headerData3': {
+        'settings': true,
         'styleguide': true,
         'logo': {
-            'src': '/images/logo.png'
+            'src': '/images/logo_transp.png'
         },
         'input': {
             'placeholder': 'Search bar..'

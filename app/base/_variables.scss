@@ -11,11 +11,11 @@
 // Primary Palette // DO NOT CALL THESE DIRECTLY, USE UI COLORS INSTEAD
 // -----------------------------------------------------------------------------
 
-$green			: #4AB75F;
+$green	  		: #4AB75F;
 $green--light	: lighten($green, 44%);
 $green--dark	: darken($green, 10%);
-$white			: #FFFFFF;
-$grey			: #DEDEDE;
+$white	  		: #FFFFFF;
+$grey		    	: #DEDEDE;
 $grey--light 	: lighten($grey, 9%);
 $grey--dark 	: darken($grey, 56%);
 
@@ -23,64 +23,66 @@ $grey--dark 	: darken($grey, 56%);
 // Secundairy Palette // DO NOT CALL THESE DIRECTLY, USE UI COLORS INSTEAD
 // -----------------------------------------------------------------------------
 
-$sec-blue			: #6699CC;
+$sec-blue			    : #6699CC;
 $sec-blue--light	: lighten($sec-blue, 30%);
 $sec-blue--dark		: darken($sec-blue, 10%);
-$sec-red			: #DA4747;
+$sec-red		    	: #DA4747;
 $sec-red--light		: lighten($sec-red, 10%);
 $sec-red--dark		: darken($sec-red, 10%);
 
 
 // -----------------------------------------------------------------------------
-// UI colors - BACKGROUNDS
+// UI colors - BACKGROUNDS & BORDERS
 // -----------------------------------------------------------------------------
 
-$body-background-color			: $green--light;
-$block-background-color			: $white;
+$body-background-color	    		: $green--light;
+$block-background-color		    	: $white;
 $block-background-color--accent	: $grey--light;
-$border-color					: $grey--dark;
-$border-color--accent			: $green;  
+$border-color					          : $grey--dark;
+$border-color--settings		  		: $grey;
+$background-color--settings     : $grey--light;
+$border-color--accent		      	: $green;
 
 // -----------------------------------------------------------------------------
 // UI colors - BUTTONS
 // -----------------------------------------------------------------------------
 
-$button-color__text					: $white;
+$button-color__text			    		: $white;
 
-$button-color--neutral				: $white;
-$button-color--neutral--accent		: $grey;
+$button-color--neutral	  			: $white;
+$button-color--neutral--accent	: $grey;
 $button-color--neutral__text		: $grey--dark;
 
-$button-color--happy				: $green;
+$button-color--happy				    : $green;
 $button-color--happy--accent		: $green--dark;
 
-$button-color--strict				: $sec-blue;
+$button-color--strict				    : $sec-blue;
 $button-color--strict--accent		: $sec-blue--dark;
 
 // $button-color--scary__background	: $sec-yellow?;
 
-$button-color--angry				: $sec-red;
+$button-color--angry				    : $sec-red;
 $button-color--angry--accent		: $sec-red--dark;
 
 // -----------------------------------------------------------------------------
 // UI colors - ALERTS
 // -----------------------------------------------------------------------------
 
-$alert-color__text					: $white;
+$alert-color__text					    : $white;
 
-$alert-color--neutral				: $white;
+$alert-color--neutral				    : $white;
 $alert-color--neutral--accent		: $grey;
 $alert-color--neutral__text			: $grey--dark;
 
-$alert-color--happy					: $green;
+$alert-color--happy					    : $green;
 $alert-color--happy--accent			: $green--dark;
 
-$alert-color--strict				: $sec-blue;
+$alert-color--strict			    	: $sec-blue;
 $alert-color--strict--accent		: $sec-blue--dark;
 
 // $alert-color--scary__background	: $sec-yellow?;
 
-$alert-color--angry					: $sec-red;
+$alert-color--angry					    : $sec-red;
 $alert-color--angry--accent			: $sec-red--dark;
 
 // -----------------------------------------------------------------------------
@@ -98,13 +100,13 @@ $divider-color		: $grey--light;
 // Type - COLOR
 // -----------------------------------------------------------------------------
 
-$text-color				: $grey--dark;
+$text-color			    	: $grey--dark;
 $text-color--accent		: $green;
 
-$header-color			: $grey--dark;
+$header-color			    : $grey--dark;
 $header-color--accent	: $green;
 
-$link-color				: $sec-blue--dark;
+$link-color			    	: $sec-blue--dark;
 $link-color--accent		: $sec-blue;
 
 
@@ -126,7 +128,7 @@ $font-family			: 'Source Sans Pro', sans-serif;
 $button-font			: 'Source Sans Pro', sans-serif;
 $alert-font				: 'Source Sans Pro', sans-serif;
 //todo: mixin for browser compatibility
-// $font-size				: .9em; 
+// $font-size				: .9em;
 
 // -----------------------------------------------------------------------------
 // Type - WEIGHT
@@ -141,14 +143,14 @@ $font-weight--bold		: 600;
 // -----------------------------------------------------------------------------
 
 //todo: mixin for browser compatibility
-$font-size--small		: 0.9em;
+$font-size--small	  	: 0.9em;
 $font-size--regular		: 1em;
-$font-size--large		: 1.1em;
+$font-size--large		  : 1.1em;
 $font-size--x-large		: 1.4em;
 $font-size--xx-large	: 2em;
 $font-size--xxx-large	: 2.7em;
 
-$line-height			: $font-size--large;
+$line-height			    : $font-size--large;
 
 
 
@@ -161,4 +163,3 @@ $line-height			: $font-size--large;
 // -----------------------------------------------------------------------------
 
 $block-padding			: .4em;
-

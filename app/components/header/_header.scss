@@ -9,19 +9,25 @@
     right: 0;
     z-index: 999;
     padding: 1em;
-    border-bottom: 3px solid $border-color--accent;
+    border-bottom: 2px solid $border-color--accent;
     margin-bottom: 1em;
     &.header--styleguide {
         position: relative;
         display: block;
     }
+    &.header--settings {
+        border-bottom: 2px solid $border-color--settings;
+        background: $background-color--settings;
+
+    }
+
     .header-container {
         position: relative;
         max-width: 1170px;
         margin: 0 auto;
     }
     .header-logo {
-        padding: .2em;
+        // padding: .2em;
         max-height: 3em;
     }
 }
