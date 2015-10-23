@@ -1168,7 +1168,7 @@ ui.component.icon = (function($, T) {
             'icon': 'icon-user-mobile',
             'label': true
         }, {
-            'icon': 'user-monitor',
+            'icon': 'icon-user-monitor',
             'label': true
         }, {
             'icon': 'icon-user-suitcase',
