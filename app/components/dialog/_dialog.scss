@@ -2,8 +2,12 @@
 // Base dialog
 // -----------------------------------------------------------------------------
 .dialog {
-    display: inline-block;
-    position: relative;
+    position: absolute;
+    z-index: 1001;
+    &.styleguide {
+      display: inline-block;
+      position: relative;
+    }
     width: 32em;
     height: auto;
     padding: 4em 4em 1em 4em;
@@ -14,7 +18,7 @@
         margin-right: -30px;
         .icon {
             font-size: $font-size--xxx-large;
-            line-height: $font-size--x-large;        
+            line-height: $font-size--x-large;
         }
     }
     .dialog-title {
@@ -38,4 +42,3 @@
     // @extend .dialog;
     @include dialog($button-color--strict);
 }
-

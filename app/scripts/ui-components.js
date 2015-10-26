@@ -551,6 +551,7 @@ ui.component.dialog = (function($, T) {
 (jQuery, ui.component.template));var dialogData = {
     'dialogData1': {
         'angry': 'true',
+        'styleguide': 'true',
         'title': 'Deleting this is permanent.',
         'message': 'Are you sure you want to delete your account?',
         'button': [{
@@ -563,6 +564,7 @@ ui.component.dialog = (function($, T) {
     },
     'dialogData2': {
         'title': 'Do you wish to create a new community?',
+        'styleguide': 'true',
         'message': 'You should only create a new community if you are setting one up in a new coworking space.',
         'button': [{
             'content': 'Create community',
