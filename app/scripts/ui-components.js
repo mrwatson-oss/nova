@@ -806,8 +806,7 @@ ui.component.form = (function($, T) {
             'label': 'What\'s your age?',
             'options': [{
                 'value': 'null',
-                'option': '',
-                'title': true
+                'option': ''
             }, {
                 'option': '0-19',
                 'value': '11'
