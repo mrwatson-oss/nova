@@ -1,12 +1,12 @@
 <li class="dropdown" id="dropdown">
-	{{#if icon}}<i class="{{icon}}"></i>{{/if}} 
+	{{#if icon}}<i class="{{icon}}"></i>{{/if}}
 	{{{dropdownItem}}} {{#if badge}}<span class="dropdown-badge">{{dropdownOptions.length}}</span>{{/if}}
 	<ul class="nav drop-nav">
 		{{#each dropdownOptions}}
 			<li>
 				<a id="{{id}}" class="{{class}}" href="{{href}}">
 					{{option}}
-				</a><span class="alert-button">{{>PartialButton action="$(this).closest('li').animate({left:'-=20',opacity: 0},500,function(){$(this).closest('li').remove()})"}}</span>
+				</a>
 			</li>
 		{{/each}}
 	</ul>

@@ -45,6 +45,9 @@
     .divider {
         border-bottom: 2px solid $divider-color;
     }
+    .divider--top {
+        border-top: 2px solid $divider-color;
+    }
     .dropdown-badge {
         position: absolute;
         right: .3em;
