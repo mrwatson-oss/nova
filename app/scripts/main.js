@@ -5,4 +5,5 @@ $(document).ready(function() {
       'use strict';
       $(this).toggleClass("drop-nav-active");
   });
+  emojify.run();
 });
