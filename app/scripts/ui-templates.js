@@ -617,23 +617,22 @@ this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":functio
 },"3":function(depth0,helpers,partials,data) {
     return "header--settings";
 },"5":function(depth0,helpers,partials,data) {
-    var stack1;
-
-  return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.logo : depth0),{"name":"if","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
-},"6":function(depth0,helpers,partials,data) {
     var stack1, helper, options, buffer = 
   "              ";
-  stack1 = ((helper = (helper = helpers.logo || (depth0 != null ? depth0.logo : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"logo","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
+  stack1 = ((helper = (helper = helpers.logo || (depth0 != null ? depth0.logo : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"logo","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
   if (!helpers.logo) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
   return buffer + "\n";
-},"7":function(depth0,helpers,partials,data) {
+},"6":function(depth0,helpers,partials,data) {
     var helper;
 
   return "<a href=\"/\"><img src=\""
     + this.escapeExpression(((helper = (helper = helpers.src || (depth0 != null ? depth0.src : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"src","hash":{},"data":data}) : helper)))
     + "\" class=\"header-logo pull-left\"></a>";
+},"8":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"9":function(depth0,helpers,partials,data) {
     var stack1;
 
@@ -692,8 +691,9 @@ this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":functio
     + " "
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.settings : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\">\n    <div class=\"header-container\">\n        <div class=\"col-xs-3\">\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.headerMobile : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\n        <div class=\"col-xs-9\">\n\n\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.logo : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.headerMobile : depth0),{"name":"if","hash":{},"fn":this.program(8, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "        </div>\n        <div class=\"col-xs-9\">\n"
     + ((stack1 = helpers.unless.call(depth0,(depth0 != null ? depth0.headerMobile : depth0),{"name":"unless","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.headerMobile : depth0),{"name":"if","hash":{},"fn":this.program(21, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "        </div>\n    </div>\n</div>\n"

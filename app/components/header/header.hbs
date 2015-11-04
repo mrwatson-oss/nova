@@ -2,10 +2,10 @@
 <div class="row header {{#if styleguide}}header--styleguide{{/if}} {{#if settings}}header--settings{{/if}}">
     <div class="header-container">
         <div class="col-xs-3">
-        {{#if headerMobile}}
           {{#if logo}}
               {{#logo}}<a href="/"><img src="{{src}}" class="header-logo pull-left"></a>{{/logo}}
           {{/if}}
+        {{#if headerMobile}}
           {{#if dropdown}}
               {{#each dropdown}}
                  <div class="pull-left"> {{> PartialDropdown}}</div>
@@ -15,8 +15,6 @@
         </div>
         <div class="col-xs-9">
             {{!-- {{#if input}} {{#input}} {{> PartialTextInput class="text-input__grey"}} {{/input}} {{/if}}  --}}
-
-
           {{#unless headerMobile}}
             <div class="nav nav--horizontal pull-right">
             {{#if navItems}}
