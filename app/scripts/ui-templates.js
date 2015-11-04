@@ -49,10 +49,10 @@ this["ui"]["component"]["template"]["alert"] = Handlebars.template({"1":function
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\">\n      <div class=\"row\">\n        <div class=\"col-xs-1 col-sm-1\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.icon : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\n        <div class=\"col-xs-10 col-sm-10\">\n"
+    + "        </div>\n        <div class=\"col-xs-9 col-sm-10\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.message : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\n        <div class=\"col-xs-1 col-sm-1\">\n"
+    + "        </div>\n        <div class=\"col-xs-2 col-sm-1\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.button : depth0),{"name":"if","hash":{},"fn":this.program(8, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 },"usePartial":true,"useData":true});
