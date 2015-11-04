@@ -2,13 +2,13 @@
   <div class="col-xs-12">
     <div class="alert {{class}}" id="{{id}}">
       <div class="row">
-        <div class="col-xs-10 ">
-            <div class="alert-icon pull-left"> <i class="icon {{icon}}"></i></div>
+        <div class="col-xs-10">
+          <div class="alert-icon"> <i class="icon {{icon}}"></i></div>
           {{#if title}}
-            <div class="title pull-left"><b> {{title}} </b></div>
+            <div class="title"><b>{{title}} </b></div>
           {{/if}}
           {{#if message}}
-            <div class="message pull-left"> {{message}}
+            <div class="message"> {{message}}
               {{#if link}} <a href="{{{href}}}">{{link}}</a> {{/if}}
             </div>
           {{/if}}
