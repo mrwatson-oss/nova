@@ -3,18 +3,18 @@
 // -----------------------------------------------------------------------------
 .alert {
     height: auto;
-    padding: 1.5em .5em .5em 1.5em;
+    padding: 1.5em 1.5em .8em 1.5em;
     width: 100%;
     margin-bottom: 1em;
     border-radius: 2px;
-    overflow: hidden;
+    // overflow: hidden;
     .alert-icon {
         .icon {
             font-size: $font-size--x-large;
         }
     }
     .title {
-        padding: 0 .4em 0 0;
+        padding: 0 .4em 0 1em;
     }
     .message {
           padding-bottom: 1em;
@@ -22,7 +22,6 @@
     .alert-button {
         button {
         padding-top: 0 !important;
-        // margin-right: -1em;
       }
     }
 }
