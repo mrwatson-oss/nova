@@ -1,18 +1,30 @@
-<div class="alert {{class}}" id="{{id}}">
-  {{#if icon}}
-    <span class="alert-icon"> <i class="icon {{icon}}"></i></span>
-  {{/if}}
-  {{#if title}}
-    <span class="title"><b> {{title}} </b></span>
-  {{/if}}
-  {{#if message}}
-    <span class="message"> {{message}}
-      {{#if link}} <a href="{{{href}}}">{{link}}</a> {{/if}}
-    </span>
-  {{/if}}
-  {{#if button}}
-    {{#each button}}
-      <span class="alert-button">{{>PartialButton action="$(this).closest('div.alert').animate({left:'-=20',opacity: 0},500,function(){$(this).closest('div.alert').hide()})"}}</span>
-    {{/each}}
-  {{/if}}
+<div class="row">
+  <div class="col-xs-12">
+    <div class="alert {{class}}" id="{{id}}">
+      <div class="row">
+        <div class="col-xs-1 col-sm-1">
+          {{#if icon}}
+            <div class="alert-icon pull-left"> <i class="icon {{icon}}"></i></div>
+          {{/if}}
+        </div>
+        <div class="col-xs-10 col-sm-10">
+          {{#if title}}
+            <div class="title pull-left"><b> {{title}} </b></div>
+          {{/if}}
+          {{#if message}}
+            <div class="message pull-left"> {{message}}
+              {{#if link}} <a href="{{{href}}}">{{link}}</a> {{/if}}
+            </div>
+          {{/if}}
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          {{#if button}}
+            {{#each button}}
+              <div class="alert-button pull-right">{{>PartialButton action="$(this).closest('.alert').animate({left:'-=20',opacity: 0},500,function(){$(this).closest('div.alert').hide()})"}}</div>
+            {{/each}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -4,13 +4,13 @@
             -ms-border-radius: $radius;
             border-radius: $radius;
         }
-        
+
         @mixin opacity($opacity) {
             opacity: $opacity;
             $opacity-ie: $opacity * 100;
             filter: alpha(opacity=$opacity-ie); //IE8
         }
-        
+
         // -----------------------------------------------------------------------------
         // Button mixins
         // -----------------------------------------------------------------------------
@@ -30,14 +30,14 @@
                 color: $icon-color;
             }
             &:active {
-                // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4); 
+                // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4);
             }
             &:focus {
                 color: $icon-color;
                 outline: none;
             }
         }
-        
+
         @mixin solid-button($button-color, $button-color-accent, $button-text-color: $button-color__text) {
             background: $button-color;
             border: 1px solid $button-color;
@@ -71,7 +71,7 @@
                 border-color: $button-color-accent;
             }
             &:active {
-                // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4); 
+                // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4);
             }
             &:focus {
                 background-color: $button-color-accent;
@@ -85,7 +85,7 @@
                 cursor: default;
             }
         }
-        
+
         @mixin naked-button($button-text-color, $button-color-accent) {
             background: none;
             border: none;
@@ -123,7 +123,7 @@
                 }
             }
             &:active {
-                // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4); 
+                // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4);
             }
             &:focus {
                 color: $button-color-accent;
@@ -135,7 +135,7 @@
                 cursor: default;
             }
         }
-        
+
         // -----------------------------------------------------------------------------
         // Alert mixins
         // -----------------------------------------------------------------------------
@@ -155,7 +155,7 @@
                 }
             }
         }
-        
+
         @mixin naked-alert($alert-color, $alert-text-color) {
             background: none;
             border: 1px solid $alert-color;
@@ -175,7 +175,7 @@
                 }
             }
         }
-        
+
         // -----------------------------------------------------------------------------
         // Dialog mixins
         // -----------------------------------------------------------------------------

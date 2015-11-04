@@ -47,7 +47,7 @@ var alertData = {
         'icon': 'icon-solid-fire',
         'title': 'Oops!',
         'class': 'solid-alert--angry',
-        'message': 'That e-mail address already exists.',
+        'message': 'That e-mail addrhat e-mail address already exists.ess already exhat e-mail address already exists.ists.',
         'link': 'Forgot your password?',
         'href': '#',
         'button': [{
