@@ -617,41 +617,77 @@ this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":functio
 },"3":function(depth0,helpers,partials,data) {
     return "header--settings";
 },"5":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.logo : depth0),{"name":"if","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"6":function(depth0,helpers,partials,data) {
     var stack1, helper, options, buffer = 
-  "            ";
-  stack1 = ((helper = (helper = helpers.logo || (depth0 != null ? depth0.logo : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"logo","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
+  "              ";
+  stack1 = ((helper = (helper = helpers.logo || (depth0 != null ? depth0.logo : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"logo","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
   if (!helpers.logo) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
   return buffer + "\n";
-},"6":function(depth0,helpers,partials,data) {
+},"7":function(depth0,helpers,partials,data) {
     var helper;
 
   return "<a href=\"/\"><img src=\""
     + this.escapeExpression(((helper = (helper = helpers.src || (depth0 != null ? depth0.src : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"src","hash":{},"data":data}) : helper)))
     + "\" class=\"header-logo pull-left\"></a>";
-},"8":function(depth0,helpers,partials,data) {
-    var stack1;
-
-  return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navItems : depth0),{"name":"each","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navIcons : depth0),{"name":"each","hash":{},"fn":this.program(11, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"9":function(depth0,helpers,partials,data) {
     var stack1;
 
+  return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.dropdown : depth0),{"name":"each","hash":{},"fn":this.program(10, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"10":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "                 <div class=\"pull-left\"> "
+    + ((stack1 = this.invokePartial(partials.PartialDropdown,depth0,{"name":"PartialDropdown","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</div>\n";
+},"12":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "              <div class=\"pull-right mobile-header__title\"> <h4>"
+    + this.escapeExpression(((helper = (helper = helpers.headerMobileNavTitle || (depth0 != null ? depth0.headerMobileNavTitle : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"headerMobileNavTitle","hash":{},"data":data}) : helper)))
+    + " </h4></div>\n";
+},"14":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "            <div class=\"nav nav--horizontal pull-right\">\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.navItems : depth0),{"name":"if","hash":{},"fn":this.program(15, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "            </div>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":this.program(20, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"15":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navItems : depth0),{"name":"each","hash":{},"fn":this.program(16, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.navIcons : depth0),{"name":"each","hash":{},"fn":this.program(18, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"16":function(depth0,helpers,partials,data) {
+    var stack1;
+
   return ((stack1 = this.invokePartial(partials.PartialNavItem,depth0,{"name":"PartialNavItem","data":data,"indent":"                    ","helpers":helpers,"partials":partials})) != null ? stack1 : "");
-},"11":function(depth0,helpers,partials,data) {
+},"18":function(depth0,helpers,partials,data) {
     var stack1;
 
   return ((stack1 = this.invokePartial(partials.PartialIcon,depth0,{"name":"PartialIcon","data":data,"indent":"                    ","helpers":helpers,"partials":partials})) != null ? stack1 : "");
-},"13":function(depth0,helpers,partials,data) {
+},"20":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.dropdown : depth0),{"name":"each","hash":{},"fn":this.program(14, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
-},"14":function(depth0,helpers,partials,data) {
+  return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.dropdown : depth0),{"name":"each","hash":{},"fn":this.program(21, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"21":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "                   <div class=\"pull-right\"> "
     + ((stack1 = this.invokePartial(partials.PartialDropdown,depth0,{"name":"PartialDropdown","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</div>\n";
+},"23":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "          <div class=\"nav nav--horizontal pull-right\">\n            <div class=\"mobile-header__close-settings\"> "
+    + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","hash":{"action":"location.href=\"/\";","icon":"icon-system-close","class":"naked-button--neutral"},"data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</div>\n          </div>\n";
+},"25":function(depth0,helpers,partials,data) {
+    return "  <script type=\"text/javascript\">\n    $('.header-container').find($('.drop-nav').addClass('drop-nav--right'));\n  </script>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
@@ -659,13 +695,15 @@ this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":functio
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.styleguide : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + " "
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.settings : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\">\n    <div class=\"header-container\">\n        <div class=\"col-md-3\">\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.logo : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\n        <div class=\"col-md-6\">\n\n        </div>\n        <div class=\"col-md-3\">\n            <div class=\"nav nav--horizontal pull-right\">\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.navItems : depth0),{"name":"if","hash":{},"fn":this.program(8, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "            </div>\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.dropdown : depth0),{"name":"if","hash":{},"fn":this.program(13, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\n    </div>\n</div>\n";
+    + "\">\n    <div class=\"header-container\">\n        <div class=\"col-xs-3\">\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.headerMobile : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "        </div>\n        <div class=\"col-xs-8\">\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.headerMobile : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "        </div>\n        <div class=\"col-xs-1\">\n"
+    + ((stack1 = helpers.unless.call(depth0,(depth0 != null ? depth0.headerMobile : depth0),{"name":"unless","hash":{},"fn":this.program(14, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.headerMobile : depth0),{"name":"if","hash":{},"fn":this.program(23, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "        </div>\n    </div>\n</div>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.headerMobile : depth0),{"name":"if","hash":{},"fn":this.program(25, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["icon"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

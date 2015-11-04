@@ -74,5 +74,26 @@ var headerData = {
                 'class': 'divider'
             }]
         }]
+    },
+    'headerData4': {
+        'settings': true,
+        'headerMobile': true,
+        'styleguide': true,
+        'headerMobileNavTitle': 'deze',
+        'dropdown': [{
+            'icon': 'icon-solid-menu',
+            // 'dropdownItem': 'Settings',
+            'dropdownOptions': [{
+                'option': 'Profile',
+                'href': '#'
+            }, {
+                'option': 'Company',
+                'href': '#',
+                'class': 'divider'
+            }, {
+                'option': 'Log out',
+                'href': '#'
+            }]
+        }]
     }
 }

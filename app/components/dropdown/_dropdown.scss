@@ -41,6 +41,9 @@
         overflow: hidden;
         background: white;
         border: 2px solid $grey;
+        &.drop-nav--right {
+          left: 0;          
+        }
     }
     .divider {
         border-bottom: 2px solid $divider-color;

@@ -1,16 +1,26 @@
 
 <div class="row header {{#if styleguide}}header--styleguide{{/if}} {{#if settings}}header--settings{{/if}}">
     <div class="header-container">
-        <div class="col-md-3">
-        {{#if logo}}
-            {{#logo}}<a href="/"><img src="{{src}}" class="header-logo pull-left"></a>{{/logo}}
+        <div class="col-xs-3">
+        {{#if headerMobile}}
+          {{#if logo}}
+              {{#logo}}<a href="/"><img src="{{src}}" class="header-logo pull-left"></a>{{/logo}}
+          {{/if}}
+          {{#if dropdown}}
+              {{#each dropdown}}
+                 <div class="pull-left"> {{> PartialDropdown}}</div>
+              {{/each}}
+          {{/if}}
         {{/if}}
         </div>
-        <div class="col-md-6">
+        <div class="col-xs-8">
             {{!-- {{#if input}} {{#input}} {{> PartialTextInput class="text-input__grey"}} {{/input}} {{/if}}  --}}
-
+            {{#if headerMobile}}
+              <div class="pull-right mobile-header__title"> <h4>{{headerMobileNavTitle}} </h4></div>
+            {{/if}}
         </div>
-        <div class="col-md-3">
+        <div class="col-xs-1">
+          {{#unless headerMobile}}
             <div class="nav nav--horizontal pull-right">
             {{#if navItems}}
                 {{#each navItems}}
@@ -26,6 +36,17 @@
                    <div class="pull-right"> {{> PartialDropdown}}</div>
                 {{/each}}
             {{/if}}
+          {{/unless}}
+          {{#if headerMobile}}
+          <div class="nav nav--horizontal pull-right">
+            <div class="mobile-header__close-settings"> {{>PartialButton class="naked-button--neutral" icon="icon-system-close" action='location.href="/";'}}</div>
+          </div>
+          {{/if}}
         </div>
     </div>
 </div>
+{{#if headerMobile}}
+  <script type="text/javascript">
+    $('.header-container').find($('.drop-nav').addClass('drop-nav--right'));
+  </script>
+{{/if}}
