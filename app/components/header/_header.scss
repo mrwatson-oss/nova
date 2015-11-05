@@ -17,7 +17,7 @@
         display: block;
     }
     &.header--settings {
-        border-bottom: 2px solid $border-color--settings;
+        border-bottom: 1px solid $border-color--settings;
         background: $background-color--settings;
         color: white;
         .dropdown {
@@ -27,6 +27,15 @@
             &.dropdown--active {
                 background: $green--dark;
             }
+          a:hover {
+            background: $grey--light;
+          }
+          .divider {
+              border-bottom: 1px solid $divider-color;
+          }
+          .divider--top {
+              border-top: 1px solid $divider-color;
+          }
         }
     }
     .header-container {
