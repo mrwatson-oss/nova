@@ -3,15 +3,17 @@
 // -----------------------------------------------------------------------------
 .app-bar {
     display: block;
-    height: 4em;
+    min-height: 4em;
+    max-height: 8em;
     padding: .6em;
     margin-bottom: 1em;
     background: $white;
+    overflow: hidden;
     .innerContainer {
-    	// height: auto;
-    	// position: relative;
+    	height: auto;
+    	position: relative;
     	// float: left;
-    	// margin: 0 auto;
+    	margin: 0 auto;
 
     }
 }

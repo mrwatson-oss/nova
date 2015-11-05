@@ -127,6 +127,7 @@
             &:hover {
                 background: none;
                 border-bottom: .2em solid $border-color--accent;
+                margin-bottom: -.2em;
             }
             &:active {
                 background: none;
@@ -151,6 +152,7 @@
 
 .nav--active {
     border-bottom: .2em solid $border-color--accent;
+    // box-shadow:inset 0px 0px 0px .2em $border-color--accent;
 }
 .side-nav--active {
     background: $grey--light;

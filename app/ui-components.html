@@ -89,6 +89,30 @@
                         );
                         </script>
                     </div>
+                    <div class="col-xs-4">
+                        <div id="appbar"></div>
+                        <script>
+                        $('#appbar').replaceWith(
+                            $(ui.component.appbar.render({
+                                'navItems': [{
+                                    'url': '#',
+                                    'item': 'Past events',
+                                    'class': 'nav--active divider'
+                                }, {
+                                    'url': '/ui-components.html',
+                                    'item': 'Upcoming events'
+                                }, {
+                                    'url': '/ui-components.html',
+                                    'item': 'Upcoming events'
+                                }],
+                                'button': [{
+                                    'class': 'solid-button--strict pull-right',
+                                    'content': 'Add new event'
+                                }]
+                            }))
+                        );
+                        </script>
+                    </div>
                     <div class="col-md-8">
                         <pre><code class="language-javascript">
   $(ui.component.appbar.render({
