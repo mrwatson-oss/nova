@@ -18,9 +18,16 @@
     &.header--settings {
         border-bottom: 2px solid $border-color--settings;
         background: $background-color--settings;
-
+        color: white;
+        .dropdown {
+          color: white;
+            &:hover,
+            &:active,
+            &.dropdown--active {
+                background: $green--dark;
+            }
+        }
     }
-
     .header-container {
         position: relative;
         max-width: 1170px;
@@ -31,6 +38,15 @@
         max-height: 3em;
     }
     .mobile-header__close-settings {
+      button {
+        &:hover,
+        &:active {
+          background: $green;
+        }
+        .icon {
+          color: white;
+        }
+      }
       // margin-top: -1em;
     }
     .mobile-header__title {
