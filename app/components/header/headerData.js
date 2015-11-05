@@ -39,8 +39,50 @@ var headerData = {
         'logo': {
             'src': '/images/logo_transp.png'
         },
-        'input': {
-            'placeholder': 'Search bar..'
+        'dropdown': [{
+            'dropdownItem': 'My settings',
+            'icon': 'icon-system-down-open',
+            'dropdownOptions': [{
+                'option': 'Profile',
+                'href': '#'
+            }, {
+                'option': 'Company',
+                'href': '#',
+                'class': 'divider'
+            }, {
+                'option': 'Log out',
+                'href': '#'
+            }]
+        }]
+    },
+    'headerData4': {
+        'settings': true,
+        'headerMobile': true,
+        'styleguide': true,
+        'headerMobileNavTitle': 'Mobile user settings',
+        'dropdown': [{
+            'icon': 'icon-solid-menu',
+            // 'dropdownItem': 'Settings',
+            'dropdownOptions': [{
+                'optionCat': true,
+                'option': 'User settings'
+            }, {
+                'option': 'Profile',
+                'href': '#'
+            },{
+                'option': 'Company',
+                'href': '#',
+                'class': 'divider'
+            }, {
+                'option': 'Log out',
+                'href': '#'
+            }]
+        }]
+    },
+    'headerData5': {
+        'styleguide': true,
+        'logo': {
+            'src': '/images/logo_transp.png'
         },
         'dropdown': [{
             'icon': 'icon-naked-settings',
@@ -74,26 +116,5 @@ var headerData = {
                 'class': 'divider'
             }]
         }]
-    },
-    'headerData4': {
-        'settings': true,
-        'headerMobile': true,
-        'styleguide': true,
-        'headerMobileNavTitle': 'deze',
-        'dropdown': [{
-            'icon': 'icon-solid-menu',
-            // 'dropdownItem': 'Settings',
-            'dropdownOptions': [{
-                'option': 'Profile',
-                'href': '#'
-            }, {
-                'option': 'Company',
-                'href': '#',
-                'class': 'divider'
-            }, {
-                'option': 'Log out',
-                'href': '#'
-            }]
-        }]
-    }
+      }
 }

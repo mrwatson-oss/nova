@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 .header {
     background: white;
+    height: 72px;
     position: fixed;
     top: 0;
     left: 0;
@@ -38,13 +39,15 @@
         max-height: 3em;
     }
     .mobile-header__close-settings {
+      margin-top: -.25em;
       button {
         &:hover,
         &:active {
-          background: $green;
+          background: $green--dark;
         }
         .icon {
           color: white;
+          padding: .5em .1em .7em .5em;
         }
       }
       // margin-top: -1em;
@@ -52,7 +55,7 @@
     .mobile-header__title {
       h4 {
         padding: 0;
-        margin: .3em 1.2em 0 1em;
+        margin: .6em 1.2em 0 1em;
       }
     }
 }

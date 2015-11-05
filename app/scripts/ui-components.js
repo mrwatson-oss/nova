@@ -642,9 +642,13 @@ ui.component.dropdown = (function($, T) {
 }(jQuery, ui.component.template));
 ;var dropdownData = {
     'dropdownData1': {
+      'dropdownItem': 'My settings',
         'icon': 'icon-naked-bell',
         'badge': 'true',
         'dropdownOptions': [{
+            'optionCat': true,
+            'option': 'Category'            
+        }, {
             'option': 'Profile',
             'href': '#'
         }, {
@@ -925,8 +929,50 @@ ui.component.header = (function($, T) {
         'logo': {
             'src': '/images/logo_transp.png'
         },
-        'input': {
-            'placeholder': 'Search bar..'
+        'dropdown': [{
+            'dropdownItem': 'My settings',
+            'icon': 'icon-system-down-open',
+            'dropdownOptions': [{
+                'option': 'Profile',
+                'href': '#'
+            }, {
+                'option': 'Company',
+                'href': '#',
+                'class': 'divider'
+            }, {
+                'option': 'Log out',
+                'href': '#'
+            }]
+        }]
+    },
+    'headerData4': {
+        'settings': true,
+        'headerMobile': true,
+        'styleguide': true,
+        'headerMobileNavTitle': 'Mobile user settings',
+        'dropdown': [{
+            'icon': 'icon-solid-menu',
+            // 'dropdownItem': 'Settings',
+            'dropdownOptions': [{
+                'optionCat': true,
+                'option': 'User settings'
+            }, {
+                'option': 'Profile',
+                'href': '#'
+            },{
+                'option': 'Company',
+                'href': '#',
+                'class': 'divider'
+            }, {
+                'option': 'Log out',
+                'href': '#'
+            }]
+        }]
+    },
+    'headerData5': {
+        'styleguide': true,
+        'logo': {
+            'src': '/images/logo_transp.png'
         },
         'dropdown': [{
             'icon': 'icon-naked-settings',
@@ -960,28 +1006,7 @@ ui.component.header = (function($, T) {
                 'class': 'divider'
             }]
         }]
-    },
-    'headerData4': {
-        'settings': true,
-        'headerMobile': true,
-        'styleguide': true,
-        'headerMobileNavTitle': 'deze',
-        'dropdown': [{
-            'icon': 'icon-solid-menu',
-            // 'dropdownItem': 'Settings',
-            'dropdownOptions': [{
-                'option': 'Profile',
-                'href': '#'
-            }, {
-                'option': 'Company',
-                'href': '#',
-                'class': 'divider'
-            }, {
-                'option': 'Log out',
-                'href': '#'
-            }]
-        }]
-    }
+      }
 }
 ;var ui = ui || {};
 
@@ -1513,7 +1538,7 @@ ui.component.partials = (function($, T) {
             Handlebars.registerPartial({
                 'PartialAvatar': '{{#if avatar}}{{#avatar}}<div class="avatar {{#if small}}avatar--small{{/if}} {{#if round}} round{{/if}}"><img {{#if src}}src="{{src}}" {{else}}src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu"{{/if}} alt="avatar"></div>{{/avatar}}{{else}}<div class="avatar {{#if small}}avatar--small{{/if}}"><img src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu" alt="avatar"/></div>{{/if}}',
                 'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="btn {{class}} {{#if icon}}icon-only{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}" {{#if cancel}} formnovalidate {{/if}}>{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>',
-                'PartialDropdown': '<li class="dropdown" id="dropdown">{{#if icon}}<i class="{{icon}}"></i>{{/if}}{{{dropdownItem}}}{{#if badge}}<span class="dropdown-badge">{{dropdownOptions.length}}</span>{{/if}}<ul class="nav drop-nav">{{#each dropdownOptions}}<li><a id="{{id}}" class="{{class}}" href="{{href}}">{{option}}</a></li>{{/each}}</ul><script>{{script}}</script></li>',
+                'PartialDropdown': '<li class="dropdown" id="dropdown"><span class="dropdown-item"><h4>{{{dropdownItem}}}</h4></span>{{#if icon}}<i class="{{icon}}"></i>{{/if}}{{#if badge}}<span class="dropdown-badge">{{dropdownOptions.length}}</span>{{/if}}<ul class="nav drop-nav">{{#each dropdownOptions}}<li>{{#if optionCat}}<div class="option-catagory">{{option}}</div>{{else}}<a id="{{id}}"class="{{class}}"href="{{href}}">{{option}}</a>{{/if}}</li>{{/each}}</ul><script>{{script}}</script></li>',
                 'PartialTextInput': ui.component.textInput.render({
                     'class': '{{class}}',
                     'id': '{{id}}',
