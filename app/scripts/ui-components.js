@@ -930,7 +930,7 @@ ui.component.header = (function($, T) {
             'src': '/images/logo_transp.png'
         },
         'dropdown': [{
-            'dropdownItem': 'My settings',
+            'dropdownItem': 'My isdfsdf ngs',
             'icon': 'icon-system-down-open',
             'dropdownOptions': [{
                 'option': 'Profile',

@@ -5,13 +5,7 @@
 	<ul class="nav drop-nav">
 		{{#each dropdownOptions}}
 			<li>
-				{{#if optionCat}}
-					<div class="option-catagory">{{option}}</div>
-				{{else}}
-				<a id="{{id}}" class="{{class}}" href="{{href}}">
-					{{option}}
-				</a>
-				{{/if}}
+				{{#if optionCat}}<div class="option-catagory">{{option}}</div>{{else}}<a id="{{id}}" class="{{class}}" href="{{href}}">{{option}}</a>{{/if}}
 			</li>
 		{{/each}}
 	</ul>

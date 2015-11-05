@@ -325,27 +325,27 @@ this["ui"]["component"]["template"]["dropdown"] = Handlebars.template({"1":funct
 },"5":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "			<li>\n"
+  return "			<li>\n				"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.optionCat : depth0),{"name":"if","hash":{},"fn":this.program(6, data, 0),"inverse":this.program(8, data, 0),"data":data})) != null ? stack1 : "")
-    + "			</li>\n";
+    + "\n			</li>\n";
 },"6":function(depth0,helpers,partials,data) {
     var helper;
 
-  return "					<div class=\"option-catagory\">"
+  return "<div class=\"option-catagory\">"
     + this.escapeExpression(((helper = (helper = helpers.option || (depth0 != null ? depth0.option : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"option","hash":{},"data":data}) : helper)))
-    + "</div>\n";
+    + "</div>";
 },"8":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "				<a id=\""
+  return "<a id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\" class=\""
     + alias3(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
     + "\" href=\""
     + alias3(((helper = (helper = helpers.href || (depth0 != null ? depth0.href : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"href","hash":{},"data":data}) : helper)))
-    + "\">\n					"
+    + "\">"
     + alias3(((helper = (helper = helpers.option || (depth0 != null ? depth0.option : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"option","hash":{},"data":data}) : helper)))
-    + "\n				</a>\n";
+    + "</a>";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function";
 

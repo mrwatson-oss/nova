@@ -51,7 +51,8 @@
         list-style-type: none;
         position: absolute;
         display: none;
-        width: 12em;
+        min-width: 12em;
+        max-width: 100%;
         right: 0;
         overflow: hidden;
         background: white;
