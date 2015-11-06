@@ -5,7 +5,14 @@ var formData = {
         'formTitle': 'Form Title',
         inputs: [{
             'required': true,
-            'inputId': 'userPassword',
+            'inputId': 'firstPassword',
+            'label': 'Password',
+            'type': 'password',
+            'maxlength': '12',
+            'minlength': '5'
+        }, {
+            'required': true,
+            'inputId': 'password',
             'label': 'Password',
             'type': 'password',
             'maxlength': '12',

@@ -57,6 +57,16 @@
                     .find( "div[class='" + element.attr( "id" ) + "']" )
                         .prepend( error );
         },
+				rules: {
+      		password: {
+		        equalTo: "#firstPassword"
+		      },
+    		},
+				messages: {
+		      password: {
+		        equalTo: "Please enter the same password as above"
+		      }
+		    },
         errorElement: "div",
         success: "valid"
   		// submitHandler: function() { alert("Submitted!") }
