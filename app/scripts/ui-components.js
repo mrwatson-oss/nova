@@ -357,22 +357,28 @@ clickButton = function() {
         'buttons': [{
             'content': 'Meetings',
             'class': 'naked-button--neutral',
+            'buttonLoader': true
         }, {
             'content': 'Like',
-            'class': 'naked-button--happy'
+            'class': 'naked-button--happy',
+            'buttonLoader': true
         }, {
             'content': 'Back',
-            'class': 'naked-button--strict'
+            'class': 'naked-button--strict',
+            'buttonLoader': true
         }, {
             'content': 'Destroy',
-            'class': 'naked-button--angry'
+            'class': 'naked-button--angry',
+            'buttonLoader': true
         }, {
             'content': 'Menu',
             'class': 'naked-button--neutral',
-            'icon': 'icon-system-menu'
+            'icon': 'icon-system-menu',
+            'buttonLoader': true
         }, {
             'icon': 'icon-solid-camera',
-            'class': 'naked-button--neutral'
+            'class': 'naked-button--neutral',
+            'buttonLoader': true
         }]
     },
     'buttonData2': {
@@ -408,23 +414,29 @@ clickButton = function() {
         'styleguide': true,
         'buttons': [{
             'content': 'Cancel',
-            'class': 'solid-button--neutral'
+            'class': 'solid-button--neutral',
+            'buttonLoader': true
         }, {
             'content': 'Share post',
-            'class': 'solid-button--happy'
+            'class': 'solid-button--happy',
+            'buttonLoader': true
         }, {
             'content': 'Check availability',
-            'class': 'solid-button--strict'
+            'class': 'solid-button--strict',
+            'buttonLoader': true
         }, {
             'content': 'Delete user',
-            'class': 'solid-button--angry'
+            'class': 'solid-button--angry',
+            'buttonLoader': true
         }, {
             'content': 'Settings',
             'icon': 'icon-solid-settings',
+            'buttonLoader': true,
             'class': 'solid-button--neutral'
         }, {
             'icon': 'icon-user-arrow-right',
-            'class': 'solid-button--strict'
+            'class': 'solid-button--strict',
+            'buttonLoader': true
         }]
     },
     'buttonData4': {
@@ -1544,7 +1556,7 @@ ui.component.partials = (function($, T) {
             });
             Handlebars.registerPartial({
                 'PartialAvatar': '{{#if avatar}}{{#avatar}}<div class="avatar {{#if small}}avatar--small{{/if}} {{#if round}} round{{/if}}"><img {{#if src}}src="{{src}}" {{else}}src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu"{{/if}} alt="avatar"></div>{{/avatar}}{{else}}<div class="avatar {{#if small}}avatar--small{{/if}}"><img src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu" alt="avatar"/></div>{{/if}}',
-                'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="btn {{class}} {{#if icon}}icon-only{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}" {{#if cancel}} formnovalidate {{/if}}>{{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}}{{content}}{{/if}}{{/if}}</button>',
+                'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="btn {{class}} {{#if icon}}icon-only{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{#if buttonLoader}}loadingButton(this);{{/if}} {{action}}" {{#if cancel}} formnovalidate {{/if}}>{{#if buttonLoader}} <div class="btn__loading-container"><span class="btn__loading-circle">&nbsp;</span><span class="btn__loading-circle">&nbsp;</span><span class="btn__loading-circle">&nbsp;</span><span class="btn__loading-circle">&nbsp;</span></div>{{/if}} {{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}} {{content}} {{/if}} {{/if}}</button>',
                 'PartialDropdown': '<li class="dropdown" id="dropdown"><span class="dropdown-item"><h4>{{{dropdownItem}}}</h4></span>{{#if icon}}<i class="{{icon}}"></i>{{/if}}{{#if badge}}<span class="dropdown-badge">{{dropdownOptions.length}}</span>{{/if}}<ul class="nav drop-nav">{{#each dropdownOptions}}<li>{{#if optionCat}}<div class="option-catagory">{{option}}</div>{{else}}<a id="{{id}}"class="{{class}}"href="{{href}}">{{option}}</a>{{/if}}</li>{{/each}}</ul><script>{{script}}</script></li>',
                 'PartialTextInput': ui.component.textInput.render({
                     'class': '{{class}}',
@@ -1563,6 +1575,7 @@ ui.component.partials = (function($, T) {
                     'src': '{{{src}}}',
                     'alt': '{{alt}}'
                 }),
+                'PartialLoading': '<div class="btn__loader"><div class="btn--loading"><div class="btn__loading-circle">&nbsp;</div><div class="btn__loading-circle">&nbsp;</div><div class="btn__loading-circle">&nbsp;</div><div class="btn__loading-circle">&nbsp;</div></div></div>',
                 'PartialCommunitySwitch': '<div class="community-switch" style="background: no-repeat center url({{src}})"><span class="community-switch-name">{{name}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}</span></div>',
                 'PartialNavItem': '<li><a class="{{class}} "href="{{baseurl}}{{url}}">{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{{item}}}</a></li>'
             });

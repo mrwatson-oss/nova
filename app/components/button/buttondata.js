@@ -4,22 +4,28 @@ var buttonData = {
         'buttons': [{
             'content': 'Meetings',
             'class': 'naked-button--neutral',
+            'buttonLoader': true
         }, {
             'content': 'Like',
-            'class': 'naked-button--happy'
+            'class': 'naked-button--happy',
+            'buttonLoader': true
         }, {
             'content': 'Back',
-            'class': 'naked-button--strict'
+            'class': 'naked-button--strict',
+            'buttonLoader': true
         }, {
             'content': 'Destroy',
-            'class': 'naked-button--angry'
+            'class': 'naked-button--angry',
+            'buttonLoader': true
         }, {
             'content': 'Menu',
             'class': 'naked-button--neutral',
-            'icon': 'icon-system-menu'
+            'icon': 'icon-system-menu',
+            'buttonLoader': true
         }, {
             'icon': 'icon-solid-camera',
-            'class': 'naked-button--neutral'
+            'class': 'naked-button--neutral',
+            'buttonLoader': true
         }]
     },
     'buttonData2': {
@@ -55,23 +61,29 @@ var buttonData = {
         'styleguide': true,
         'buttons': [{
             'content': 'Cancel',
-            'class': 'solid-button--neutral'
+            'class': 'solid-button--neutral',
+            'buttonLoader': true
         }, {
             'content': 'Share post',
-            'class': 'solid-button--happy'
+            'class': 'solid-button--happy',
+            'buttonLoader': true
         }, {
             'content': 'Check availability',
-            'class': 'solid-button--strict'
+            'class': 'solid-button--strict',
+            'buttonLoader': true
         }, {
             'content': 'Delete user',
-            'class': 'solid-button--angry'
+            'class': 'solid-button--angry',
+            'buttonLoader': true
         }, {
             'content': 'Settings',
             'icon': 'icon-solid-settings',
+            'buttonLoader': true,
             'class': 'solid-button--neutral'
         }, {
             'icon': 'icon-user-arrow-right',
-            'class': 'solid-button--strict'
+            'class': 'solid-button--strict',
+            'buttonLoader': true
         }]
     },
     'buttonData4': {
