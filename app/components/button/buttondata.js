@@ -64,7 +64,7 @@ var buttonData = {
             'class': 'solid-button--neutral',
             'buttonLoader': true
         }, {
-            'content': 'Share post',
+            'content': 'Sha',
             'class': 'solid-button--happy',
             'buttonLoader': true
         }, {

@@ -145,18 +145,18 @@
 }
 
 .btn__loading-circle + .btn__loading-circle {
-  margin-left: -25px;
+  margin-left: -20px;
   /* staggered effect cause by delay property */
   animation: btnloading 2.5s 0.2s infinite;
 }
 
 .btn__loading-circle + .btn__loading-circle + .btn__loading-circle {
-  margin-left: -25px;
+  margin-left: -20px;
   animation: btnloading 2.5s 0.4s infinite;
 }
 
 .btn__loading-circle + .btn__loading-circle + .btn__loading-circle + .btn__loading-circle {
-  margin-left: -25px;
+  margin-left: -20px;
   animation: btnloading 2.5s 0.6s infinite;
 }
 
@@ -166,7 +166,7 @@
     width: .6em;
     height: .6em;
     border-radius: 50%;
-    left: -50%;
+    left: -40%;
     background-color: rgba(0, 0, 0, 0);
   }
 
@@ -182,7 +182,7 @@
     width: .6em;
     height: .6em;
     border-radius: 50%;
-    left: 50%;
+    left: 40%;
     background-color: rgba(0, 0, 0, 0);
   }
 }
