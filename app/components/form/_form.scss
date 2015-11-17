@@ -86,8 +86,13 @@
         margin: -.5em 0 .5em 0;
         color: $sec-red;
     }
+    .form__link {
+      margin-top: 2.2em;
+    }
     .form__select {
-        display: block;
+        // display: inline-block;
+        width: 100%;
+        // float: left;
         margin-top: 2em;
         // margin-bottom: 1em;
         label {
@@ -119,7 +124,8 @@
             }
         }
         .selectric-wrapper {
-          display: block;
+          display: inline-block;
+          width: 100%;
         }
     }
     .form__textarea {

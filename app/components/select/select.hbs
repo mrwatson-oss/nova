@@ -6,7 +6,9 @@
 <p id="select_value">Current value: <strong></strong></p>
 <script>
 $(function(){
-$('select').selectric();
+$('select').selectric({
+   disableOnMobile: false,
+});
   // Cache the target element
 var $selectValue = $('#select_value').find('strong');
 // Get initial value

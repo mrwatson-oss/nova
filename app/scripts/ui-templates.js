@@ -537,7 +537,7 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
 },"13":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "		<div class=\"form__select\">\n			<div class=\""
+  return "	<div class=\"row\">\n		<div class=\"col-xs-6\">\n		<div class=\"form__select\">\n			<div class=\""
     + alias3(((helper = (helper = helpers.selectId || (depth0 != null ? depth0.selectId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"selectId","hash":{},"data":data}) : helper)))
     + "\">\n				<select id=\""
     + alias3(((helper = (helper = helpers.selectId || (depth0 != null ? depth0.selectId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"selectId","hash":{},"data":data}) : helper)))
@@ -551,7 +551,9 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
     + alias3(((helper = (helper = helpers.selectId || (depth0 != null ? depth0.selectId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"selectId","hash":{},"data":data}) : helper)))
     + "\">"
     + alias3(((helper = (helper = helpers.label || (depth0 != null ? depth0.label : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"label","hash":{},"data":data}) : helper)))
-    + "</label>\n			</div>\n		</div>\n";
+    + "</label>\n			</div>\n			</div>\n		</div>\n		<div class=\"col-xs-6\">\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.formButton : depth0),{"name":"if","hash":{},"fn":this.program(17, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "		</div>\n		</div>\n";
 },"14":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
@@ -565,6 +567,14 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
 },"15":function(depth0,helpers,partials,data) {
     return " selected=\"selected\" ";
 },"17":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "				<a href=\""
+    + alias3(((helper = (helper = helpers.href || (depth0 != null ? depth0.href : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"href","hash":{},"data":data}) : helper)))
+    + "\" class=\"naked-button--strict form__link\">"
+    + alias3(((helper = (helper = helpers.formButton || (depth0 != null ? depth0.formButton : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"formButton","hash":{},"data":data}) : helper)))
+    + "</a>\n";
+},"19":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "		<div class=\"form__textarea\">\n			<div class=\""
@@ -588,13 +598,13 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
     + ">"
     + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
     + "</textarea>\n				<span class=\"bar\"></span>\n			</div>\n		</div>\n";
-},"19":function(depth0,helpers,partials,data) {
+},"21":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "		<span class=\"form-button pull-right\">"
     + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","hash":{"type":"submit"},"data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</span>\n";
-},"21":function(depth0,helpers,partials,data) {
+},"23":function(depth0,helpers,partials,data) {
     return "		<span class=\"form-button pull-right\"><a href=\"#\" novalidate name=\"cancel\" id=\"cancel\" class=\"solid-button--neutral\">Cancel</a></span>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
@@ -612,9 +622,9 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.invisibleInputs : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.inputs : depth0),{"name":"each","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.selects : depth0),{"name":"each","hash":{},"fn":this.program(13, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.textareas : depth0),{"name":"each","hash":{},"fn":this.program(17, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.buttons : depth0),{"name":"each","hash":{},"fn":this.program(19, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.cancel : depth0),{"name":"if","hash":{},"fn":this.program(21, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.textareas : depth0),{"name":"each","hash":{},"fn":this.program(19, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.buttons : depth0),{"name":"each","hash":{},"fn":this.program(21, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.cancel : depth0),{"name":"if","hash":{},"fn":this.program(23, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</form>\n<script>\n    // validate the form when it is submitted\n    var validator = $(\"#"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\").validate({\n    	ignore: [],\n        errorPlacement: function(error, element) {\n            // Append error within linked label\n            $( element )\n                .closest( \"form\" )\n                    .find( \"div[class='\" + element.attr( \"id\" ) + \"']\" )\n                        .prepend( error );\n        },\n				rules: {\n      		password: {\n		        equalTo: \"#firstPassword\"\n		      },\n    		},\n				messages: {\n		      password: {\n		        equalTo: \"Please enter the same password as above\"\n		      }\n		    },\n        errorElement: \"div\",\n        success: \"valid\"\n  		// submitHandler: function() { alert(\"Submitted!\") }\n    });\n	$('select[name=\"mySelect\"]').on('change', function() { // fires when the value changes\n	    $(this).valid(); // trigger validation on hidden select\n	});\n    $(\"#cancel\").click(function() {\n	    validator.resetForm();\n    	$(this).closest('form').find(\"input\").val(\"\");\n});\n$(function(){\n$('select').selectric();\n  // Cache the target element\nvar $selectValue = $('#select_value').find('strong');\n// Get initial value\n$selectValue.text($('#get_value').val());\n// Initialize Selectric and bind to 'change' event\n$('#get_value').selectric().on('change', function() {\n  $selectValue.text($(this).val());\n});\n}());\n</script>\n";
@@ -1024,7 +1034,7 @@ this["ui"]["component"]["template"]["select"] = Handlebars.template({"1":functio
   stack1 = ((helper = (helper = helpers.options || (depth0 != null ? depth0.options : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"options","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0,options) : helper));
   if (!helpers.options) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
   if (stack1 != null) { buffer += stack1; }
-  return buffer + "</select>\n<p id=\"select_value\">Current value: <strong></strong></p>\n<script>\n$(function(){\n$('select').selectric();\n  // Cache the target element\nvar $selectValue = $('#select_value').find('strong');\n// Get initial value\n$selectValue.text($('#get_value').val());\n// Initialize Selectric and bind to 'change' event\n$('#get_value').selectric().on('change', function() {\n  $selectValue.text($(this).val());\n});\n}());\n</script>";
+  return buffer + "</select>\n<p id=\"select_value\">Current value: <strong></strong></p>\n<script>\n$(function(){\n$('select').selectric({\n   disableOnMobile: false,\n});\n  // Cache the target element\nvar $selectValue = $('#select_value').find('strong');\n// Get initial value\n$selectValue.text($('#get_value').val());\n// Initialize Selectric and bind to 'change' event\n$('#get_value').selectric().on('change', function() {\n  $selectValue.text($(this).val());\n});\n}());\n</script>\n";
 },"useData":true});
 
 this["ui"]["component"]["template"]["textArea"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

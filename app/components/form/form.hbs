@@ -18,6 +18,8 @@
 		</div>
 	{{/each}}
 	{{#each selects}}
+	<div class="row">
+		<div class="col-xs-6">
 		<div class="form__select">
 			<div class="{{selectId}}">
 				<select id="{{selectId}}" name="{{selectId}}" {{#if required}}required{{/if}}>
@@ -27,6 +29,13 @@
 				</select>
 				<label class="label" for="{{selectId}}">{{label}}</label>
 			</div>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			{{#if formButton}}
+				<a href="{{href}}" class="naked-button--strict form__link">{{formButton}}</a>
+			{{/if}}
+		</div>
 		</div>
 	{{/each}}
 	{{#each textareas}}

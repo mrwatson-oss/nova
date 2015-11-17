@@ -14,15 +14,17 @@ $sel-inner-height: $sel-height - ($sel-border-width * 2);
 }
 
 .selectric-responsive {
-    width: 100%;
+    // width: 100%;
+    display: block;
 }
 
 .selectric {
     cursor: pointer;
     border-bottom: $sel-border-width solid $sel-main-color;
     background: $sel-bg-color;
-    position: relative;
-    max-width: 50%;
+    display: block;
+    // position: relative;
+    // max-width: 50%;
     .label {
         display: block;
         white-space: nowrap;
