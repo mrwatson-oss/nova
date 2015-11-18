@@ -23,6 +23,7 @@
   <script src="bower_components/microplugin/src/microplugin.js"></script>
   <script src="bower_components/selectize/dist/js/selectize.js"></script>
   <script src="bower_components/emojify.js/dist/js/emojify.js"></script>
+  <script src="bower_components/cropper/dist/cropper.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:js scripts/main.js -->
@@ -36,6 +37,7 @@
   <link rel="stylesheet" href="vendor/prism.css">
   <link rel="stylesheet" href="vendor/selectize.css">
   <link rel="stylesheet" href="vendor/icons.css">
+  <link rel="stylesheet" href="bower_components/cropper/dist/cropper.css">
   <script src="vendor/prism.js"></script>
 
 </head>
@@ -66,6 +68,13 @@
         <!-- </div> -->
       </div>
       <div class="col-xs-12 col-lg-9">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>area 51</h1>
+            <component data-type="cropper" data-properties="cropperData.cropperData1"></component>
+
+          </div>
+        </div>
         <div class="row" id="anchor-color">
           <div class="col-xs-12">
             <div class="app-block">

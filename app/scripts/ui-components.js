@@ -525,6 +525,52 @@ ui.component.composer = (function($, T) {
     }
 };var ui = ui || {};
 
+ui.component.cropper = (function($, T) {
+
+    /**
+     * cropper
+     * @type {Object}
+     */
+    var params = {
+        'buttons': null,
+        'input': null
+    };
+
+    /**
+     * render
+     *
+     * @todo make this method extended or mixin
+     * @param {} cropper object with all properties
+     * @return compiled handlebars template
+     */
+    function render(context) {
+
+
+        data = $.extend({}, params, context);
+
+
+        return T.cropper(data);
+    }
+
+    return {
+        render: render
+    };
+
+}(jQuery, ui.component.template));
+;var cropperData = {
+    'cropperData1': {
+        'imageSrc': '/images/frog.jpg',
+        'cropperLabel': 'Profile picture',
+        'uploadNewButtonText': 'Upload new picture',
+        'CropImageButtonText': 'Crop picture',
+        'cancelCropButtonText': 'Cancel',
+        'saveCropButtonText': 'Save',
+        'fileName': 'image',
+        'formId': 'userSettingsForm'
+    }
+}
+;var ui = ui || {};
+
 ui.component.dialog = (function($, T) {
 
     /**
@@ -858,7 +904,7 @@ ui.component.form = (function($, T) {
                 'value': 'who cares',
                 'option': 'who cares'
             }],
-            'formButton': 'Or add a another gender',
+            'formButton': 'Or add another gender',
             'href': '#'
         }],
         'textareas': [{

@@ -59,7 +59,7 @@ var formData = {
                 'value': 'who cares',
                 'option': 'who cares'
             }],
-            'formButton': 'Or add a another gender',
+            'formButton': 'Or add another gender',
             'href': '#'
         }],
         'textareas': [{

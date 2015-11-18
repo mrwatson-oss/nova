@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// Base cropper
+// -----------------------------------------------------------------------------
+
+.cropper__container {
+    overflow: hidden;
+  .label--profile-picture {
+        float: left;
+        font-weight: 600;
+        padding-top: .7em;
+      }
+}

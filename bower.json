@@ -8,7 +8,8 @@
     "jquery-validation": "~1.14.0",
     "modernizr": "~2.8.3",
     "selectize": "~0.12.1",
-    "emojify.js": "~1.1.0"
+    "emojify.js": "~1.1.0",
+    "cropper": "~2.0.1"
   },
   "devDependencies": {
     "chai": "~3.0.0",
