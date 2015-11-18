@@ -42,7 +42,7 @@
                         var reader = new FileReader();
                         reader.onload = function(e) {
                                 $('#save-image').show();
-                                $image.one('built.cropper', function(){}).cropper('reset').cropper('replace', e.target.result).cropper('setAspectRatio', 1 / 1);
+                                $image.one('built.cropper', function(){}).cropper('reset').cropper('replace', e.target.result).cropper('setAspectRatio', {{#if community}}4 / 1{{else}}1 / 1{{/if}});
                         }
                         reader.readAsDataURL($(this)[0].files[0]);
                 } else {
@@ -54,10 +54,10 @@
                             }
                     });
             });
-
+		// todo: make aspectRatio variable
         $('#cropShow').click(function() {
                 $image.cropper({
-                        aspectRatio: 1 / 1,
+                        aspectRatio: {{#if community}}4 / 1{{else}}1 / 1{{/if}},
                         crop: function(e) {
                                 $('#cropData').val(JSON.stringify(e));
                         }

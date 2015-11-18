@@ -7,6 +7,7 @@ var cropperData = {
         'cancelCropButtonText': 'Cancel',
         'saveCropButtonText': 'Save',
         'fileName': 'image',
-        'formId': 'userSettingsForm'
+        'formId': 'userSettingsForm',
+        'community': true
     }
 }

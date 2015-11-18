@@ -566,7 +566,8 @@ ui.component.cropper = (function($, T) {
         'cancelCropButtonText': 'Cancel',
         'saveCropButtonText': 'Save',
         'fileName': 'image',
-        'formId': 'userSettingsForm'
+        'formId': 'userSettingsForm',
+        'community': true
     }
 }
 ;var ui = ui || {};
