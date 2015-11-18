@@ -250,7 +250,7 @@ this["ui"]["component"]["template"]["composer"] = Handlebars.template({"1":funct
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["cropper"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    return "4 / 1";
+    return "10 / 3";
 },"3":function(depth0,helpers,partials,data) {
     return "1 / 1";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
