@@ -543,6 +543,8 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
     + alias3(((helper = (helper = helpers.inputId || (depth0 != null ? depth0.inputId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"inputId","hash":{},"data":data}) : helper)))
     + "\">\n			    <input id=\""
     + alias3(((helper = (helper = helpers.inputId || (depth0 != null ? depth0.inputId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"inputId","hash":{},"data":data}) : helper)))
+    + "\" placeholder=\""
+    + alias3(((helper = (helper = helpers.placeholder || (depth0 != null ? depth0.placeholder : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"placeholder","hash":{},"data":data}) : helper)))
     + "\" value=\""
     + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
     + "\" class=\"inputMaterial\" type=\""
@@ -642,6 +644,8 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.required : depth0),{"name":"if","hash":{},"fn":this.program(13, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</label>\n				<textarea value=\""
     + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
+    + "\" placeholder=\""
+    + alias3(((helper = (helper = helpers.placeholder || (depth0 != null ? depth0.placeholder : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"placeholder","hash":{},"data":data}) : helper)))
     + "\" name=\""
     + alias3(((helper = (helper = helpers.textareaId || (depth0 != null ? depth0.textareaId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"textareaId","hash":{},"data":data}) : helper)))
     + "\" class=\"inputMaterial\" id=\""
@@ -771,6 +775,10 @@ this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":functio
     + this.escapeExpression(((helper = (helper = helpers.headerMobileNavTitle || (depth0 != null ? depth0.headerMobileNavTitle : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"headerMobileNavTitle","hash":{},"data":data}) : helper)))
     + " </h4></div>\n";
 },"27":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers.unless.call(depth0,(depth0 != null ? depth0.styleguide : depth0),{"name":"unless","hash":{},"fn":this.program(28, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"28":function(depth0,helpers,partials,data) {
     return "  <script type=\"text/javascript\">\n    $('.header-container').find($('.drop-nav').addClass('drop-nav--right'));\n    var adminNavTitle;\n    function settingsTitle() {\n        adminNavTitle= $(location).attr('pathname').split('/')[2].replace(/\\b[a-z]/g, function(letter) {\n        return letter.toUpperCase();\n        }) + ' ' + 'settings';\n    };\n    settingsTitle();\n    $('#settings-header__title').find('.dropdown-item').html('<h4>' + adminNavTitle + '<h4>');\n  </script>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;

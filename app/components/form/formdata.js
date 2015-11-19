@@ -20,6 +20,7 @@ var formData = {
         }, {
             'required': false,
             'inputId': 'firstName',
+            'placeholder': 'wacgt',
             'label': 'First name',
             'type': 'text',
             'minlength': '2'
