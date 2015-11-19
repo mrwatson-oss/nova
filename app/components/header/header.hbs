@@ -7,9 +7,15 @@
           {{/unless}}
         {{#if settings}}
           {{#if dropdown}}
+            {{#if headerMobile}}
               {{#each dropdown}}
-                 <div class="pull-left"> {{> PartialDropdown}}</div>
+                <div class="pull-left"> {{> PartialDropdown}}</div>
               {{/each}}
+            {{else}}
+                {{#each dropdown}}
+                    <div class="pull-left" id="settings-header__title"> {{> PartialDropdown}}</div>
+                {{/each}}
+             {{/if}}
           {{/if}}
         {{/if}}
         </div>
@@ -44,5 +50,13 @@
 {{#if settings}}
   <script type="text/javascript">
     $('.header-container').find($('.drop-nav').addClass('drop-nav--right'));
+    var adminNavTitle;
+    function settingsTitle() {
+        adminNavTitle= $(location).attr('pathname').split('/')[2].replace(/\b[a-z]/g, function(letter) {
+        return letter.toUpperCase();
+        }) + ' ' + 'settings';
+    };
+    settingsTitle();
+    $('#settings-header__title').find('.dropdown-item').html('<h4>' + adminNavTitle + '<h4>');
   </script>
 {{/if}}

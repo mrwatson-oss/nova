@@ -30,11 +30,14 @@
     <script src="vendor/prism.js"></script>
     <script src="bower_components/emojify.js/dist/js/emojify.min.js"></script>
     <link rel="stylesheet" href="vendor/icons.css">
+    <link rel="stylesheet" href="bower_components/cropper/dist/cropper.css">
     <!-- <link href="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css" rel="stylesheet">
     <script src="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js"></script> -->
     <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
     <script src="bower_components/jquery-selectric/public/jquery.selectric.js"></script>
     <script src="bower_components/selectize/dist/js/selectize.js"></script>
+    <script src="bower_components/cropper/dist/cropper.js"></script>
+
     <!-- <link rel="stylesheet" href="bower_components/jquery-selectric/public/selectric.css"> -->
 </head>
 <body>
@@ -310,6 +313,38 @@ $(ui.component.composer.render({
 </code></pre>
                         </div>
                     </div>
+                    <div class="row" id="anchor-cropper">
+                        <div class="col-xs-12">
+                            <div class="app-block">
+                                <h2>Cropper</h2>
+                                <p>
+                                    This is the cropper component <br>
+                                    Right now it is only posible to use 1 cropper per view. To do: fix this by making the id's variable classes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <component data-type="cropper" data-properties="cropperData.cropperData1"></component>
+                        </div>
+                        <!-- <div class="col-sm-4">
+                            <component data-type="cropper" data-properties="cropperData.cropperData2"></component>
+                        </div> -->
+                        <div class="col-sm-6">
+                            <pre><code class="language-javascript">
+'cropperData1': {
+    'imageSrc': '/images/frog.jpg',
+    'cropperLabel': 'Profile picture',
+    'uploadNewButtonText': 'Upload new',
+    'CropImageButtonText': 'Crop image',
+    'cancelCropButtonText': 'Cancel',
+    'saveCropButtonText': 'Save',
+    'fileName': 'image',
+    'formId': 'userSettingsForm',
+    'community': false
+}
+</code></pre>
+                        </div>
+                    </div>
                     <div class="row" id="anchor-header">
                         <div class="col-xs-12">
                             <div class="app-block">
@@ -324,8 +359,8 @@ $(ui.component.composer.render({
                         </div>
                         <div class="col-xs-12">
                             <component data-type="header" data-properties="headerData.headerData3"></component>
-                            <component data-type="header" data-properties="headerData.headerData4"></component>
-                            <component data-type="header" data-properties="headerData.headerData5"></component>
+                            <!-- <component data-type="header" data-properties="headerData.headerData4"></component> -->
+                            <!-- <component data-type="header" data-properties="headerData.headerData5"></component> -->
                         </div>
                         <div class="col-md-8">
                             <pre><code class="language-javascript">

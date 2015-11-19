@@ -36,11 +36,8 @@ var headerData = {
     'headerData3': {
         'settings': true,
         'styleguide': true,
-        'logo': {
-            'src': '/images/logo_transp.png'
-        },
         'dropdown': [{
-            'dropdownItem': 'My isdfsdf ngs',
+            'dropdownItem': '1e',
             'icon': 'icon-system-down-open',
             'dropdownOptions': [{
                 'option': 'Profile',
@@ -57,8 +54,8 @@ var headerData = {
     },
     'headerData4': {
         'settings': true,
-        'headerMobile': true,
         'styleguide': true,
+        'headerMobile': true,
         'headerMobileNavTitle': 'Mobile user settings',
         'dropdown': [{
             'icon': 'icon-solid-menu',

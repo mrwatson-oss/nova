@@ -561,8 +561,19 @@ ui.component.cropper = (function($, T) {
     'cropperData1': {
         'imageSrc': '/images/frog.jpg',
         'cropperLabel': 'Profile picture',
-        'uploadNewButtonText': 'Upload new picture',
-        'CropImageButtonText': 'Crop picture',
+        'uploadNewButtonText': 'Upload new',
+        'CropImageButtonText': 'Crop image',
+        'cancelCropButtonText': 'Cancel',
+        'saveCropButtonText': 'Save',
+        'fileName': 'image',
+        'formId': 'userSettingsForm',
+        'community': false
+    },
+    'cropperData2': {
+        'imageSrc': '/images/logo_transp.png',
+        'cropperLabel': 'Community image',
+        'uploadNewButtonText': 'Upload new',
+        'CropImageButtonText': 'Crop image',
         'cancelCropButtonText': 'Cancel',
         'saveCropButtonText': 'Save',
         'fileName': 'image',
@@ -994,11 +1005,8 @@ ui.component.header = (function($, T) {
     'headerData3': {
         'settings': true,
         'styleguide': true,
-        'logo': {
-            'src': '/images/logo_transp.png'
-        },
         'dropdown': [{
-            'dropdownItem': 'My isdfsdf ngs',
+            'dropdownItem': '1e',
             'icon': 'icon-system-down-open',
             'dropdownOptions': [{
                 'option': 'Profile',
@@ -1015,8 +1023,8 @@ ui.component.header = (function($, T) {
     },
     'headerData4': {
         'settings': true,
-        'headerMobile': true,
         'styleguide': true,
+        'headerMobile': true,
         'headerMobileNavTitle': 'Mobile user settings',
         'dropdown': [{
             'icon': 'icon-solid-menu',
@@ -1491,6 +1499,14 @@ ui.component.nav = (function($, T) {
             'item': 'Composer',
             'icon': 'icon-user-naked-pencil blue'
         }, {
+            'url': '#anchor-cropper',
+            'item': 'Cropper',
+            'icon': 'icon-naked-crop blue'
+        }, {
+            'url': '#anchor-form',
+            'item': 'Form',
+            'icon': 'icon-app-naked-notebook blue'
+        }, {
             'url': '#anchor-header',
             'item': 'Header',
             'icon': 'icon-app-naked-school blue'
@@ -1501,7 +1517,7 @@ ui.component.nav = (function($, T) {
         }, {
             'url': '#anchor-input',
             'item': 'Input Fields',
-            'icon': 'icon-app-naked-notebook blue'
+            'icon': 'icon-app-naked-pen blue'
         }, {
             'url': '#anchor-messages',
             'item': 'Messages',
@@ -1513,7 +1529,7 @@ ui.component.nav = (function($, T) {
         }, {
             'url': '#anchor-postits',
             'item': 'Post-it&#39;s',
-            'icon': 'icon-app-naked-pen blue'
+            'icon': 'icon-app-naked-filter blue'
         }]
     },
     'navData4': {

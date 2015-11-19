@@ -3,6 +3,10 @@
 // -----------------------------------------------------------------------------
 .form {
     // margin-top: 3em;
+    .input-required {
+        color: $text-color--soft;
+        font-weight: $font-weight--regular;
+    }
     .form__input {
         padding-top: 2em;
         margin-bottom: -.5em;
@@ -101,8 +105,9 @@
             position: relative;
             pointer-events: none;
             margin-left: .5em;
+            width: 100%;
             padding: .5em;
-            bottom: 5em;
+            bottom: 5.2em;
             transition: 0.2s ease all !important;
             -moz-transition: 0.2s ease all !important;
             -webkit-transition: 0.2s ease all !important;

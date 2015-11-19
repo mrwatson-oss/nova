@@ -13,7 +13,7 @@
 			    <input id="{{inputId}}" value="{{value}}" class="inputMaterial" type="{{type}}" name="{{inputId}}" {{#if required}}required{{/if}} {{#if minlength}}
 			    minlength="{{minlength}}" {{/if}} {{#if maxlength}} maxlength="{{maxlength}}" {{/if}} >
 			    <span class="bar"></span>
-			    <label for="{{inputId}}">{{label}}</label>
+			    <label for="{{inputId}}">{{label}}{{#if required}}<span class="input-required"> {{#if requiredText}} ({{requiredText}}){{else}}(Required){{/if}}</span>{{/if}}</label>
 	   	</div>
 		</div>
 	{{/each}}
@@ -27,7 +27,7 @@
 				    <option value="{{value}}" {{#if selected}} selected="selected" {{/if}}>{{option}}</option>
 				  {{/each}}
 				</select>
-				<label class="label" for="{{selectId}}">{{label}}</label>
+				<label class="label" for="{{selectId}}">{{label}}{{#if required}}<span class="input-required"> {{#if requiredText}} ({{requiredText}}){{else}}(Required){{/if}}</span>{{/if}}</label>
 			</div>
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 	{{#each textareas}}
 		<div class="form__textarea">
 			<div class="{{textareaId}}">
-			    <label for="{{textareaId}}">{{label}}</label>
+			    <label for="{{textareaId}}">{{label}}{{#if required}}<span class="input-required"> {{#if requiredText}} ({{requiredText}}){{else}}(Required){{/if}}</span>{{/if}}</label>
 				<textarea value="{{value}}" name="{{textareaId}}" class="inputMaterial" id="{{textareaId}}" cols="{{cols}}" rows="{{rows}}" {{#if required}}required{{/if}}>{{value}}</textarea>
 				<span class="bar"></span>
 			</div>

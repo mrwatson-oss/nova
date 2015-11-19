@@ -47,6 +47,14 @@ var navData = {
             'item': 'Composer',
             'icon': 'icon-user-naked-pencil blue'
         }, {
+            'url': '#anchor-cropper',
+            'item': 'Cropper',
+            'icon': 'icon-naked-crop blue'
+        }, {
+            'url': '#anchor-form',
+            'item': 'Form',
+            'icon': 'icon-app-naked-notebook blue'
+        }, {
             'url': '#anchor-header',
             'item': 'Header',
             'icon': 'icon-app-naked-school blue'
@@ -57,7 +65,7 @@ var navData = {
         }, {
             'url': '#anchor-input',
             'item': 'Input Fields',
-            'icon': 'icon-app-naked-notebook blue'
+            'icon': 'icon-app-naked-pen blue'
         }, {
             'url': '#anchor-messages',
             'item': 'Messages',
@@ -69,7 +77,7 @@ var navData = {
         }, {
             'url': '#anchor-postits',
             'item': 'Post-it&#39;s',
-            'icon': 'icon-app-naked-pen blue'
+            'icon': 'icon-app-naked-filter blue'
         }]
     },
     'navData4': {
