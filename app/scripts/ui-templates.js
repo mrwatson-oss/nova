@@ -771,7 +771,13 @@ this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":functio
     + this.escapeExpression(((helper = (helper = helpers.headerMobileNavTitle || (depth0 != null ? depth0.headerMobileNavTitle : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"headerMobileNavTitle","hash":{},"data":data}) : helper)))
     + " </h4></div>\n";
 },"27":function(depth0,helpers,partials,data) {
-    return "  <script type=\"text/javascript\">\n    $('.header-container').find($('.drop-nav').addClass('drop-nav--right'));\n    var adminNavTitle;\n    function settingsTitle() {\n        adminNavTitle= $(location).attr('pathname').split('/')[2].replace(/\\b[a-z]/g, function(letter) {\n        return letter.toUpperCase();\n        }) + ' ' + 'settings';\n    };\n    settingsTitle();\n    $('#settings-header__title').find('.dropdown-item').html('<h4>' + adminNavTitle + '<h4>');\n  </script>\n";
+    var stack1;
+
+  return "  <script type=\"text/javascript\">\n    $('.header-container').find($('.drop-nav').addClass('drop-nav--right'));\n"
+    + ((stack1 = helpers.unless.call(depth0,(depth0 != null ? depth0.styleguide : depth0),{"name":"unless","hash":{},"fn":this.program(28, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "  </script>\n";
+},"28":function(depth0,helpers,partials,data) {
+    return "    var adminNavTitle;\n    function settingsTitle() {\n        adminNavTitle= $(location).attr('pathname').split('/')[2].replace(/\\b[a-z]/g, function(letter) {\n        return letter.toUpperCase();\n        }) + ' ' + 'settings';\n    };\n    settingsTitle();\n    $('#settings-header__title').find('.dropdown-item').html('<h4>' + adminNavTitle + '<h4>');\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 

@@ -1006,7 +1006,7 @@ ui.component.header = (function($, T) {
         'settings': true,
         'styleguide': true,
         'dropdown': [{
-            'dropdownItem': '1e',
+            'dropdownItem': 'Settings',
             'icon': 'icon-system-down-open',
             'dropdownOptions': [{
                 'option': 'Profile',
