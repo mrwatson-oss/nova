@@ -150,11 +150,12 @@ ui.component.appbar = (function($, T) {
             'class': 'nav--active divider'
         }, {
             'url': 'ui-components.html',
-            'item': 'Upcoming events'
+            'item': 'Upcoming eventse'
         }],
         'button': [{
             'class': 'solid-button--strict pull-right',
-            'content': 'Add new event'
+            'content': 'Add newr event',
+            'action': 'dit'
         }]
     }
 }
@@ -1623,7 +1624,7 @@ ui.component.partials = (function($, T) {
             });
             Handlebars.registerPartial({
                 'PartialAvatar': '{{#if avatar}}{{#avatar}}<div class="avatar {{#if small}}avatar--small{{/if}} {{#if round}} round{{/if}}"><img {{#if src}}src="{{src}}" {{else}}src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu"{{/if}} alt="avatar"></div>{{/avatar}}{{else}}<div class="avatar {{#if small}}avatar--small{{/if}}"><img src="https://www.filepicker.io/api/file/Xr1rtfRBRd6HVNVynfMu" alt="avatar"/></div>{{/if}}',
-                'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="btn {{class}} {{#if icon}}icon-only{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" {{action}}" {{#if cancel}} formnovalidate {{/if}}>{{#if buttonLoader}} <div class="btn__loading-container"><span class="btn__loading-circle">&nbsp;</span><span class="btn__loading-circle">&nbsp;</span><span class="btn__loading-circle">&nbsp;</span><span class="btn__loading-circle">&nbsp;</span></div>{{/if}} {{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}} {{content}} {{/if}} {{/if}}</button>',
+                'PartialButton': '<button {{#if disabled}}disabled{{/if}} class="btn {{class}} {{#if icon}}icon-only{{/if}}" id="{{id}}" name="{{name}}" type="{{type}}" value="{{value}}" onclick="{{action}}" {{#if cancel}} formnovalidate {{/if}}>{{#if buttonLoader}} <div class="btn__loading-container"><span class="btn__loading-circle">&nbsp;</span><span class="btn__loading-circle">&nbsp;</span><span class="btn__loading-circle">&nbsp;</span><span class="btn__loading-circle">&nbsp;</span></div>{{/if}} {{#if iconOnly}}{{#if icon}}<i class="icon {{icon}}"></i>{{/if}}{{else}}{{#if icon}}<i class="icon {{icon}}"></i> {{/if}}{{#if content}} {{content}} {{/if}} {{/if}}</button>',
                 'PartialDropdown': '<li class="dropdown" id="dropdown"><span class="dropdown-item"><h4>{{{dropdownItem}}}</h4></span>{{#if icon}}<i class="{{icon}}"></i>{{/if}}{{#if badge}}<span class="dropdown-badge">{{dropdownOptions.length}}</span>{{/if}}<ul class="nav drop-nav">{{#each dropdownOptions}}<li>{{#if optionCat}}<div class="option-catagory">{{option}}</div>{{else}}<a id="{{id}}"class="{{class}}"href="{{href}}">{{option}}</a>{{/if}}</li>{{/each}}</ul><script>{{script}}</script></li>',
                 'PartialTextInput': ui.component.textInput.render({
                     'class': '{{class}}',

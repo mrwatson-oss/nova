@@ -6,11 +6,12 @@ var appbarData = {
             'class': 'nav--active divider'
         }, {
             'url': 'ui-components.html',
-            'item': 'Upcoming events'
+            'item': 'Upcoming eventse'
         }],
         'button': [{
             'class': 'solid-button--strict pull-right',
-            'content': 'Add new event'
+            'content': 'Add newr event',
+            'action': 'dit'
         }]
     }
 }
