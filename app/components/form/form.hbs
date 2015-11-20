@@ -58,7 +58,8 @@
 <script>
     // validate the form when it is submitted
     var validator = $("#{{id}}").validate({
-    	ignore: [],
+		// debug: true,
+		ignore: [],
         errorPlacement: function(error, element) {
             // Append error within linked label
             $( element )
@@ -77,8 +78,18 @@
 		      }
 		    },
         errorElement: "div",
-        success: "valid"
-  		// submitHandler: function() { alert("Submitted!") }
+        success: "valid",
+  		submitHandler: function(form) {
+			var theLoadingButton = $("#{{id}}").find('button');
+			var buttonColor = $(theLoadingButton).css('color');
+			$(theLoadingButton).addClass('btn__loader');
+		    theLoadingButton.css('color', 'rgba(0,0,0,0)');
+			setTimeout(function() {
+			    $(theLoadingButton).removeClass('btn__loader');
+			    theLoadingButton.css('color', buttonColor);
+			}, 30000);
+			form.submit();
+		}
     });
 	$('select[name="mySelect"]').on('change', function() { // fires when the value changes
 	    $(this).valid(); // trigger validation on hidden select

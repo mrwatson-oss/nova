@@ -72,6 +72,7 @@ var formData = {
         'cancel': true,
         'buttons': [{
             'class': 'solid-button--happy',
+            'buttonLoader': true,
             'content': 'Doe doe'
         }]
     }

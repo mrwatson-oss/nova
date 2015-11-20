@@ -13,18 +13,18 @@ $(document).ready(function() {
 });
 
 // button loading animation
-function loadingButton(thisButton) {
-  // var originalButtonContent = thisButton.innerHTML;
-  var buttonColor = $(thisButton).css('color');
-  if(!$(thisButton).hasClass('btn__loader')){
-    $(thisButton).addClass('btn__loader');
-    thisButton.style.color = 'rgba(0,0,0,0)';
-    setTimeout(function(){
-      $(thisButton).removeClass('btn__loader');
-      thisButton.style.color = buttonColor;
-    }, 4000);
-  }
-};
+// function loadingButton(thisButton) {
+  // // var originalButtonContent = thisButton.innerHTML;
+  // var buttonColor = $(thisButton).css('color');
+  // if(!$(thisButton).hasClass('btn__loader')){
+  //   $(thisButton).addClass('btn__loader');
+  //   thisButton.style.color = 'rgba(0,0,0,0)';
+  //   setTimeout(function(){
+  //     $(thisButton).removeClass('btn__loader');
+  //     thisButton.style.color = buttonColor;
+  //   }, 4000);
+  // }
+// };
 
 // var dots = window.setInterval( function() {
 //   var wait = document.getElementById("wait");
