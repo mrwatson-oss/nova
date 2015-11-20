@@ -10,7 +10,7 @@
 	{{#each inputs}}
 		<div class="form__input">
 			<div class="{{inputId}}">
-			    <input id="{{inputId}}" value="{{value}}" class="inputMaterial" type="{{type}}" name="{{inputId}}" {{#if required}}required{{/if}} {{#if minlength}}
+			    <input id="{{inputId}}" placeholder="{{placeholder}}" value="{{value}}" class="inputMaterial" type="{{type}}" name="{{inputId}}" {{#if required}}required{{/if}} {{#if minlength}}
 			    minlength="{{minlength}}" {{/if}} {{#if maxlength}} maxlength="{{maxlength}}" {{/if}} >
 			    <span class="bar"></span>
 			    <label for="{{inputId}}">{{label}}{{#if required}}<span class="input-required"> {{#if requiredText}} ({{requiredText}}){{else}}(Required){{/if}}</span>{{/if}}</label>
@@ -42,7 +42,7 @@
 		<div class="form__textarea">
 			<div class="{{textareaId}}">
 			    <label for="{{textareaId}}">{{label}}{{#if required}}<span class="input-required"> {{#if requiredText}} ({{requiredText}}){{else}}(Required){{/if}}</span>{{/if}}</label>
-				<textarea value="{{value}}" name="{{textareaId}}" class="inputMaterial" id="{{textareaId}}" cols="{{cols}}" rows="{{rows}}" {{#if required}}required{{/if}}>{{value}}</textarea>
+				<textarea value="{{value}}" placeholder="{{placeholder}}" name="{{textareaId}}" class="inputMaterial" id="{{textareaId}}" cols="{{cols}}" rows="{{rows}}" {{#if required}}required{{/if}}>{{value}}</textarea>
 				<span class="bar"></span>
 			</div>
 		</div>

@@ -48,6 +48,7 @@
     </div>
 </div>
 {{#if settings}}
+{{#unless styleguide}}
   <script type="text/javascript">
     $('.header-container').find($('.drop-nav').addClass('drop-nav--right'));
     {{#unless styleguide}}
@@ -61,4 +62,5 @@
     $('#settings-header__title').find('.dropdown-item').html('<h4>' + adminNavTitle + '<h4>');
     {{/unless}}
   </script>
+{{/unless}}
 {{/if}}

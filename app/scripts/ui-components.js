@@ -877,6 +877,7 @@ ui.component.form = (function($, T) {
         }, {
             'required': false,
             'inputId': 'firstName',
+            'placeholder': 'wacgt',
             'label': 'First name',
             'type': 'text',
             'minlength': '2'
