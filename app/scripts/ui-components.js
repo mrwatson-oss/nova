@@ -567,6 +567,7 @@ ui.component.cropper = (function($, T) {
         'cancelCropButtonText': 'Cancel',
         'saveCropButtonText': 'Save',
         'fileName': 'image',
+        'hideCropper': true,
         'formId': 'userSettingsForm',
         'community': false
     },

@@ -250,13 +250,17 @@ this["ui"]["component"]["template"]["composer"] = Handlebars.template({"1":funct
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["cropper"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    return "10 / 3";
+    return "            $('#cropShow').hide();\n";
 },"3":function(depth0,helpers,partials,data) {
+    return "10 / 3";
+},"5":function(depth0,helpers,partials,data) {
     return "1 / 1";
+},"7":function(depth0,helpers,partials,data) {
+    return "                    $('#cropShow').show();\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"app-block\">\n    <div class=\"cropper__container\">\n        <label class=\"label--profile-picture\">"
+  return "\n<div class=\"app-block\">\n    <div class=\"cropper__container\">\n        <label class=\"label--profile-picture\">"
     + alias3(((helper = (helper = helpers.cropperLabel || (depth0 != null ? depth0.cropperLabel : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"cropperLabel","hash":{},"data":data}) : helper)))
     + "</label>\n        <a class=\"naked-button--strict pull-right\" onclick=\"$('#fileUpload').click();\" id=\"upload-new-img\" type=\"button\" form=\""
     + alias3(((helper = (helper = helpers.formId || (depth0 != null ? depth0.formId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"formId","hash":{},"data":data}) : helper)))
@@ -282,11 +286,15 @@ this["ui"]["component"]["template"]["cropper"] = Handlebars.template({"1":functi
     + alias3(((helper = (helper = helpers.formId || (depth0 != null ? depth0.formId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"formId","hash":{},"data":data}) : helper)))
     + "\"/>\n        </div>\n        <input type=\"hidden\" name=\"cropData\" id=\"cropData\" form=\""
     + alias3(((helper = (helper = helpers.formId || (depth0 != null ? depth0.formId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"formId","hash":{},"data":data}) : helper)))
-    + "\">\n    </div>\n</div>\n<script src=\"https://cdn.rawgit.com/fengyuanchen/cropper/v1.0.0-rc.1/dist/cropper.min.js\"></script>\n<link href=\"https://cdn.rawgit.com/fengyuanchen/cropper/v1.0.0-rc.1/dist/cropper.min.css\" rel=\"stylesheet\">\n<script type=\"text/javascript\">\n\n        $('#save-image').hide();\n        $('#cropHide').hide();\n\n        var $image = $('#image-holder > .image');\n\n        $('#fileUpload').on('change', function() {\n                $('#cropShow').hide();\n                $('#cropHide').show();\n                if (typeof (FileReader) !== 'undefined') {\n                        var image_holder = $('#image-holder');\n                        var reader = new FileReader();\n                        reader.onload = function(e) {\n                                $('#save-image').show();\n                                $image.one('built.cropper', function(){}).cropper('reset').cropper('replace', e.target.result).cropper('setAspectRatio', "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.community : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(3, data, 0),"data":data})) != null ? stack1 : "")
+    + "\">\n    </div>\n</div>\n<script src=\"https://cdn.rawgit.com/fengyuanchen/cropper/v1.0.0-rc.1/dist/cropper.min.js\"></script>\n<link href=\"https://cdn.rawgit.com/fengyuanchen/cropper/v1.0.0-rc.1/dist/cropper.min.css\" rel=\"stylesheet\">\n<script type=\"text/javascript\">\n\n        $('#save-image').hide();\n        $('#cropHide').hide();\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.hideCropper : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "        var $image = $('#image-holder > .image');\n\n        $('#fileUpload').on('change', function() {\n                $('#cropShow').hide();\n                $('#cropHide').show();\n                if (typeof (FileReader) !== 'undefined') {\n                        var image_holder = $('#image-holder');\n                        var reader = new FileReader();\n                        reader.onload = function(e) {\n                                $('#save-image').show();\n                                $image.one('built.cropper', function(){}).cropper('reset').cropper('replace', e.target.result).cropper('setAspectRatio', "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.community : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.program(5, data, 0),"data":data})) != null ? stack1 : "")
     + ");\n                        }\n                        reader.readAsDataURL($(this)[0].files[0]);\n                } else {\n                        alert(\"This browser does not support FileReader.\");\n                }\n                $image.cropper({\n                            crop: function(e) {\n                                    $('#cropData').val(JSON.stringify(e));\n                            }\n                    });\n            });\n		// todo: make aspectRatio variable\n        $('#cropShow').click(function() {\n                $image.cropper({\n                        aspectRatio: "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.community : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(3, data, 0),"data":data})) != null ? stack1 : "")
-    + ",\n                        crop: function(e) {\n                                $('#cropData').val(JSON.stringify(e));\n                        }\n                    });\n                $('#cropHide').show();\n                $('#save-image').show();\n                $( this ).hide();\n            });\n\n        $('#cropHide').click(function() {\n                $image.cropper('destroy');\n                $('#upload-new-img').show();\n                $('#save-image').hide();\n                $('#cropData').val('');\n                $('#cropShow').show();\n                $(this).hide();\n        });\n</script>\n";
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.community : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.program(5, data, 0),"data":data})) != null ? stack1 : "")
+    + ",\n                        crop: function(e) {\n                                $('#cropData').val(JSON.stringify(e));\n                        }\n                    });\n                $('#cropHide').show();\n                $('#save-image').show();\n                $( this ).hide();\n            });\n\n        $('#cropHide').click(function() {\n                $image.cropper('destroy');\n"
+    + ((stack1 = helpers.unless.call(depth0,(depth0 != null ? depth0.hideCropper : depth0),{"name":"unless","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "                $('#upload-new-img').show();\n                $('#save-image').hide();\n                $('#cropData').val('');\n                $(this).hide();\n        });\n</script>\n";
 },"useData":true});
 
 this["ui"]["component"]["template"]["dialog"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

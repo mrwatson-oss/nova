@@ -7,6 +7,7 @@ var cropperData = {
         'cancelCropButtonText': 'Cancel',
         'saveCropButtonText': 'Save',
         'fileName': 'image',
+        'hideCropper': true,
         'formId': 'userSettingsForm',
         'community': false
     },

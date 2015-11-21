@@ -1,3 +1,4 @@
+
 <div class="app-block">
     <div class="cropper__container">
         <label class="label--profile-picture">{{cropperLabel}}</label>
@@ -31,7 +32,9 @@
 
         $('#save-image').hide();
         $('#cropHide').hide();
-
+        {{#if hideCropper}}
+            $('#cropShow').hide();
+        {{/if}}
         var $image = $('#image-holder > .image');
 
         $('#fileUpload').on('change', function() {
@@ -69,10 +72,12 @@
 
         $('#cropHide').click(function() {
                 $image.cropper('destroy');
+                {{#unless hideCropper}}
+                    $('#cropShow').show();
+                {{/unless}}
                 $('#upload-new-img').show();
                 $('#save-image').hide();
                 $('#cropData').val('');
-                $('#cropShow').show();
                 $(this).hide();
         });
 </script>
