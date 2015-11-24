@@ -1,200 +1,214 @@
-        @mixin border-radius($radius) {
-            -webkit-border-radius: $radius;
-            -moz-border-radius: $radius;
-            -ms-border-radius: $radius;
-            border-radius: $radius;
-        }
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter:alpha(opacity=$opacity-ie); //IE8
+}
 
-        @mixin opacity($opacity) {
-            opacity: $opacity;
-            $opacity-ie: $opacity * 100;
-            filter: alpha(opacity=$opacity-ie); //IE8
-        }
+// -----------------------------------------------------------------------------
+// Button mixins
+// -----------------------------------------------------------------------------
+@mixin naked-button--icon-only($icon-color) {
+  background: none;
+  border: none;
+  color: $icon-color;
+  padding: 1em !important;
+  .icon {
+    font-size: 1.6em;
 
-        // -----------------------------------------------------------------------------
-        // Button mixins
-        // -----------------------------------------------------------------------------
-        @mixin naked-button--icon-only($icon-color) {
-            background: none;
-            border: none;
-            color: $icon-color;
-            padding: 1em !important;
-            .icon {
-                font-size: 1.6em;
-                // line-height: 1em;
-                // margin: 0;
-            }
-            &:link {}
-            &:visited {}
-            &:hover {
-                color: $icon-color;
-            }
-            &:active {
-                // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4);
-            }
-            &:focus {
-                color: $icon-color;
-                outline: none;
-            }
-        }
+    // line-height: 1em;
+    // margin: 0;
+  }
+  &:link {
 
-        @mixin solid-button($button-color, $button-color-accent, $button-text-color: $button-color__text) {
-            background: $button-color;
-            border: 1px solid $button-color;
-            color: $button-text-color;
-            padding: 1em 1.4em;
-            .icon {
-                font-size: $font-size--x-large;
-                line-height: $font-size--regular;
-                // vertical-align: bottom;
-            // margin: .2em 0 -.2em 0;
-                &.green {
-                    color: $green;
-                }
-                &.blue {
-                    color: $sec-blue;
-                }
-                &.red {
-                    color: $sec-red;
-                }
-                &.grey {
-                    color: $grey;
-                }
-                &.white {
-                    color: $white;
-                }
-            }
-            &:link {}
-            &:visited {}
-            &:hover {
-                background-color: $button-color-accent;
-                border-color: $button-color-accent;
-            }
-            &:active {
-                // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4);
-            }
-            &:focus {
-                background-color: $button-color-accent;
-                border-color: $button-color-accent;
-                outline: none;
-            }
-            &:disabled {
-                background: lighten($button-color, 30%);
-                border: 1px solid lighten($button-color, 40%);
-                color: lighten($button-text-color, 40%);
-                cursor: default;
-            }
-        }
+  }
+  &:visited {
 
-        @mixin naked-button($button-text-color, $button-color-accent) {
-            background: none;
-            border: none;
-            color: $button-text-color;
-            padding: 1em;
-            .icon {
-                font-size: 1.6em;
-                vertical-align: bottom;
-                margin: 0 .2em -.12em 0;
-                &.green {
-                    color: $green;
-                }
-                &.blue {
-                    color: $sec-blue;
-                }
-                &.red {
-                    color: $sec-red;
-                }
-                &.grey {
-                    color: $grey;
-                }
-                &.white {
-                    color: $white;
-                }
-            }
-            &:link {}
-            &:visited {}
-            &:hover {
-                color: $button-color-accent;
-                background: $grey--light;
-            }
-            &.hover {
-                &:hover {
-                    background: $grey--light;
-                }
-            }
-            &:active {
-                // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4);
-            }
-            &:focus {
-                color: $button-color-accent;
-                outline: none;
-            }
-            &:disabled {
-                background: none;
-                color: lighten($button-text-color, 30%);
-                cursor: default;
-            }
-        }
+  }
+  &:hover {
+    color: $icon-color;
+  }
+  &:active {
 
-        // -----------------------------------------------------------------------------
-        // Alert mixins
-        // -----------------------------------------------------------------------------
-        @mixin solid-alert($alert-color, $alert-text-color: $alert-color__text) {
-            background: $alert-color;
-            border: 1px solid $alert-color;
-            color: $alert-text-color;
-            .icon {
-                font-size: 1.6em;
-                vertical-align: bottom;
-                color: $alert-text-color;
-            }
-            a {
-                color: $alert-text-color;
-                &:focus {
-                    outline: none;
-                }
-            }
-        }
+    // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4);
+  }
+  &:focus {
+    color: $icon-color;
+    outline: none;
+  }
+}
+@mixin solid-button($button-color, $button-color-accent, $button-text-color: $button-color__text) {
+  background: $button-color;
+  border: 1px solid $button-color;
+  color: $button-text-color;
+  padding: 1em 1.4em;
+  .icon {
+    font-size: $font-size--x-large;
+    line-height: $font-size--regular;
 
-        @mixin naked-alert($alert-color, $alert-text-color) {
-            background: none;
-            border: 1px solid $alert-color;
-            color: $alert-text-color;
-            .title {
-                color: $alert-color;
-            }
-            .icon {
-                font-size: 1.6em;
-                vertical-align: bottom;
-                color: $alert-color;
-            }
-            a {
-                color: $alert-text-color;
-                &:focus {
-                    outline: none;
-                }
-            }
-        }
+    // vertical-align: bottom;
+    // margin: .2em 0 -.2em 0;
+    &.green {
+      color: $green;
+    }
+    &.blue {
+      color: $sec-blue;
+    }
+    &.red {
+      color: $sec-red;
+    }
+    &.grey {
+      color: $grey;
+    }
+    &.white {
+      color: $white;
+    }
+  }
+  &:link {
 
-        // -----------------------------------------------------------------------------
-        // Dialog mixins
-        // -----------------------------------------------------------------------------
-        @mixin dialog($dialog-color) {
-            .dialog-title {
-                color: $dialog-color;
-            }
-            .icon {
-                color: $dialog-color;
-            }
-        }
-        // -----------------------------------------------------------------------------
-        // Modal mixins
-        // -----------------------------------------------------------------------------
-        @mixin modal($modal-color) {
-            .modal-title {
-                color: $modal-color;
-            }
-            .icon {
-                color: $modal-color;
-            }
-        }
+  }
+  &:visited {
+
+  }
+  &:hover {
+    background-color: $button-color-accent;
+    border-color: $button-color-accent;
+  }
+  &:active {
+
+    // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4);
+  }
+  &:focus {
+    background-color: $button-color-accent;
+    border-color: $button-color-accent;
+    outline: none;
+  }
+  &:disabled {
+    background: lighten($button-color, 30%);
+    border: 1px solid lighten($button-color, 40%);
+    color: lighten($button-text-color, 40%);
+    cursor: default;
+  }
+}
+@mixin naked-button($button-text-color, $button-color-accent) {
+  background: none;
+  border: none;
+  color: $button-text-color;
+  padding: 1em;
+  .icon {
+    font-size: 1.6em;
+    vertical-align: bottom;
+    margin: 0 0.2em -.12em 0;
+    &.green {
+      color: $green;
+    }
+    &.blue {
+      color: $sec-blue;
+    }
+    &.red {
+      color: $sec-red;
+    }
+    &.grey {
+      color: $grey;
+    }
+    &.white {
+      color: $white;
+    }
+  }
+  &:link {
+
+  }
+  &:visited {
+
+  }
+  &:hover {
+    color: $button-color-accent;
+    background: $grey--light;
+  }
+  &.hover {
+    &:hover {
+      background: $grey--light;
+    }
+  }
+  &:active {
+
+    // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4);
+  }
+  &:focus {
+    color: $button-color-accent;
+    outline: none;
+  }
+  &:disabled {
+    background: none;
+    color: lighten($button-text-color, 30%);
+    cursor: default;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Alert mixins
+// -----------------------------------------------------------------------------
+@mixin solid-alert($alert-color, $alert-text-color: $alert-color__text) {
+  background: $alert-color;
+  border: 1px solid $alert-color;
+  color: $alert-text-color;
+  .icon {
+    font-size: 1.6em;
+    vertical-align: bottom;
+    color: $alert-text-color;
+  }
+  a {
+    color: $alert-text-color;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+@mixin naked-alert($alert-color, $alert-text-color) {
+  background: none;
+  border: 1px solid $alert-color;
+  color: $alert-text-color;
+  .title {
+    color: $alert-color;
+  }
+  .icon {
+    font-size: 1.6em;
+    vertical-align: bottom;
+    color: $alert-color;
+  }
+  a {
+    color: $alert-text-color;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Dialog mixins
+// -----------------------------------------------------------------------------
+@mixin dialog($dialog-color) {
+  .dialog-title {
+    color: $dialog-color;
+  }
+  .icon {
+    color: $dialog-color;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Modal mixins
+// -----------------------------------------------------------------------------
+@mixin modal($modal-color) {
+  .modal-title {
+    color: $modal-color;
+  }
+  .icon {
+    color: $modal-color;
+  }
+}
