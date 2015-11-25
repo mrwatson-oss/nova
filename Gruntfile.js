@@ -483,8 +483,7 @@ module.exports = function(grunt) {
     'modernizr',
     // 'filerev',
     'usemin',
-    'htmlmin',
-    'grunt-gh-pages'
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [
@@ -492,4 +491,7 @@ module.exports = function(grunt) {
     'test',
     'build'
   ]);
+
+  grunt.loadNpmTasks('grunt-gh-pages');
+  
 };
