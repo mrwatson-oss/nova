@@ -48,7 +48,12 @@ $ grunt build
 - Change all file names
 - Change component.js content names to new component name (*cmd ^ F => oldComponentName = newComponentName*)
 - Add components Sass file to [styles/main.scss](../master/app/styles/main.scss)
-- Add component to [ui-components.html](../master/app/ui-components.html)
+- Add component to [ui-components.html](../master/app/ui-components.html) and document it.
+- `$ grunt build`
+- `$ git pull`
+- `$ git add .`
+- `$ git commit -m "your-commit-message"`
+- `$ git push`
 
 #### Add new bower packages
 - Make sure `grunt serve` is running  
