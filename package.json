@@ -16,6 +16,7 @@
     "grunt-contrib-uglify": "^0.8.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-filerev": "^2.2.0",
+    "grunt-gh-pages": "^1.0.0",
     "grunt-mocha": "^0.4.12",
     "grunt-modernizr": "^0.6.0",
     "grunt-newer": "^1.1.0",
@@ -29,9 +30,9 @@
     "time-grunt": "^1.1.0"
   },
   "engines": {
-      "node": ">=0.10.0"
+    "node": ">=0.10.0"
   },
   "scripts": {
-      "test": "grunt test"
+    "test": "grunt test"
   }
 }
