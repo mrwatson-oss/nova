@@ -45,7 +45,7 @@ $ grunt build
 - Make sure `grunt serve` is running
 - Open the project in your favorite editor and navigate to `app/components`
 - Duplicate a component folder
-- Change all file names
+- Change all file names (no special characters)
 - Change component.js content names to new component name (*cmd ^ F => oldComponentName = newComponentName*)
 - Add components Sass file to [styles/main.scss](../master/app/styles/main.scss)
 - Add component to [ui-components.html](../master/app/ui-components.html) and document it.
