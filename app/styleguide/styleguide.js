@@ -1,4 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 $(document).ready(function() {
   'use strict';
 
@@ -61,10 +60,10 @@ function ghPageRoutes() {
     // console.log(checkThis);
     // windowUrl === 'nova' &&
     if (windowUrl === 'nova' && checkThis !== 'nova' && checkThis !== 'http:' && checkThis !== 'https:' && checkThis !== 'www') {
-        if (windowUrl2.split('.')[0] === 'ui-components' && firstPiece === '#') {
-            theUrl = '/nova/ui-components' + presRef;
-            return $(this).attr('src', theUrl);
-        }
+      if (windowUrl2.split('.')[0] === 'ui-components' && firstPiece === '#') {
+        theUrl = '/nova/ui-components' + presRef;
+        return $(this).attr('src', theUrl);
+      }
       theUrl = '/nova' + presRef;
       return $(this).attr('src', theUrl);
     }
