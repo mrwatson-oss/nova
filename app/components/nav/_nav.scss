@@ -79,7 +79,8 @@
         font-size: 1.6em;
         // line-height: 1.4em;
         vertical-align: bottom;
-        margin: 0 .4em -.2em 0;
+        padding: .2em;
+        margin-bottom: -.4em;
         &.green {
             color: $green;
         }
@@ -94,6 +95,11 @@
         }
         &.white {
             color: $white;
+        }
+        &:hover {
+            // border-radius: 50% 50% 0 0;
+            // transition: all .5;
+            background: $green--light;
         }
     }
     .community-switch {

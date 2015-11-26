@@ -985,7 +985,12 @@ ui.component.header = (function($, T) {
             'class': 'nav--active divider'
         }, {
             'url': '/ui-components.html',
+            'class': 'divider',
             'item': 'UI components'
+        }, {
+            'icon': 'icon-user-github',
+            'url': 'https://github.com/mrwatson-oss/nova',
+            'item': ''
         }]
     },
     'headerData2': {
@@ -1000,10 +1005,13 @@ ui.component.header = (function($, T) {
             'item': 'UI base',
             'class': 'divider'
         }, {
-
             'url': '#',
             'item': 'UI components',
-            'class': 'nav--active'
+            'class': 'divider nav--active'
+        }, {
+            'icon': 'icon-user-github',
+            'url': 'https://github.com/mrwatson-oss/nova',
+            'item': ''
         }]
     },
     'headerData3': {
