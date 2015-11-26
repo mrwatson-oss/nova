@@ -1,6 +1,5 @@
 #Mr.Watson | Nova (v0.1.0)
-Front-end framework & style guide for [www.mrwatson.com](http://www.mrwatson.com)  
-*To do: link to live style guide*
+Front-end framework & [style guide](http://mrwatson-oss.github.io/nova/) for [www.mrwatson.com](http://www.mrwatson.com)  
 
 ## Dependencies
 
@@ -54,12 +53,13 @@ $ grunt build
 - `$ git add .`
 - `$ git commit -m "your-commit-message"`
 - `$ git push`
+- `$ grunt gh-pages` (Pushes /dist/ to gh-pages)
 
 #### Add new bower packages
 - Make sure `grunt serve` is running  
 - Depending on the package:
 ```
-$ bower install [package-name] 
+$ bower install [package-name]
 ```
 ```
 $ bower install [package-name] --save
