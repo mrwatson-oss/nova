@@ -8,26 +8,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/icon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
-  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <!-- <script src="bower_components/modernizr/ui/modernizr.js"></script> -->
+  <!-- endbuild -->
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/handlebars/handlebars.js"></script>
+  <script src="bower_components/jquery-selectric/public/jquery.selectric.js"></script>
+  <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
+  <script src="bower_components/sifter/sifter.js"></script>
+  <script src="bower_components/microplugin/src/microplugin.js"></script>
+  <script src="bower_components/selectize/dist/js/selectize.js"></script>
+  <script src="bower_components/emojify.js/dist/js/emojify.js"></script>
+  <script src="bower_components/cropper/dist/cropper.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
   <script src="scripts/ui-templates.js"></script>
   <script src="scripts/ui-components.js"></script>
   <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+  <!-- build:js styleguide/styleguide.js -->
+  <script src="styleguide/styleguide.js"></script>
+  <!-- endbuild -->
   <link rel="stylesheet" href="vendor/prism.css">
   <link rel="stylesheet" href="vendor/selectize.css">
-  <script src="vendor/prism.js"></script>
-  <script src="styleguide/styleguide.js"></script>
-  <script src="bower_components/emojify.js/dist/js/emojify.min.js"></script>
   <link rel="stylesheet" href="vendor/icons.css">
   <link rel="stylesheet" href="bower_components/cropper/dist/cropper.css">
-  <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
-  <script src="bower_components/jquery-selectric/public/jquery.selectric.js"></script>
-  <script src="bower_components/selectize/dist/js/selectize.js"></script>
-  <script src="bower_components/cropper/dist/cropper.js"></script>
+  <script src="vendor/prism.js"></script>
 </head>
-
 <body>
   <component data-type="button" data-properties="buttonData.scrollToTop"></component>
   <div id="partials"></div>
