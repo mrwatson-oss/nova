@@ -56,10 +56,10 @@ function ghPageRoutes() {
     var presRef = $(this).attr('src');
     var firstPiece = presRef.split('/')[0];
     var checkThis = firstPiece.split('.')[0];
-    // console.log(firstPiece);
+    console.log(firstPiece);
     // console.log(checkThis);
     // windowUrl === 'nova' &&
-    if (windowUrl === 'nova' && checkThis !== 'nova' && checkThis !== 'http:' && checkThis !== 'https:' && checkThis !== 'www') {
+    if (checkThis !== 'nova' && checkThis !== 'http:' && checkThis !== 'https:' && checkThis !== 'www') {
       theUrl = '/nova' + presRef;
       return $(this).attr('src', theUrl);
     }
@@ -74,7 +74,7 @@ function ghPageRoutes() {
     var checkThis = firstPiece.split('.')[0];
     // console.log(checkThis);
     // windowUrl === 'nova' &&
-    if (windowUrl === 'nova' && checkThis !== 'nova' && checkThis !== 'http:' && checkThis !== 'https:' && checkThis !== 'www') {
+    if (checkThis !== 'nova' && checkThis !== 'http:' && checkThis !== 'https:' && checkThis !== 'www') {
       if (windowUrl2.split('.')[0] === 'ui-components' && firstPiece[0] === '#') {
         theUrl = '/nova/ui-components' + presRef;
         return $(this).attr('href', theUrl);

@@ -9,22 +9,12 @@
   <link rel="shortcut icon" href="/icon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="styles/main.css">
-  <!-- build:css(.tmp) styles/main.css -->
-  <!-- endbuild -->
-  <!-- build:js scripts/vendor/modernizr.js -->
   <script src="bower_components/modernizr/modernizr.js"></script>
-  <!-- endbuild -->
-  <!-- build:js(.) scripts/vendor.js -->
-  <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/handlebars/handlebars.js"></script>
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:js scripts/main.js -->
   <script src="scripts/ui-templates.js"></script>
   <script src="scripts/ui-components.js"></script>
   <script src="scripts/main.js"></script>
-  <!-- endbuild -->
   <script src="styleguide/styleguide.js"></script>
   <link rel="stylesheet" href="vendor/prism.css">
   <link rel="stylesheet" href="vendor/selectize.css">
@@ -32,14 +22,10 @@
   <script src="bower_components/emojify.js/dist/js/emojify.min.js"></script>
   <link rel="stylesheet" href="vendor/icons.css">
   <link rel="stylesheet" href="bower_components/cropper/dist/cropper.css">
-  <!-- <link href="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.css" rel="stylesheet">
-    <script src="https://fontastic.s3.amazonaws.com/TnTv7Yj4B8ZJ3JBxcWVHBW/icons.js"></script> -->
   <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
   <script src="bower_components/jquery-selectric/public/jquery.selectric.js"></script>
   <script src="bower_components/selectize/dist/js/selectize.js"></script>
   <script src="bower_components/cropper/dist/cropper.js"></script>
-
-  <!-- <link rel="stylesheet" href="bower_components/jquery-selectric/public/selectric.css"> -->
 </head>
 
 <body>
@@ -740,6 +726,8 @@
               </code>
             </pre>
           </div>
+          <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+          <!-- <div class="clearfix visible-lg-block"></div> -->
           <div class="col-xs-10 col-sm-6 col-md-4">
             <component data-type="nav" data-properties="navData.navData5"></component>
           </div>
@@ -751,6 +739,7 @@
               </code>
             </pre>
           </div>
+          <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
           <div class="col-xs-10 col-sm-6 col-md-4">
             <component data-type="nav" data-properties="navData.navData6"></component>
           </div>
@@ -971,11 +960,18 @@
         </div>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     <script>
-      $(document).ready(function(){
-          ghPageRoutes();
-      });
+    //   $(document).ready(function() {
+    //     ghPageRoutes();
+    //   });
+    $(document).ready(function(){
+        ghPageRoutes()
+    });
+    //   $(window).load(function() {
+    //       ghPageHrefRoutes()
+    //       ghPageSrcRoutes();
+    //   });
     </script>
 </body>
 
