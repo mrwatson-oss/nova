@@ -25,7 +25,6 @@ $(document).ready(function() {
     }
     return eval(component)(properties);
   });
-
   $('a[href*=#]:not([href=#])').click(function() {
     // 'use strict';
     if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') || location.hostname === this.hostname) {
@@ -40,51 +39,53 @@ $(document).ready(function() {
       }
     }
   });
-})
+});
 
 function ghPageRoutes() {
   var windowUrl = $(location).attr('pathname').split('/')[1];
   var windowUrl2 = $(location).attr('pathname').split('/')[2];
-  // console.log(windowUrl);
-  // console.log(windowUrl2);
-
   var theRef = $('a');
   var imgRef = $('img');
   imgRef.each(function() {
     var theUrl = $(this).attr('src');
-    // console.log(theUrl);
     var presRef = $(this).attr('src');
     var firstPiece = presRef.split('/')[0];
     var checkThis = firstPiece.split('.')[0];
-    console.log(firstPiece);
-    // console.log(checkThis);
     // windowUrl === 'nova' &&
-    if (checkThis !== 'nova' && checkThis !== 'http:' && checkThis !== 'https:' && checkThis !== 'www') {
+    if (windowUrl === 'nova' && checkThis !== 'nova' && checkThis !== 'http:' && checkThis !== 'https:' && checkThis !== 'www') {
       theUrl = '/nova' + presRef;
       return $(this).attr('src', theUrl);
     }
-    // console.log(theUrl);
   })
   theRef.each(function() {
     var theUrl = $(this).attr('href');
-    // console.log(theUrl);
     var presRef = $(this).attr('href');
-    var firstPiece = presRef.split('/')[0];
-    // console.log(firstPiece);
-    var checkThis = firstPiece.split('.')[0];
-    // console.log(checkThis);
-    // windowUrl === 'nova' &&
-    if (checkThis !== 'nova' && checkThis !== 'http:' && checkThis !== 'https:' && checkThis !== 'www') {
-      if (windowUrl2.split('.')[0] === 'ui-components' && firstPiece[0] === '#') {
-        theUrl = '/nova/ui-components' + presRef;
+    var firstPiece;
+    var checkThis;
+    if (presRef !== undefined) {
+      if (presRef.indexOf('/') >= 0) {
+        firstPiece = presRef.split('/')[0];
+      }
+      if (firstPiece !== undefined) {
+        // console.log(presRef);
+        checkThis = firstPiece.split('.')[0];
+      }
+    }
+    var windowUrl3;
+    if (windowUrl2 !== undefined) {
+      windowUrl3 = windowUrl2.split('.')[0];
+    }
+    if (windowUrl === 'nova' && checkThis !== 'nova' && checkThis !== 'http:' && checkThis !== 'https:' && checkThis !== 'www') {
+      if (windowUrl3 === 'ui-components' && theUrl[0] === '#') {
+        theUrl = '/nova/ui-components.html' + presRef;
         return $(this).attr('href', theUrl);
       }
       theUrl = '/nova' + presRef;
       return $(this).attr('href', theUrl);
     }
-    // console.log(theUrl);
   });
 };
+// ghPageRoutes();
 
 //dropdown
 $("li.dropdown").click(function() {
