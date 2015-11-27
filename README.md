@@ -73,8 +73,6 @@ Grunt should automatically wiredep the right files to the index.html file.
 If it doesn't, you can do it yourself via the `$ grunt wiredep` command.  
 If that doesn't work the package is not installed properly (*check if it's there in the `bower_components` folder and the `bower.json` file.*)
 
-*To do: Make wiredep work for ui-components.html too*
-
 
 ## License
 The [MIT](http://opensource.org/licenses/MIT "MIT") License (MIT).
