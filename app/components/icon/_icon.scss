@@ -8,19 +8,19 @@
         fill: currentColor;
     }
     display: inline-block;
-    .green {
-        fill: $green;
+    &.green {
+        color: $green;
     }
-    .blue {
-        fill: $sec-blue;
+    &.blue {
+        color: $sec-blue;
     }
-    .red {
-        fill: $sec-red;
+    &.red {
+        color: $sec-red;
     }
-    .grey {
-        fill: $grey;
+    &.grey {
+        color: $grey;
     }
-    .white {
-        fill: $white;
+    &.white {
+        color: $white;
     }
 }
