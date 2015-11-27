@@ -68,7 +68,6 @@
         <div class="row" id="anchor-appbar">
           <div class="col-xs-12">
             <h2>App Bar</h2>
-            <p>:) :bowtie:</p>
           </div>
           <div class="col-xs-12">
             <div id="appbar"></div>
@@ -114,15 +113,6 @@
                 }))
               );
             </script>
-          </div>
-          <div class="col-md-8">
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.appbar.render({ navItems: [{ url: '#', item: 'Past events', 'class': 'nav--active divider' }, { url: '#', item: 'Upcoming events' }], button: [{ 'class': 'solid-button--strict pull-right', content: 'Add new event' }] }))
-              </code>
-            </pre>
-          </div>
-          <div class="col-md-4">
             <div class="app-block">
               The app bar component is used as header for apps.
               <br>
@@ -130,6 +120,25 @@
               <br>
               <br> Properties includes an array for nav items and an optional one for one or more action buttons.
             </div>
+          </div>
+          <div class="col-md-8">
+<pre>
+<code class="language-javascript">
+$(ui.component.appbar.render({
+  'navItems': [{
+    'url': '#',
+    'item': 'Past events',
+    'class': 'nav--active divider'
+  }, {
+    'url': '#',
+    'item': 'Upcoming events'
+  }],
+  'button': [{
+    'class': 'solid-button--strict pull-right',
+    'content': 'Add new event'
+  }]
+}));
+</code></pre>
           </div>
         </div>
         <div class="row" id="anchor-appblock">
@@ -141,20 +150,35 @@
               <p>The app block is a CSS class.
                 <br>
                 <br> All it does at the moment is putting the content in it in a white block
-                <pre>
-                  <code class="language-css"> display: inline-block; padding: 1em; width : 100%; height: auto; background: white; margin-bottom: 1em;</code>
-                </pre> Just like all other components the app block should be placed directly in a column.
+<pre>
+<code class="language-css">
+  display: inline-block;
+  padding: 1em;
+  width : 100%;
+  height: auto;
+  background: white;
+  margin-bottom: 1em;
+</code></pre>
+Just like all other components the app block should be placed directly in a column.
               </p>
             </div>
           </div>
           <div class="col-sm-8 col-md-6">
             <!-- <div class="app-block"> -->
             <pre>
-              <code class="language-markup">
-                &lt;div class="col-md-6"&gt; &lt;div class="app-block"&gt; &lt;p&gt;The app block is a CSS class. All it does at the moment is putting the content in it in a white block &lt;!-- code example --&gt; Just like all other components the app block should be
-                placed directly in a column. &lt;&#47;p&gt; &lt;&#47;div&gt; &lt;&#47;div&gt;
-              </code>
-            </pre>
+<code class="language-markup">
+&lt;div class="col-md-6"&gt;
+  &lt;div class="app-block"&gt;
+    &lt;p&gt;The app block is a CSS class.
+    All it does at the moment is putting
+    the content in it in a white block
+    &lt;!-- code example --&gt;
+    Just like all other components the app
+    block should be placed directly in a
+    column. &lt;&#47;p&gt;
+  &lt;&#47;div&gt;
+&lt;&#47;div&gt;
+</code></pre>
             <!-- </div> -->
           </div>
         </div>
@@ -194,11 +218,14 @@
                   </div>
                 </div>
                 <div class="col-sm-8 col-md-7">
-                  <pre>
-                    <code class="language-javascript">
-                      $(ui.component.button.render({ content: 'Menu', 'class': 'naked-button--neutral', action: 'myAction', icon: 'icon-system-menu' }))
-                    </code>
-                  </pre>
+                  <pre><code class="language-javascript">
+$(ui.component.button.render({
+    'content': 'Menu',
+    'class': 'naked-button--neutral',
+    'action': 'myAction',
+    'icon': 'icon-system-menu'
+}))
+</code></pre>
                 </div>
               </div>
             </div>
@@ -270,12 +297,22 @@
             </script>
           </div>
           <div class="col-md-6">
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.composer.render({ input: { placeholder: 'Share your thoughts' }, buttons: [{ 'class': 'solid-button--neutral', icon: 'icon-solid-camera', action: 'alert("pick a classy one!")' }, { 'class': 'solid-button--happy pull-right', content: 'Share
-                post', action: 'alert("it works")' }] }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+$(ui.component.composer.render({
+    input: {
+        placeholder: 'Share your thoughts'
+    },
+    buttons: [{
+        'class': 'solid-button--neutral',
+        icon: 'icon-solid-camera',
+        action: 'alert("pick a classy one!")'
+    }, {
+        'class': 'solid-button--happy pull-right',
+        content: 'Share post',
+        action: 'alert("it works")'
+    }]
+}))
+</code></pre>
           </div>
         </div>
         <div class="row" id="anchor-cropper">
@@ -295,12 +332,18 @@
                             <component data-type="cropper" data-properties="cropperData.cropperData2"></component>
                         </div> -->
           <div class="col-sm-6">
-            <pre>
-              <code class="language-javascript">
-                'cropperData1': { 'imageSrc': '/images/frog.jpg', 'cropperLabel': 'Profile picture', 'uploadNewButtonText': 'Upload new', 'CropImageButtonText': 'Crop image', 'cancelCropButtonText': 'Cancel', 'saveCropButtonText': 'Save', 'fileName': 'image', 'formId':
-                'userSettingsForm', 'community': false }
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+'cropperData1': {
+  'imageSrc': '/images/frog.jpg',
+  'cropperLabel': 'Profile picture',
+  'uploadNewButtonText': 'Upload new',
+  'CropImageButtonText': 'Crop image',
+  'cancelCropButtonText': 'Cancel',
+  'saveCropButtonText': 'Save',
+  'fileName': 'image',
+  'formId': 'userSettingsForm',
+  'community': false
+}</code></pre>
           </div>
         </div>
         <div class="row" id="anchor-header">
@@ -308,9 +351,6 @@
             <div class="app-block">
               <h2>Header
               </h2>
-              <div class="gho">
-                dsaf
-              </div>
               <p>
                 The header component is used only by the mr.Watson platform, not by apps.
                 <br> If you're looking for an app header check out the app bar component.
@@ -325,13 +365,47 @@
             <!-- <component data-type="header" data-properties="headerData.headerData5"></component> -->
           </div>
           <div class="col-md-8">
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.header.render({ logo: { src: '/images/logo.png' }, input: { placeholder: 'Search bar..' }, dropdown: [{ icon: 'icon-solid-settings', dropdownItem: 'Settings', dropdownOptions: [{ option: 'Profile', href: '#' }, { option: 'Company', href:
-                '#', 'class': 'divider' }, { option: 'Log out', href: '#' }] }, { icon: 'icon-solid-bell', dropdownItem: 'Notifs', dropdownOptions: [{ option: 'You rock', href: '#', 'class': 'divider' }, { option: 'Freddie invited you to lunch party',
-                href: '#', 'class': 'divider' }, { option: 'Hans commented on your post-it', href: '#', 'class': 'divider' }] }] }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+$(ui.component.header.render({
+    logo: {
+        src: '/images/logo.png'
+    },
+    input: {
+        placeholder: 'Search bar..'
+    },
+    dropdown: [{
+        icon: 'icon-solid-settings',
+        dropdownItem: 'Settings',
+        dropdownOptions: [{
+            option: 'Profile',
+            href: '#'
+        }, {
+            option: 'Company',
+            href: '#',
+            'class': 'divider'
+        }, {
+            option: 'Log out',
+            href: '#'
+        }]
+    }, {
+        icon: 'icon-solid-bell',
+        dropdownItem: 'Notifs',
+        dropdownOptions: [{
+            option: 'You rock',
+            href: '#',
+            'class': 'divider'
+        }, {
+            option: 'Freddie invited you to lunch party',
+            href: '#',
+            'class': 'divider'
+        }, {
+            option: 'Hans commented on your post-it',
+            href: '#',
+            'class': 'divider'
+        }]
+    }]
+}))
+</code></pre>
           </div>
         </div>
         <div class="row" id="anchor-image">
@@ -350,44 +424,48 @@
               <h4>Square Avatar</h4>
               <component data-type="avatar" data-properties="avatarData.avatarData1"></component>
             </div>
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.avatar.render({ src:'/*image source*/' }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+$(ui.component.avatar.render({
+    src:'/*image source*/'
+}))
+</code></pre>
           </div>
           <div class="col-md-6">
             <div class="app-block">
               <h4>Round Avatar</h4>
               <component data-type="avatar" data-properties="avatarData.avatarData2"></component>
             </div>
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.avatar.render({ src:'/*image source*/', round: true }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+$(ui.component.avatar.render({
+    src:'/*image source*/',
+    round: true
+}))
+</code></pre>
           </div>
           <div class="col-md-6">
             <div class="app-block">
               <h4>Small Square Avatar</h4>
               <component data-type="avatar" data-properties="avatarData.avatarData3"></component>
             </div>
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.avatar.render({ src:'/*image source*/', small: true }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+ $(ui.component.avatar.render({
+     src:'/*image source*/',
+     small: true
+ }))
+ </code></pre>
           </div>
           <div class="col-md-6">
             <div class="app-block">
               <h4>Small Round Avatar</h4>
               <component data-type="avatar" data-properties="avatarData.avatarData4"></component>
             </div>
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.avatar.render({ src:'/*image source*/', round: true, small: true }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+$(ui.component.avatar.render({
+    src:'/*image source*/',
+    round: true,
+    small: true
+}))
+</code></pre>
           </div>
           <div class="col-xs-12">
             <!-- <div class="app-block"> -->
@@ -400,11 +478,11 @@
             </div>
           </div>
           <div class="col-md-6">
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.image.render({ src:'/*image source*/' }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+  $(ui.component.image.render({
+    src:'/*image source*/'
+  }))
+</code></pre>
             <div class="app-block">
               <p>Body images are used inside content area's.
                 <br> They take up the entire width of the column they are in.
@@ -421,11 +499,14 @@
             <component data-type="image" data-properties="imageData.imageData2"></component>
           </div>
           <div class="col-xs-6">
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.image.render({ image: [{ src: '/*image source*/', cover: true }] }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+    $(ui.component.image.render({
+      image: [{
+          src: '/*image source*/',
+          cover: true
+         }]
+      }))
+  </code></pre>
           </div>
           <div class="col-xs-6">
             <div class="app-block">
@@ -516,11 +597,11 @@
             <component data-type="textArea" data-properties="textareaData.textareaData1"></component>
           </div>
           <div class="col-md-6">
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.textArea.render({ placeholder: 'Tell people what you\'re all about' }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+   $(ui.component.textArea.render({
+     placeholder: 'Tell people what you\'re all about'
+   }))
+ </code></pre>
           </div>
           <div class="col-xs-12">
             <!-- <div class="app-block"> -->
@@ -551,21 +632,25 @@
             <component data-type="textInput" data-properties="textinputData.textinputData1"></component>
           </div>
           <div class="col-md-6">
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.textInput.render({ hasLabel': true, type: 'password', label: 'Password', icon: 'icon-user-key' }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+ $(ui.component.textInput.render({
+   hasLabel': true,
+   type: 'password',
+   label: 'Password',
+   icon: 'icon-user-key'
+ }))
+</code></pre>
           </div>
           <div class="col-md-6">
             <component data-type="textInput" data-properties="textinputData.textinputData2"></component>
           </div>
           <div class="col-md-6">
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.textInput.render({ hasLabel: true, label: 'First name' }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+  $(ui.component.textInput.render({
+    hasLabel: true,
+    label: 'First name'
+  }))
+</code></pre>
           </div>
           <div class="col-xs-12">
             <h3>Select</h3>
@@ -582,12 +667,26 @@
             <component data-type="dropdown" data-properties="dropdownData.dropdownData1">
           </div>
           <div class="col-md-6">
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.dropdown.render({ dropdownItem: 'Options', dropdownOptions: [{ option: 'Profile', href: '#' }, { option: 'Privacy', href: '#' }, { option: 'Settings', href: '#', 'class': 'divider' }, { option: 'Log out', href: '#' }] }))
+            <pre><code class="language-javascript">
+$(ui.component.dropdown.render({
+    dropdownItem: 'Options',
+    dropdownOptions: [{
+        option: 'Profile',
+        href: '#'
+    }, {
+        option: 'Privacy',
+        href: '#'
+    }, {
+        option: 'Settings',
+        href: '#',
+        'class': 'divider'
+    }, {
+        option: 'Log out',
+        href: '#'
+    }]
+}))
 
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
         <div class="row" id="anchor-messages">
@@ -623,11 +722,18 @@
                 </div>
               </div>
               <div class="col-xs-7">
-                <pre>
-                  <code class="language-javascript">
-                    $(ui.component.alert.render({ icon: 'icon-user-award', title: 'YES!', 'class': 'solid-alert--happy', message: 'You did something right', button: [{ icon: 'icon-system-close', 'class': 'naked-button--icon-only--happy' }] }))
-                  </code>
-                </pre>
+                <pre><code class="language-javascript">
+$(ui.component.alert.render({
+    icon: 'icon-user-award',
+    title: 'YES!',
+    'class': 'solid-alert--happy',
+    message: 'You did something right',
+    button: [{
+        icon: 'icon-system-close',
+        'class': 'naked-button--icon-only--happy'
+    }]
+}))
+</code></pre>
               </div>
             </div>
           </div>
@@ -662,11 +768,18 @@
                 </div>
               </div>
               <div class="col-xs-7">
-                <pre>
-                  <code class="language-javascript">
-                    $(ui.component.dialog.render({ angry: 'true', title: 'Deleting this is permanent.', message: 'Are you sure you want to delete your account?', button: [{ content: 'Delete account' }, { content: 'Cancel' }] }))
-                  </code>
-                </pre>
+                <pre><code class="language-javascript">
+$(ui.component.dialog.render({
+    angry: 'true',
+    title: 'Deleting this is permanent.',
+    message: 'Are you sure you want to delete your account?',
+    button: [{
+        content: 'Delete account'
+    }, {
+        content: 'Cancel'
+    }]
+}))
+</code></pre>
               </div>
             </div>
           </div>
@@ -696,12 +809,22 @@
                 </div>
               </div>
               <div class="col-xs-7">
-                <pre>
-                  <code class="language-javascript">
-                    $(ui.component.modal.render({ 'title': 'Invite your friend', 'close': true, 'body': 'Modal body.. Now find out the different possibilities', 'button': [{ 'class': 'solid-button--happy', 'content': 'Send Invitation', 'action': 'alert("Alrighty sent")'
-                    }, { 'class': 'solid-button--neutral', 'content': 'Cancel', 'action': 'alert("Alrighty canceled")' }] }))
-                  </code>
-                </pre>
+                <pre><code class="language-javascript">
+$(ui.component.modal.render({
+    'title': 'Invite your friend',
+    'close': true,
+    'body': 'Modal body.. Now find out the different possibilities',
+    'button': [{
+        'class': 'solid-button--happy',
+        'content': 'Send Invitation',
+        'action': 'alert("Alrighty sent")'
+    }, {
+        'class': 'solid-button--neutral',
+        'content': 'Cancel',
+        'action': 'alert("Alrighty canceled")'
+    }]
+}))
+</code></pre>
               </div>
             </div>
           </div>
@@ -719,11 +842,11 @@
                     <em>(should the app bar be under navigation too?)</em> only one type of nav but there's a lot of tweaking possible.</p>
                 </div>
                 <div class="col-sm-8">
-                  <pre>
-                    <code class="language-javascript">
-                      $(ui.component.nav.render({ // properties }))
-                    </code>
-                  </pre>
+                  <pre><code class="language-javascript">
+  $(ui.component.nav.render({
+    // properties
+  }))
+</code></pre>
                 </div>
               </div>
             </div>
@@ -732,12 +855,30 @@
             <component data-type="nav" data-properties="navData.navData4"></component>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-8">
-            <pre>
-              <code class="language-javascript">
-                communitySwitch: true, navCommunities: [{ src: 'http://erfgoedstem.nl/wp-content/uploads/2012/07/Industriegebouw-Goudsesingel_1.jpg', name: 'Het Industriegeb..', icon: 'icon-system-down-open' }], navItems: [{ url: '#', item: 'Dashboard' }, { url: '#',
-                item: 'People' }, { url: '#', item: 'Companies' }, { url: '#', item: 'Messages' }, { url: '#', item: 'Meet-ups' }]
-              </code>
-            </pre>
+          <pre><code class="language-javascript">
+   communitySwitch: true,
+   navCommunities: [{
+       src: 'http://erfgoedstem.nl/wp-content/uploads/2012/07/Industriegebouw-Goudsesingel_1.jpg',
+       name: 'Het Industriegeb..',
+       icon: 'icon-system-down-open'
+   }],
+   navItems: [{
+       url: '#',
+       item: 'Dashboard'
+   }, {
+       url: '#',
+       item: 'People'
+   }, {
+       url: '#',
+       item: 'Companies'
+   }, {
+       url: '#',
+       item: 'Messages'
+   }, {
+       url: '#',
+       item: 'Meet-ups'
+   }]
+</code></pre>
           </div>
           <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
           <!-- <div class="clearfix visible-lg-block"></div> -->
@@ -745,25 +886,60 @@
             <component data-type="nav" data-properties="navData.navData5"></component>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-8">
-            <pre>
-              <code class="language-javascript">
-                title: true, navTitleIcon: 'icon-solid-settings', navTitle: 'Settings', button: true, 'class': 'solid-button--strict', content: 'Dashboard', subTitle: true, category: 'Community', name: 'Katshoek', navItems: [{ url: '#', item: 'Profile' }, { url: '#2',
-                item: 'People' }]
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+    title: true,
+    navTitleIcon: 'icon-solid-settings',
+    navTitle: 'Settings',
+    button: true,
+    'class': 'solid-button--strict',
+    content: 'Dashboard',
+    subTitle: true,
+    category: 'Community',
+    name: 'Katshoek',
+    navItems: [{
+        url: '#',
+        item: 'Profile'
+    }, {
+        url: '#2',
+        item: 'People'
+    }]
+</code></pre>
           </div>
           <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
           <div class="col-xs-10 col-sm-6 col-md-4">
             <component data-type="nav" data-properties="navData.navData6"></component>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-8">
-            <pre>
-              <code class="language-javascript">
-                title: true, button: true, 'class': 'naked-button--strict hover', content: 'Add Group', navTitle: 'Groups', navItems: [{ url: '#', item: 'Developers', icon: 'icon-app-solid-server grey' }, { url: '#', item: 'Horse whisperers', icon: 'icon-app-solid-leaf
-                green' }, { url: '#', item: 'Cool Cats', icon: 'icon-app-solid-necktie blue' }, { url: '#', item: 'BBQ', icon: 'icon-app-solid-burger red' }], navActionBar: true, navActionBarButtons: [{ url: '#', 'class': 'naked-button--strict', content:
-                'See all your groups' }]
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+title: true,
+button: true,
+'class': 'naked-button--strict hover',
+content: 'Add Group',
+navTitle: 'Groups',
+navItems: [{
+    url: '#',
+    item: 'Developers',
+    icon: 'icon-app-solid-server grey'
+}, {
+    url: '#',
+    item: 'Horse whisperers',
+    icon: 'icon-app-solid-leaf green'
+}, {
+    url: '#',
+    item: 'Cool Cats',
+    icon: 'icon-app-solid-necktie blue'
+}, {
+    url: '#',
+    item: 'BBQ',
+    icon: 'icon-app-solid-burger red'
+}],
+navActionBar: true,
+navActionBarButtons: [{
+    url: '#',
+    'class': 'naked-button--strict',
+    content: 'See all your groups'
+}]
+</code></pre>
           </div>
         </div>
         <div class="row" id="anchor-postits">
@@ -825,13 +1001,32 @@
             </script>
           </div>
           <div class="col-md-10">
-            <pre>
-              <code class="language-javascript">
-                $(ui.component.userpostit.render({ userpostitMeta: { avatar: { src: 'http://i.ytimg.com/vi/N1KvgtEnABY/hqdefault.jpg' }, author: 'Sgt. Sanders', timestamp: '10 aug 2015' }, userpostitContent: { content: 'Om deze grijze maandagmiddag wat zonneschijn te
-                geven, staat er op de 2e verdieping op de picknicktafels allerlei lekkers van Marqt wat anders weggegooid zou worden. Ik zou zeggen; sla je slag en geniet :-)' }, userpostitActions: [{ 'class': 'naked-button--happy hover', content: 'Like',
-                icon: 'icon-solid-like' }, { 'class': 'naked-button--happy hover', content: 'Comment', icon: 'icon-naked-bubble' }], userpostitLikes: { number: '17' } }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+$(ui.component.userpostit.render({
+    userpostitMeta: {
+        avatar: {
+            src: 'http://i.ytimg.com/vi/N1KvgtEnABY/hqdefault.jpg'
+        },
+        author: 'Sgt. Sanders',
+        timestamp: '10 aug 2015'
+    },
+    userpostitContent: {
+        content: 'Om deze grijze maandagmiddag wat zonneschijn te geven, staat er op de 2e verdieping op de picknicktafels allerlei lekkers van Marqt wat anders weggegooid zou worden. Ik zou zeggen; sla je slag en geniet :-)'
+    },
+    userpostitActions: [{
+        'class': 'naked-button--happy hover',
+        content: 'Like',
+        icon: 'icon-solid-like'
+    }, {
+        'class': 'naked-button--happy hover',
+        content: 'Comment',
+        icon: 'icon-naked-bubble'
+    }],
+    userpostitLikes: {
+        number: '17'
+    }
+}))
+</code></pre>
           </div>
           <div class="col-md-8">
             <component data-type="userpostit" data-properties="userpostitData.userpostitData2"></component>
@@ -896,18 +1091,58 @@
             </script>
           </div>
           <div class="col-md-10">
-            <pre>
-              <code class="language-javascript">
-                userpostitMeta: { avatar: { src: 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg' }, author: 'Dr. Strangelove', timestamp: '10 aug 2015' }, userpostitContent: { content: 'Vanochtend kwam ik aan en was het luik
-                niet naar beneden. Allemaal leuk en aardig, maar er staat te veel apparatuur op deze verdieping om hem open te laten. DUS LUIK DICHT!' }, userpostitActions: [{ 'class': 'naked-button--happy hover', content: 'Like', icon: 'icon-naked-like'
-                }, { 'class': 'naked-button--happy hover', content: '2 Comments', icon: 'icon-solid-bubble' }], userpostitLikes: { number: '2' }, comments: [{ author: 'General Dooks', timestamp: '12 aug 2015', avatar: { src: 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png',
-                small: true }, content: 'Daarnaast mbt corvee, het is al eerder aangegeven. Het is wel zo netjes om een volgende groep niet met een achterstand te laten beginnen, voor iedereen zijn de maandagochtenden belangrijk, dus zorg ajb dat je op
-                vrijdag je corveeweek netjes afsluit, dan kan iedereen zich op maandag focussen wat belangrijk is' }, { author: 'General Dooks', timestamp: '13 aug 2015', avatar: { src: 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png',
-                small: true }, content: 'Trouwens, bij onze zuivel-bestelling van deze week is er iets mis gegaan waardoor we met een ietsje-pietsje meer volle melk zitten dan de bedoeling was. Omdat we het natuurlijk zonde vinden als al deze flessen
-                zouden bederven, kunnen jullie voor een mooi prijsje wat flessen mee naar huis nemen.' }], commentInputField: { avatar: { src: 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg', small: true },
-                placeholder: 'Add a comment', content: 'Comment' } }))
-              </code>
-            </pre>
+            <pre><code class="language-javascript">
+userpostitMeta: {
+    avatar: {
+        src: 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg'
+    },
+    author: 'Dr. Strangelove',
+    timestamp: '10 aug 2015'
+    },
+    userpostitContent: {
+        content: 'Vanochtend kwam ik aan en was het luik niet naar beneden. Allemaal leuk en aardig, maar er staat te veel apparatuur op deze verdieping om hem open te laten. DUS LUIK DICHT!'
+    },
+    userpostitActions: [{
+        'class': 'naked-button--happy hover',
+        content: 'Like',
+        icon: 'icon-naked-like'
+    }, {
+        'class': 'naked-button--happy hover',
+        content: '2 Comments',
+        icon: 'icon-solid-bubble'
+    }],
+    userpostitLikes: {
+        number: '2'
+    },
+    comments: [{
+        author: 'General Dooks',
+        timestamp: '12 aug 2015',
+        avatar: {
+            src: 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png',
+            small: true
+        },
+        content: 'Daarnaast mbt corvee, het is al eerder aangegeven. Het is wel zo netjes om een volgende groep niet met een achterstand te laten beginnen, voor iedereen zijn de maandagochtenden belangrijk, dus zorg ajb dat je op vrijdag je corveeweek netjes afsluit, dan kan iedereen zich op maandag focussen wat belangrijk is'
+
+    }, {
+        author: 'General Dooks',
+        timestamp: '13 aug 2015',
+        avatar: {
+            src: 'http://voo-du.net/wp-content/uploads/2013/01/379933331633.png',
+            small: true
+        },
+        content: 'Trouwens, bij onze zuivel-bestelling van deze week is er iets mis gegaan waardoor we met een ietsje-pietsje meer volle melk zitten dan de bedoeling was. Omdat we het natuurlijk zonde vinden als al deze flessen zouden bederven, kunnen jullie voor een mooi prijsje wat flessen mee naar huis nemen.'
+
+    }],
+    commentInputField: {
+        avatar: {
+            src: 'https://www.modernartoxford.org.uk/wp-content/uploads/2015/07/DrStrangelove060Pyxurz1.jpg',
+            small: true
+        },
+        placeholder: 'Add a comment',
+        content: 'Comment'
+    }
+}))
+</code></pre>
           </div>
         </div>
         <div class="col-xs-12">
@@ -967,7 +1202,7 @@
         <div class="row">
           <div class="col-xs-12">
             <div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sit est quae numquam nobis nemo, quos aliquam adipisci voluptatibus amet voluptatum quas enim, laborum accusamus nihil. Rerum temporibus deleniti maiores.</p>
+              <p></p>
             </div>
           </div>
         </div>
