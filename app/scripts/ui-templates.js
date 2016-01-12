@@ -643,6 +643,58 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
 },"24":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
+  return "	<div class=\"row\">\n		<div class=\"col-xs-12\">\n			<div class=\"form__picker\">\n				<div class=\""
+    + alias3(((helper = (helper = helpers.pickerId || (depth0 != null ? depth0.pickerId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"pickerId","hash":{},"data":data}) : helper)))
+    + "\">\n					<select id=\""
+    + alias3(((helper = (helper = helpers.pickerId || (depth0 != null ? depth0.pickerId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"pickerId","hash":{},"data":data}) : helper)))
+    + "Day\" name=\""
+    + alias3(((helper = (helper = helpers.pickerId || (depth0 != null ? depth0.pickerId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"pickerId","hash":{},"data":data}) : helper)))
+    + "Day\" required>\n						<option "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.disableFirstItem : depth0),{"name":"if","hash":{},"fn":this.program(25, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + " value=\""
+    + alias3(((helper = (helper = helpers.valueDay || (depth0 != null ? depth0.valueDay : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"valueDay","hash":{},"data":data}) : helper)))
+    + "\" selected=\"selected\">"
+    + alias3(((helper = (helper = helpers.optionDay || (depth0 != null ? depth0.optionDay : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"optionDay","hash":{},"data":data}) : helper)))
+    + "</option>\n						<option value=\"1\">1</option>\n						<option value=\"2\">2</option>\n						<option value=\"3\">3</option>\n						<option value=\"4\">4</option>\n						<option value=\"5\">5</option>\n						<option value=\"6\">6</option>\n						<option value=\"7\">7</option>\n						<option value=\"8\">8</option>\n						<option value=\"9\">9</option>\n						<option value=\"10\">10</option>\n						<option value=\"11\">11</option>\n						<option value=\"12\">12</option>\n						<option value=\"13\">13</option>\n						<option value=\"14\">14</option>\n						<option value=\"15\">15</option>\n						<option value=\"16\">16</option>\n						<option value=\"17\">17</option>\n						<option value=\"18\">18</option>\n						<option value=\"19\">19</option>\n						<option value=\"20\">20</option>\n						<option value=\"21\">21</option>\n						<option value=\"22\">22</option>\n						<option value=\"23\">23</option>\n						<option value=\"24\">24</option>\n						<option value=\"25\">25</option>\n						<option value=\"26\">26</option>\n						<option value=\"27\">27</option>\n						<option value=\"28\">28</option>\n						<option value=\"29\">29</option>\n						<option value=\"30\">30</option>\n						<option value=\"31\">31</option>\n					</select>\n\n					<select id=\""
+    + alias3(((helper = (helper = helpers.pickerId || (depth0 != null ? depth0.pickerId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"pickerId","hash":{},"data":data}) : helper)))
+    + "Month\" name=\""
+    + alias3(((helper = (helper = helpers.pickerId || (depth0 != null ? depth0.pickerId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"pickerId","hash":{},"data":data}) : helper)))
+    + "Month\" required>\n						<option "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.disableFirstItem : depth0),{"name":"if","hash":{},"fn":this.program(25, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + " value=\""
+    + alias3(((helper = (helper = helpers.valueMonth || (depth0 != null ? depth0.valueMonth : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"valueMonth","hash":{},"data":data}) : helper)))
+    + "\" selected=\"selected\">"
+    + alias3(((helper = (helper = helpers.optionMonth || (depth0 != null ? depth0.optionMonth : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"optionMonth","hash":{},"data":data}) : helper)))
+    + "</option>\n						<option value=\"1\">January</option>\n						<option value=\"2\">February</option>\n						<option value=\"3\">March</option>\n						<option value=\"4\">April</option>\n						<option value=\"5\">May</option>\n						<option value=\"6\">June</option>\n						<option value=\"7\">July</option>\n						<option value=\"8\">August</option>\n						<option value=\"9\">September</option>\n						<option value=\"10\">October</option>\n						<option value=\"11\">November</option>\n						<option value=\"12\">December</option>\n					</select>\n\n					<select id=\""
+    + alias3(((helper = (helper = helpers.pickerId || (depth0 != null ? depth0.pickerId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"pickerId","hash":{},"data":data}) : helper)))
+    + "Year\" name=\""
+    + alias3(((helper = (helper = helpers.pickerId || (depth0 != null ? depth0.pickerId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"pickerId","hash":{},"data":data}) : helper)))
+    + "Year\" required>\n						<option "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.disableFirstItem : depth0),{"name":"if","hash":{},"fn":this.program(25, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + " value=\""
+    + alias3(((helper = (helper = helpers.valueYear || (depth0 != null ? depth0.valueYear : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"valueYear","hash":{},"data":data}) : helper)))
+    + "\" selected=\"selected\">"
+    + alias3(((helper = (helper = helpers.optionYear || (depth0 != null ? depth0.optionYear : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"optionYear","hash":{},"data":data}) : helper)))
+    + "</option>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.years : depth0),{"name":"each","hash":{},"fn":this.program(27, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "					</select>\n\n					<label class=\"label\" for=\""
+    + alias3(((helper = (helper = helpers.pickerId || (depth0 != null ? depth0.pickerId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"pickerId","hash":{},"data":data}) : helper)))
+    + "\">"
+    + alias3(((helper = (helper = helpers.label || (depth0 != null ? depth0.label : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"label","hash":{},"data":data}) : helper)))
+    + "<span class=\"input-required\">(Required)</span></label>\n\n				</div>\n			</div>\n		</div>\n	</div>\n";
+},"25":function(depth0,helpers,partials,data) {
+    return " disabled=\"true\" ";
+},"27":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "							<option value=\""
+    + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
+    + "\">"
+    + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
+    + "</option>\n";
+},"29":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
   return "		<div class=\"form__textarea\">\n			<div class=\""
     + alias3(((helper = (helper = helpers.textareaId || (depth0 != null ? depth0.textareaId : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"textareaId","hash":{},"data":data}) : helper)))
     + "\">\n			    <label for=\""
@@ -667,13 +719,13 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
     + ">"
     + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
     + "</textarea>\n				<span class=\"bar\"></span>\n			</div>\n		</div>\n";
-},"26":function(depth0,helpers,partials,data) {
+},"31":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "		<span class=\"form-button pull-right\">"
     + ((stack1 = this.invokePartial(partials.PartialButton,depth0,{"name":"PartialButton","hash":{"type":"submit"},"data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "</span>\n";
-},"28":function(depth0,helpers,partials,data) {
+},"33":function(depth0,helpers,partials,data) {
     return "		<span class=\"form-button pull-right\"><a href=\"#\" novalidate name=\"cancel\" id=\"cancel\" class=\"solid-button--neutral\">Cancel</a></span>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
@@ -688,17 +740,24 @@ this["ui"]["component"]["template"]["form"] = Handlebars.template({"1":function(
     + alias3(((helper = (helper = helpers.enctype || (depth0 != null ? depth0.enctype : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"enctype","hash":{},"data":data}) : helper)))
     + "\">\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.formTitle : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.invisibleInputs : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.inputs : depth0),{"name":"each","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.selects : depth0),{"name":"each","hash":{},"fn":this.program(18, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.textareas : depth0),{"name":"each","hash":{},"fn":this.program(24, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.buttons : depth0),{"name":"each","hash":{},"fn":this.program(26, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.cancel : depth0),{"name":"if","hash":{},"fn":this.program(28, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</form>\n<script>\n    // validate the form when it is submitted\n    var validator = $(\"#"
+    + "\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.datepickers : depth0),{"name":"each","hash":{},"fn":this.program(24, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.textareas : depth0),{"name":"each","hash":{},"fn":this.program(29, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.buttons : depth0),{"name":"each","hash":{},"fn":this.program(31, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.cancel : depth0),{"name":"if","hash":{},"fn":this.program(33, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</form>\n\n<script>\n  // validate the form when it is submitted\n  var validator = $(\"#"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\").validate({\n		// debug: true,\n		ignore: [],\n        errorPlacement: function(error, element) {\n            // Append error within linked label\n            $( element )\n                .closest( \"form\" )\n                    .find( \"div[class='\" + element.attr( \"id\" ) + \"']\" )\n                        .prepend( error );\n        },\n				rules: {\n      		password: {\n		        equalTo: \"#firstPassword\"\n		      },\n    		},\n				messages: {\n		      password: {\n		        equalTo: \"Please enter the same password as above\"\n		      }\n		    },\n        errorElement: \"div\",\n        success: \"valid\",\n  		submitHandler: function(form) {\n			var theLoadingButton = $(\"#"
+    + "\").validate({\n		// debug: true,\n		ignore: [],\n\n    errorPlacement: function(error, element) {\n      // Append error within linked label\n      $( element )\n          .closest( \"form\" )\n              .find( \"div[class='\" + element.attr( \"id\" ) + \"']\" )\n                  .prepend( error );\n    },\n\n		rules: {\n  		password: {\n        equalTo: \"#firstPassword\"\n      }\n		},\n\n		messages: {\n      password: {\n        equalTo: \"Please enter the same password as above\"\n      }\n    },\n\n    errorElement: \"div\",\n    success: \"valid\",\n		submitHandler: function(form) {\n			var theLoadingButton = $(\"#"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\").find('button');\n			var buttonColor = $(theLoadingButton).css('color');\n			$(theLoadingButton).addClass('btn__loader');\n		    theLoadingButton.css('color', 'rgba(0,0,0,0)');\n			setTimeout(function() {\n			    $(theLoadingButton).removeClass('btn__loader');\n			    theLoadingButton.css('color', buttonColor);\n			}, 30000);\n			form.submit();\n		}\n    });\n	$('select[name=\"mySelect\"]').on('change', function() { // fires when the value changes\n	    $(this).valid(); // trigger validation on hidden select\n	});\n    $(\"#cancel\").click(function() {\n	    validator.resetForm();\n    	$(this).closest('form').find(\"input\").val(\"\");\n});\n$(function(){\n$('select').selectric({\n	disableOnMobile: false\n});\n  // Cache the target element\nvar $selectValue = $('#select_value').find('strong');\n// Get initial value\n$selectValue.text($('#get_value').val());\n// Initialize Selectric and bind to 'change' event\n$('#get_value').selectric().on('change', function() {\n  $selectValue.text($(this).val());\n});\n}());\n</script>\n";
+    + "\").find('button');\n			var buttonColor = $(theLoadingButton).css('color');\n\n			$(theLoadingButton).addClass('btn__loader');\n	    theLoadingButton.css('color', 'rgba(0,0,0,0)');\n\n			setTimeout(function() {\n			    $(theLoadingButton).removeClass('btn__loader');\n			    theLoadingButton.css('color', buttonColor);\n			}, 30000);\n\n			form.submit();\n		}\n  });\n\n	$('select[name=\"mySelect\"]').on('change', function() { // fires when the value changes\n	    $(this).valid(); // trigger validation on hidden select\n	});\n\n  $(\"#cancel\").click(function() {\n    validator.resetForm();\n  	$(this).closest('form').find(\"input\").val(\"\");\n	});\n\n$(function(){\n	$('select').selectric({\n		disableOnMobile: false\n	});\n  // Cache the target element\n	var $selectValue = $('#select_value').find('strong');\n	// Get initial value\n	$selectValue.text($('#get_value').val());\n	// Initialize Selectric and bind to 'change' event\n	$('#get_value').selectric().on('change', function() {\n	  $selectValue.text($(this).val());\n	});\n}());\n</script>\n";
 },"usePartial":true,"useData":true});
 
 this["ui"]["component"]["template"]["header"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

@@ -2,11 +2,13 @@
 	{{#if formTitle}}
 		<h4>{{{formTitle}}}</h4>
 	{{/if}}
+
 	{{#if invisibleInputs}}
 		{{#each invisibleInputs}}
 			<input id="{{inputId}}" value="{{value}}" type="{{type}}" name="{{inputId}}">
 		{{/each}}
 	{{/if}}
+
 	{{#each inputs}}
 		<div class="form__input">
 			<div class="{{inputId}}">
@@ -17,6 +19,7 @@
 	   	</div>
 		</div>
 	{{/each}}
+
 	{{#each selects}}
 	<div class="row">
 		<div class="col-xs-6">
@@ -38,6 +41,78 @@
 		</div>
 		</div>
 	{{/each}}
+
+	{{#each datepickers}}
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="form__picker">
+				<div class="{{pickerId}}">
+					<select id="{{pickerId}}Day" name="{{pickerId}}Day" required>
+						<option {{#if disableFirstItem}} disabled="true" {{/if}} value="{{valueDay}}" selected="selected">{{optionDay}}</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+					</select>
+
+					<select id="{{pickerId}}Month" name="{{pickerId}}Month" required>
+						<option {{#if disableFirstItem}} disabled="true" {{/if}} value="{{valueMonth}}" selected="selected">{{optionMonth}}</option>
+						<option value="1">January</option>
+						<option value="2">February</option>
+						<option value="3">March</option>
+						<option value="4">April</option>
+						<option value="5">May</option>
+						<option value="6">June</option>
+						<option value="7">July</option>
+						<option value="8">August</option>
+						<option value="9">September</option>
+						<option value="10">October</option>
+						<option value="11">November</option>
+						<option value="12">December</option>
+					</select>
+
+					<select id="{{pickerId}}Year" name="{{pickerId}}Year" required>
+						<option {{#if disableFirstItem}} disabled="true" {{/if}} value="{{valueYear}}" selected="selected">{{optionYear}}</option>
+						{{#each years}}
+							<option value="{{value}}">{{value}}</option>
+						{{/each}}
+					</select>
+
+					<label class="label" for="{{pickerId}}">{{label}}<span class="input-required">(Required)</span></label>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+
 	{{#each textareas}}
 		<div class="form__textarea">
 			<div class="{{textareaId}}">
@@ -51,64 +126,76 @@
 	{{#each buttons}}
 		<span class="form-button pull-right">{{>PartialButton type="submit"}}</span>
 	{{/each}}
+
 	{{#if cancel}}
 		<span class="form-button pull-right"><a href="#" novalidate name="cancel" id="cancel" class="solid-button--neutral">Cancel</a></span>
 	{{/if}}
 </form>
+
 <script>
-    // validate the form when it is submitted
-    var validator = $("#{{id}}").validate({
+  // validate the form when it is submitted
+  var validator = $("#{{id}}").validate({
 		// debug: true,
 		ignore: [],
-        errorPlacement: function(error, element) {
-            // Append error within linked label
-            $( element )
-                .closest( "form" )
-                    .find( "div[class='" + element.attr( "id" ) + "']" )
-                        .prepend( error );
-        },
-				rules: {
-      		password: {
-		        equalTo: "#firstPassword"
-		      },
-    		},
-				messages: {
-		      password: {
-		        equalTo: "Please enter the same password as above"
-		      }
-		    },
-        errorElement: "div",
-        success: "valid",
-  		submitHandler: function(form) {
+
+    errorPlacement: function(error, element) {
+      // Append error within linked label
+      $( element )
+          .closest( "form" )
+              .find( "div[class='" + element.attr( "id" ) + "']" )
+                  .prepend( error );
+    },
+
+		rules: {
+  		password: {
+        equalTo: "#firstPassword"
+      }
+		},
+
+		messages: {
+      password: {
+        equalTo: "Please enter the same password as above"
+      }
+    },
+
+    errorElement: "div",
+    success: "valid",
+		submitHandler: function(form) {
 			var theLoadingButton = $("#{{id}}").find('button');
 			var buttonColor = $(theLoadingButton).css('color');
+
 			$(theLoadingButton).addClass('btn__loader');
-		    theLoadingButton.css('color', 'rgba(0,0,0,0)');
+	    theLoadingButton.css('color', 'rgba(0,0,0,0)');
+
 			setTimeout(function() {
 			    $(theLoadingButton).removeClass('btn__loader');
 			    theLoadingButton.css('color', buttonColor);
 			}, 30000);
+
 			form.submit();
 		}
-    });
+  });
+
 	$('select[name="mySelect"]').on('change', function() { // fires when the value changes
 	    $(this).valid(); // trigger validation on hidden select
 	});
-    $("#cancel").click(function() {
-	    validator.resetForm();
-    	$(this).closest('form').find("input").val("");
-});
+
+  $("#cancel").click(function() {
+    validator.resetForm();
+  	$(this).closest('form').find("input").val("");
+	});
+
 $(function(){
-$('select').selectric({
-	disableOnMobile: false
-});
+	$('select').selectric({
+		disableOnMobile: false
+	});
   // Cache the target element
-var $selectValue = $('#select_value').find('strong');
-// Get initial value
-$selectValue.text($('#get_value').val());
-// Initialize Selectric and bind to 'change' event
-$('#get_value').selectric().on('change', function() {
-  $selectValue.text($(this).val());
-});
+	var $selectValue = $('#select_value').find('strong');
+	// Get initial value
+	$selectValue.text($('#get_value').val());
+	// Initialize Selectric and bind to 'change' event
+	$('#get_value').selectric().on('change', function() {
+	  $selectValue.text($(this).val());
+	});
 }());
 </script>

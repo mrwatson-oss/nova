@@ -862,6 +862,7 @@ ui.component.form = (function($, T) {
         'id': 'style-guide__form',
         'method': 'get',
         'formTitle': 'Form Title',
+
         inputs: [{
             'required': true,
             'inputId': 'firstPassword',
@@ -879,11 +880,12 @@ ui.component.form = (function($, T) {
         }, {
             'required': false,
             'inputId': 'firstName',
-            'placeholder': 'wacgt',
+            'placeholder': 'name',
             'label': 'First name',
             'type': 'text',
             'minlength': '2'
         }],
+
         'selects': [{
             'required': false,
             'selectId': 'age',
@@ -901,7 +903,8 @@ ui.component.form = (function($, T) {
                 'option': '50+',
                 'value': '15'
             }]
-        }, {
+        },
+        {
             'selectId': 'sex',
             'label': 'What\'s your gender?',
             'required': true,
@@ -922,17 +925,49 @@ ui.component.form = (function($, T) {
             'formButton': 'Or add another gender',
             'href': '#'
         }],
+
+        'datepickers': [{
+          'pickerId': 'Birthday',
+          'label': 'Birthday picker',
+          // 'disableFirstItem': true,
+
+          'valueDay': 13,
+          'optionDay': 13,
+
+          'valueMonth': 10,
+          'optionMonth': 'October',
+
+          'valueYear': 1994,
+          'optionYear': 1994,
+
+          'years': [
+            {'value': 2016},
+            {'value': 2015},
+            {'value': 2014},
+            {'value': 2013},
+            {'value': 2012},
+            {'value': 2011},
+            {'value': 2010},
+            {'value': 2009},
+            {'value': 2008},
+            {'value': 2007},
+            {'value': 2006}
+          ]
+        }],
+
         'textareas': [{
             'required': true,
             'textareaId': 'AboutMe',
             'rows': '5',
             'label': 'What are you about?'
         }],
+
         'cancel': true,
+
         'buttons': [{
             'class': 'solid-button--happy',
             'buttonLoader': true,
-            'content': 'Doe doe'
+            'content': 'ga verder'
         }]
     }
 }
