@@ -21,3 +21,5 @@ Used to declare the font families/colors/sizes and whatnot. Don't declare variab
 Only edit this file with grunt serve running ($ grunt serve). This way you'll get errors so you will know where the variable are used.
 Use the BEM naming technique.   
 Only declare variables in *this* file, not in any others.
+
+hi how are you?
