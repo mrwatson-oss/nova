@@ -70,16 +70,16 @@ var formData = {
         'datepickers': [{
           'pickerId': 'Birthday',
           'label': 'Birthday picker',
-          // 'disableFirstItem': true,
+          'disableFirstItem': true,
 
-          'valueDay': 13,
-          'optionDay': 13,
+          'valueDay': 0,
+          'optionDay': 'day',
 
-          'valueMonth': 10,
-          'optionMonth': 'October',
+          'valueMonth': 0,
+          'optionMonth': 'month',
 
-          'valueYear': 1994,
-          'optionYear': 1994,
+          'valueYear': 0,
+          'optionYear': 'year',
 
           'years': [
             {'value': 2016},
